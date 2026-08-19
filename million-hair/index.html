@@ -147,6 +147,93 @@ a{color:inherit}
 .voet-in{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:space-between}
 .voet a{color:var(--bot);font-weight:600}
 
+/* afspraak plannen */
+.afspraak{padding-block:clamp(3rem,7vw,5.5rem);border-top:1px solid var(--rand)}
+.afspraak-kop{max-width:52ch}
+.afspraak-kop h2{font-weight:700;letter-spacing:-.03em;line-height:1.06;font-size:clamp(1.9rem,4.6vw,2.8rem)}
+.afspraak-kop h2 span{color:var(--amber)}
+.afspraak-kop p{margin-top:.9rem;color:var(--zacht)}
+.boeker{
+  margin-top:2.4rem;display:grid;grid-template-columns:1fr;gap:0;
+  border:1px solid var(--rand);border-radius:var(--rond);overflow:hidden;background:var(--hoog);
+}
+@media(min-width:940px){.boeker{grid-template-columns:1.35fr .65fr}}
+.boeker-stappen{padding:clamp(1.4rem,3.5vw,2.2rem);display:grid;gap:2rem}
+.boeker-zij{
+  background:var(--zwart);border-left:1px solid var(--rand);
+  padding:clamp(1.4rem,3.5vw,2.2rem);
+  display:flex;flex-direction:column;justify-content:space-between;gap:1.5rem;
+}
+.stap-blok{border:0;padding:0;margin:0;min-width:0}
+.stap-blok legend{padding:0;font-weight:600;font-size:1rem;letter-spacing:-.01em;margin-bottom:.9rem}
+.stap-blok legend b{
+  display:inline-flex;align-items:center;justify-content:center;width:1.45rem;height:1.45rem;
+  border-radius:var(--rond);background:var(--amber);color:var(--zwart);margin-right:.6rem;font-size:.8rem;font-weight:700;
+}
+.keuzes{display:flex;flex-wrap:wrap;gap:.55rem}
+.keuze{position:relative}
+.keuze input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.keuze span{
+  display:inline-flex;flex-direction:column;gap:.1rem;cursor:pointer;border-radius:var(--rond);
+  border:1.5px solid var(--rand);background:var(--zwart);padding:.62rem 1rem;
+  font-size:.96rem;font-weight:500;transition:border-color .15s,background .15s,color .15s;
+}
+.keuze span small{font-weight:400;font-size:.79rem;color:var(--zacht)}
+.keuze input:hover + span{border-color:var(--amber)}
+.keuze input:focus-visible + span{outline:3px solid var(--amber);outline-offset:2px}
+.keuze input:checked + span{border-color:var(--amber);background:var(--amber);color:var(--zwart);font-weight:600}
+.keuze input:checked + span small{color:#5c4514}
+.keuze input:disabled + span{opacity:.35;cursor:not-allowed;text-decoration:line-through}
+
+.dagen{display:grid;grid-auto-flow:column;grid-auto-columns:5.2rem;gap:.5rem;overflow-x:auto;padding-bottom:.6rem;scroll-snap-type:x proximity}
+.dagen::-webkit-scrollbar{height:6px}
+.dagen::-webkit-scrollbar-thumb{background:#3a3d36;border-radius:var(--rond)}
+.dagen .keuze span{align-items:center;text-align:center;padding:.7rem .3rem;scroll-snap-align:start}
+.dagen .keuze span b{font-size:1.16rem;font-weight:700;line-height:1.1}
+
+.tijden{display:grid;grid-template-columns:repeat(auto-fill,minmax(5.2rem,1fr));gap:.5rem}
+.tijden .keuze span{justify-content:center;align-items:center;padding:.62rem .3rem;font-variant-numeric:tabular-nums}
+.leeg{border:1.5px dashed var(--rand);border-radius:var(--rond);padding:1.1rem;color:var(--zacht);font-size:.95rem;background:var(--zwart)}
+.laat-merk{
+  display:inline-block;margin-left:.45rem;background:rgba(217,164,65,.2);color:var(--amber);
+  font-size:.63rem;font-weight:600;letter-spacing:.06em;padding:.13rem .42rem;border-radius:var(--rond);vertical-align:middle;
+}
+.keuze input:checked + span .laat-merk{background:rgba(14,15,13,.22);color:var(--zwart)}
+
+.velden{display:grid;grid-template-columns:1fr;gap:1rem}
+@media(min-width:620px){.velden{grid-template-columns:1fr 1fr}}
+.veld{display:flex;flex-direction:column;gap:.4rem;min-width:0}
+.veld label{font-weight:500;font-size:.94rem}
+.veld input{
+  font:inherit;font-size:1rem;padding:.76rem .88rem;border:1.5px solid var(--rand);
+  border-radius:var(--rond);background:var(--zwart);color:var(--bot);
+}
+.veld input::placeholder{color:#6d6f67}
+.veld input:focus{outline:3px solid var(--amber);outline-offset:1px;border-color:var(--amber)}
+.veld.fout input{border-color:#e07a6a}
+.veld .melding{font-size:.86rem;color:#e07a6a;font-weight:500;display:none}
+.veld.fout .melding{display:block}
+
+.samenvatting h3{font-weight:600;font-size:.98rem;margin-bottom:.9rem}
+.samenvatting dl{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1rem}
+.samenvatting dt{color:var(--zacht);font-size:.92rem}
+.samenvatting dd{font-weight:600;text-align:right;font-size:.98rem}
+.samenvatting .nog{color:#63655d;font-style:italic;font-weight:400}
+.boeker-zij .knop{width:100%}
+.zij-noot{font-size:.86rem;color:var(--zacht);line-height:1.55}
+
+.uitkomst{display:none}
+.uitkomst.aan{display:block}
+.uitkomst h3{font-weight:700;font-size:clamp(1.2rem,2.6vw,1.5rem);letter-spacing:-.02em;line-height:1.25}
+.uitkomst .regels{margin-top:1rem;border-top:2px solid var(--amber);padding-top:1rem;font-size:1.02rem;line-height:1.6}
+.uitkomst .regels b{display:block;font-size:1.12rem;font-weight:700}
+.demo-noot{
+  margin-top:1.4rem;background:rgba(217,164,65,.12);border-left:3px solid var(--amber);
+  border-radius:0 var(--rond) var(--rond) 0;padding:.95rem 1.1rem;font-size:.9rem;color:var(--zacht);line-height:1.55;
+}
+.opnieuw{margin-top:1.2rem;background:none;border:0;color:var(--amber);font:inherit;font-weight:600;font-size:.93rem;cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:3px}
+.opnieuw:hover{color:var(--bot)}
+
 @media(prefers-reduced-motion:no-preference){
   .onthul{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
   .onthul.zichtbaar{opacity:1;transform:none}
@@ -165,7 +252,7 @@ a{color:inherit}
 <header class="kop">
   <div class="wrap kop-in">
     <a class="merk" href="#top">Million Hair<small>ZEVENAAR</small></a>
-    <a class="kop-cta" href="https://wa.me/31684692360" target="_blank" rel="noopener">Afspraak via WhatsApp</a>
+    <a class="kop-cta" href="#afspraak">Tijd reserveren</a>
   </div>
 </header>
 
@@ -177,8 +264,8 @@ a{color:inherit}
         <h1>Nog even langs.<span>Tot acht uur.</span></h1>
         <p>Barbershop in het centrum van Zevenaar. Zes dagen per week open tot 20:00, dus ook na je werk.</p>
         <div class="knoppen">
-          <a class="knop knop-hoofd" href="https://wa.me/31684692360" target="_blank" rel="noopener">Afspraak via WhatsApp</a>
-          <a class="knop knop-rand" href="tel:+31684692360">Bel 06 84692360</a>
+          <a class="knop knop-hoofd" href="#afspraak">Tijd reserveren</a>
+          <a class="knop knop-rand" href="https://wa.me/31684692360" target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
       <div class="hero-kolom">
@@ -208,6 +295,78 @@ a{color:inherit}
         <h3>20:00</h3>
         <p>Elke werkdag zo laat nog open</p>
       </div>
+    </div>
+  </section>
+
+  <section class="afspraak" id="afspraak">
+    <div class="wrap">
+      <div class="afspraak-kop">
+        <h2>Pak zelf een <span>plekje</span></h2>
+        <p>Kies wat je komt doen en wanneer het jou uitkomt. Liever even appen? Dat kan ook, je krijgt meestal binnen een paar minuten antwoord.</p>
+      </div>
+
+      <form class="boeker" id="boeker" novalidate>
+        <div class="boeker-stappen">
+          <fieldset class="stap-blok">
+            <legend><b>1</b> Wat kom je doen?</legend>
+            <div class="keuzes" id="diensten"></div>
+          </fieldset>
+
+          <fieldset class="stap-blok">
+            <legend><b>2</b> Welke dag?</legend>
+            <div class="dagen" id="dagen"></div>
+          </fieldset>
+
+          <fieldset class="stap-blok">
+            <legend><b>3</b> Hoe laat?</legend>
+            <div id="tijden-houder">
+              <p class="leeg">Kies eerst een dag, dan laten we zien wat er nog vrij is.</p>
+            </div>
+          </fieldset>
+
+          <fieldset class="stap-blok">
+            <legend><b>4</b> Je gegevens</legend>
+            <div class="velden">
+              <div class="veld" id="veld-naam">
+                <label for="naam">Naam</label>
+                <input type="text" id="naam" name="naam" autocomplete="name" placeholder="Je naam">
+                <span class="melding">Vul je naam in, dan weten we voor wie de stoel is.</span>
+              </div>
+              <div class="veld" id="veld-tel">
+                <label for="telefoon">Telefoonnummer</label>
+                <input type="tel" id="telefoon" name="telefoon" autocomplete="tel" placeholder="06 12345678" inputmode="tel">
+                <span class="melding">Vul een nummer in, voor als er iets tussenkomt.</span>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <aside class="boeker-zij">
+          <div class="samenvatting" id="samenvatting">
+            <h3>Je afspraak</h3>
+            <dl>
+              <dt>Behandeling</dt><dd id="sam-dienst" class="nog">nog kiezen</dd>
+              <dt>Dag</dt><dd id="sam-dag" class="nog">nog kiezen</dd>
+              <dt>Tijd</dt><dd id="sam-tijd" class="nog">nog kiezen</dd>
+            </dl>
+          </div>
+          <div>
+            <button class="knop knop-hoofd" type="submit" id="bevestig">Afspraak bevestigen</button>
+            <p class="zij-noot" id="zij-noot">Je ziet hierna precies wat er is doorgegeven. Er wordt niets afgeschreven en je zit nergens aan vast.</p>
+          </div>
+
+          <div class="uitkomst" id="uitkomst" role="status" aria-live="polite">
+            <h3>Je afspraak staat genoteerd</h3>
+            <div class="regels" id="uitkomst-regels"></div>
+            <p class="demo-noot">
+              Dit is een voorbeeldontwerp, dus er is nu niets echt vastgelegd.
+              Op een werkende website komt deze afspraak meteen in de agenda van de
+              barbershop te staan en krijg je een bevestiging per sms.
+            </p>
+            <button type="button" class="opnieuw" id="opnieuw">Een andere tijd kiezen</button>
+          </div>
+        </aside>
+      </form>
     </div>
   </section>
 
@@ -274,10 +433,10 @@ a{color:inherit}
   <section class="slot wrap">
     <div class="slot-doos">
       <h2>Even een plekje vastleggen?</h2>
-      <p>Stuur een appje met wanneer het jou uitkomt. Meestal krijg je binnen een paar minuten antwoord.</p>
+      <p>Kies hierboven een tijd, of stuur een appje. Meestal krijg je binnen een paar minuten antwoord.</p>
       <div class="knoppen">
-        <a class="knop knop-hoofd" href="https://wa.me/31684692360" target="_blank" rel="noopener">Afspraak via WhatsApp</a>
-        <a class="knop knop-rand" href="https://maps.google.com/?q=Nieuwe+Doelenstraat+8+Zevenaar" target="_blank" rel="noopener">Route hierheen</a>
+        <a class="knop knop-hoofd" href="#afspraak">Tijd reserveren</a>
+        <a class="knop knop-rand" href="https://wa.me/31684692360" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
   </section>
@@ -306,6 +465,221 @@ a{color:inherit}
     });
   }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
   doelen.forEach(function (d) { kijker.observe(d); });
+})();
+
+// Afspraakplanner. De vrije tijden komen uit de echte openingstijden, dus de
+// late uren staan er vanzelf in en zondag valt weg.
+(function () {
+  var form = document.getElementById('boeker');
+  if (!form) return;
+
+  var UREN = {           // per weekdag, 0 = zondag. null betekent gesloten.
+    0: null,
+    1: [12 * 60, 20 * 60],
+    2: [9 * 60, 20 * 60],
+    3: [9 * 60, 20 * 60],
+    4: [9 * 60, 20 * 60],
+    5: [9 * 60, 20 * 60],
+    6: [9 * 60, 19 * 60]
+  };
+  var DIENSTEN = [
+    { id: 'knippen', naam: 'Knippen',          duur: 30 },
+    { id: 'fade',    naam: 'Skin fade',        duur: 45 },
+    { id: 'combi',   naam: 'Knippen en baard', duur: 45 },
+    { id: 'baard',   naam: 'Baard trimmen',    duur: 20 },
+    { id: 'kind',    naam: 'Kinderen',         duur: 30 }
+  ];
+  var STAP = 30;
+  var DAGEN_VOORUIT = 14;
+  var AVOND_VANAF = 18 * 60;
+
+  var DAGNAAM = ['zo', 'ma', 'di', 'wo', 'do', 'vr', 'za'];
+  var DAGVOLUIT = ['zondag', 'maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag'];
+  var MAAND = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli',
+               'augustus', 'september', 'oktober', 'november', 'december'];
+
+  var keuze = { dienst: null, datum: null, tijd: null };
+
+  function klok(minuten) {
+    var u = Math.floor(minuten / 60), m = minuten % 60;
+    return (u < 10 ? '0' : '') + u + ':' + (m < 10 ? '0' : '') + m;
+  }
+
+  function zelfdeDag(a, b) {
+    return a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
+  }
+
+  function vrijeTijden(datum, duur) {
+    var uren = UREN[datum.getDay()];
+    if (!uren) return [];
+    var nu = new Date();
+    var vandaag = zelfdeDag(datum, nu);
+    var nuMinuten = nu.getHours() * 60 + nu.getMinutes();
+    var lijst = [];
+    for (var t = uren[0]; t + duur <= uren[1]; t += STAP) {
+      if (vandaag && t < nuMinuten + 60) continue;
+      lijst.push(t);
+    }
+    return lijst;
+  }
+
+  function maakKeuze(soort, waarde, binnenkant, uitgeschakeld) {
+    var wrap = document.createElement('label');
+    wrap.className = 'keuze';
+    var input = document.createElement('input');
+    input.type = 'radio';
+    input.name = soort;
+    input.value = waarde;
+    if (uitgeschakeld) input.disabled = true;
+    var span = document.createElement('span');
+    span.innerHTML = binnenkant;
+    wrap.appendChild(input);
+    wrap.appendChild(span);
+    return { wrap: wrap, input: input };
+  }
+
+  var houderDiensten = document.getElementById('diensten');
+  DIENSTEN.forEach(function (d) {
+    var k = maakKeuze('dienst', d.id, d.naam + '<small>' + d.duur + ' minuten</small>', false);
+    k.input.addEventListener('change', function () {
+      keuze.dienst = d;
+      keuze.tijd = null;
+      toonTijden();
+      werkBij();
+    });
+    houderDiensten.appendChild(k.wrap);
+  });
+
+  var houderDagen = document.getElementById('dagen');
+  (function () {
+    var vandaag = new Date();
+    for (var i = 0; i < DAGEN_VOORUIT; i++) {
+      var d = new Date(vandaag.getFullYear(), vandaag.getMonth(), vandaag.getDate() + i);
+      var open = !!UREN[d.getDay()];
+      var label = DAGNAAM[d.getDay()] + '<b>' + d.getDate() + '</b>' +
+                  '<small>' + (open ? MAAND[d.getMonth()].slice(0, 3) : 'dicht') + '</small>';
+      // Bewust niet toISOString: dat rekent naar UTC en levert in de zomertijd
+      // de dag ervoor op.
+      var sleutel = d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
+      var k = maakKeuze('dag', sleutel, label, !open);
+      (function (datum) {
+        k.input.addEventListener('change', function () {
+          keuze.datum = datum;
+          keuze.tijd = null;
+          toonTijden();
+          werkBij();
+        });
+      })(d);
+      houderDagen.appendChild(k.wrap);
+    }
+  })();
+
+  var houderTijden = document.getElementById('tijden-houder');
+
+  function toonTijden() {
+    houderTijden.innerHTML = '';
+    if (!keuze.datum) {
+      houderTijden.innerHTML = '<p class="leeg">Kies eerst een dag, dan laten we zien wat er nog vrij is.</p>';
+      return;
+    }
+    var duur = keuze.dienst ? keuze.dienst.duur : 30;
+    var tijden = vrijeTijden(keuze.datum, duur);
+    if (!tijden.length) {
+      houderTijden.innerHTML = '<p class="leeg">Deze dag zit vol. Kies een andere dag, of stuur even een appje; soms schuift er nog wel iets.</p>';
+      return;
+    }
+    var raster = document.createElement('div');
+    raster.className = 'tijden';
+    tijden.forEach(function (t) {
+      var merk = (t >= AVOND_VANAF) ? '<span class="laat-merk">avond</span>' : '';
+      var k = maakKeuze('tijd', String(t), klok(t) + merk, false);
+      k.input.addEventListener('change', function () {
+        keuze.tijd = t;
+        werkBij();
+      });
+      raster.appendChild(k.wrap);
+    });
+    houderTijden.appendChild(raster);
+  }
+
+  function schrijf(id, tekst, gekozen) {
+    var el = document.getElementById(id);
+    el.textContent = tekst;
+    el.classList.toggle('nog', !gekozen);
+  }
+
+  function datumTekst(d) {
+    return DAGVOLUIT[d.getDay()] + ' ' + d.getDate() + ' ' + MAAND[d.getMonth()];
+  }
+
+  function werkBij() {
+    schrijf('sam-dienst', keuze.dienst ? keuze.dienst.naam : 'nog kiezen', !!keuze.dienst);
+    schrijf('sam-dag', keuze.datum ? datumTekst(keuze.datum) : 'nog kiezen', !!keuze.datum);
+    schrijf('sam-tijd', keuze.tijd !== null ? klok(keuze.tijd) + ' uur' : 'nog kiezen', keuze.tijd !== null);
+  }
+
+  var naamVeld = document.getElementById('naam');
+  var telVeld = document.getElementById('telefoon');
+
+  function markeer(wrapperId, fout) {
+    document.getElementById(wrapperId).classList.toggle('fout', fout);
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    var naamLeeg = !naamVeld.value.trim();
+    var telLeeg = telVeld.value.replace(/\D/g, '').length < 9;
+    markeer('veld-naam', naamLeeg);
+    markeer('veld-tel', telLeeg);
+
+    var ontbreekt = [];
+    if (!keuze.dienst) ontbreekt.push('een behandeling');
+    if (!keuze.datum) ontbreekt.push('een dag');
+    if (keuze.tijd === null) ontbreekt.push('een tijd');
+
+    var noot = document.getElementById('zij-noot');
+    if (ontbreekt.length) {
+      noot.textContent = 'Kies nog ' + ontbreekt.join(' en ') + ', dan zetten we het vast.';
+      noot.style.color = '#e07a6a';
+      return;
+    }
+    if (naamLeeg || telLeeg) {
+      noot.textContent = 'Vul je gegevens nog even aan.';
+      noot.style.color = '#e07a6a';
+      (naamLeeg ? naamVeld : telVeld).focus();
+      return;
+    }
+
+    document.getElementById('uitkomst-regels').innerHTML =
+      '<b>' + keuze.dienst.naam + '</b>' +
+      datumTekst(keuze.datum) + ' om ' + klok(keuze.tijd) + ' uur<br>' +
+      'op naam van ' + naamVeld.value.trim() + '<br>' +
+      telVeld.value.trim();
+
+    document.getElementById('samenvatting').style.display = 'none';
+    document.getElementById('bevestig').style.display = 'none';
+    noot.style.display = 'none';
+    document.getElementById('uitkomst').classList.add('aan');
+  });
+
+  document.getElementById('opnieuw').addEventListener('click', function () {
+    form.reset();
+    keuze = { dienst: null, datum: null, tijd: null };
+    toonTijden();
+    werkBij();
+    markeer('veld-naam', false);
+    markeer('veld-tel', false);
+    var noot = document.getElementById('zij-noot');
+    noot.textContent = 'Je ziet hierna precies wat er is doorgegeven. Er wordt niets afgeschreven en je zit nergens aan vast.';
+    noot.style.color = '';
+    noot.style.display = '';
+    document.getElementById('samenvatting').style.display = '';
+    document.getElementById('bevestig').style.display = '';
+    document.getElementById('uitkomst').classList.remove('aan');
+    var zacht = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.getElementById('afspraak').scrollIntoView({ behavior: zacht ? 'smooth' : 'auto', block: 'start' });
+  });
 })();
 </script>
 </body>
