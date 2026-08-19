@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hair-Centre Winterswijk | Dames &amp; heren kapsalon, met of zonder afspraak</title>
+<meta name="description" content="Kapsalon in het centrum van Winterswijk voor dames, heren en kinderen. Loop binnen zonder afspraak of bel 0543 796 513. Vrijdag tot 21:00 open.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lime:#8dc63f;
+  --lime-diep:#6ea52c;
+  --inkt:#14150f;
+  --inkt-zacht:#3a3c33;
+  --bot:#f6f5f0;
+  --lijn:#dedcd2;
+  --wit:#ffffff;
+  --marge:clamp(1.25rem,5vw,4.5rem);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Archivo,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--bot);color:var(--inkt);
+  font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:var(--marge)}
+
+/* ---------- voorstelbalk ---------- */
+.voorstel{
+  background:var(--inkt);color:#c9cbbe;font-size:.8rem;line-height:1.45;
+  padding:.6rem 0;border-bottom:1px solid rgba(255,255,255,.12);
+}
+.voorstel .wrap{display:flex;flex-wrap:wrap;gap:.35rem 1rem;align-items:baseline;justify-content:center;text-align:center}
+.voorstel b{color:var(--lime);font-weight:700}
+
+/* ---------- kop ---------- */
+.kop{
+  position:sticky;top:0;z-index:50;
+  background:rgba(246,245,240,.92);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--lijn);
+}
+.kop-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:72px}
+.merk{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+.merk img{width:42px;height:42px;object-fit:cover}
+.merk b{font-weight:800;letter-spacing:-.02em;font-size:1.05rem;line-height:1.1}
+.merk span{display:block;font-weight:500;font-size:.7rem;letter-spacing:.16em;color:var(--inkt-zacht)}
+.kop-bel{
+  display:inline-flex;align-items:center;gap:.5rem;white-space:nowrap;
+  background:var(--inkt);color:var(--wit);text-decoration:none;
+  font-weight:600;font-size:.95rem;padding:.7rem 1.15rem;
+  transition:background .2s ease,transform .12s ease;
+}
+.kop-bel:hover{background:var(--lime-diep)}
+.kop-bel:active{transform:translateY(1px)}
+
+/* ---------- hero: asymmetrische splitsing ---------- */
+.hero{padding-block:clamp(2.5rem,6vw,5rem) clamp(2rem,5vw,4rem)}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:center}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem)}}
+.hero h1{
+  font-weight:800;letter-spacing:-.035em;line-height:1.02;
+  font-size:clamp(2.6rem,7.5vw,4.6rem);
+}
+.hero h1 em{font-style:normal;color:var(--lime-diep);display:block}
+.hero p{
+  margin-top:1.35rem;font-size:clamp(1.05rem,2.2vw,1.2rem);
+  color:var(--inkt-zacht);max-width:34ch;
+}
+.knoppen{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:2rem}
+.knop{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  text-decoration:none;font-weight:600;white-space:nowrap;
+  padding:1rem 1.6rem;font-size:1.02rem;
+  transition:transform .12s ease,background .2s ease,color .2s ease;
+}
+.knop-hoofd{background:var(--lime);color:var(--inkt);border:2px solid var(--lime)}
+.knop-hoofd:hover{background:var(--lime-diep);border-color:var(--lime-diep);color:var(--wit)}
+.knop-hoofd:active{transform:translateY(1px)}
+.knop-rand{background:transparent;color:var(--inkt);border:2px solid var(--inkt)}
+.knop-rand:hover{background:var(--inkt);color:var(--bot)}
+.knop-rand:active{transform:translateY(1px)}
+.hero-beeld{position:relative}
+.hero-beeld img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.hero-beeld::after{
+  content:"";position:absolute;left:-14px;bottom:-14px;width:96px;height:96px;
+  background:var(--lime);z-index:-1;
+}
+
+/* ---------- bewijsstrook ---------- */
+.bewijs{background:var(--inkt);color:var(--bot)}
+.bewijs-in{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:1px;background:rgba(255,255,255,.14);
+}
+@media(min-width:760px){.bewijs-in{grid-template-columns:repeat(4,1fr)}}
+.bewijs-cel{background:var(--inkt);padding:1.6rem var(--marge)}
+.bewijs-cel b{display:block;font-size:1.7rem;font-weight:800;letter-spacing:-.02em;line-height:1}
+.bewijs-cel span{display:block;margin-top:.35rem;font-size:.85rem;color:#b9bbaf}
+.sterren{color:var(--lime)}
+
+/* ---------- belofte: donker, groot ---------- */
+.belofte{background:var(--inkt);color:var(--bot);padding-block:clamp(3.5rem,8vw,6.5rem)}
+.belofte h2{
+  font-weight:800;letter-spacing:-.03em;line-height:1.05;
+  font-size:clamp(2rem,5.5vw,3.4rem);max-width:16ch;
+}
+.belofte h2 mark{background:none;color:var(--lime)}
+.belofte-rij{display:grid;grid-template-columns:1fr;gap:2rem;margin-top:3rem}
+@media(min-width:820px){.belofte-rij{grid-template-columns:repeat(3,1fr);gap:2.5rem}}
+.belofte-blok{border-top:2px solid var(--lime);padding-top:1.1rem}
+.belofte-blok h3{font-size:1.15rem;font-weight:700;letter-spacing:-.01em}
+.belofte-blok p{margin-top:.5rem;color:#b9bbaf;font-size:.98rem}
+
+/* ---------- vakman: beeld + tekst ---------- */
+.vakman{padding-block:clamp(3.5rem,8vw,6rem)}
+.vakman-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:center}
+@media(min-width:900px){.vakman-grid{grid-template-columns:.9fr 1.1fr;gap:clamp(2.5rem,5vw,5rem)}}
+.vakman img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.vakman h2{font-weight:800;letter-spacing:-.03em;line-height:1.06;font-size:clamp(1.9rem,4.6vw,3rem)}
+.vakman p{margin-top:1.2rem;color:var(--inkt-zacht);max-width:52ch}
+.citaat-groot{
+  margin-top:2rem;border-left:4px solid var(--lime);padding-left:1.4rem;
+  font-size:1.12rem;line-height:1.5;
+}
+.citaat-groot cite{
+  display:block;margin-top:.7rem;font-style:normal;font-size:.88rem;
+  color:var(--inkt-zacht);font-weight:600;
+}
+
+/* ---------- reviews ---------- */
+.reviews{background:var(--wit);padding-block:clamp(3.5rem,8vw,6rem);border-block:1px solid var(--lijn)}
+.reviews-kop{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:1rem}
+.reviews-kop h2{font-weight:800;letter-spacing:-.03em;font-size:clamp(1.8rem,4.2vw,2.6rem)}
+.reviews-kop p{color:var(--inkt-zacht);font-size:.95rem}
+.review-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;margin-top:2.5rem}
+@media(min-width:800px){.review-grid{grid-template-columns:repeat(3,1fr)}}
+.review{border:1px solid var(--lijn);padding:1.6rem;background:var(--bot)}
+.review .sterren{font-size:.95rem;letter-spacing:.12em;color:var(--lime-diep)}
+.review p{margin-top:.8rem;font-size:1rem;line-height:1.5}
+.review cite{display:block;margin-top:1rem;font-style:normal;font-weight:600;font-size:.85rem;color:var(--inkt-zacht)}
+
+/* ---------- praktisch ---------- */
+.praktisch{padding-block:clamp(3.5rem,8vw,6rem)}
+.praktisch-grid{display:grid;grid-template-columns:1fr;gap:3rem}
+@media(min-width:880px){.praktisch-grid{grid-template-columns:1.1fr .9fr;gap:clamp(2.5rem,6vw,5rem)}}
+.praktisch h2{font-weight:800;letter-spacing:-.03em;font-size:clamp(1.8rem,4.2vw,2.6rem);margin-bottom:1.8rem}
+.uren{width:100%;border-collapse:collapse}
+.uren tr{border-bottom:1px solid var(--lijn)}
+.uren tr:last-child{border-bottom:0}
+.uren th{text-align:left;font-weight:500;padding:.85rem 0;color:var(--inkt-zacht)}
+.uren td{text-align:right;padding:.85rem 0;font-weight:600;font-variant-numeric:tabular-nums}
+.uren tr.laat th,.uren tr.laat td{color:var(--inkt);font-weight:800}
+.uren tr.laat td::after{
+  content:"tot laat";display:inline-block;margin-left:.6rem;
+  background:var(--lime);color:var(--inkt);font-size:.68rem;font-weight:700;
+  letter-spacing:.08em;padding:.2rem .45rem;vertical-align:middle;
+}
+.uren tr.dicht td{color:#9a9c90;font-weight:500}
+.adres{font-size:1.05rem;line-height:1.7}
+.adres strong{display:block;font-size:1.2rem;font-weight:800;letter-spacing:-.02em}
+.adres a{font-weight:600;color:var(--lime-diep);text-decoration-thickness:2px;text-underline-offset:3px}
+.praktisch-beeld{margin-top:1.8rem}
+.praktisch-beeld img{width:100%;aspect-ratio:16/10;object-fit:cover}
+
+/* ---------- slot ---------- */
+.slot{background:var(--lime);color:var(--inkt);padding-block:clamp(3.5rem,8vw,5.5rem);text-align:center}
+.slot h2{font-weight:800;letter-spacing:-.035em;line-height:1.05;font-size:clamp(2rem,6vw,3.6rem);max-width:18ch;margin-inline:auto}
+.slot p{margin-top:1.1rem;font-size:1.1rem;max-width:44ch;margin-inline:auto}
+.slot .knoppen{justify-content:center;margin-top:2.2rem}
+.slot .knop-hoofd{background:var(--inkt);color:var(--bot);border-color:var(--inkt)}
+.slot .knop-hoofd:hover{background:var(--wit);color:var(--inkt);border-color:var(--wit)}
+.slot .knop-rand{border-color:var(--inkt);color:var(--inkt)}
+.slot .knop-rand:hover{background:var(--inkt);color:var(--lime)}
+
+.voet{background:var(--inkt);color:#9a9c90;padding-block:2.5rem;font-size:.9rem}
+.voet-in{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
+.voet a{color:var(--bot);font-weight:600}
+
+/* ---------- beweging ---------- */
+@media(prefers-reduced-motion:no-preference){
+  .onthul{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+  .onthul.zichtbaar{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="voorstel">
+  <div class="wrap">
+    <span><b>Voorbeeldontwerp</b> gemaakt voor Hair-Centre door Bjorn Beerntsen.</span>
+    <span>Dit is geen offici&euml;le website van Hair-Centre.</span>
+  </div>
+</div>
+
+<header class="kop">
+  <div class="wrap kop-in">
+    <a class="merk" href="#top">
+      <img src="img/logo.jpg" alt="Logo Hair-Centre Winterswijk">
+      <b>Hair-Centre<span>WINTERSWIJK</span></b>
+    </a>
+    <a class="kop-bel" href="tel:+31543796513">Bel 0543 796 513</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero wrap">
+    <div class="hero-grid">
+      <div>
+        <h1>Even langs de kapper.<em>Zonder gedoe.</em></h1>
+        <p>Dames, heren en kinderen. Loop binnen wanneer het jou uitkomt, of bel even vooruit.</p>
+        <div class="knoppen">
+          <a class="knop knop-hoofd" href="tel:+31543796513">Bel 0543 796 513</a>
+          <a class="knop knop-rand" href="#openingstijden">Openingstijden</a>
+        </div>
+      </div>
+      <div class="hero-beeld">
+        <img src="img/pand.jpg" alt="De winkel van Hair-Centre aan de Wilhelminastraat in Winterswijk" width="1600" height="1200" fetchpriority="high">
+      </div>
+    </div>
+  </section>
+
+  <section class="bewijs">
+    <div class="bewijs-in">
+      <div class="bewijs-cel"><b>4,9<span class="sterren"> &#9733;</span></b><span>gemiddeld op Google</span></div>
+      <div class="bewijs-cel"><b>116</b><span>mensen lieten een review achter</span></div>
+      <div class="bewijs-cel"><b>6 dagen</b><span>per week open</span></div>
+      <div class="bewijs-cel"><b>21:00</b><span>op vrijdag nog open</span></div>
+    </div>
+  </section>
+
+  <section class="belofte">
+    <div class="wrap">
+      <h2 class="onthul">Met afspraak of <mark>gewoon binnenlopen.</mark></h2>
+      <div class="belofte-rij">
+        <div class="belofte-blok onthul">
+          <h3>Geen afspraak nodig</h3>
+          <p>Je hoeft niets vooruit te regelen. Kom langs wanneer het uitkomt, dan kijken we wanneer je aan de beurt bent.</p>
+        </div>
+        <div class="belofte-blok onthul">
+          <h3>Dames en heren</h3>
+          <p>Knippen, kleuren, baard bijwerken. Voor het hele gezin onder hetzelfde dak, in het centrum van Winterswijk.</p>
+        </div>
+        <div class="belofte-blok onthul">
+          <h3>Vrijdag tot 21:00</h3>
+          <p>Werk je tot vijf uur? Op vrijdagavond zit je hier nog gewoon in de stoel. Ook zaterdag tot 17:00 open.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vakman wrap">
+    <div class="vakman-grid">
+      <div class="onthul">
+        <img src="img/kapper.jpg" alt="De kapper van Hair-Centre met een klant in de stoel" width="1600" height="1200" loading="lazy">
+      </div>
+      <div class="onthul">
+        <h2>Wij nemen de tijd. Ook als uw kind daar even geen zin in heeft.</h2>
+        <p>Kinderen knippen is iets anders dan volwassenen knippen. Soms gaat het in een keer goed en soms duurt het wat langer. Dat is prima. Er staat niemand op de klok, en we sturen niemand met een half kapsel de deur uit.</p>
+        <blockquote class="citaat-groot">
+          &#8220;Ik kom al vier jaar met veel plezier bij deze kapper, altijd samen met mijn zoontje van 4. Wat ik enorm waardeer, is de manier waarop er met kinderen wordt omgegaan.&#8221;
+          <cite>Ezra Pietersz, via Google</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="wrap">
+      <div class="reviews-kop">
+        <h2>Wat klanten schrijven</h2>
+        <p>116 reviews op Google, gemiddeld 4,9</p>
+      </div>
+      <div class="review-grid">
+        <article class="review onthul">
+          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Een geweldige kapper. Het resultaat was echt prachtig en de prijs was heel erg goed voor het werk dat hij gedaan heeft.</p>
+          <cite>Ibrahim Amousi</cite>
+        </article>
+        <article class="review onthul">
+          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Sinds de opening al klant en altijd tevreden. Super vriendelijke kapper en neemt alle tijd.</p>
+          <cite>Ian</cite>
+        </article>
+        <article class="review onthul">
+          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Vriendelijke kapper met oog voor detail en aandacht voor de klant.</p>
+          <cite>Via Google</cite>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="praktisch wrap" id="openingstijden">
+    <div class="praktisch-grid">
+      <div class="onthul">
+        <h2>Openingstijden</h2>
+        <table class="uren">
+          <tbody>
+            <tr><th>Maandag</th><td>11:00 - 18:00</td></tr>
+            <tr><th>Dinsdag</th><td>09:00 - 18:00</td></tr>
+            <tr><th>Woensdag</th><td>09:00 - 18:00</td></tr>
+            <tr><th>Donderdag</th><td>09:00 - 18:00</td></tr>
+            <tr class="laat"><th>Vrijdag</th><td>09:00 - 21:00</td></tr>
+            <tr><th>Zaterdag</th><td>09:00 - 17:00</td></tr>
+            <tr class="dicht"><th>Zondag</th><td>Gesloten</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="onthul">
+        <h2>Waar u ons vindt</h2>
+        <div class="adres">
+          <strong>Hair-Centre Winterswijk</strong>
+          Wilhelminastraat 13<br>
+          7101 CM Winterswijk<br><br>
+          <a href="tel:+31543796513">0543 796 513</a><br>
+          <a href="https://maps.google.com/?q=Wilhelminastraat+13+Winterswijk" target="_blank" rel="noopener">Route via Google Maps</a>
+        </div>
+        <div class="praktisch-beeld">
+          <img src="img/interieur.jpg" alt="Het interieur van de kapsalon met de stoelen en spiegels" width="1600" height="1200" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slot">
+    <div class="wrap">
+      <h2>Tijd voor een knipbeurt?</h2>
+      <p>Bel even, of loop gewoon binnen aan de Wilhelminastraat. Wij zorgen dat u goed geknipt weer buiten staat.</p>
+      <div class="knoppen">
+        <a class="knop knop-hoofd" href="tel:+31543796513">Bel 0543 796 513</a>
+        <a class="knop knop-rand" href="https://maps.google.com/?q=Wilhelminastraat+13+Winterswijk" target="_blank" rel="noopener">Route hierheen</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="voet">
+  <div class="wrap voet-in">
+    <div>Hair-Centre Winterswijk &nbsp;&middot;&nbsp; Wilhelminastraat 13 &nbsp;&middot;&nbsp; Dames &amp; heren kapsalon</div>
+    <div><a href="tel:+31543796513">0543 796 513</a></div>
+  </div>
+</footer>
+
+<script>
+// Onthullen bij scrollen. Alleen als de bezoeker beweging niet heeft uitgezet.
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var doelen = document.querySelectorAll('.onthul');
+  if (!('IntersectionObserver' in window)) {
+    doelen.forEach(function (d) { d.classList.add('zichtbaar'); });
+    return;
+  }
+  var kijker = new IntersectionObserver(function (rijen) {
+    rijen.forEach(function (rij) {
+      if (!rij.isIntersecting) return;
+      rij.target.classList.add('zichtbaar');
+      kijker.unobserve(rij.target);
+    });
+  }, { threshold: 0.18, rootMargin: '0px 0px -40px 0px' });
+  doelen.forEach(function (d) { kijker.observe(d); });
+})();
+</script>
+</body>
+</html>

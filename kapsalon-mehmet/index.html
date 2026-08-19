@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kapsalon Mehmet Zevenaar | Dames en heren knippen, sinds 2008</title>
+<meta name="description" content="Kapsalon aan de Muldershof in Zevenaar. Knippen voor dames, heren en kinderen, al sinds 2008. Bel 0316 240 697. Vrijdag tot 20:00 open.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rood:#c8102e;
+  --rood-diep:#9d0c24;
+  --kool:#2b2b2b;
+  --creme:#faf6ef;
+  --wit:#fff;
+  --grijs:#6a645d;
+  --lijn:#e6dfd3;
+  --rond:6px;
+  --marge:clamp(1.25rem,5vw,4rem);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Manrope,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--creme);color:var(--kool);font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:var(--marge)}
+
+.voorstel{background:var(--kool);color:#b3aca3;font-size:.8rem;padding:.6rem 0;line-height:1.45}
+.voorstel .wrap{display:flex;flex-wrap:wrap;gap:.3rem 1rem;justify-content:center;text-align:center}
+.voorstel b{color:#f08a97;font-weight:700}
+
+.kop{background:var(--creme);border-bottom:3px solid var(--rood);position:sticky;top:0;z-index:50}
+.kop-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:70px}
+.merk{text-decoration:none;font-weight:800;font-size:1.1rem;letter-spacing:.06em;text-transform:uppercase;line-height:1.1}
+.merk small{display:block;font-size:.64rem;letter-spacing:.26em;font-weight:500;color:var(--grijs);margin-top:.15rem}
+.kop-bel{
+  background:var(--rood);color:var(--wit);text-decoration:none;font-weight:600;font-size:.92rem;
+  padding:.65rem 1.15rem;border-radius:var(--rond);white-space:nowrap;
+  transition:background .2s,transform .12s;
+}
+.kop-bel:hover{background:var(--rood-diep)}
+.kop-bel:active{transform:translateY(1px)}
+
+/* hero: beeldband met gecentreerde tekst eronder */
+.hero{padding-bottom:clamp(2.5rem,6vw,4.5rem)}
+.hero-band{width:100%;height:clamp(170px,27vh,270px);overflow:hidden}
+.hero-band img{width:100%;height:100%;object-fit:cover;object-position:center 45%}
+.hero-tekst{text-align:center;padding-top:clamp(2rem,5vw,3.2rem)}
+.hero-tekst h1{
+  font-weight:800;letter-spacing:-.03em;line-height:1.04;
+  font-size:clamp(2.3rem,6.4vw,4rem);max-width:15ch;margin-inline:auto;
+}
+.hero-tekst h1 span{color:var(--rood)}
+.hero-tekst p{margin-top:1.1rem;color:var(--grijs);font-size:clamp(1.02rem,2.2vw,1.15rem);max-width:44ch;margin-inline:auto}
+.knoppen{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.9rem;justify-content:center}
+.knop{
+  display:inline-flex;align-items:center;justify-content:center;
+  text-decoration:none;font-weight:600;white-space:nowrap;border-radius:var(--rond);
+  padding:.95rem 1.6rem;font-size:1rem;border:2px solid transparent;
+  transition:background .2s,color .2s,border-color .2s,transform .12s;
+}
+.knop-hoofd{background:var(--rood);color:var(--wit);border-color:var(--rood)}
+.knop-hoofd:hover{background:var(--rood-diep);border-color:var(--rood-diep)}
+.knop-hoofd:active{transform:translateY(1px)}
+.knop-rand{border-color:var(--kool);color:var(--kool)}
+.knop-rand:hover{background:var(--kool);color:var(--creme)}
+.knop-rand:active{transform:translateY(1px)}
+
+/* erfenisband */
+.erf{background:var(--kool);color:var(--creme);padding-block:clamp(3rem,7vw,5rem)}
+.erf-in{display:grid;grid-template-columns:1fr;gap:1.6rem;align-items:center}
+@media(min-width:860px){.erf-in{grid-template-columns:auto 1fr;gap:clamp(2rem,6vw,4.5rem)}}
+.erf-jaar{font-weight:800;font-size:clamp(3.4rem,10vw,6.4rem);line-height:.9;letter-spacing:-.045em;color:var(--rood)}
+.erf-jaar small{display:block;font-size:.9rem;letter-spacing:.24em;font-weight:600;color:#b3aca3;margin-top:.7rem}
+.erf p{font-size:clamp(1.1rem,2.6vw,1.45rem);line-height:1.45;max-width:40ch;color:#e0d9cf}
+
+/* diensten */
+.diensten{padding-block:clamp(3.5rem,8vw,6rem)}
+.diensten h2{font-weight:800;letter-spacing:-.03em;font-size:clamp(1.9rem,4.6vw,2.8rem);max-width:18ch}
+.dienst-grid{display:grid;grid-template-columns:1fr;gap:1.6rem;margin-top:2.5rem}
+@media(min-width:760px){
+  .dienst-grid{grid-template-columns:1.2fr .8fr;gap:1.6rem}
+  .dienst-blok:first-child{grid-row:span 2}
+}
+.dienst-blok{background:var(--wit);border:1px solid var(--lijn);border-radius:var(--rond);padding:1.8rem}
+.dienst-blok h3{font-weight:800;font-size:1.2rem;letter-spacing:-.01em}
+.dienst-blok ul{list-style:none;margin-top:1rem}
+.dienst-blok li{padding:.5rem 0;border-bottom:1px solid var(--lijn);color:var(--grijs)}
+.dienst-blok li:last-child{border-bottom:0}
+.dienst-blok p{margin-top:.8rem;color:var(--grijs)}
+.dienst-blok.nadruk{background:var(--rood);border-color:var(--rood);color:var(--wit)}
+.dienst-blok.nadruk h3{color:var(--wit)}
+.dienst-blok.nadruk p{color:#ffd9de}
+
+/* vader en zoon */
+.familie{padding-block:clamp(3rem,7vw,5.5rem);background:var(--wit);border-block:1px solid var(--lijn)}
+.familie-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:center}
+@media(min-width:900px){.familie-grid{grid-template-columns:1.05fr .95fr;gap:clamp(2.5rem,6vw,4.5rem)}}
+.familie img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--rond)}
+.familie h2{font-weight:800;letter-spacing:-.03em;line-height:1.08;font-size:clamp(1.8rem,4.4vw,2.6rem)}
+.familie p{margin-top:1.1rem;color:var(--grijs);max-width:48ch}
+
+/* stemmen */
+.stem-groot{background:var(--rood);color:var(--wit);padding-block:clamp(3rem,7vw,4.8rem)}
+.stem-groot blockquote{font-size:clamp(1.35rem,3.4vw,2.15rem);line-height:1.32;font-weight:600;letter-spacing:-.02em;max-width:24ch}
+.stem-groot cite{display:block;margin-top:1.3rem;font-style:normal;font-weight:600;font-size:.9rem;color:#ffd0d7}
+.stem-klein{padding-block:clamp(2.5rem,6vw,4rem)}
+.stem-klein-grid{display:grid;grid-template-columns:1fr;gap:1.4rem}
+@media(min-width:780px){.stem-klein-grid{grid-template-columns:repeat(2,1fr);gap:2rem}}
+.stem-kaart{border-left:3px solid var(--rood);padding-left:1.4rem}
+.stem-kaart p{font-size:1.05rem;line-height:1.5}
+.stem-kaart cite{display:block;margin-top:.8rem;font-style:normal;font-weight:600;font-size:.85rem;color:var(--grijs)}
+
+/* praktisch */
+.praktisch{padding-block:clamp(3rem,7vw,5.5rem);background:var(--wit);border-top:1px solid var(--lijn)}
+.praktisch-grid{display:grid;grid-template-columns:1fr;gap:2.8rem}
+@media(min-width:880px){.praktisch-grid{grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,5rem)}}
+.praktisch h2{font-weight:800;letter-spacing:-.03em;font-size:clamp(1.7rem,4.2vw,2.4rem);margin-bottom:1.4rem}
+.uren{list-style:none}
+.uren li{display:flex;justify-content:space-between;gap:1rem;padding:.78rem 0;border-bottom:1px solid var(--lijn)}
+.uren li:last-child{border-bottom:0}
+.uren li span:first-child{color:var(--grijs)}
+.uren li span:last-child{font-weight:700;font-variant-numeric:tabular-nums}
+.uren li.laat span:last-child{color:var(--rood)}
+.uren li.dicht span{color:#a49d94;font-weight:500}
+.adres{font-size:1.05rem;line-height:1.8}
+.adres strong{display:block;font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+.adres a{color:var(--rood);font-weight:600;text-underline-offset:3px}
+.praktisch-beeld{margin-top:1.6rem}
+.praktisch-beeld img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--rond)}
+
+.slot{padding-block:clamp(3.5rem,8vw,5.5rem);text-align:center}
+.slot h2{font-weight:800;letter-spacing:-.035em;line-height:1.05;font-size:clamp(2rem,5.6vw,3.3rem);max-width:18ch;margin-inline:auto}
+.slot p{margin-top:1rem;color:var(--grijs);max-width:42ch;margin-inline:auto}
+
+.voet{background:var(--kool);color:#a49d94;padding-block:2.4rem;font-size:.9rem}
+.voet-in{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:space-between}
+.voet a{color:var(--creme);font-weight:600}
+
+@media(prefers-reduced-motion:no-preference){
+  .onthul{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+  .onthul.zichtbaar{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="voorstel">
+  <div class="wrap">
+    <span><b>Voorbeeldontwerp</b> gemaakt voor Kapsalon Mehmet door Bjorn Beerntsen.</span>
+    <span>Dit is geen offici&euml;le website van Kapsalon Mehmet.</span>
+  </div>
+</div>
+
+<header class="kop">
+  <div class="wrap kop-in">
+    <a class="merk" href="#top">Kapsalon Mehmet<small>ZEVENAAR</small></a>
+    <a class="kop-bel" href="tel:+31316240697">Bel 0316 240 697</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-band">
+      <img src="img/logo-muur.jpg" alt="Het logo van Kapsalon Mehmet op de muur in de salon" width="1400" height="800" fetchpriority="high">
+    </div>
+    <div class="wrap hero-tekst">
+      <h1>Uw kapper in <span>Zevenaar.</span></h1>
+      <p>Knippen voor dames, heren en kinderen aan de Muldershof. Vader en zoon, alle generaties, al sinds 2008.</p>
+      <div class="knoppen">
+        <a class="knop knop-hoofd" href="tel:+31316240697">Bel 0316 240 697</a>
+        <a class="knop knop-rand" href="#openingstijden">Openingstijden</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="erf">
+    <div class="wrap erf-in">
+      <div class="erf-jaar">2008<small>SINDS</small></div>
+      <p>Zeventien jaar lang dezelfde stoelen, dezelfde straat, en klanten die hun kinderen meenemen naar de kapper waar ze zelf ook zaten.</p>
+    </div>
+  </section>
+
+  <section class="diensten wrap">
+    <h2 class="onthul">Waarvoor u bij ons terecht kunt</h2>
+    <div class="dienst-grid">
+      <div class="dienst-blok onthul">
+        <h3>Knippen</h3>
+        <ul>
+          <li>Heren knippen</li>
+          <li>Dames knippen</li>
+          <li>Kinderen knippen</li>
+          <li>Wassen, knippen, drogen</li>
+          <li>Model en styling</li>
+        </ul>
+      </div>
+      <div class="dienst-blok nadruk onthul">
+        <h3>Het randwerk erbij</h3>
+        <p>Wenkbrauwen bijwerken, haartjes in neus en oren, baard netjes afgewerkt. Klanten noemen het steeds weer, want de meeste kappers slaan het over.</p>
+      </div>
+      <div class="dienst-blok onthul">
+        <h3>Scheren en baard</h3>
+        <ul>
+          <li>Baard trimmen en modelleren</li>
+          <li>Scheren</li>
+          <li>Nek en contouren afwerken</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="familie">
+    <div class="wrap familie-grid">
+      <div class="onthul">
+        <img src="img/interieur.jpg" alt="De salon van Kapsalon Mehmet met de kappersstoelen en de rode wand" width="1500" height="1125" loading="lazy">
+      </div>
+      <div class="onthul">
+        <h2>Vader en zoon, en iedereen daartussenin</h2>
+        <p>Bij ons komt de opa voor zijn maandelijkse knipbeurt, de vader in zijn werkkleding tussen de middag door, en de zoon die precies weet welk model hij wil. Alle drie in dezelfde stoel.</p>
+        <p>Er staat koffie klaar, u zit niet lang te wachten, en u vertelt maar even wat u wilt. Wij doen de rest.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stem-groot">
+    <div class="wrap">
+      <blockquote>Vader en zoon knippen alle generaties en bijna alle kapsels.</blockquote>
+      <cite>Uit een review op Google</cite>
+    </div>
+  </section>
+
+  <section class="stem-klein wrap">
+    <div class="stem-klein-grid">
+      <div class="stem-kaart onthul">
+        <p>Deze kapper weet precies hoe ik mijn haar wil hebben en zit altijd goed, beetje extra zorg voor de wenkbrauwen en beharing in neus en oren. En nog een aardige kerel ook.</p>
+        <cite>Peter Damen</cite>
+      </div>
+      <div class="stem-kaart onthul">
+        <p>De kapper knipte mij precies zoals ik het voor ogen had: niet te kort, strak en netjes. Daarom raad ik deze kapper van harte aan.</p>
+        <cite>Ferry Visser, Local Guide</cite>
+      </div>
+    </div>
+  </section>
+
+  <section class="praktisch" id="openingstijden">
+    <div class="wrap praktisch-grid">
+      <div class="onthul">
+        <h2>Openingstijden</h2>
+        <ul class="uren">
+          <li><span>Maandag</span><span>09:00 - 18:00</span></li>
+          <li><span>Dinsdag</span><span>09:00 - 18:00</span></li>
+          <li><span>Woensdag</span><span>09:00 - 18:00</span></li>
+          <li><span>Donderdag</span><span>09:00 - 18:00</span></li>
+          <li class="laat"><span>Vrijdag</span><span>09:00 - 20:00</span></li>
+          <li><span>Zaterdag</span><span>09:00 - 17:00</span></li>
+          <li class="dicht"><span>Zondag</span><span>Gesloten</span></li>
+        </ul>
+      </div>
+      <div class="onthul">
+        <h2>Waar u ons vindt</h2>
+        <div class="adres">
+          <strong>Kapsalon Mehmet</strong>
+          Muldershof 23<br>
+          6901 GW Zevenaar<br><br>
+          <a href="tel:+31316240697">0316 240 697</a><br>
+          <a href="https://maps.google.com/?q=Muldershof+23+Zevenaar" target="_blank" rel="noopener">Route via Google Maps</a>
+        </div>
+        <div class="praktisch-beeld">
+          <img src="img/gevel.jpg" alt="De winkel van Kapsalon Mehmet aan de Muldershof in Zevenaar" width="1500" height="1125" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slot wrap">
+    <h2>Even bellen voor een plekje?</h2>
+    <p>Wij zijn zes dagen per week open. Op vrijdag kunt u tot acht uur 's avonds terecht.</p>
+    <div class="knoppen">
+      <a class="knop knop-hoofd" href="tel:+31316240697">Bel 0316 240 697</a>
+      <a class="knop knop-rand" href="https://maps.google.com/?q=Muldershof+23+Zevenaar" target="_blank" rel="noopener">Route hierheen</a>
+    </div>
+  </section>
+</main>
+
+<footer class="voet">
+  <div class="wrap voet-in">
+    <div>Kapsalon Mehmet &nbsp;&middot;&nbsp; Muldershof 23, Zevenaar &nbsp;&middot;&nbsp; Sinds 2008</div>
+    <div><a href="tel:+31316240697">0316 240 697</a></div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var doelen = document.querySelectorAll('.onthul');
+  if (!('IntersectionObserver' in window)) {
+    doelen.forEach(function (d) { d.classList.add('zichtbaar'); });
+    return;
+  }
+  var kijker = new IntersectionObserver(function (rijen) {
+    rijen.forEach(function (rij) {
+      if (!rij.isIntersecting) return;
+      rij.target.classList.add('zichtbaar');
+      kijker.unobserve(rij.target);
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  doelen.forEach(function (d) { kijker.observe(d); });
+})();
+</script>
+</body>
+</html>

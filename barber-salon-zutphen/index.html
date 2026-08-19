@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barber Salon Zutphen | Herenkapper zonder afspraak, elke dag vanaf 08:00</title>
+<meta name="description" content="Herenkapper aan de Ruys de Beerenbrouckstraat in Zutphen. Zonder afspraak, elke werkdag vanaf 08:00 en vrijdag tot 21:00. Bel 0575 470225.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blauw:#1d3fb0;
+  --blauw-diep:#152e83;
+  --inkt:#15171d;
+  --bot:#f2efe8;
+  --wit:#fff;
+  --grijs:#5d6070;
+  --pil:999px;
+  --marge:clamp(1.25rem,5vw,4rem);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:var(--bot);color:var(--inkt);font-size:17px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.kopfont{font-family:Oswald,"Arial Narrow",sans-serif;font-weight:600;letter-spacing:.005em}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:var(--marge)}
+
+.voorstel{background:var(--inkt);color:#9ea3b5;font-size:.8rem;padding:.6rem 0;line-height:1.45}
+.voorstel .wrap{display:flex;flex-wrap:wrap;gap:.3rem 1rem;justify-content:center;text-align:center}
+.voorstel b{color:#8fa6ee;font-weight:600}
+
+/* kop: blauwe balk */
+.kop{background:var(--blauw);color:var(--wit);position:sticky;top:0;z-index:50}
+.kop-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:70px}
+.merk{text-decoration:none;font-family:Oswald,sans-serif;font-weight:600;font-size:1.25rem;letter-spacing:.02em;line-height:1}
+.merk small{display:block;font-size:.63rem;letter-spacing:.32em;font-weight:400;opacity:.8;margin-top:.15rem}
+.kop-acties{display:flex;gap:.5rem;align-items:center}
+.kop-bel{
+  background:var(--wit);color:var(--blauw-diep);text-decoration:none;font-weight:600;font-size:.92rem;
+  padding:.6rem 1.1rem;border-radius:var(--pil);white-space:nowrap;transition:background .2s,color .2s,transform .12s;
+}
+.kop-bel:hover{background:var(--inkt);color:var(--wit)}
+.kop-bel:active{transform:translateY(1px)}
+
+/* hero: gevel als volvlak beeld */
+.hero{position:relative;min-height:clamp(460px,74vh,660px);display:flex;align-items:flex-end;overflow:hidden}
+.hero-foto{position:absolute;inset:0}
+.hero-foto img{width:100%;height:100%;object-fit:cover;object-position:center 38%}
+.hero-scrim{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(21,23,29,.30) 0%,rgba(21,23,29,.62) 45%,rgba(21,23,29,.90) 100%);
+}
+.hero-in{position:relative;z-index:2;padding-block:clamp(2.5rem,6vw,4rem);color:var(--wit);width:100%}
+.hero h1{
+  font-size:clamp(2.5rem,7.4vw,4.8rem);line-height:.98;text-transform:uppercase;
+  font-weight:700;max-width:14ch;
+}
+.hero h1 span{color:#9db6ff;display:block}
+.hero p{margin-top:1.1rem;font-size:clamp(1.02rem,2.2vw,1.18rem);max-width:38ch;color:#d7dae6}
+.knoppen{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.9rem}
+.knop{
+  display:inline-flex;align-items:center;justify-content:center;
+  text-decoration:none;font-weight:600;white-space:nowrap;border-radius:var(--pil);
+  padding:.95rem 1.7rem;font-size:1rem;border:2px solid transparent;
+  transition:background .2s,color .2s,border-color .2s,transform .12s;
+}
+.knop-hoofd{background:var(--blauw);color:var(--wit);border-color:var(--blauw)}
+.knop-hoofd:hover{background:var(--wit);color:var(--blauw-diep);border-color:var(--wit)}
+.knop-hoofd:active{transform:translateY(1px)}
+.knop-rand{border-color:var(--wit);color:var(--wit)}
+.knop-rand:hover{background:var(--wit);color:var(--inkt)}
+.knop-rand:active{transform:translateY(1px)}
+
+/* blauwe beloftebalk */
+.belofte{background:var(--blauw);color:var(--wit)}
+.belofte-in{display:grid;grid-template-columns:1fr;gap:0}
+@media(min-width:800px){.belofte-in{grid-template-columns:repeat(3,1fr)}}
+.belofte-cel{padding:1.9rem var(--marge);border-bottom:1px solid rgba(255,255,255,.22)}
+@media(min-width:800px){
+  .belofte-cel{border-bottom:0;border-right:1px solid rgba(255,255,255,.22);padding-inline:2rem}
+  .belofte-cel:first-child{padding-left:var(--marge)}
+  .belofte-cel:last-child{border-right:0;padding-right:var(--marge)}
+}
+.belofte-cel b{display:block;font-family:Oswald,sans-serif;font-size:1.5rem;font-weight:600;text-transform:uppercase;line-height:1.1}
+.belofte-cel span{display:block;margin-top:.4rem;font-size:.95rem;color:#cfd7f5}
+
+/* zo werkt het */
+.werkt{padding-block:clamp(3.5rem,8vw,6rem)}
+.werkt h2{font-size:clamp(1.9rem,4.6vw,2.9rem);text-transform:uppercase;line-height:1.05;max-width:18ch}
+.stappen{display:grid;grid-template-columns:1fr;gap:2rem;margin-top:2.6rem;counter-reset:stap}
+@media(min-width:780px){.stappen{grid-template-columns:repeat(3,1fr);gap:2.5rem}}
+.stap{counter-increment:stap;position:relative;padding-top:2.6rem}
+.stap::before{
+  content:counter(stap);position:absolute;top:0;left:0;
+  font-family:Oswald,sans-serif;font-size:2.4rem;font-weight:700;color:var(--blauw);line-height:1;
+}
+.stap h3{font-size:1.2rem;text-transform:uppercase}
+.stap p{margin-top:.5rem;color:var(--grijs)}
+
+/* tijden op inkt */
+.tijden{background:var(--inkt);color:var(--bot);padding-block:clamp(3.5rem,8vw,6rem)}
+.tijden-grid{display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media(min-width:880px){.tijden-grid{grid-template-columns:.85fr 1.15fr;gap:clamp(2.5rem,6vw,5rem)}}
+.tijden h2{font-size:clamp(1.9rem,4.6vw,2.9rem);text-transform:uppercase;line-height:1.05}
+.tijden h2 span{color:#8fa6ee}
+.tijden > .wrap > .tijden-grid > div > p{margin-top:1rem;color:#9ea3b5;max-width:38ch}
+.uren{list-style:none}
+.uren li{display:flex;justify-content:space-between;gap:1rem;padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.13);font-size:1.05rem}
+.uren li:last-child{border-bottom:0}
+.uren li span:first-child{color:#9ea3b5}
+.uren li span:last-child{font-weight:600;font-variant-numeric:tabular-nums}
+.uren li.laat span:last-child{color:#9db6ff}
+.uren li.laat span:first-child{color:var(--bot)}
+.uren li.dicht span{color:#6a6e7e;font-weight:400}
+
+/* reviews: horizontale rij */
+.stemmen{padding-block:clamp(3.5rem,8vw,5.5rem);overflow:hidden}
+.stemmen h2{font-size:clamp(1.8rem,4.4vw,2.6rem);text-transform:uppercase}
+.stemmen > .wrap > p{margin-top:.5rem;color:var(--grijs)}
+.rij{
+  display:grid;grid-auto-flow:column;grid-auto-columns:minmax(268px,340px);
+  gap:1.2rem;margin-top:2.2rem;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding-bottom:1rem;-webkit-overflow-scrolling:touch;
+}
+.rij::-webkit-scrollbar{height:6px}
+.rij::-webkit-scrollbar-thumb{background:#c9c4b6;border-radius:var(--pil)}
+.stem{background:var(--wit);border:1px solid #ddd8cc;padding:1.6rem;scroll-snap-align:start}
+.sterren{color:var(--blauw);letter-spacing:.14em;font-size:.9rem}
+.stem p{margin-top:.7rem;font-size:1rem;line-height:1.5}
+.stem cite{display:block;margin-top:1rem;font-style:normal;font-weight:600;font-size:.85rem;color:var(--grijs)}
+
+/* waar */
+.waar{padding-block:clamp(3rem,7vw,5.5rem);background:var(--wit);border-top:1px solid #e2ddd1}
+.waar-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:center}
+@media(min-width:880px){.waar-grid{grid-template-columns:1.1fr .9fr;gap:clamp(2.5rem,6vw,4.5rem)}}
+.waar img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.waar h2{font-size:clamp(1.8rem,4.4vw,2.5rem);text-transform:uppercase}
+.adres{margin-top:1.2rem;font-size:1.05rem;line-height:1.8}
+.adres strong{display:block;font-family:Oswald,sans-serif;font-weight:600;font-size:1.2rem}
+.adres a{color:var(--blauw);font-weight:600;text-underline-offset:3px}
+
+/* slot */
+.slot{background:var(--blauw);color:var(--wit);padding-block:clamp(3.5rem,8vw,5.5rem)}
+.slot h2{font-size:clamp(2rem,6vw,3.6rem);text-transform:uppercase;line-height:1.02;max-width:16ch}
+.slot p{margin-top:1rem;font-size:1.1rem;color:#cfd7f5;max-width:44ch}
+.slot .knop-hoofd{background:var(--wit);color:var(--blauw-diep);border-color:var(--wit)}
+.slot .knop-hoofd:hover{background:var(--inkt);color:var(--wit);border-color:var(--inkt)}
+
+.voet{background:var(--inkt);color:#8b8f9e;padding-block:2.4rem;font-size:.9rem}
+.voet-in{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:space-between}
+.voet a{color:var(--bot);font-weight:600}
+
+@media(prefers-reduced-motion:no-preference){
+  .onthul{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+  .onthul.zichtbaar{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="voorstel">
+  <div class="wrap">
+    <span><b>Voorbeeldontwerp</b> gemaakt voor Barber Salon Zutphen door Bjorn Beerntsen.</span>
+    <span>Dit is geen offici&euml;le website van Barber Salon Zutphen.</span>
+  </div>
+</div>
+
+<header class="kop">
+  <div class="wrap kop-in">
+    <a class="merk" href="#top">Barber Salon<small>ZUTPHEN</small></a>
+    <div class="kop-acties">
+      <a class="kop-bel" href="tel:+31575470225">Bel 0575 470225</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-foto">
+      <img src="img/gevel.jpg" alt="De gevel van Barber Salon aan de Ruys de Beerenbrouckstraat in Zutphen" width="1600" height="900" fetchpriority="high">
+    </div>
+    <div class="hero-scrim"></div>
+    <div class="hero-in">
+      <div class="wrap">
+        <h1>Zonder afspraak.<span>Vanaf acht uur.</span></h1>
+        <p>Herenkapper in Zutphen. Loop binnen, drink een kop koffie, en ga strak geknipt weer verder.</p>
+        <div class="knoppen">
+          <a class="knop knop-hoofd" href="tel:+31575470225">Bel 0575 470225</a>
+          <a class="knop knop-rand" href="https://wa.me/31640252764" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="belofte">
+    <div class="belofte-in">
+      <div class="belofte-cel"><b>Geen afspraak</b><span>Je hoeft niets te regelen. Kom langs wanneer het jou uitkomt.</span></div>
+      <div class="belofte-cel"><b>Vanaf 08:00</b><span>Voor je werk al geknipt. Op vrijdag kun je tot 21:00 terecht.</span></div>
+      <div class="belofte-cel"><b>4,6 uit 191</b><span>Zoveel mensen namen de moeite een review achter te laten.</span></div>
+    </div>
+  </section>
+
+  <section class="werkt wrap">
+    <h2 class="onthul">Hoe het hier gaat</h2>
+    <div class="stappen">
+      <div class="stap onthul">
+        <h3>Binnenlopen</h3>
+        <p>De deur staat open. Geen agenda, geen app, geen wachtlijst. Je meldt je gewoon even.</p>
+      </div>
+      <div class="stap onthul">
+        <h3>Koffie erbij</h3>
+        <p>Meestal ben je snel aan de beurt. Is het druk, dan schenken we wat in terwijl je wacht.</p>
+      </div>
+      <div class="stap onthul">
+        <h3>Klaar</h3>
+        <p>Knippen, baard bijwerken, scheren. Netjes afgewerkt, en je staat zo weer buiten.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tijden">
+    <div class="wrap tijden-grid">
+      <div class="onthul">
+        <h2>Wij zijn er <span>voordat jij begint.</span></h2>
+        <p>De meeste kappers gaan om negen uur open. Hier kun je er al om acht uur in, zes dagen per week.</p>
+      </div>
+      <ul class="uren onthul">
+        <li><span>Maandag</span><span>09:00 - 18:00</span></li>
+        <li><span>Dinsdag</span><span>08:00 - 18:00</span></li>
+        <li><span>Woensdag</span><span>08:00 - 18:00</span></li>
+        <li><span>Donderdag</span><span>08:00 - 18:00</span></li>
+        <li class="laat"><span>Vrijdag</span><span>08:00 - 21:00</span></li>
+        <li><span>Zaterdag</span><span>08:00 - 17:00</span></li>
+        <li class="dicht"><span>Zondag</span><span>Gesloten</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="stemmen">
+    <div class="wrap">
+      <h2>Wat klanten zeggen</h2>
+      <p>Een greep uit de 191 reviews op Google.</p>
+    </div>
+    <div class="wrap">
+      <div class="rij">
+        <article class="stem onthul">
+          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Altijd fijn om hier naar de kapper te gaan. Kom hier al jaren. Altijd goede service met een lach, kop thee en strak kapsel bij vertrek.</p>
+          <cite>Drikus</cite>
+        </article>
+        <article class="stem onthul">
+          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Prettige kapper, je hoeft vaak niet lang te wachten om geknipt te worden. Ook altijd netjes en vlot geknipt.</p>
+          <cite>Ronald, Local Guide</cite>
+        </article>
+        <article class="stem onthul">
+          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Goede service en top klantvriendelijkheid. Salon ziet er super netjes uit. Kortom ik zeg super zaak.</p>
+          <cite>Tony Ticheler van Klingeren</cite>
+        </article>
+        <article class="stem onthul">
+          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Snel aan de beurt. Het fijne is zonder afspraak, goede kappers.</p>
+          <cite>Via Google</cite>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="waar">
+    <div class="wrap waar-grid">
+      <div class="onthul">
+        <img src="img/straat.jpg" alt="Barber Salon Zutphen gezien vanaf de straat, naast de bakkerij" width="1400" height="875" loading="lazy">
+      </div>
+      <div class="onthul">
+        <h2>Waar je ons vindt</h2>
+        <div class="adres">
+          <strong>Barber Salon Zutphen</strong>
+          Ruys de Beerenbrouckstraat 5<br>
+          7204 MK Zutphen<br><br>
+          Vast: <a href="tel:+31575470225">0575 470225</a><br>
+          Mobiel: <a href="https://wa.me/31640252764" target="_blank" rel="noopener">06 40252764</a><br>
+          <a href="https://maps.google.com/?q=Ruys+de+Beerenbrouckstraat+5+Zutphen" target="_blank" rel="noopener">Route via Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slot">
+    <div class="wrap">
+      <h2>Tot straks in de stoel</h2>
+      <p>Bellen hoeft niet, maar het mag. Loop gerust binnen tijdens openingstijden.</p>
+      <div class="knoppen">
+        <a class="knop knop-hoofd" href="tel:+31575470225">Bel 0575 470225</a>
+        <a class="knop knop-rand" href="https://maps.google.com/?q=Ruys+de+Beerenbrouckstraat+5+Zutphen" target="_blank" rel="noopener">Route hierheen</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="voet">
+  <div class="wrap voet-in">
+    <div>Barber Salon Zutphen &nbsp;&middot;&nbsp; Herenkapper &nbsp;&middot;&nbsp; Ruys de Beerenbrouckstraat 5</div>
+    <div><a href="tel:+31575470225">0575 470225</a></div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var doelen = document.querySelectorAll('.onthul');
+  if (!('IntersectionObserver' in window)) {
+    doelen.forEach(function (d) { d.classList.add('zichtbaar'); });
+    return;
+  }
+  var kijker = new IntersectionObserver(function (rijen) {
+    rijen.forEach(function (rij) {
+      if (!rij.isIntersecting) return;
+      rij.target.classList.add('zichtbaar');
+      kijker.unobserve(rij.target);
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  doelen.forEach(function (d) { kijker.observe(d); });
+})();
+</script>
+</body>
+</html>

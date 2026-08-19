@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eli&amp;Nali | Nagelstudio &amp; BIAB in Doetinchem, 's avonds open</title>
+<meta name="description" content="Nagelstudio aan de Nieuweweg in Doetinchem. Gespecialiseerd in BIAB. Doordeweeks open tot 20:00 en zaterdagochtend vanaf 08:00. Afspraak online of via WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --roos:#c25a6e;
+  --roos-diep:#a24153;
+  --pruim:#33222a;
+  --bot:#fbf7f6;
+  --blos:#f4e6e5;
+  --grijs:#6b5b60;
+  --wit:#fff;
+  --rond:14px;
+  --marge:clamp(1.25rem,5vw,4rem);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Outfit,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--bot);color:var(--pruim);
+  font-size:17px;line-height:1.65;font-weight:400;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:var(--marge)}
+
+/* voorstelbalk */
+.voorstel{background:var(--pruim);color:#d8c6ca;font-size:.8rem;padding:.6rem 0;line-height:1.45}
+.voorstel .wrap{display:flex;flex-wrap:wrap;gap:.3rem 1rem;justify-content:center;text-align:center}
+.voorstel b{color:#f0b9c3;font-weight:600}
+
+/* kop */
+.kop{position:sticky;top:0;z-index:50;background:rgba(251,247,246,.9);backdrop-filter:blur(10px)}
+.kop-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:74px}
+.merk{font-weight:600;font-size:1.15rem;letter-spacing:-.01em;text-decoration:none}
+.merk small{display:block;font-weight:400;font-size:.68rem;letter-spacing:.18em;color:var(--grijs);text-transform:uppercase}
+.kop-cta{
+  background:var(--roos);color:var(--wit);text-decoration:none;font-weight:500;font-size:.94rem;
+  padding:.68rem 1.25rem;border-radius:var(--rond);white-space:nowrap;
+  transition:background .2s ease,transform .12s ease;
+}
+.kop-cta:hover{background:var(--roos-diep)}
+.kop-cta:active{transform:translateY(1px)}
+
+/* hero: volvlak beeld met overlappende kaart */
+.hero{position:relative;padding-bottom:clamp(3rem,7vw,5rem)}
+.hero-beeld{position:relative;border-radius:var(--rond);overflow:hidden;margin-inline:var(--marge)}
+.hero-beeld img{width:100%;height:clamp(320px,58vh,560px);object-fit:cover;object-position:center 42%}
+.hero-kaart{
+  background:var(--wit);border-radius:var(--rond);
+  padding:clamp(1.6rem,4vw,2.8rem);
+  max-width:640px;margin:-64px auto 0;position:relative;z-index:2;
+  box-shadow:0 22px 60px rgba(51,34,42,.13);
+}
+@media(min-width:980px){
+  .hero-kaart{margin-left:calc(var(--marge) + 2.5rem);margin-right:0;margin-top:-110px}
+}
+.hero-kaart h1{
+  font-weight:600;letter-spacing:-.03em;line-height:1.05;
+  font-size:clamp(2.1rem,5.6vw,3.4rem);
+}
+.hero-kaart h1 span{color:var(--roos)}
+.hero-kaart p{margin-top:1rem;color:var(--grijs);font-size:1.05rem;max-width:40ch}
+.knoppen{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.8rem}
+.knop{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  text-decoration:none;font-weight:500;white-space:nowrap;border-radius:var(--rond);
+  padding:.9rem 1.5rem;font-size:1rem;border:1.5px solid transparent;
+  transition:background .2s ease,color .2s ease,transform .12s ease;
+}
+.knop-hoofd{background:var(--roos);color:var(--wit)}
+.knop-hoofd:hover{background:var(--roos-diep)}
+.knop-hoofd:active{transform:translateY(1px)}
+.knop-rand{border-color:var(--pruim);color:var(--pruim)}
+.knop-rand:hover{background:var(--pruim);color:var(--bot)}
+.knop-rand:active{transform:translateY(1px)}
+
+/* zachte feitenrij */
+.feiten{background:var(--blos);padding-block:clamp(2rem,4vw,2.8rem)}
+.feiten-in{display:grid;grid-template-columns:1fr;gap:1.6rem;text-align:center}
+@media(min-width:720px){.feiten-in{grid-template-columns:repeat(3,1fr)}}
+.feit b{display:block;font-size:1.55rem;font-weight:600;letter-spacing:-.02em;color:var(--roos-diep)}
+.feit span{display:block;margin-top:.2rem;font-size:.95rem;color:var(--grijs)}
+
+/* galerij: mozaïek */
+.galerij{padding-block:clamp(3.5rem,8vw,6rem)}
+.galerij h2{font-weight:600;letter-spacing:-.03em;font-size:clamp(1.8rem,4.4vw,2.7rem);max-width:20ch}
+.galerij > .wrap > p{margin-top:.8rem;color:var(--grijs);max-width:52ch}
+.mozaiek{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem;margin-top:2.5rem}
+@media(min-width:820px){
+  .mozaiek{grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:1.1rem}
+  .mozaiek figure:nth-child(1){grid-column:span 2;grid-row:span 2}
+  .mozaiek figure:nth-child(4){grid-column:span 2}
+}
+.mozaiek figure{margin:0;border-radius:var(--rond);overflow:hidden;background:var(--blos)}
+.mozaiek img{width:100%;height:100%;min-height:170px;object-fit:cover;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+@media(prefers-reduced-motion:no-preference){.mozaiek figure:hover img{transform:scale(1.04)}}
+
+/* BIAB: tekstgedreven */
+.biab{background:var(--pruim);color:#e8dcdf;padding-block:clamp(3.5rem,8vw,6rem)}
+.biab-grid{display:grid;grid-template-columns:1fr;gap:2.2rem}
+@media(min-width:900px){.biab-grid{grid-template-columns:.85fr 1.15fr;gap:clamp(2.5rem,6vw,5rem)}}
+.biab h2{font-weight:600;letter-spacing:-.03em;line-height:1.08;font-size:clamp(1.9rem,4.6vw,2.9rem);color:var(--wit)}
+.biab h2 span{color:#f0a8b6}
+.biab p{margin-bottom:1.1rem;color:#cbb8bd}
+.biab p:last-child{margin-bottom:0}
+.biab strong{color:var(--wit);font-weight:600}
+
+/* avond */
+.avond{padding-block:clamp(3.5rem,8vw,6rem)}
+.avond-grid{display:grid;grid-template-columns:1fr;gap:2.8rem}
+@media(min-width:880px){.avond-grid{grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,5rem);align-items:start}}
+.avond h2{font-weight:600;letter-spacing:-.03em;line-height:1.08;font-size:clamp(1.9rem,4.6vw,2.9rem);max-width:16ch}
+.avond h2 span{color:var(--roos)}
+.avond > .wrap > .avond-grid > div > p{margin-top:1.1rem;color:var(--grijs);max-width:46ch}
+.tijden{list-style:none;background:var(--blos);border-radius:var(--rond);padding:1.4rem 1.6rem}
+.tijden li{display:flex;justify-content:space-between;gap:1rem;padding:.62rem 0;font-size:1rem}
+.tijden li + li{border-top:1px solid rgba(51,34,42,.08)}
+.tijden span:first-child{color:var(--grijs)}
+.tijden span:last-child{font-weight:600;font-variant-numeric:tabular-nums}
+.tijden li.dicht span{color:#a4949a;font-weight:400}
+
+/* reviews: één groot, twee klein */
+.stemmen{background:var(--blos);padding-block:clamp(3.5rem,8vw,6rem)}
+.stemmen-grid{display:grid;grid-template-columns:1fr;gap:1.4rem}
+@media(min-width:900px){.stemmen-grid{grid-template-columns:1.35fr 1fr;gap:1.6rem}}
+.stem-groot{
+  background:var(--wit);border-radius:var(--rond);padding:clamp(1.8rem,4vw,2.6rem);
+  display:flex;flex-direction:column;justify-content:center;
+}
+.stem-groot p{font-size:clamp(1.12rem,2.4vw,1.4rem);line-height:1.45;font-weight:400}
+.stem-klein-kolom{display:grid;gap:1.4rem;align-content:start}
+.stem-klein{background:var(--wit);border-radius:var(--rond);padding:1.5rem 1.6rem}
+.stem-klein p{font-size:1rem;line-height:1.5}
+.sterren{color:var(--roos);letter-spacing:.14em;font-size:.9rem;margin-bottom:.7rem}
+.stemmen cite{display:block;margin-top:1rem;font-style:normal;font-weight:500;font-size:.86rem;color:var(--grijs)}
+
+/* slot */
+.slot{padding-block:clamp(3.5rem,8vw,6rem)}
+.slot-doos{
+  background:var(--roos);color:var(--wit);border-radius:var(--rond);
+  padding:clamp(2.2rem,6vw,4rem);display:grid;grid-template-columns:1fr;gap:2rem;align-items:center;
+}
+@media(min-width:880px){.slot-doos{grid-template-columns:1.25fr .75fr}}
+.slot-doos h2{font-weight:600;letter-spacing:-.03em;line-height:1.08;font-size:clamp(1.8rem,4.6vw,2.8rem)}
+.slot-doos p{margin-top:.9rem;color:#ffe6ea;max-width:42ch}
+.slot-doos .knop-hoofd{background:var(--wit);color:var(--roos-diep)}
+.slot-doos .knop-hoofd:hover{background:var(--pruim);color:var(--wit)}
+.slot-doos .knop-rand{border-color:rgba(255,255,255,.75);color:var(--wit)}
+.slot-doos .knop-rand:hover{background:var(--wit);color:var(--roos-diep)}
+.slot-adres{font-size:1.02rem;line-height:1.75}
+.slot-adres strong{display:block;font-weight:600;font-size:1.1rem}
+.slot-adres a{color:var(--wit);font-weight:600;text-underline-offset:3px}
+
+.voet{padding-block:2.5rem;font-size:.9rem;color:var(--grijs);border-top:1px solid rgba(51,34,42,.09)}
+.voet-in{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:space-between}
+.voet a{font-weight:500;color:var(--roos-diep)}
+
+@media(prefers-reduced-motion:no-preference){
+  .onthul{opacity:0;transform:translateY(20px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}
+  .onthul.zichtbaar{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="voorstel">
+  <div class="wrap">
+    <span><b>Voorbeeldontwerp</b> gemaakt voor Eli&amp;Nali door Bjorn Beerntsen.</span>
+    <span>Dit is geen offici&euml;le website van Eli&amp;Nali.</span>
+  </div>
+</div>
+
+<header class="kop">
+  <div class="wrap kop-in">
+    <a class="merk" href="#top">Eli&amp;Nali<small>Nagelstudio Doetinchem</small></a>
+    <a class="kop-cta" href="https://elzbietamichalak.salonized.com" target="_blank" rel="noopener">Afspraak maken</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-beeld">
+      <img src="img/hero.jpg" alt="Verzorgde nagels met een French manicure, gemaakt bij Eli en Nali" width="1100" height="1467" fetchpriority="high">
+    </div>
+    <div class="hero-kaart">
+      <h1>Nagels, <span>na werktijd.</span></h1>
+      <p>Nagelstudio aan de Nieuweweg in Doetinchem. Doordeweeks open tot 20:00, en zaterdagochtend al vanaf acht uur.</p>
+      <div class="knoppen">
+        <a class="knop knop-hoofd" href="https://elzbietamichalak.salonized.com" target="_blank" rel="noopener">Afspraak maken</a>
+        <a class="knop knop-rand" href="https://wa.me/31611957630" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="feiten">
+    <div class="wrap feiten-in">
+      <div class="feit"><b>5,0 &#9733;</b><span>uit 30 reviews op Google, zonder uitzondering</span></div>
+      <div class="feit"><b>Tot 20:00</b><span>doordeweeks open, ook na een werkdag</span></div>
+      <div class="feit"><b>BIAB</b><span>versterking op je eigen nagel</span></div>
+    </div>
+  </section>
+
+  <section class="galerij">
+    <div class="wrap">
+      <h2 class="onthul">Werk van de afgelopen weken</h2>
+      <p class="onthul">Van rustige French tot cat eye. Alles wordt hier gezet, niets is een voorbeeldplaatje.</p>
+      <div class="mozaiek">
+        <figure class="onthul"><img src="img/n05.jpg" alt="Zachte roze nagels op de manicurekussen" loading="lazy" width="1100" height="1467"></figure>
+        <figure class="onthul"><img src="img/n01.jpg" alt="Roze gelakte nagels, ovaal gevijld" loading="lazy" width="1100" height="1467"></figure>
+        <figure class="onthul"><img src="img/n03.jpg" alt="Parelmoerroze nagels met een klein bloemetje" loading="lazy" width="1100" height="1467"></figure>
+        <figure class="onthul"><img src="img/n04.jpg" alt="Warmroze nagels met een glanzende afwerking" loading="lazy" width="1100" height="1467"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="biab">
+    <div class="wrap biab-grid">
+      <h2 class="onthul">Wat is <span>BIAB</span> eigenlijk?</h2>
+      <div class="onthul">
+        <p><strong>BIAB staat voor Builder In A Bottle.</strong> Het is een gel die als een dun laagje op je eigen nagel wordt aangebracht. Je nagel wordt daardoor steviger, maar blijft van jezelf.</p>
+        <p>Het verschil met kunstnagels: er wordt niets opgeplakt en er hoeft weinig weggevijld te worden. Voor wie snel scheurende of buigende nagels heeft is dit vaak de rustigste oplossing.</p>
+        <p>Gemiddeld gaat een set drie tot vier weken mee. Daarna wordt de aangroei bijgewerkt in plaats van alles opnieuw te doen. Twijfelt u wat bij u past? Stuur gerust een appje, dan denken we mee.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="avond">
+    <div class="wrap avond-grid">
+      <div class="onthul">
+        <h2>Open wanneer u <span>eindelijk tijd heeft.</span></h2>
+        <p>De meeste nagelstudio's sluiten precies wanneer u vrij bent. Hier begint de dag juist om vier uur, en op zaterdag kunt u er al voor het boodschappen doen tussen.</p>
+      </div>
+      <ul class="tijden onthul">
+        <li><span>Maandag</span><span>16:00 - 20:00</span></li>
+        <li><span>Dinsdag</span><span>16:00 - 20:00</span></li>
+        <li><span>Woensdag</span><span>17:00 - 20:30</span></li>
+        <li><span>Donderdag</span><span>16:00 - 20:00</span></li>
+        <li><span>Vrijdag</span><span>16:00 - 20:00</span></li>
+        <li><span>Zaterdag</span><span>08:00 - 14:00</span></li>
+        <li class="dicht"><span>Zondag</span><span>Gesloten</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="stemmen">
+    <div class="wrap">
+      <div class="stemmen-grid">
+        <blockquote class="stem-groot onthul">
+          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Heel erg blij met mijn BIAB nagels. Ik heb ze laten doen omdat ik op vakantie ging. Nu een week later zijn ze nog steeds erg mooi.</p>
+          <cite>Scarlett Hazenbrink, via Google</cite>
+        </blockquote>
+        <div class="stem-klein-kolom">
+          <blockquote class="stem-klein onthul">
+            <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>Zeer klantvriendelijk, en gaat netjes te werk. Een echte aanrader.</p>
+            <cite>J.J.B</cite>
+          </blockquote>
+          <blockquote class="stem-klein onthul">
+            <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>Heel vriendelijk en professioneel, nam echt de tijd en had veel oog voor detail.</p>
+            <cite>Via Google</cite>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slot">
+    <div class="wrap">
+      <div class="slot-doos">
+        <div>
+          <h2>Zin in nieuwe nagels?</h2>
+          <p>Kies online een moment dat u schikt, of stuur even een appje als u eerst wilt overleggen.</p>
+          <div class="knoppen">
+            <a class="knop knop-hoofd" href="https://elzbietamichalak.salonized.com" target="_blank" rel="noopener">Afspraak maken</a>
+            <a class="knop knop-rand" href="https://wa.me/31611957630" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+        <div class="slot-adres">
+          <strong>Eli&amp;Nali</strong>
+          Nieuweweg 183<br>
+          7009 HB Doetinchem<br><br>
+          <a href="tel:+31611957630">06 11957630</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="voet">
+  <div class="wrap voet-in">
+    <div>Eli&amp;Nali Nagelstudio &amp; BIAB &nbsp;&middot;&nbsp; Nieuweweg 183, Doetinchem</div>
+    <div><a href="https://wa.me/31611957630" target="_blank" rel="noopener">06 11957630</a></div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var doelen = document.querySelectorAll('.onthul');
+  if (!('IntersectionObserver' in window)) {
+    doelen.forEach(function (d) { d.classList.add('zichtbaar'); });
+    return;
+  }
+  var kijker = new IntersectionObserver(function (rijen) {
+    rijen.forEach(function (rij) {
+      if (!rij.isIntersecting) return;
+      rij.target.classList.add('zichtbaar');
+      kijker.unobserve(rij.target);
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  doelen.forEach(function (d) { kijker.observe(d); });
+})();
+</script>
+</body>
+</html>
