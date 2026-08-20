@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E&amp;N Beauty Empire Arnhem | Nagels en pedicure, zeven dagen open</title>
+<meta name="description" content="Nagelstudio aan de Luthersestraat in Arnhem. BIAB, nail art en pedicure door Elena en Narwan. Zeven dagen per week open, doordeweeks tot 20:00. Boek online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --petrol:#17494f;
+  --petrol-diep:#0f3338;
+  --koraal:#d97757;
+  --zand:#e8e0d4;
+  --room:#f8f5f0;
+  --inkt:#1a2224;
+  --grijs:#5f6d70;
+  --wit:#fff;
+  --rond:8px;
+  --marge:clamp(1.15rem,4.5vw,4rem);
+  --balk:0px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Sora,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--room);color:var(--inkt);font-size:16.5px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;padding-bottom:var(--balk);
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:var(--marge)}
+
+.voorstel{background:var(--petrol-diep);color:#a8bfc2;font-size:.79rem;padding:.55rem 0;line-height:1.45}
+.voorstel .wrap{display:flex;flex-wrap:wrap;gap:.3rem 1rem;justify-content:center;text-align:center}
+.voorstel b{color:var(--koraal);font-weight:600}
+
+.kop{position:sticky;top:0;z-index:60;background:rgba(248,245,240,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--zand)}
+.kop-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:66px}
+.merk{text-decoration:none;font-weight:800;font-size:1.02rem;letter-spacing:-.02em;line-height:1.2}
+.merk small{display:block;font-weight:400;font-size:.62rem;letter-spacing:.2em;color:var(--grijs);text-transform:uppercase}
+.kop-cta{background:var(--petrol);color:var(--wit);text-decoration:none;font-weight:600;font-size:.9rem;
+  padding:.6rem 1.15rem;border-radius:var(--rond);white-space:nowrap;transition:background .18s,transform .1s}
+.kop-cta:hover{background:var(--petrol-diep)}
+.kop-cta:active{transform:translateY(1px)}
+@media(max-width:640px){.kop-cta{display:none}}
+
+.hero{padding-block:clamp(2rem,5vw,3.4rem) clamp(2.4rem,5vw,3.6rem)}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:2rem;align-items:center}
+@media(min-width:940px){.hero-grid{grid-template-columns:1.08fr .92fr;gap:clamp(2.5rem,6vw,4rem)}}
+.hero h1{font-weight:800;letter-spacing:-.04em;line-height:1.05;font-size:clamp(2.05rem,5.4vw,3.3rem)}
+.hero h1 span{color:var(--petrol)}
+.hero-sub{margin-top:1rem;color:var(--grijs);font-size:clamp(1rem,2.1vw,1.12rem);max-width:40ch}
+.knoppen{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1.7rem}
+.knop{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;text-decoration:none;font-weight:600;
+  border-radius:var(--rond);padding:.88rem 1.5rem;font-size:.98rem;border:2px solid transparent;transition:all .18s}
+.knop-hoofd{background:var(--petrol);color:var(--wit);border-color:var(--petrol)}
+.knop-hoofd:hover{background:var(--petrol-diep);border-color:var(--petrol-diep)}
+.knop-rand{border-color:var(--inkt);color:var(--inkt)}
+.knop-rand:hover{background:var(--inkt);color:var(--room)}
+.hero-beeld{border-radius:var(--rond);overflow:hidden;background:var(--zand)}
+.hero-beeld img{width:100%;aspect-ratio:4/5;object-fit:cover}
+
+.bewijs{background:var(--petrol);color:var(--wit)}
+.bewijs-in{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.2)}
+@media(min-width:820px){.bewijs-in{grid-template-columns:repeat(4,1fr)}}
+.bewijs-cel{background:var(--petrol);padding:1.35rem var(--marge)}
+.bewijs-cel b{display:block;font-size:1.42rem;font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.bewijs-cel span{display:block;margin-top:.22rem;font-size:.84rem;color:#b6ced1}
+.koraal{color:var(--koraal)}
+
+/* twee specialisten */
+.duo{padding-block:clamp(3rem,7vw,4.6rem)}
+.duo h2{font-weight:800;letter-spacing:-.03em;font-size:clamp(1.7rem,4.2vw,2.4rem);max-width:22ch}
+.duo > .wrap > p{margin-top:.7rem;color:var(--grijs);max-width:52ch}
+.duo-grid{display:grid;grid-template-columns:1fr;gap:1.2rem;margin-top:2rem}
+@media(min-width:760px){.duo-grid{grid-template-columns:1fr 1fr}}
+.persoon{background:var(--wit);border:1px solid var(--zand);border-radius:var(--rond);overflow:hidden}
+.duo-beeld{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin-top:1.2rem}
+@media(max-width:640px){.duo-beeld{grid-template-columns:repeat(2,1fr)}.duo-beeld figure:nth-child(3){display:none}}
+.duo-beeld figure{margin:0;border-radius:var(--rond);overflow:hidden;background:var(--zand)}
+.duo-beeld img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.persoon-tekst{padding:1.4rem}
+.persoon h3{font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+.persoon .rol{color:var(--koraal);font-size:.85rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-top:.15rem}
+.persoon p{margin-top:.6rem;color:var(--grijs);font-size:.95rem}
+
+/* boeken */
+.boeken{background:var(--zand);padding-block:clamp(3rem,7vw,4.6rem)}
+.boeken-kop{max-width:54ch}
+.boeken h2{font-weight:800;letter-spacing:-.03em;line-height:1.1;font-size:clamp(1.8rem,4.4vw,2.6rem)}
+.boeken h2 span{color:var(--petrol)}
+.boeken-kop p{margin-top:.7rem;color:var(--grijs)}
+.widget-doos{margin-top:1.8rem;border-radius:var(--rond);overflow:hidden;background:var(--wit);
+  border:1px solid #d5cbbb;box-shadow:0 18px 50px rgba(26,34,36,.10)}
+.widget-doos iframe{width:100%;height:770px;border:0;display:block;background:var(--wit)}
+@media(max-width:640px){.widget-doos iframe{height:690px}}
+.widget-noot{margin-top:.85rem;font-size:.85rem;color:var(--grijs);line-height:1.55}
+
+/* behandelingen */
+.behandel{padding-block:clamp(3rem,7vw,4.6rem)}
+.behandel h2{font-weight:800;letter-spacing:-.03em;font-size:clamp(1.7rem,4.2vw,2.4rem)}
+.b-grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1.9rem}
+@media(min-width:760px){.b-grid{grid-template-columns:repeat(3,1fr)}}
+.b-kaart{background:var(--wit);border:1px solid var(--zand);border-radius:var(--rond);padding:1.4rem;border-left:4px solid var(--koraal)}
+.b-kaart h3{font-weight:800;font-size:1.05rem}
+.b-kaart p{margin-top:.4rem;color:var(--grijs);font-size:.94rem}
+
+/* stemmen */
+.stemmen{background:var(--inkt);color:var(--room);padding-block:clamp(3rem,7vw,4.6rem)}
+.stemmen h2{font-weight:800;letter-spacing:-.03em;font-size:clamp(1.7rem,4.2vw,2.4rem)}
+.stemmen > .wrap > p{margin-top:.45rem;color:#96a4a7}
+.stem-grid{display:grid;grid-template-columns:1fr;gap:1.1rem;margin-top:1.9rem}
+@media(min-width:860px){.stem-grid{grid-template-columns:repeat(3,1fr)}}
+.stem{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--rond);padding:1.35rem}
+.sterren{color:var(--koraal);letter-spacing:.14em;font-size:.88rem}
+.stem p{margin-top:.6rem;font-size:.96rem;line-height:1.55}
+.stem cite{display:block;margin-top:.85rem;font-style:normal;font-weight:600;font-size:.84rem;color:#96a4a7}
+
+/* praktisch */
+.praktisch{padding-block:clamp(3rem,7vw,4.6rem)}
+.p-grid{display:grid;grid-template-columns:1fr;gap:2.2rem}
+@media(min-width:860px){.p-grid{grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,5rem)}}
+.praktisch h2{font-weight:800;letter-spacing:-.03em;font-size:clamp(1.5rem,3.8vw,2rem);margin-bottom:1.1rem}
+.tijden{list-style:none;background:var(--zand);border-radius:var(--rond);padding:1.1rem 1.35rem}
+.tijden li{display:flex;justify-content:space-between;gap:1rem;padding:.5rem 0;font-size:.99rem}
+.tijden li + li{border-top:1px solid rgba(26,34,36,.09)}
+.tijden span:first-child{color:var(--grijs)}
+.tijden span:last-child{font-weight:600;font-variant-numeric:tabular-nums}
+.adres{font-size:1.02rem;line-height:1.85}
+.adres strong{display:block;font-weight:800;font-size:1.08rem}
+.adres a{color:var(--petrol);font-weight:600;text-underline-offset:3px}
+
+.voet{background:var(--petrol-diep);color:#8fa8ab;padding-block:2.1rem;font-size:.87rem}
+.voet-in{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:space-between}
+.voet a{color:var(--room);font-weight:600}
+
+.actiebalk{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;
+  background:rgba(15,51,56,.97);backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.14);
+  padding:.55rem var(--marge) calc(.55rem + env(safe-area-inset-bottom,0px));gap:.5rem}
+.actiebalk a{flex:1;display:flex;align-items:center;justify-content:center;text-decoration:none;
+  font-weight:700;font-size:.9rem;padding:.75rem .4rem;border-radius:var(--rond);white-space:nowrap}
+.ab-boek{background:var(--koraal);color:#2a1109}
+.ab-wa{background:#25d366;color:#04250f}
+.ab-route{background:rgba(255,255,255,.14);color:var(--room)}
+@media(max-width:860px){.actiebalk{display:flex} body{--balk:74px}}
+
+@media(prefers-reduced-motion:no-preference){
+  .onthul{opacity:0;transform:translateY(18px);transition:opacity .65s cubic-bezier(.16,1,.3,1),transform .65s cubic-bezier(.16,1,.3,1)}
+  .onthul.zichtbaar{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="voorstel">
+  <div class="wrap">
+    <span><b>Voorbeeldontwerp</b> gemaakt voor E&amp;N Beauty Empire door Bjorn Beerntsen.</span>
+    <span>Dit is geen offici&euml;le website van E&amp;N Beauty Empire.</span>
+  </div>
+</div>
+
+<header class="kop">
+  <div class="wrap kop-in">
+    <a class="merk" href="#top">E&amp;N Beauty Empire<small>Arnhem</small></a>
+    <a class="kop-cta" href="#boeken">Online boeken</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Handen &eacute;n voeten, <span>zeven dagen per week.</span></h1>
+        <p class="hero-sub">Nagelstudio aan de Luthersestraat in Arnhem. Doordeweeks tot acht uur 's avonds en in het weekend gewoon open, ook op zondag.</p>
+        <div class="knoppen">
+          <a class="knop knop-hoofd" href="#boeken">Kies een tijd</a>
+          <a class="knop knop-rand" href="https://wa.me/31640893789" target="_blank" rel="noopener">Overleggen via WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-beeld">
+        <img src="img/e01.jpg" alt="Pedicure met een French afwerking, gezet bij E&amp;N Beauty Empire" width="750" height="1000" fetchpriority="high">
+      </div>
+    </div>
+  </section>
+
+  <section class="bewijs">
+    <div class="bewijs-in">
+      <div class="bewijs-cel"><b>5,0 <span class="koraal">&#9733;</span></b><span>en geen enkele lagere beoordeling</span></div>
+      <div class="bewijs-cel"><b>28</b><span>klanten schreven een review</span></div>
+      <div class="bewijs-cel"><b>7 dagen</b><span>per week open, ook op zondag</span></div>
+      <div class="bewijs-cel"><b>Tot 20:00</b><span>van maandag tot en met vrijdag</span></div>
+    </div>
+  </section>
+
+  <section class="duo">
+    <div class="wrap">
+      <h2 class="onthul">De E en de N zijn Elena en Narwan</h2>
+      <p class="onthul">Twee specialisten met ieder hun eigen hand. Klanten noemen ze bij naam in hun reviews, en dat zegt genoeg: u wordt niet door een willekeurige medewerker geholpen maar door iemand die uw nagels kent.</p>
+      <div class="duo-grid">
+        <article class="persoon onthul">
+          <div class="persoon-tekst">
+            <h3>Elena</h3>
+            <div class="rol">Werkt veel met BIAB</div>
+            <p>Klanten die al bijna een jaar bij haar komen schrijven over haar oog voor detail, en dat ze van een uitdaging houdt.</p>
+          </div>
+        </article>
+        <article class="persoon onthul">
+          <div class="persoon-tekst">
+            <h3>Narwan</h3>
+            <div class="rol">Werkt met precisie</div>
+            <p>Reviews noemen haar creatieve voorstellen, handig als u zelf nog niet precies weet wat u wilt.</p>
+          </div>
+        </article>
+      </div>
+      <div class="duo-beeld">
+        <figure><img src="img/e02.jpg" alt="Nagelwerk uit de salon van E&amp;N Beauty Empire" width="562" height="1000" loading="lazy"></figure>
+        <figure><img src="img/e03.jpg" alt="Nagelontwerp gemaakt bij E&amp;N Beauty Empire" width="562" height="1000" loading="lazy"></figure>
+        <figure><img src="img/e04.jpg" alt="Verzorgde nagels uit de salon van E&amp;N Beauty Empire" width="750" height="1000" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="boeken" id="boeken">
+    <div class="wrap">
+      <div class="boeken-kop">
+        <h2 class="onthul">Kies zelf <span>een moment</span></h2>
+        <p class="onthul">Hieronder ziet u wat er vrij is, ook in de avond en op zondag. Het staat meteen genoteerd.</p>
+      </div>
+      <div class="widget-doos onthul">
+        <iframe
+          src="https://widget.salonized.com/widget?color=%2317494f&amp;language=nl&amp;company=vm6vYvYmiSSnRZyWF116ENgS&amp;inline=true"
+          title="Online een afspraak maken bij E&amp;N Beauty Empire" loading="lazy"></iframe>
+      </div>
+      <p class="widget-noot">
+        Dit is het echte boeksysteem van E&amp;N Beauty Empire, hier in de pagina gezet.
+        Een afspraak die u hier maakt komt gewoon in hun agenda te staan.
+      </p>
+    </div>
+  </section>
+
+  <section class="behandel">
+    <div class="wrap">
+      <h2 class="onthul">Wat u kunt laten doen</h2>
+      <div class="b-grid">
+        <div class="b-kaart onthul">
+          <h3>BIAB</h3>
+          <p>Een gel die op uw eigen nagel wordt aangebracht en hem steviger maakt. Er wordt niets opgeplakt.</p>
+        </div>
+        <div class="b-kaart onthul">
+          <h3>Nail art</h3>
+          <p>Van een rustige French tot een compleet ontwerp. Laat zien wat u mooi vindt, dan maken wij het.</p>
+        </div>
+        <div class="b-kaart onthul">
+          <h3>Pedicure</h3>
+          <p>Ook voeten worden hier verzorgd. Weinig salons doen allebei, u hoeft dus niet naar twee adressen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stemmen">
+    <div class="wrap">
+      <h2>Wat klanten schrijven</h2>
+      <p>28 reviews op Google, allemaal vijf sterren.</p>
+      <div class="stem-grid">
+        <article class="stem">
+          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Zowel Narwan als Elena werken met precisie en controle. Je hebt altijd goed resultaat en ze zijn enorm klantvriendelijk.</p>
+          <cite>Irene Vinke</cite>
+        </article>
+        <article class="stem">
+          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Elena is nu al bijna een jaar mijn nail tech voor BIAB en ik ben echt over the moon met haar. Ze heeft superveel oog voor detail.</p>
+          <cite>Nastasia Griffioen</cite>
+        </article>
+        <article class="stem">
+          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Vriendelijke dames, mooie salon en een hele fijne pedicure gehad vandaag.</p>
+          <cite>Via Google</cite>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="praktisch">
+    <div class="wrap p-grid">
+      <div class="onthul">
+        <h2>Openingstijden</h2>
+        <ul class="tijden">
+          <li><span>Maandag</span><span>09:30 - 20:00</span></li>
+          <li><span>Dinsdag</span><span>09:30 - 20:00</span></li>
+          <li><span>Woensdag</span><span>09:30 - 20:00</span></li>
+          <li><span>Donderdag</span><span>09:30 - 20:00</span></li>
+          <li><span>Vrijdag</span><span>09:30 - 20:00</span></li>
+          <li><span>Zaterdag</span><span>10:00 - 19:00</span></li>
+          <li><span>Zondag</span><span>10:00 - 19:00</span></li>
+        </ul>
+      </div>
+      <div class="onthul">
+        <h2>Waar u ons vindt</h2>
+        <div class="adres">
+          <strong>E&amp;N Beauty Empire</strong>
+          Luthersestraat 14<br>
+          6811 GR Arnhem<br><br>
+          <a href="https://wa.me/31640893789" target="_blank" rel="noopener">06 40893789 via WhatsApp</a><br>
+          <a href="https://maps.google.com/?q=Luthersestraat+14+Arnhem" target="_blank" rel="noopener">Route via Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="voet">
+  <div class="wrap voet-in">
+    <div>E&amp;N Beauty Empire &nbsp;&middot;&nbsp; Luthersestraat 14, Arnhem &nbsp;&middot;&nbsp; Elke dag open</div>
+    <div><a href="#boeken">Online boeken</a></div>
+  </div>
+</footer>
+
+<nav class="actiebalk" aria-label="Snel boeken">
+  <a class="ab-boek" href="#boeken">Tijd kiezen</a>
+  <a class="ab-wa" href="https://wa.me/31640893789" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="ab-route" href="https://maps.google.com/?q=Luthersestraat+14+Arnhem" target="_blank" rel="noopener">Route</a>
+</nav>
+
+<script>
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+    document.querySelectorAll('.onthul').forEach(function (d) { d.classList.add('zichtbaar'); });
+    return;
+  }
+  var kijker = new IntersectionObserver(function (rijen) {
+    rijen.forEach(function (rij) {
+      if (!rij.isIntersecting) return;
+      rij.target.classList.add('zichtbaar');
+      kijker.unobserve(rij.target);
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.onthul').forEach(function (d) { kijker.observe(d); });
+})();
+</script>
+</body>
+</html>
