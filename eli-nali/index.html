@@ -49,27 +49,29 @@ a{color:inherit}
 .kop-cta:hover{background:var(--roos-diep)}
 .kop-cta:active{transform:translateY(1px)}
 
-/* hero: het beeld draagt de sectie en de tekst ligt eroverheen.
-   Het beeld is samengesteld: de volledige foto rechts, zodat de handen heel
-   blijven, en warme ruimte links waar de tekst kan staan. */
+/* hero: een band van haar eigen werk over de volle breedte.
+   Losse staande foto's naast elkaar in plaats van een brede uitsnede, want
+   haar foto's zijn staand en een brede uitsnede kost altijd vingers.
+   Hoeveel er passen hangt af van het scherm; de mooiste staat rechts en is
+   daarom altijd in beeld. */
 .hero{position:relative;isolation:isolate}
-.hero-beeld{position:absolute;inset:0;z-index:0}
-/* Rechts uitlijnen is hier het hele punt: het beeld is breder gemaakt dan elk
-   beeldvlak dat deze pagina kan opleveren, dus wat de browser wegsnijdt is
-   altijd de lege ruimte links en nooit de handen. */
-.hero-beeld img{width:100%;height:100%;object-fit:cover;object-position:right center}
+.hero-beeld{position:absolute;inset:0;z-index:0;display:flex;gap:3px;background:var(--blos)}
+.hero-beeld figure{margin:0;flex:1;min-width:0;overflow:hidden}
+.hero-beeld img{width:100%;height:100%;object-fit:cover;object-position:center 42%}
+/* smal scherm: alleen de laatste */
+.hero-beeld figure:nth-child(-n+3){display:none}
+@media(min-width:640px){.hero-beeld figure:nth-child(3){display:block}}
+@media(min-width:1000px){.hero-beeld figure:nth-child(2){display:block}}
+@media(min-width:1400px){.hero-beeld figure:nth-child(1){display:block}}
+
 .hero-sluier{position:absolute;inset:0;z-index:1;
-  background:linear-gradient(180deg,rgba(250,242,241,.22) 0%,rgba(250,242,241,.78) 58%,rgba(250,242,241,.97) 100%);
+  background:linear-gradient(180deg,rgba(250,242,241,.24) 0%,rgba(250,242,241,.80) 56%,rgba(250,242,241,.97) 100%);
 }
 @media(min-width:900px){
-  .hero-sluier{background:linear-gradient(90deg,rgba(250,242,241,.95) 0%,rgba(250,242,241,.88) 34%,rgba(250,242,241,0) 62%)}
+  .hero-sluier{background:linear-gradient(90deg,rgba(250,242,241,.96) 0%,rgba(250,242,241,.90) 30%,rgba(250,242,241,.46) 56%,rgba(250,242,241,.16) 100%)}
 }
 .hero-in{position:relative;z-index:2;display:flex;align-items:flex-end;
-  /* De 31vw houdt de hero op een heel breed scherm mee omhoog. Zonder die
-     ondergrens wordt het vlak breder dan de 3.4:1 van het beeld en gaat de
-     browser alsnog boven en onder snijden, precies waar de vingers zitten. */
-  min-height:max(clamp(440px,66vh,640px), 31vw);
-  padding-block:clamp(2.2rem,5vw,3.5rem);
+  min-height:clamp(440px,66vh,640px);padding-block:clamp(2.2rem,5vw,3.5rem);
 }
 @media(min-width:900px){.hero-in{align-items:center}}
 .hero-in .wrap{width:100%}
@@ -211,8 +213,11 @@ a{color:inherit}
 <main id="top">
 
   <section class="hero">
-    <div class="hero-beeld">
-      <img src="img/hero-breed.jpg" alt="Twee handen met een verzorgde French manicure, gezet bij Eli en Nali" width="3400" height="1000" fetchpriority="high">
+    <div class="hero-beeld" aria-hidden="true">
+      <figure><img src="img/n03.jpg" alt="" loading="lazy"></figure>
+      <figure><img src="img/n04.jpg" alt="" loading="lazy"></figure>
+      <figure><img src="img/n01.jpg" alt="" loading="lazy"></figure>
+      <figure><img src="img/hero.jpg" alt="" fetchpriority="high"></figure>
     </div>
     <div class="hero-sluier" aria-hidden="true"></div>
     <div class="hero-in">
