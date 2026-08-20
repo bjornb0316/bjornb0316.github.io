@@ -49,24 +49,28 @@ a{color:inherit}
 .kop-cta:hover{background:var(--roos-diep)}
 .kop-cta:active{transform:translateY(1px)}
 
-/* hero: brede band met een kaart die eroverheen valt.
-   Het beeld is een uitsnede op de nagels, zodat de band vol werk staat
-   in plaats van vol vingers. */
-.hero{position:relative;padding-bottom:clamp(3rem,7vw,5rem)}
-.hero-beeld{position:relative;border-radius:var(--rond);overflow:hidden;margin-inline:var(--marge)}
-.hero-beeld img{width:100%;height:clamp(300px,52vh,540px);object-fit:cover;object-position:center 38%}
-.hero-kaart{
-  background:var(--wit);border-radius:var(--rond);
-  padding:clamp(1.6rem,4vw,2.8rem);
-  max-width:640px;margin:-64px auto 0;position:relative;z-index:2;
-  box-shadow:0 22px 60px rgba(51,34,42,.13);
+/* hero: het beeld draagt de sectie en de tekst ligt eroverheen.
+   Het beeld is samengesteld: de volledige foto rechts, zodat de handen heel
+   blijven, en warme ruimte links waar de tekst kan staan. */
+.hero{position:relative;isolation:isolate}
+.hero-beeld{position:absolute;inset:0;z-index:0}
+.hero-beeld img{width:100%;height:100%;object-fit:cover;object-position:76% center}
+@media(min-width:900px){.hero-beeld img{object-position:center}}
+.hero-sluier{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(250,242,241,.22) 0%,rgba(250,242,241,.78) 58%,rgba(250,242,241,.97) 100%);
 }
-@media(min-width:980px){
-  .hero-kaart{margin-left:calc(var(--marge) + 2.5rem);margin-right:0;margin-top:-110px}
+@media(min-width:900px){
+  .hero-sluier{background:linear-gradient(90deg,rgba(250,242,241,.95) 0%,rgba(250,242,241,.88) 34%,rgba(250,242,241,0) 62%)}
 }
-.hero-kaart h1{font-weight:600;letter-spacing:-.03em;line-height:1.05;font-size:clamp(2.1rem,5.6vw,3.4rem)}
-.hero-kaart h1 span{color:var(--roos)}
-.hero-kaart p{margin-top:1rem;color:var(--grijs);font-size:1.05rem;max-width:40ch}
+.hero-in{position:relative;z-index:2;display:flex;align-items:flex-end;
+  min-height:clamp(440px,66vh,640px);padding-block:clamp(2.2rem,5vw,3.5rem);
+}
+@media(min-width:900px){.hero-in{align-items:center}}
+.hero-in .wrap{width:100%}
+.hero-tekst{max-width:34rem}
+.hero-tekst h1{font-weight:600;letter-spacing:-.03em;line-height:1.04;font-size:clamp(2.2rem,6vw,3.6rem)}
+.hero-tekst h1 span{color:var(--roos)}
+.hero-tekst p{margin-top:1rem;color:var(--grijs);font-size:1.05rem;max-width:38ch}
 .knoppen{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.8rem}
 .knop{
   display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
@@ -202,14 +206,19 @@ a{color:inherit}
 
   <section class="hero">
     <div class="hero-beeld">
-      <img src="img/hero-breed.jpg" alt="Nagels met een French manicure, gezet bij Eli en Nali" width="1800" height="909" fetchpriority="high">
+      <img src="img/hero-breed.jpg" alt="Twee handen met een verzorgde French manicure, gezet bij Eli en Nali" width="2200" height="1100" fetchpriority="high">
     </div>
-    <div class="hero-kaart">
-      <h1>Nagels, <span>na werktijd.</span></h1>
-      <p>Nagelstudio aan de Nieuweweg in Doetinchem. Doordeweeks open tot 20:00, en zaterdagochtend al vanaf acht uur.</p>
-      <div class="knoppen">
-        <a class="knop knop-hoofd" href="#afspraak">Afspraak maken</a>
-        <a class="knop knop-rand" href="https://wa.me/31611957630" target="_blank" rel="noopener">WhatsApp</a>
+    <div class="hero-sluier" aria-hidden="true"></div>
+    <div class="hero-in">
+      <div class="wrap">
+        <div class="hero-tekst">
+          <h1>Nagels, <span>na werktijd.</span></h1>
+          <p>Nagelstudio aan de Nieuweweg in Doetinchem. Doordeweeks open tot 20:00, en zaterdagochtend al vanaf acht uur.</p>
+          <div class="knoppen">
+            <a class="knop knop-hoofd" href="#afspraak">Afspraak maken</a>
+            <a class="knop knop-rand" href="https://wa.me/31611957630" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
