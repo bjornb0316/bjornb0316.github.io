@@ -111,10 +111,17 @@ a{color:inherit}
   padding:1.2rem 0;border-bottom:1px solid rgba(43,36,29,.15)}
 .regel h3{font-family:Newsreader,Georgia,serif;font-weight:400;font-size:1.22rem;letter-spacing:-.01em}
 .regel .duur{color:var(--grijs);font-size:.78rem;letter-spacing:.05em}
-.regel .bedrag{font-family:Newsreader,Georgia,serif;font-size:1.45rem;white-space:nowrap}
+.regel .bedrag{display:block;font-family:Newsreader,Georgia,serif;font-size:1.45rem;white-space:nowrap}
 .regel .bedrag small{font-family:Karla,sans-serif;font-size:.66rem;letter-spacing:.12em;
   text-transform:uppercase;color:var(--grijs);margin-right:.4rem}
 .regel p{grid-column:1/-1;margin:0;color:var(--grijs);font-size:.92rem;line-height:1.55;max-width:44ch}
+a.regel{text-decoration:none;color:inherit;position:relative;transition:background .2s}
+a.regel .pak{grid-column:1/-1;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--cognac-diep);opacity:0;transform:translateY(-4px);transition:opacity .25s,transform .25s;margin-top:.3rem}
+a.regel:hover,a.regel:focus-visible{background:rgba(192,122,69,.07)}
+a.regel:hover .pak,a.regel:focus-visible .pak{opacity:1;transform:none}
+a.regel:focus-visible{outline:2px solid var(--cognac-diep);outline-offset:4px}
+@media(hover:none){a.regel .pak{opacity:1;transform:none}}
 
 /* ---------- team ---------- */
 .team{background:var(--wit);padding-block:clamp(3.5rem,8vw,6rem)}
@@ -134,6 +141,18 @@ a{color:inherit}
 .boekvenster iframe{display:block;width:100%;height:clamp(620px,82vh,880px);border:0}
 .boek-noot{margin-top:1rem;font-size:.92rem;color:var(--grijs)}
 .boek-noot a{color:var(--cognac-diep);font-weight:600;text-underline-offset:3px}
+
+/* ---------- slotoproep ---------- */
+.slot{background:var(--cognac-diep);color:var(--kalk);padding-block:clamp(3.5rem,9vw,6.5rem)}
+.slot-in{text-align:center}
+.slot h2{font-family:Newsreader,Georgia,serif;font-weight:200;
+  font-size:clamp(2rem,6vw,3.6rem);letter-spacing:-.03em;line-height:1.08;max-width:20ch;margin-inline:auto}
+.slot p{margin-top:1.1rem;color:#f1ddcc;max-width:44ch;margin-inline:auto}
+.slot .knoppen{justify-content:center;margin-top:2.2rem}
+.slot .knop-hoofd{background:var(--kalk);color:var(--nacht);border-color:var(--kalk)}
+.slot .knop-hoofd:hover{background:var(--nacht);color:var(--kalk);border-color:var(--nacht)}
+.slot .knop-rand{border-color:rgba(239,231,218,.6);color:var(--kalk)}
+.slot .knop-rand:hover{background:var(--kalk);color:var(--nacht);border-color:var(--kalk)}
 
 /* ---------- praktisch ---------- */
 .praktisch{background:var(--nacht);color:var(--kalk);padding-block:clamp(3.5rem,8vw,6rem)}
@@ -204,7 +223,7 @@ a{color:inherit}
       <p class="hero-claim">Mensen rijden er <em>anderhalf uur</em> voor.</p>
       <div class="knoppen">
         <a class="knop knop-hoofd" href="#boeken">Reserveer je stoel</a>
-        <a class="knop knop-rand" href="tel:+31640909311">Bel 06 40909311</a>
+        <a class="knop knop-rand" href="https://wa.me/31640909311" target="_blank" rel="noopener">Stuur een appje</a>
       </div>
     </div>
   </section>
@@ -233,49 +252,71 @@ a{color:inherit}
     </div>
   </section>
 
+  <section class="boeken" id="boeken">
+    <div class="wrap">
+      <h2>Reserveer je stoel</h2>
+      <p>Kies je behandeling, je kapper en een tijd die je schikt. Je boekt rechtstreeks in de agenda van de zaak.</p>
+      <div class="boekvenster">
+        <iframe
+          src="https://dashboard.knipklok.nl/shop/135/appointment/barber/choose?locale=nl_NL"
+          title="Online een afspraak maken bij mems in Didam"
+          loading="lazy"></iframe>
+      </div>
+      <p class="boek-noot">Liever bellen? Dat kan op <a href="tel:+31640909311">06 40909311</a>.</p>
+    </div>
+  </section>
+
   <section class="prijzen wrap">
     <div class="kopregel onthul">
       <h2>Wat het kost</h2>
       <p>Met de tijd die ervoor staat</p>
     </div>
     <div class="lijst">
-      <div class="regel onthul">
+      <a class="regel onthul" href="#boeken">
         <h3>Knippen <span class="duur">30 tot 45 min</span></h3>
-        <div class="bedrag"><small>vanaf</small>&euro;&nbsp;20</div>
+        <span class="bedrag"><small>vanaf</small>&euro;&nbsp;20</span>
         <p>Het volledig in model brengen van je haar, bovenop en aan de zijkanten.</p>
-      </div>
-      <div class="regel onthul">
+        <span class="pak">Reserveren</span>
+      </a>
+      <a class="regel onthul" href="#boeken">
         <h3>Knippen en korte baard <span class="duur">30 tot 45 min</span></h3>
-        <div class="bedrag"><small>vanaf</small>&euro;&nbsp;22,50</div>
+        <span class="bedrag"><small>vanaf</small>&euro;&nbsp;22,50</span>
         <p>Je haar en je korte baard volledig in model.</p>
-      </div>
-      <div class="regel onthul">
+        <span class="pak">Reserveren</span>
+      </a>
+      <a class="regel onthul" href="#boeken">
         <h3>Knippen en lange baard <span class="duur">45 tot 60 min</span></h3>
-        <div class="bedrag"><small>vanaf</small>&euro;&nbsp;25</div>
+        <span class="bedrag"><small>vanaf</small>&euro;&nbsp;25</span>
         <p>Je haar en je lange baard volledig in model.</p>
-      </div>
-      <div class="regel onthul">
+        <span class="pak">Reserveren</span>
+      </a>
+      <a class="regel onthul" href="#boeken">
         <h3>Baard <span class="duur">15 min</span></h3>
-        <div class="bedrag"><small>vanaf</small>&euro;&nbsp;12,50</div>
+        <span class="bedrag"><small>vanaf</small>&euro;&nbsp;12,50</span>
         <p>Alleen het scheren en contouren van je baard, dus niet je haar.</p>
-      </div>
-      <div class="regel onthul">
+        <span class="pak">Reserveren</span>
+      </a>
+      <a class="regel onthul" href="#boeken">
         <h3>Baard plus <span class="duur">15 min</span></h3>
-        <div class="bedrag"><small>vanaf</small>&euro;&nbsp;15</div>
+        <span class="bedrag"><small>vanaf</small>&euro;&nbsp;15</span>
         <p>Je baard in model, plus je hoofd kaal scheren of je contouren bijwerken.</p>
-      </div>
-      <div class="regel onthul">
+        <span class="pak">Reserveren</span>
+      </a>
+      <a class="regel onthul" href="#boeken">
         <h3>Knippen tot 16 jaar <span class="duur">30 tot 45 min</span></h3>
-        <div class="bedrag"><small>vanaf</small>&euro;&nbsp;18</div>
-      </div>
-      <div class="regel onthul">
+        <span class="bedrag"><small>vanaf</small>&euro;&nbsp;18</span>
+        <span class="pak">Reserveren</span>
+      </a>
+      <a class="regel onthul" href="#boeken">
         <h3>Knippen tot 6 jaar <span class="duur">15 min</span></h3>
-        <div class="bedrag">&euro;&nbsp;20</div>
-      </div>
-      <div class="regel onthul">
+        <span class="bedrag">&euro;&nbsp;20</span>
+        <span class="pak">Reserveren</span>
+      </a>
+      <a class="regel onthul" href="#boeken">
         <h3>Knippen 65 plus <span class="duur">15 tot 30 min</span></h3>
-        <div class="bedrag">&euro;&nbsp;20</div>
-      </div>
+        <span class="bedrag">&euro;&nbsp;20</span>
+        <span class="pak">Reserveren</span>
+      </a>
     </div>
   </section>
 
@@ -294,17 +335,16 @@ a{color:inherit}
     </div>
   </section>
 
-  <section class="boeken" id="boeken">
-    <div class="wrap">
-      <h2>Reserveer je stoel</h2>
-      <p>Kies je behandeling, je kapper en een tijd die je schikt. Je boekt rechtstreeks in de agenda van de zaak.</p>
-      <div class="boekvenster">
-        <iframe
-          src="https://dashboard.knipklok.nl/shop/135/appointment/barber/choose?locale=nl_NL"
-          title="Online een afspraak maken bij mems in Didam"
-          loading="lazy"></iframe>
+
+
+  <section class="slot">
+    <div class="wrap slot-in">
+      <h2 class="onthul">Zin in een strakke knipbeurt?</h2>
+      <p class="onthul">Kies online je kapper en je tijd, of stuur even een appje. Je hoort meestal binnen een paar minuten iets terug.</p>
+      <div class="knoppen onthul">
+        <a class="knop knop-hoofd" href="#boeken">Reserveer je stoel</a>
+        <a class="knop knop-rand" href="https://wa.me/31640909311" target="_blank" rel="noopener">Stuur een appje</a>
       </div>
-      <p class="boek-noot">Liever bellen? Dat kan op <a href="tel:+31640909311">06 40909311</a>.</p>
     </div>
   </section>
 
