@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Eli&amp;Nali | Nagelstudio &amp; BIAB in Doetinchem, 's avonds open</title>
 <meta name="description" content="Nagelstudio aan de Nieuweweg in Doetinchem. Gespecialiseerd in BIAB. Doordeweeks open tot 20:00 en zaterdagochtend vanaf 08:00. Afspraak online of via WhatsApp.">
+<!-- De rechtertegel is het eerste dat in beeld komt, dus die met voorrang ophalen. -->
+<link rel="preload" as="image" href="img/hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -56,13 +58,15 @@ a{color:inherit}
    daarom altijd in beeld. */
 .hero{position:relative;isolation:isolate}
 .hero-beeld{position:absolute;inset:0;z-index:0;display:flex;gap:3px;background:var(--blos)}
-.hero-beeld figure{margin:0;flex:1;min-width:0;overflow:hidden}
-.hero-beeld img{width:100%;height:100%;object-fit:cover;object-position:center 42%}
+/* Achtergrondbeelden in plaats van img: die laden betrouwbaar achter de sluier,
+   en een tegel op display:none wordt door de browser niet opgehaald. Op een
+   telefoon kost deze band dus maar een foto in plaats van vier. */
+.hero-beeld span{flex:1;min-width:0;background-size:cover;background-position:center 42%;background-repeat:no-repeat}
 /* smal scherm: alleen de laatste */
-.hero-beeld figure:nth-child(-n+3){display:none}
-@media(min-width:640px){.hero-beeld figure:nth-child(3){display:block}}
-@media(min-width:1000px){.hero-beeld figure:nth-child(2){display:block}}
-@media(min-width:1400px){.hero-beeld figure:nth-child(1){display:block}}
+.hero-beeld span:nth-child(-n+3){display:none}
+@media(min-width:640px){.hero-beeld span:nth-child(3){display:block}}
+@media(min-width:1000px){.hero-beeld span:nth-child(2){display:block}}
+@media(min-width:1400px){.hero-beeld span:nth-child(1){display:block}}
 
 .hero-sluier{position:absolute;inset:0;z-index:1;
   background:linear-gradient(180deg,rgba(250,242,241,.24) 0%,rgba(250,242,241,.80) 56%,rgba(250,242,241,.97) 100%);
@@ -214,11 +218,11 @@ a{color:inherit}
 
   <section class="hero">
     <div class="hero-beeld" aria-hidden="true">
-      <figure><img src="img/n03.jpg" alt="" loading="lazy"></figure>
-      <figure><img src="img/n04.jpg" alt="" loading="lazy"></figure>
-      <figure><img src="img/n01.jpg" alt="" loading="lazy"></figure>
-      <figure><img src="img/hero.jpg" alt="" fetchpriority="high"></figure>
-    </div>
+        <span style="background-image:url(img/n03.jpg)"></span>
+        <span style="background-image:url(img/n04.jpg)"></span>
+        <span style="background-image:url(img/n01.jpg)"></span>
+        <span style="background-image:url(img/hero.jpg)"></span>
+      </div>
     <div class="hero-sluier" aria-hidden="true"></div>
     <div class="hero-in">
       <div class="wrap">
