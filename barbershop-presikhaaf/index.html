@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barbershop Presikhaaf Arnhem | Online een tijd reserveren</title>
+<meta name="description" content="Barbershop in Winkelcentrum Presikhaaf, Arnhem. 5,0 uit 171 reviews. Knippen, baard en scheren met de tijd die het vraagt. Reserveer online of app 06 87504606.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --zwart:#0d0e0d;
+  --kool:#17181a;
+  --lijn:#2a2c2e;
+  --goud:#c9a227;
+  --goud-licht:#e0be4a;
+  --room:#f4f2ee;
+  --zacht:#a2a5a8;
+  --wit:#fff;
+  --rond:6px;
+  --marge:clamp(1.15rem,4.5vw,4.5rem);
+  --balk:0px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Instrument Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--zwart);color:var(--room);font-size:17px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;padding-bottom:var(--balk);
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:var(--marge)}
+
+.voorstel{background:#000;color:#8b8e91;font-size:.78rem;padding:.55rem 0;line-height:1.45}
+.voorstel .wrap{display:flex;flex-wrap:wrap;gap:.3rem 1rem;justify-content:center;text-align:center}
+.voorstel b{color:var(--goud);font-weight:600}
+
+/* kop */
+.kop{position:sticky;top:0;z-index:60;background:rgba(13,14,13,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--lijn)}
+.kop-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:70px}
+.merk{text-decoration:none;display:flex;align-items:center;gap:.6rem}
+.merk .bp{
+  width:34px;height:34px;border:1.5px solid var(--goud);border-radius:50%;
+  display:grid;place-items:center;font-weight:700;font-size:.82rem;color:var(--goud);letter-spacing:.02em;
+}
+.merk b{font-weight:700;font-size:1rem;letter-spacing:.02em;line-height:1.15}
+.merk small{display:block;font-weight:400;font-size:.63rem;letter-spacing:.24em;color:var(--zacht);text-transform:uppercase}
+.kop-cta{background:var(--goud);color:#1a1500;text-decoration:none;font-weight:700;font-size:.9rem;
+  padding:.62rem 1.2rem;border-radius:var(--rond);white-space:nowrap;transition:background .18s,transform .1s}
+.kop-cta:hover{background:var(--goud-licht)}
+.kop-cta:active{transform:translateY(1px)}
+@media(max-width:640px){.kop-cta{display:none}}
+
+/* hero */
+.hero{padding-block:clamp(2.2rem,5vw,4rem) clamp(2.6rem,6vw,4.5rem)}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:2.2rem;align-items:center}
+@media(min-width:940px){.hero-grid{grid-template-columns:1.15fr .85fr;gap:clamp(2.5rem,6vw,4.5rem)}}
+.ster-rij{display:inline-flex;align-items:center;gap:.55rem;border:1px solid var(--lijn);border-radius:999px;
+  padding:.4rem .9rem;font-size:.86rem;color:var(--zacht)}
+.ster-rij b{color:var(--goud);font-weight:700}
+.hero h1{margin-top:1.2rem;font-weight:700;letter-spacing:-.035em;line-height:1.02;font-size:clamp(2.3rem,6.2vw,4rem);max-width:13ch}
+.hero h1 span{color:var(--goud)}
+.hero-sub{margin-top:1.1rem;color:var(--zacht);font-size:clamp(1.02rem,2.2vw,1.16rem);max-width:40ch}
+.knoppen{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.9rem}
+.knop{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;text-decoration:none;font-weight:700;
+  border-radius:var(--rond);padding:.92rem 1.6rem;font-size:1rem;border:1.5px solid transparent;transition:all .18s}
+.knop-goud{background:var(--goud);color:#1a1500;border-color:var(--goud)}
+.knop-goud:hover{background:var(--goud-licht);border-color:var(--goud-licht)}
+.knop-goud:active{transform:translateY(1px)}
+.knop-rand{border-color:var(--lijn);color:var(--room)}
+.knop-rand:hover{background:var(--room);color:var(--zwart);border-color:var(--room)}
+.hero-beeld{position:relative;border-radius:var(--rond);overflow:hidden;background:var(--kool)}
+.hero-beeld img{width:100%;aspect-ratio:7/9;object-fit:cover;object-position:center 42%}
+.hero-beeld::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(201,162,39,.22);border-radius:var(--rond);pointer-events:none}
+
+/* bewijs */
+.bewijs{border-block:1px solid var(--lijn)}
+.bewijs-in{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--lijn)}
+@media(min-width:820px){.bewijs-in{grid-template-columns:repeat(4,1fr)}}
+.bewijs-cel{background:var(--zwart);padding:1.5rem var(--marge)}
+.bewijs-cel b{display:block;font-size:1.55rem;font-weight:700;letter-spacing:-.02em;line-height:1.1;color:var(--goud)}
+.bewijs-cel span{display:block;margin-top:.28rem;font-size:.86rem;color:var(--zacht)}
+
+/* aandacht */
+.aandacht{padding-block:clamp(3.2rem,7vw,5.2rem)}
+.aandacht h2{font-weight:700;letter-spacing:-.03em;line-height:1.08;font-size:clamp(1.9rem,4.6vw,2.8rem);max-width:19ch}
+.aandacht h2 span{color:var(--goud)}
+.aandacht > .wrap > p{margin-top:.9rem;color:var(--zacht);max-width:54ch}
+.a-grid{display:grid;grid-template-columns:1fr;gap:1.1rem;margin-top:2.4rem}
+@media(min-width:780px){.a-grid{grid-template-columns:repeat(3,1fr);gap:1.3rem}}
+.a-kaart{background:var(--kool);border:1px solid var(--lijn);border-radius:var(--rond);padding:1.6rem;position:relative}
+.a-kaart::before{content:"";position:absolute;top:0;left:1.6rem;right:1.6rem;height:2px;background:var(--goud)}
+.a-kaart h3{font-weight:700;font-size:1.1rem;letter-spacing:-.01em}
+.a-kaart p{margin-top:.5rem;color:var(--zacht);font-size:.97rem}
+
+/* boeken */
+.boeken{background:var(--room);color:var(--zwart);padding-block:clamp(3.2rem,7vw,5.2rem)}
+.boeken-kop{max-width:56ch}
+.boeken h2{font-weight:700;letter-spacing:-.03em;line-height:1.08;font-size:clamp(1.9rem,4.6vw,2.8rem)}
+.boeken-kop p{margin-top:.85rem;color:#5c5f62}
+.widget-doos{margin-top:2rem;border-radius:var(--rond);overflow:hidden;background:var(--wit);
+  border:1px solid #ddd9d2;box-shadow:0 22px 60px rgba(0,0,0,.14)}
+.widget-doos iframe{width:100%;height:780px;border:0;display:block;background:var(--wit)}
+@media(max-width:640px){.widget-doos iframe{height:700px}}
+.widget-noot{margin-top:.9rem;font-size:.86rem;color:#5c5f62;line-height:1.55}
+
+/* stemmen */
+.stemmen{padding-block:clamp(3.2rem,7vw,5.2rem)}
+.stemmen-kop{display:flex;flex-wrap:wrap;gap:1rem;align-items:baseline;justify-content:space-between}
+.stemmen h2{font-weight:700;letter-spacing:-.03em;font-size:clamp(1.8rem,4.4vw,2.6rem)}
+.stemmen-kop p{color:var(--zacht);font-size:.94rem}
+.stem-grid{display:grid;grid-template-columns:1fr;gap:1.2rem;margin-top:2.2rem}
+@media(min-width:860px){.stem-grid{grid-template-columns:repeat(3,1fr)}}
+.stem{border:1px solid var(--lijn);border-radius:var(--rond);padding:1.5rem;background:var(--kool)}
+.sterren{color:var(--goud);letter-spacing:.14em;font-size:.88rem}
+.stem p{margin-top:.7rem;font-size:.98rem;line-height:1.55}
+.stem cite{display:block;margin-top:1rem;font-style:normal;font-weight:600;font-size:.85rem;color:var(--zacht)}
+
+/* praktisch */
+.praktisch{background:var(--kool);border-top:1px solid var(--lijn);padding-block:clamp(3.2rem,7vw,5rem)}
+.p-grid{display:grid;grid-template-columns:1fr;gap:2.4rem}
+@media(min-width:860px){.p-grid{grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,5rem)}}
+.praktisch h2{font-weight:700;letter-spacing:-.03em;font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:1.2rem}
+.uren{list-style:none}
+.uren li{display:flex;justify-content:space-between;gap:1rem;padding:.72rem 0;border-bottom:1px solid var(--lijn);font-size:1.02rem}
+.uren li:last-child{border-bottom:0}
+.uren li span:first-child{color:var(--zacht)}
+.uren li span:last-child{font-weight:600;font-variant-numeric:tabular-nums}
+.uren li.vandaag{background:rgba(201,162,39,.09);margin-inline:-.8rem;padding-inline:.8rem}
+.uren li.vandaag span:first-child{color:var(--room);font-weight:600}
+.uren li.vandaag span:last-child{color:var(--goud)}
+.uren li.dicht span{color:#63666a;font-weight:400}
+.adres{font-size:1.04rem;line-height:1.85;color:var(--zacht)}
+.adres strong{display:block;font-weight:700;font-size:1.12rem;color:var(--room)}
+.adres a{color:var(--goud);font-weight:600;text-underline-offset:3px}
+.status{display:inline-flex;align-items:center;gap:.55rem;margin-bottom:1.1rem;
+  border:1px solid var(--lijn);border-radius:999px;padding:.45rem .95rem;font-size:.92rem;font-weight:600}
+.stip{width:.6rem;height:.6rem;border-radius:50%;background:#4ade80}
+.status.dicht .stip{background:#f87171}
+
+.voet{border-top:1px solid var(--lijn);padding-block:2.2rem;font-size:.87rem;color:var(--zacht)}
+.voet-in{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:space-between}
+.voet a{color:var(--room);font-weight:600}
+
+.actiebalk{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;
+  background:rgba(13,14,13,.97);backdrop-filter:blur(10px);border-top:1px solid var(--lijn);
+  padding:.55rem var(--marge) calc(.55rem + env(safe-area-inset-bottom,0px));gap:.5rem}
+.actiebalk a{flex:1;display:flex;align-items:center;justify-content:center;text-decoration:none;
+  font-weight:700;font-size:.92rem;padding:.78rem .4rem;border-radius:var(--rond);white-space:nowrap}
+.ab-boek{background:var(--goud);color:#1a1500}
+.ab-wa{background:#25d366;color:#04250f}
+.ab-route{background:rgba(255,255,255,.1);color:var(--room)}
+@media(max-width:860px){.actiebalk{display:flex} body{--balk:76px}}
+
+@media(prefers-reduced-motion:no-preference){
+  .onthul{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+  .onthul.zichtbaar{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="voorstel">
+  <div class="wrap">
+    <span><b>Voorbeeldontwerp</b> gemaakt voor Barbershop Presikhaaf door Bjorn Beerntsen.</span>
+    <span>Dit is geen offici&euml;le website van Barbershop Presikhaaf.</span>
+  </div>
+</div>
+
+<header class="kop">
+  <div class="wrap kop-in">
+    <a class="merk" href="#top">
+      <span class="bp" aria-hidden="true">BP</span>
+      <b>Barbershop Presikhaaf<small>Arnhem</small></b>
+    </a>
+    <a class="kop-cta" href="#boeken">Tijd reserveren</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="ster-rij"><b>5,0 &#9733;</b> uit 171 reviews, geen enkele lager</span>
+        <h1>Geknipt met <span>aandacht.</span></h1>
+        <p class="hero-sub">Barbershop in Winkelcentrum Presikhaaf. Er wordt de tijd genomen die uw kapsel vraagt, en u krijgt eerlijk advies over wat wel en niet werkt.</p>
+        <div class="knoppen">
+          <a class="knop knop-goud" href="#boeken">Kies een tijd</a>
+          <a class="knop knop-rand" href="https://wa.me/31687504606" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-beeld">
+        <img src="img/gevel.jpg" alt="De verlichte gevel van Barbershop Presikhaaf in de avond" width="560" height="1200" fetchpriority="high">
+      </div>
+    </div>
+  </section>
+
+  <section class="bewijs">
+    <div class="bewijs-in">
+      <div class="bewijs-cel"><b>5,0 &#9733;</b><span>en geen enkele lagere beoordeling</span></div>
+      <div class="bewijs-cel"><b>171</b><span>klanten schreven een review</span></div>
+      <div class="bewijs-cel"><b>15&times;</b><span>noemen zij het woord aandacht</span></div>
+      <div class="bewijs-cel"><b>6 dagen</b><span>per week open, ook zaterdag</span></div>
+    </div>
+  </section>
+
+  <section class="aandacht">
+    <div class="wrap">
+      <h2 class="onthul">Wat klanten steeds <span>opnieuw noemen</span></h2>
+      <p class="onthul">Van de 171 reviews gaat het vijftien keer over hetzelfde: dat er niet gehaast wordt. Dat is geen toeval, dat is hoe hier gewerkt wordt.</p>
+      <div class="a-grid">
+        <div class="a-kaart onthul">
+          <h3>Er wordt de tijd genomen</h3>
+          <p>Geen stoel die na twintig minuten leeg moet zijn. U gaat pas de deur uit als het klopt, en dat merkt u aan het resultaat.</p>
+        </div>
+        <div class="a-kaart onthul">
+          <h3>Eerlijk advies</h3>
+          <p>Wat past bij uw haar en wat niet. Als iets niet gaat werken, hoort u dat voordat de tondeuse aangaat.</p>
+        </div>
+        <div class="a-kaart onthul">
+          <h3>Koffie erbij</h3>
+          <p>Zes reviews noemen het uit zichzelf. U zit hier even, en dat mag ook zo voelen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="boeken" id="boeken">
+    <div class="wrap">
+      <div class="boeken-kop">
+        <h2 class="onthul">Reserveer zelf een tijd</h2>
+        <p class="onthul">Hieronder ziet u wat er vrij is. Kies een behandeling, een dag en een tijd, en het staat meteen genoteerd. Geen telefoontje nodig.</p>
+      </div>
+      <div class="widget-doos onthul">
+        <iframe
+          src="https://widget.salonized.com/widget?color=%23c9a227&amp;language=nl&amp;company=xNLytb2RpvgiLbbzYomfHxLo&amp;inline=true"
+          title="Online een tijd reserveren bij Barbershop Presikhaaf" loading="lazy"></iframe>
+      </div>
+      <p class="widget-noot">
+        Dit is het echte boeksysteem van Barbershop Presikhaaf, hier in de pagina gezet.
+        Een afspraak die u hier maakt komt gewoon in hun agenda te staan.
+      </p>
+    </div>
+  </section>
+
+  <section class="stemmen">
+    <div class="wrap">
+      <div class="stemmen-kop">
+        <h2>Wat klanten schrijven</h2>
+        <p>171 reviews op Google, allemaal vijf sterren</p>
+      </div>
+      <div class="stem-grid">
+        <article class="stem">
+          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Er wordt veel aandacht besteed aan de details en er wordt ruim de tijd genomen, zodat de klant tevreden de deur uit gaat.</p>
+          <cite>Alan Sorane</cite>
+        </article>
+        <article class="stem">
+          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Ik ben bij aardig wat kappers geweest, maar deze ervaring was top. Je krijgt goed advies over je haar en het resultaat is geweldig.</p>
+          <cite>Rick Gunsing</cite>
+        </article>
+        <article class="stem">
+          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Ik kom nu al ruim een jaar bij Barbershop Presikhaaf en de service en knipbeurt zijn voortreffelijk.</p>
+          <cite>Jacco Rutten</cite>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="praktisch">
+    <div class="wrap p-grid">
+      <div class="onthul">
+        <h2>Openingstijden</h2>
+        <div class="status" id="status" role="status">
+          <span class="stip"></span>
+          <span id="status-tekst">Openingstijden worden geladen</span>
+        </div>
+        <ul class="uren" id="uren">
+          <li data-dag="1"><span>Maandag</span><span>11:00 - 18:00</span></li>
+          <li data-dag="2"><span>Dinsdag</span><span>09:30 - 18:00</span></li>
+          <li data-dag="3"><span>Woensdag</span><span>09:30 - 18:00</span></li>
+          <li data-dag="4"><span>Donderdag</span><span>09:30 - 18:00</span></li>
+          <li data-dag="5"><span>Vrijdag</span><span>09:30 - 18:00</span></li>
+          <li data-dag="6"><span>Zaterdag</span><span>09:30 - 18:00</span></li>
+          <li data-dag="0" class="dicht"><span>Zondag</span><span>Gesloten</span></li>
+        </ul>
+      </div>
+      <div class="onthul">
+        <h2>Waar u ons vindt</h2>
+        <div class="adres">
+          <strong>Barbershop Presikhaaf</strong>
+          Hanzestraat 339<br>
+          6826 ML Arnhem<br>
+          <span style="font-size:.95rem">In Winkelcentrum Presikhaaf, parkeren voor de deur</span><br><br>
+          <a href="https://wa.me/31687504606" target="_blank" rel="noopener">06 87504606 via WhatsApp</a><br>
+          <a href="https://maps.google.com/?q=Hanzestraat+339+Arnhem" target="_blank" rel="noopener">Route via Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="voet">
+  <div class="wrap voet-in">
+    <div>Barbershop Presikhaaf &nbsp;&middot;&nbsp; Hanzestraat 339, Arnhem &nbsp;&middot;&nbsp; Winkelcentrum Presikhaaf</div>
+    <div><a href="#boeken">Tijd reserveren</a></div>
+  </div>
+</footer>
+
+<nav class="actiebalk" aria-label="Snel reserveren">
+  <a class="ab-boek" href="#boeken">Tijd kiezen</a>
+  <a class="ab-wa" href="https://wa.me/31687504606" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="ab-route" href="https://maps.google.com/?q=Hanzestraat+339+Arnhem" target="_blank" rel="noopener">Route</a>
+</nav>
+
+<script>
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+    document.querySelectorAll('.onthul').forEach(function (d) { d.classList.add('zichtbaar'); });
+  } else {
+    var kijker = new IntersectionObserver(function (rijen) {
+      rijen.forEach(function (rij) {
+        if (!rij.isIntersecting) return;
+        rij.target.classList.add('zichtbaar');
+        kijker.unobserve(rij.target);
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.onthul').forEach(function (d) { kijker.observe(d); });
+  }
+})();
+
+// Kan ik nu nog terecht? Die vraag beantwoorden we hier in plaats van de
+// bezoeker zelf in de tabel te laten zoeken.
+(function () {
+  var UREN = { 0: null, 1: [11 * 60, 18 * 60], 2: [570, 1080], 3: [570, 1080], 4: [570, 1080], 5: [570, 1080], 6: [570, 1080] };
+  var DAG = ['zondag', 'maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag'];
+  function klok(m) { var u = Math.floor(m / 60), r = m % 60; return (u < 10 ? '0' : '') + u + ':' + (r < 10 ? '0' : '') + r; }
+
+  var nu = new Date(), dag = nu.getDay(), min = nu.getHours() * 60 + nu.getMinutes(), vandaag = UREN[dag];
+  var doos = document.getElementById('status'), tekst = document.getElementById('status-tekst');
+  var regel = document.querySelector('#uren li[data-dag="' + dag + '"]');
+  if (regel) regel.classList.add('vandaag');
+
+  if (vandaag && min >= vandaag[0] && min < vandaag[1]) {
+    tekst.textContent = 'Nu open tot ' + klok(vandaag[1]);
+    return;
+  }
+  doos.classList.add('dicht');
+  if (vandaag && min < vandaag[0]) {
+    tekst.textContent = 'Nu gesloten, vandaag open vanaf ' + klok(vandaag[0]);
+    return;
+  }
+  for (var i = 1; i <= 7; i++) {
+    var d = (dag + i) % 7;
+    if (UREN[d]) {
+      tekst.textContent = 'Nu gesloten, ' + (i === 1 ? 'morgen' : DAG[d]) + ' weer open vanaf ' + klok(UREN[d][0]);
+      return;
+    }
+  }
+})();
+</script>
+</body>
+</html>
