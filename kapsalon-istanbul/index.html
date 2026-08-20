@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="nl" class="">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.className+=' js';</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Kapsalon Istanbul Tiel &middot; Dames en heren &middot; sinds 2006</title>
+<meta name="description" content="Kapsalon Istanbul aan de Vleesstraat in Tiel. Dames en heren, sinds 2006. Online een plek vastleggen bij Ahmet, Sibel of Samet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --asfalt:#0c0c0d;
+  --kool:#161618;
+  --grafiet:#232326;
+  --rook:#8b8b90;
+  --mist:#c9c8c6;
+  --zilver:#f4f3f1;
+  --tram:#d63220;
+  --tram-diep:#a82416;
+  --rand:rgba(255,255,255,.11);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--asfalt);color:var(--mist);
+  font-family:Barlow,"Helvetica Neue",Arial,sans-serif;
+  font-size:clamp(1rem,.96rem + .2vw,1.12rem);line-height:1.65;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3,.bord,.telling b,.knop{font-family:Oswald,"Arial Narrow",Arial,sans-serif;font-weight:500}
+
+/* ---------- balk van Bjorn ---------- */
+.voorstel{
+  background:var(--grafiet);color:var(--mist);
+  font-size:.78rem;line-height:1.5;letter-spacing:.02em;
+  padding:.6rem 1.2rem;text-align:center;border-bottom:1px solid var(--rand);
+}
+.voorstel strong{color:var(--zilver);font-weight:600}
+.voorstel a{color:var(--zilver);text-underline-offset:3px}
+
+/* ---------- bord ---------- */
+.bord{
+  display:inline-block;background:var(--tram);color:#fff;
+  text-transform:uppercase;letter-spacing:.2em;font-size:.74rem;
+  padding:.48rem 1.05rem .42rem;line-height:1;
+}
+.bord.leeg{background:transparent;color:var(--tram);border:1px solid var(--tram);padding:.44rem 1rem .38rem}
+
+/* ---------- knoppen ---------- */
+.knop{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  background:var(--tram);color:#fff;text-decoration:none;
+  text-transform:uppercase;letter-spacing:.14em;font-size:.86rem;font-weight:600;
+  padding:1.05rem 2rem;border:1px solid var(--tram);
+  transition:background .18s ease,border-color .18s ease,transform .18s ease;
+}
+.knop:hover,.knop:focus-visible{background:var(--tram-diep);border-color:var(--tram-diep);transform:translateY(-2px)}
+.knop.stil{background:transparent;color:var(--zilver);border-color:var(--rand)}
+.knop.stil:hover,.knop.stil:focus-visible{background:rgba(255,255,255,.06);border-color:var(--zilver);transform:translateY(-2px)}
+:focus-visible{outline:2px solid var(--tram);outline-offset:3px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:grid;grid-template-rows:auto 1fr;background:var(--asfalt)}
+.hero-beeld{position:relative;overflow:hidden;background:var(--kool)}
+.hero-beeld img{width:100%;height:100%;object-fit:cover;object-position:26% 32%;aspect-ratio:4/3}
+.hero-beeld::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(12,12,13,.15) 0%,rgba(12,12,13,.05) 45%,rgba(12,12,13,.92) 100%);
+}
+.hero-tekst{
+  position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;
+  padding:2.4rem 1.4rem 3rem;gap:1.35rem;
+}
+.plaatsregel{
+  font-family:Oswald,"Arial Narrow",Arial,sans-serif;font-weight:400;
+  text-transform:uppercase;letter-spacing:.34em;font-size:.72rem;color:var(--tram);
+}
+.woordmerk{
+  font-family:Oswald,"Arial Narrow",Arial,sans-serif;font-weight:600;color:var(--zilver);
+  font-size:clamp(3.4rem,15vw,9.5rem);line-height:.86;letter-spacing:-.015em;
+  text-transform:uppercase;
+}
+.woordmerk .zacht{display:block;font-weight:300;color:var(--mist);font-size:.38em;letter-spacing:.06em;margin-top:.5rem}
+.hero-onder{font-size:1.06rem;color:var(--mist);max-width:34ch}
+.hero-knoppen{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:.35rem}
+.hero-feit{
+  display:flex;align-items:center;gap:.6rem;font-size:.82rem;color:var(--rook);
+  text-transform:uppercase;letter-spacing:.12em;margin-top:.4rem;
+}
+.hero-feit span{width:26px;height:1px;background:var(--tram);flex:none}
+
+@media(min-width:920px) and (min-aspect-ratio:1/1){
+  .hero{grid-template-rows:1fr;grid-template-columns:minmax(0,1fr) minmax(0,1.02fr)}
+  .hero-beeld{grid-column:2;grid-row:1}
+  .hero-beeld img{aspect-ratio:auto;object-position:20% 40%}
+  .hero-beeld::after{background:linear-gradient(to right,rgba(12,12,13,.96) 0%,rgba(12,12,13,.35) 26%,rgba(12,12,13,0) 60%)}
+  .hero-tekst{grid-column:1;grid-row:1;padding:4rem 1.5rem 4rem clamp(2rem,6vw,6rem)}
+}
+
+/* ---------- secties ---------- */
+section{padding:clamp(4rem,10vw,7.5rem) 1.4rem}
+.mid{max-width:1180px;margin:0 auto}
+.kop{font-size:clamp(2rem,5.4vw,3.5rem);line-height:1.02;color:var(--zilver);text-transform:uppercase;letter-spacing:-.01em;font-weight:600}
+.kop .dun{font-weight:300;color:var(--rook)}
+.inlei{max-width:56ch;margin-top:1.1rem;color:var(--mist)}
+.sectiekop{display:flex;flex-direction:column;gap:1.1rem;align-items:flex-start;margin-bottom:2.8rem}
+
+/* ---------- tellers ---------- */
+.tellers{background:var(--kool);border-top:1px solid var(--rand);border-bottom:1px solid var(--rand)}
+.tellerrij{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--rand)}
+@media(min-width:820px){.tellerrij{grid-template-columns:repeat(4,1fr)}}
+.telling{background:var(--kool);padding:2.2rem 1.2rem;text-align:center}
+.telling b{display:block;font-size:clamp(2.6rem,7vw,4.2rem);line-height:1;color:var(--zilver);font-weight:600}
+.telling span{display:block;margin-top:.7rem;font-size:.74rem;text-transform:uppercase;letter-spacing:.2em;color:var(--rook)}
+
+/* ---------- beeldstrook ---------- */
+.strook{display:grid;gap:1px;background:var(--rand);border:1px solid var(--rand)}
+@media(min-width:820px){.strook{grid-template-columns:1fr 1fr}}
+.beeld{position:relative;overflow:hidden;background:var(--kool);margin:0}
+.beeld img{
+  width:100%;aspect-ratio:4/3;object-fit:cover;
+  filter:grayscale(1) contrast(1.06);
+  transition:filter .5s ease,transform .7s ease;
+}
+.beeld:hover img,.beeld:focus-within img{filter:grayscale(0) contrast(1);transform:scale(1.02)}
+.beeld figcaption{
+  position:absolute;left:0;bottom:0;right:0;padding:1.4rem 1.3rem 1.2rem;
+  background:linear-gradient(to top,rgba(12,12,13,.9),rgba(12,12,13,0));
+  font-size:.78rem;text-transform:uppercase;letter-spacing:.16em;color:var(--zilver);
+}
+
+/* ---------- citaat ---------- */
+.citaat{background:var(--tram);color:#fff;text-align:center}
+.citaat blockquote{max-width:22ch;margin:0 auto;font-family:Oswald,"Arial Narrow",Arial,sans-serif;
+  font-weight:400;font-size:clamp(2rem,6.4vw,4.4rem);line-height:1.04;text-transform:uppercase;letter-spacing:-.005em}
+.citaat cite{display:block;margin-top:1.8rem;font-family:Barlow,Arial,sans-serif;font-style:normal;
+  font-size:.78rem;text-transform:uppercase;letter-spacing:.22em;color:rgba(255,255,255,.82)}
+
+/* ---------- boeken ---------- */
+.boeken{background:var(--kool)}
+.agenda{border:1px solid var(--rand);background:#fff;margin-top:2.2rem}
+.agenda iframe{display:block;width:100%;height:760px;border:0}
+.agenda-onder{
+  display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;justify-content:center;
+  margin-top:1.6rem;font-size:.86rem;color:var(--rook);text-align:center;
+}
+.laat{
+  border-left:3px solid var(--tram);padding:1.1rem 0 1.1rem 1.2rem;margin-top:2rem;max-width:58ch;
+}
+.laat b{color:var(--zilver);font-family:Oswald,Arial,sans-serif;font-weight:500;letter-spacing:.04em}
+
+/* ---------- prijzen ---------- */
+.lijst{border-top:1px solid var(--rand);margin-top:2.4rem}
+.regel{
+  display:grid;grid-template-columns:1fr auto;gap:.4rem 1.4rem;align-items:baseline;
+  padding:1.15rem .2rem;border-bottom:1px solid var(--rand);
+  text-decoration:none;color:inherit;transition:background .18s ease,padding-left .18s ease;
+}
+.regel:hover,.regel:focus-visible{background:rgba(214,50,32,.09);padding-left:.9rem}
+.regel h3{font-size:1.06rem;color:var(--zilver);font-weight:500;letter-spacing:.01em}
+.regel .duur{display:block;font-family:Barlow,Arial,sans-serif;font-weight:400;font-size:.76rem;
+  text-transform:uppercase;letter-spacing:.16em;color:var(--rook);margin-top:.3rem}
+.regel .wat{grid-column:1/-1;font-size:.9rem;color:var(--rook);max-width:62ch;margin-top:.45rem}
+.regel .bedrag{font-family:Oswald,Arial,sans-serif;font-weight:500;font-size:1.5rem;color:var(--zilver);white-space:nowrap}
+.regel .bedrag small{display:block;font-size:.6rem;text-transform:uppercase;letter-spacing:.18em;color:var(--rook);font-weight:400}
+.regel .pak{
+  grid-column:1/-1;justify-self:start;margin-top:.6rem;
+  font-family:Oswald,Arial,sans-serif;font-size:.72rem;text-transform:uppercase;letter-spacing:.2em;color:var(--tram);
+  opacity:0;transform:translateY(-4px);transition:opacity .2s ease,transform .2s ease;
+}
+.regel:hover .pak,.regel:focus-visible .pak{opacity:1;transform:none}
+.regel.top{background:rgba(214,50,32,.07)}
+.regel.top h3{color:#fff}
+
+/* ---------- team ---------- */
+.team{background:var(--kool)}
+.teamrij{display:grid;gap:1px;background:var(--rand);border:1px solid var(--rand);margin-top:2.4rem}
+@media(min-width:700px){.teamrij{grid-template-columns:repeat(3,1fr)}}
+.kapper{background:var(--kool);padding:2.4rem 1.6rem;text-align:center}
+.kapper b{display:block;font-family:Oswald,Arial,sans-serif;font-weight:500;font-size:1.7rem;
+  color:var(--zilver);text-transform:uppercase;letter-spacing:.06em}
+.kapper span{display:block;margin-top:.6rem;font-size:.74rem;text-transform:uppercase;letter-spacing:.2em;color:var(--tram)}
+
+/* ---------- slot ---------- */
+.slot{text-align:center;background:var(--asfalt);border-top:1px solid var(--rand)}
+.slot .kop{max-width:18ch;margin:0 auto}
+.slot .hero-knoppen{justify-content:center;margin-top:2.2rem}
+
+/* ---------- praktisch ---------- */
+.praktisch{background:var(--kool);border-top:1px solid var(--rand)}
+.praktrij{display:grid;gap:2.6rem;margin-top:2.4rem}
+@media(min-width:880px){.praktrij{grid-template-columns:1.15fr .85fr;gap:3.5rem}}
+.uren{width:100%;border-collapse:collapse;font-size:.98rem}
+.uren th,.uren td{text-align:left;padding:.72rem 0;border-bottom:1px solid var(--rand)}
+.uren th{font-weight:400;color:var(--mist);text-transform:capitalize}
+.uren td{text-align:right;color:var(--zilver);font-variant-numeric:tabular-nums}
+.uren tr.nu th,.uren tr.nu td{color:var(--tram)}
+.uren tr.dicht td{color:var(--rook)}
+.adres p{margin-bottom:1.1rem}
+.adres a.lijn{color:var(--zilver);text-decoration:none;border-bottom:1px solid var(--tram);padding-bottom:2px}
+.verborgen{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- voet ---------- */
+footer{background:var(--asfalt);border-top:1px solid var(--rand);padding:2.6rem 1.4rem 7.5rem;text-align:center;font-size:.8rem;color:var(--rook);line-height:1.7}
+footer strong{color:var(--mist);font-weight:600}
+
+/* ---------- meeschuivende balk ---------- */
+.balk{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;
+  display:flex;gap:1px;background:var(--rand);
+  transform:translateY(110%);transition:transform .3s ease;
+  border-top:1px solid var(--rand);
+}
+.balk.aan{transform:none}
+.balk a{
+  flex:1;display:flex;align-items:center;justify-content:center;gap:.5rem;
+  padding:1.05rem .6rem;text-decoration:none;background:var(--kool);color:var(--zilver);
+  font-family:Oswald,Arial,sans-serif;font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;
+}
+.balk a.hoofd{background:var(--tram);color:#fff;flex:1.4}
+@media(min-width:900px){
+  .balk{left:auto;right:1.6rem;bottom:1.6rem;width:auto;border-top:0;background:transparent;gap:.6rem}
+  .balk a{padding:.95rem 1.5rem;border:1px solid var(--rand)}
+  .balk a.hoofd{border-color:var(--tram)}
+}
+
+/* ---------- onthullen ---------- */
+.js .onthul{opacity:0;transform:translateY(26px)}
+.onthul{transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)}
+.onthul.zicht{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .onthul,.onthul{opacity:1;transform:none;transition:none}
+  .beeld img,.knop,.regel,.balk{transition:none}
+}
+</style>
+</head>
+<body>
+
+<div class="voorstel">
+  Dit is een <strong>voorstel</strong> gemaakt door Bjorn Beerntsen, niet de offici&euml;le website van Kapsalon Istanbul.
+  Vragen? Bel of app Bjorn op <a href="tel:+31622658452">06 22 65 84 52</a>.
+</div>
+
+<header class="hero">
+  <div class="hero-beeld">
+    <img src="img/tram.jpg" width="1800" height="1350" alt="De wand in de zaak: een zwart-witfoto van de Istiklal Caddesi in Istanbul met de rode tram 410 naar Taksim en Tunel, en een rode telefooncel met verzorgingsproducten.">
+  </div>
+  <div class="hero-tekst">
+    <p class="plaatsregel">Vleesstraat 13 &middot; Tiel</p>
+    <h1 class="woordmerk">Istanbul<span class="zacht">Dames &amp; heren</span></h1>
+    <p class="hero-onder">Sinds 2006 knippen en scheren wij aan de Vleesstraat. Ahmet, Sibel en Samet staan voor u klaar.</p>
+    <div class="hero-knoppen">
+      <a class="knop" href="#boeken">Plek vastleggen</a>
+      <a class="knop stil" href="tel:+31616156181">Bel 06 16 15 61 81</a>
+    </div>
+    <p class="hero-feit"><span></span> 4,8 uit 3230 beoordelingen</p>
+  </div>
+</header>
+
+<section class="tellers">
+  <div class="mid">
+    <div class="tellerrij">
+      <div class="telling onthul"><b data-tel="3230">0</b><span>Beoordelingen</span></div>
+      <div class="telling onthul"><b data-tel="4,8">0</b><span>Gemiddeld cijfer</span></div>
+      <div class="telling onthul"><b data-tel="20">0</b><span>Jaar aan de Vleesstraat</span></div>
+      <div class="telling onthul"><b data-tel="3">0</b><span>Kappers achter de stoel</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="mid">
+    <div class="sectiekop onthul">
+      <p class="bord">De zaak</p>
+      <h2 class="kop">Alles grijs,<br><span class="dun">behalve wat telt</span></h2>
+      <p class="inlei">Op de wand rijdt tram 410 door een zwart-wit Istanbul. Zo werkt deze pagina ook: kleur krijgt alleen wat u kunt aanraken. Beweeg over een foto en de zaak komt tot leven.</p>
+    </div>
+    <div class="strook onthul">
+      <figure class="beeld">
+        <img src="img/werk.jpg" width="1500" height="1125" alt="Drie kappers aan het werk in Kapsalon Istanbul, met op de ruit het logo met de tekst since 2006, haircuts and shaves.">
+        <figcaption>Sinds 2006 &middot; haircuts and shaves</figcaption>
+      </figure>
+      <figure class="beeld">
+        <img src="img/stoelen.jpg" width="1500" height="1125" alt="De rij klassieke barbierstoelen met groen leer en houten kaptafels onder een rode lichtlijn.">
+        <figcaption>Groen leer &middot; rode lichtlijn</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="citaat">
+  <div class="mid">
+    <blockquote class="onthul">&ldquo;Ik kom hier al een aantal jaren en ben dik tevreden.&rdquo;</blockquote>
+    <cite class="onthul">Marvin van Leeuwen &middot; geholpen door Ahmet</cite>
+  </div>
+</section>
+
+<section class="boeken" id="boeken">
+  <div class="mid">
+    <div class="sectiekop onthul">
+      <p class="bord">Uw plek</p>
+      <h2 class="kop">Kies uw kapper,<br><span class="dun">kies uw tijd</span></h2>
+      <p class="inlei">Hieronder staat de echte agenda van de zaak. Kies Ahmet, Sibel of Samet, kies een behandeling en leg uw plek vast. U hoeft niets te bellen en niets af te wachten.</p>
+    </div>
+    <div class="agenda onthul">
+      <iframe src="https://dashboard.knipklok.nl/shop/105/appointment/barber/choose" title="Online een plek vastleggen bij Kapsalon Istanbul"></iframe>
+    </div>
+    <p class="agenda-onder">
+      Liever even overleggen?
+      <a class="knop stil" href="tel:+31616156181">Bel de zaak</a>
+      <a class="knop stil" href="https://wa.me/31616156181" target="_blank" rel="noopener">Stuur een appje</a>
+    </p>
+    <div class="laat onthul">
+      <p><b>Donderdag tot 21.00 uur.</b><br>De enige avond in de week dat u na het werk nog rustig terecht kunt. Die plekken gaan als eerste weg, dus leg hem op tijd vast.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="mid">
+    <div class="sectiekop onthul">
+      <p class="bord">Behandelingen</p>
+      <h2 class="kop">Wat het kost,<br><span class="dun">en hoe lang het duurt</span></h2>
+      <p class="inlei">Elke regel hieronder is meteen een knop. Tik op wat u wilt en u staat in de agenda.</p>
+    </div>
+    <div class="lijst onthul">
+
+      <a class="regel" href="#boeken">
+        <h3>Knippen<span class="duur">15 minuten</span></h3>
+        <span class="bedrag"><small>vanaf</small>&euro;&nbsp;21</span>
+        <span class="pak">Plek vastleggen</span>
+      </a>
+
+      <a class="regel" href="#boeken">
+        <h3>Dames knippen<span class="duur">15 minuten</span></h3>
+        <span class="bedrag"><small>vanaf</small>&euro;&nbsp;21</span>
+        <span class="pak">Plek vastleggen</span>
+      </a>
+
+      <a class="regel" href="#boeken">
+        <h3>Kinderen tot en met 10 jaar<span class="duur">15 minuten</span></h3>
+        <span class="bedrag">&euro;&nbsp;16</span>
+        <span class="pak">Plek vastleggen</span>
+      </a>
+
+      <a class="regel" href="#boeken">
+        <h3>Contouren baard trimmen en lijnen<span class="duur">15 minuten</span></h3>
+        <span class="bedrag">&euro;&nbsp;15</span>
+        <span class="pak">Plek vastleggen</span>
+      </a>
+
+      <a class="regel" href="#boeken">
+        <h3>Ouderwets baard glad scheren<span class="duur">15 minuten</span></h3>
+        <span class="bedrag">&euro;&nbsp;15</span>
+        <span class="pak">Plek vastleggen</span>
+      </a>
+
+      <a class="regel" href="#boeken">
+        <h3>Wenkbrauwen epileren<span class="duur">15 minuten</span></h3>
+        <span class="bedrag">&euro;&nbsp;10</span>
+        <span class="pak">Plek vastleggen</span>
+      </a>
+
+      <a class="regel" href="#boeken">
+        <h3>Wenkbrauw verven<span class="duur">15 minuten</span></h3>
+        <span class="bedrag">&euro;&nbsp;10</span>
+        <span class="pak">Plek vastleggen</span>
+      </a>
+
+      <a class="regel" href="#boeken">
+        <h3>Wenkbrauw verven en epileren<span class="duur">30 minuten</span></h3>
+        <span class="bedrag">&euro;&nbsp;18</span>
+        <span class="pak">Plek vastleggen</span>
+      </a>
+
+      <a class="regel" href="#boeken">
+        <h3>Overloop met scheermes en knippen<span class="duur">30 minuten</span></h3>
+        <span class="bedrag">&euro;&nbsp;23</span>
+        <span class="pak">Plek vastleggen</span>
+      </a>
+
+      <a class="regel" href="#boeken">
+        <h3>Knippen en wenkbrauw epileren<span class="duur">30 minuten</span></h3>
+        <span class="bedrag">&euro;&nbsp;29</span>
+        <span class="pak">Plek vastleggen</span>
+      </a>
+
+      <a class="regel" href="#boeken">
+        <h3>Knippen en baard<span class="duur">45 minuten</span></h3>
+        <span class="bedrag">&euro;&nbsp;30</span>
+        <span class="pak">Plek vastleggen</span>
+      </a>
+
+      <a class="regel" href="#boeken">
+        <h3>Overloop, knippen en baard<span class="duur">45 minuten</span></h3>
+        <span class="bedrag"><small>vanaf</small>&euro;&nbsp;30</span>
+        <span class="pak">Plek vastleggen</span>
+      </a>
+
+      <a class="regel" href="#boeken">
+        <h3>Knippen, wenkbrauw epileren en verven<span class="duur">45 minuten</span></h3>
+        <span class="bedrag">&euro;&nbsp;35</span>
+        <span class="pak">Plek vastleggen</span>
+      </a>
+
+      <a class="regel top" href="#boeken">
+        <h3>V.I.P<span class="duur">60 minuten</span></h3>
+        <span class="bedrag">&euro;&nbsp;50</span>
+        <span class="wat">Knippen, baard, waxen van het gezicht en het weghalen van neus- en oorharen, wassen, stylen, blackmask en een potje wax mee naar huis.</span>
+        <span class="pak">Plek vastleggen</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="team">
+  <div class="mid">
+    <div class="sectiekop onthul">
+      <p class="bord">Achter de stoel</p>
+      <h2 class="kop">U kiest zelf<br><span class="dun">wie u knipt</span></h2>
+      <p class="inlei">Heeft u een vaste kapper? Kies die dan gewoon in de agenda. Dan zit u bij wie u gewend bent.</p>
+    </div>
+    <div class="teamrij onthul">
+      <div class="kapper"><b>Ahmet</b><span>Kapper</span></div>
+      <div class="kapper"><b>Sibel</b><span>Kapper</span></div>
+      <div class="kapper"><b>Samet</b><span>Kapper</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="slot">
+  <div class="mid">
+    <p class="bord leeg onthul">Tot ziens aan de Vleesstraat</p>
+    <h2 class="kop onthul" style="margin-top:1.4rem">Zullen we<br><span class="dun">een tijd afspreken?</span></h2>
+    <div class="hero-knoppen onthul">
+      <a class="knop" href="#boeken">Plek vastleggen</a>
+      <a class="knop stil" href="https://wa.me/31616156181" target="_blank" rel="noopener">Stuur een appje</a>
+    </div>
+  </div>
+</section>
+
+<section class="praktisch">
+  <div class="mid">
+    <div class="sectiekop onthul">
+      <p class="bord">Praktisch</p>
+      <h2 class="kop">Openingstijden<br><span class="dun">en de weg</span></h2>
+    </div>
+    <div class="praktrij onthul">
+      <table class="uren">
+        <caption class="verborgen">Openingstijden van Kapsalon Istanbul</caption>
+        <tbody>
+          <tr><th scope="row">maandag</th><td>10.00 tot 18.00</td></tr>
+          <tr><th scope="row">dinsdag</th><td>09.00 tot 18.00</td></tr>
+          <tr><th scope="row">woensdag</th><td>09.00 tot 18.00</td></tr>
+          <tr class="nu"><th scope="row">donderdag</th><td>09.00 tot 21.00</td></tr>
+          <tr><th scope="row">vrijdag</th><td>09.00 tot 18.00</td></tr>
+          <tr><th scope="row">zaterdag</th><td>09.00 tot 17.00</td></tr>
+          <tr class="dicht"><th scope="row">zondag</th><td>gesloten</td></tr>
+        </tbody>
+      </table>
+      <div class="adres">
+        <p><strong style="color:var(--zilver)">Kapsalon Istanbul</strong><br>Vleesstraat 13<br>Tiel</p>
+        <p><a class="lijn" href="tel:+31616156181">06 16 15 61 81</a></p>
+        <p><a class="lijn" href="https://wa.me/31616156181" target="_blank" rel="noopener">Stuur een appje</a></p>
+        <p style="margin-top:1.6rem"><a class="knop" href="#boeken">Plek vastleggen</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><strong>Voorstel voor Kapsalon Istanbul</strong><br>
+  Gemaakt door Bjorn Beerntsen &middot; Capital BB &middot; <a href="tel:+31622658452" style="color:var(--mist)">06 22 65 84 52</a></p>
+  <p style="margin-top:1rem">Dit is geen offici&euml;le website van Kapsalon Istanbul. Alle gegevens komen van hun eigen pagina op knipklok en van hun eigen foto&rsquo;s.</p>
+</footer>
+
+<nav class="balk" id="balk" aria-label="Snel een plek vastleggen">
+  <a class="hoofd" href="#boeken">Plek vastleggen</a>
+  <a href="tel:+31616156181">Bellen</a>
+  <a href="https://wa.me/31616156181" target="_blank" rel="noopener">Appen</a>
+</nav>
+
+<script>
+(function(){
+  var traag = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var items = document.querySelectorAll('.onthul');
+  if (!('IntersectionObserver' in window) || traag) {
+    for (var i=0;i<items.length;i++) items[i].classList.add('zicht');
+  } else {
+    var kijker = new IntersectionObserver(function(rijen){
+      rijen.forEach(function(r){
+        if (r.isIntersecting){ r.target.classList.add('zicht'); kijker.unobserve(r.target); }
+      });
+    }, {threshold:.14, rootMargin:'0px 0px -8% 0px'});
+    for (var j=0;j<items.length;j++) kijker.observe(items[j]);
+  }
+
+  function tel(el){
+    var doel = el.getAttribute('data-tel');
+    if (traag){ el.textContent = doel; return; }
+    var komma = doel.indexOf(',') > -1;
+    var eind = parseFloat(doel.replace(',', '.'));
+    var start = null, duur = 1500;
+    function stap(t){
+      if (!start) start = t;
+      var p = Math.min((t - start) / duur, 1);
+      var e = 1 - Math.pow(1 - p, 3);
+      var w = eind * e;
+      el.textContent = komma ? w.toFixed(1).replace('.', ',') : Math.round(w).toLocaleString('nl-NL');
+      if (p < 1) requestAnimationFrame(stap);
+    }
+    requestAnimationFrame(stap);
+  }
+  var cijfers = document.querySelectorAll('[data-tel]');
+  if (!('IntersectionObserver' in window)){
+    for (var k=0;k<cijfers.length;k++) cijfers[k].textContent = cijfers[k].getAttribute('data-tel');
+  } else {
+    var teller = new IntersectionObserver(function(rijen){
+      rijen.forEach(function(r){
+        if (r.isIntersecting){ tel(r.target); teller.unobserve(r.target); }
+      });
+    }, {threshold:.5});
+    for (var m=0;m<cijfers.length;m++) teller.observe(cijfers[m]);
+  }
+
+  var balk = document.getElementById('balk');
+  var hero = document.querySelector('.hero');
+  if (balk && hero && 'IntersectionObserver' in window){
+    new IntersectionObserver(function(rijen){
+      balk.classList.toggle('aan', !rijen[0].isIntersecting);
+    }, {threshold:0}).observe(hero);
+  } else if (balk){
+    balk.classList.add('aan');
+  }
+})();
+</script>
+</body>
+</html>
