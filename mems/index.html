@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mems Didam | Barbershop aan de Wilhelminastraat</title>
+<meta name="description" content="Barbershop aan de Wilhelminastraat 44 in Didam. Knippen vanaf 20 euro, baard vanaf 12,50. Zes kappers, online een afspraak maken.">
+<link rel="preload" as="image" href="img/werk.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* De kleuren komen uit hun eigen zaak: kalkwanden in zand, cognac leren
+   stoelen, espresso letters. Geen gekozen palet maar een afgekeken palet. */
+:root{
+  --kalk:#efe8dc; --kalk-diep:#e2d7c6; --wit:#fbf8f3;
+  --espresso:#2b241d; --grijs:#6f6357;
+  --cognac:#a0673f; --cognac-diep:#7f4f2d;
+  --boog:999px; --marge:clamp(1.25rem,5vw,4.5rem);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Karla,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--kalk);color:var(--espresso);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:var(--marge)}
+.serif{font-family:Newsreader,Georgia,serif;font-weight:400;letter-spacing:-.01em}
+
+.voorstel{background:var(--espresso);color:#c4b8a9;font-size:.8rem;padding:.6rem 0;line-height:1.45}
+.voorstel .wrap{display:flex;flex-wrap:wrap;gap:.3rem 1rem;justify-content:center;text-align:center}
+.voorstel b{color:#e0a878;font-weight:700}
+.voorstel a{color:inherit;font-weight:700;text-underline-offset:2px}
+
+.kop{position:sticky;top:0;z-index:50;background:rgba(239,232,220,.92);backdrop-filter:blur(10px)}
+.kop-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:76px}
+.merk{font-family:Newsreader,Georgia,serif;font-weight:400;font-size:1.9rem;letter-spacing:-.02em;text-decoration:none;line-height:1}
+.kop-cta{background:var(--espresso);color:var(--kalk);text-decoration:none;font-weight:600;font-size:.92rem;
+  padding:.7rem 1.4rem;border-radius:var(--boog);white-space:nowrap;transition:background .2s,transform .12s}
+.kop-cta:hover{background:var(--cognac-diep)}
+.kop-cta:active{transform:translateY(1px)}
+
+/* hero: staand beeld in een boog, precies zoals de nissen in hun zaak */
+.hero{padding-block:clamp(2rem,5vw,4rem) clamp(3rem,7vw,5rem)}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:center}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.05fr .95fr;gap:clamp(2.5rem,6vw,5rem)}}
+.hero h1{font-family:Newsreader,Georgia,serif;font-weight:300;line-height:1.04;
+  font-size:clamp(2.4rem,6.4vw,4.2rem);letter-spacing:-.025em;max-width:13ch}
+.hero h1 em{font-style:italic;color:var(--cognac-diep)}
+.hero > .wrap > .hero-grid > div > p{margin-top:1.3rem;color:var(--grijs);font-size:clamp(1.03rem,2.2vw,1.16rem);max-width:38ch}
+.knoppen{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.knop{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-weight:600;
+  white-space:nowrap;border-radius:var(--boog);padding:.95rem 1.7rem;font-size:1rem;border:1.5px solid transparent;
+  transition:background .2s,color .2s,border-color .2s,transform .12s}
+.knop-hoofd{background:var(--espresso);color:var(--kalk);border-color:var(--espresso)}
+.knop-hoofd:hover{background:var(--cognac-diep);border-color:var(--cognac-diep)}
+.knop-hoofd:active{transform:translateY(1px)}
+.knop-rand{border-color:var(--espresso);color:var(--espresso)}
+.knop-rand:hover{background:var(--espresso);color:var(--kalk)}
+.knop-rand:active{transform:translateY(1px)}
+/* de boogvorm: bovenaan rond, onderaan recht */
+.boogbeeld{border-radius:var(--boog) var(--boog) 14px 14px;overflow:hidden;background:var(--kalk-diep)}
+.boogbeeld img{width:100%;aspect-ratio:3/4;object-fit:cover}
+
+.bewijs{background:var(--espresso);color:var(--kalk)}
+.bewijs-in{display:grid;grid-template-columns:repeat(2,1fr)}
+@media(min-width:820px){.bewijs-in{grid-template-columns:repeat(4,1fr)}}
+.bewijs-cel{padding:1.6rem var(--marge);border-right:1px solid rgba(255,255,255,.14);border-bottom:1px solid rgba(255,255,255,.14)}
+@media(min-width:820px){.bewijs-cel{border-bottom:0}.bewijs-cel:last-child{border-right:0}}
+.bewijs-cel b{display:block;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:1.9rem;line-height:1}
+.bewijs-cel span{display:block;margin-top:.4rem;font-size:.85rem;color:#b6a897}
+
+/* prijslijst als redactionele lijst, niet als kaartjes */
+.prijzen{padding-block:clamp(3.5rem,8vw,6rem)}
+.prijzen h2{font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(2rem,5vw,3rem);letter-spacing:-.02em}
+.prijzen > .wrap > p{margin-top:.8rem;color:var(--grijs);max-width:50ch}
+.lijst{margin-top:2.6rem;display:grid;grid-template-columns:1fr;gap:0}
+@media(min-width:840px){.lijst{grid-template-columns:1fr 1fr;column-gap:clamp(2.5rem,6vw,4.5rem)}}
+.regel{display:grid;grid-template-columns:1fr auto;gap:.4rem 1.5rem;align-items:baseline;
+  padding:1.15rem 0;border-bottom:1px solid rgba(43,36,29,.14)}
+.regel h3{font-family:Newsreader,Georgia,serif;font-weight:500;font-size:1.16rem;letter-spacing:-.01em}
+.regel .bedrag{font-family:Newsreader,Georgia,serif;font-size:1.3rem;white-space:nowrap}
+.regel .bedrag small{font-family:Karla,sans-serif;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--grijs);margin-right:.35rem}
+.regel p{grid-column:1/-1;margin:0;color:var(--grijs);font-size:.92rem;line-height:1.55;max-width:46ch}
+.regel .duur{color:var(--grijs);font-size:.82rem;letter-spacing:.04em}
+
+/* team */
+.team{background:var(--wit);padding-block:clamp(3.5rem,8vw,6rem)}
+.team-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:center}
+@media(min-width:900px){.team-grid{grid-template-columns:.8fr 1.2fr;gap:clamp(2.5rem,6vw,5rem)}}
+.team h2{font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(2rem,5vw,3rem);letter-spacing:-.02em;line-height:1.08}
+.team-tekst > p{margin-top:1.1rem;color:var(--grijs);max-width:48ch}
+.namen{list-style:none;margin-top:1.8rem;display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem 1.5rem}
+@media(min-width:620px){.namen{grid-template-columns:repeat(3,1fr)}}
+.namen li{font-family:Newsreader,Georgia,serif;font-size:1.12rem;padding-top:.6rem;border-top:1px solid rgba(43,36,29,.16)}
+
+/* verhaal */
+.verhaal{padding-block:clamp(3.5rem,8vw,6rem)}
+.verhaal-in{max-width:44rem;margin-inline:auto;text-align:center}
+.verhaal blockquote{font-family:Newsreader,Georgia,serif;font-weight:300;font-style:italic;
+  font-size:clamp(1.5rem,3.6vw,2.3rem);line-height:1.32;letter-spacing:-.02em}
+.verhaal p{margin-top:1.4rem;color:var(--grijs);max-width:42ch;margin-inline:auto}
+
+/* stemmen */
+.stemmen{background:var(--kalk-diep);padding-block:clamp(3.5rem,8vw,6rem)}
+.stemmen h2{font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(1.9rem,4.6vw,2.7rem);letter-spacing:-.02em}
+.stem-grid{display:grid;grid-template-columns:1fr;gap:1.4rem;margin-top:2.4rem}
+@media(min-width:820px){.stem-grid{grid-template-columns:repeat(3,1fr);gap:1.6rem}}
+.stem{background:var(--wit);border-radius:14px;padding:1.7rem}
+.stem p{font-size:1.02rem;line-height:1.55}
+.stem cite{display:block;margin-top:1rem;font-style:normal;font-weight:600;font-size:.85rem;color:var(--cognac-diep)}
+
+/* boeken */
+.boeken{padding-block:clamp(3.5rem,8vw,6rem)}
+.boeken h2{font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(2rem,5vw,3rem);letter-spacing:-.02em}
+.boeken > .wrap > p{margin-top:.8rem;color:var(--grijs);max-width:50ch}
+.boekvenster{margin-top:2.2rem;background:#fff;border-radius:14px;overflow:hidden;border:1px solid rgba(43,36,29,.12)}
+.boekvenster iframe{display:block;width:100%;height:clamp(620px,82vh,880px);border:0}
+.boek-noot{margin-top:1rem;font-size:.92rem;color:var(--grijs)}
+.boek-noot a{color:var(--cognac-diep);font-weight:600;text-underline-offset:3px}
+
+/* praktisch */
+.praktisch{background:var(--espresso);color:var(--kalk);padding-block:clamp(3.5rem,8vw,6rem)}
+.praktisch-grid{display:grid;grid-template-columns:1fr;gap:2.8rem}
+@media(min-width:880px){.praktisch-grid{grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,5rem)}}
+.praktisch h2{font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(1.7rem,4.2vw,2.4rem);margin-bottom:1.4rem}
+.uren{list-style:none}
+.uren li{display:flex;justify-content:space-between;gap:1rem;padding:.8rem 0;border-bottom:1px solid rgba(255,255,255,.13)}
+.uren li:last-child{border-bottom:0}
+.uren li span:first-child{color:#b6a897}
+.uren li span:last-child{font-weight:600;font-variant-numeric:tabular-nums}
+.uren li.laat span:last-child{color:#e0a878}
+.uren li.dicht span{color:#7d7164;font-weight:400}
+.adres{font-size:1.04rem;line-height:1.85;color:#b6a897}
+.adres strong{display:block;font-family:Newsreader,Georgia,serif;font-weight:400;font-size:1.5rem;color:var(--kalk)}
+.adres a{color:#e0a878;font-weight:600;text-underline-offset:3px}
+
+.voet{background:var(--espresso);color:#8d8172;padding-block:2.2rem;font-size:.88rem;border-top:1px solid rgba(255,255,255,.12)}
+.voet-in{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:space-between}
+.voet a{color:var(--kalk);font-weight:600}
+
+@media(prefers-reduced-motion:no-preference){
+  .onthul{opacity:0;transform:translateY(20px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}
+  .onthul.zichtbaar{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="voorstel">
+  <div class="wrap">
+    <span><b>Voorbeeldontwerp</b> gemaakt voor mems door Bjorn Beerntsen.</span>
+    <span>Geen offici&euml;le website. Het boeken werkt w&eacute;l echt: dat is jullie eigen knipklok-agenda.</span>
+    <span>Vragen? Bel of app Bjorn op <a href="tel:+31622658452">06 22658452</a></span>
+  </div>
+</div>
+
+<header class="kop">
+  <div class="wrap kop-in">
+    <a class="merk" href="#top">mems</a>
+    <a class="kop-cta" href="#boeken">Afspraak maken</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Mensen rijden er <em>anderhalf uur</em> voor.</h1>
+        <p>Barbershop aan de Wilhelminastraat in Didam. Zes kappers, en een stoel die vooruit gereserveerd wordt.</p>
+        <div class="knoppen">
+          <a class="knop knop-hoofd" href="#boeken">Afspraak maken</a>
+          <a class="knop knop-rand" href="tel:+31640909311">Bel 06 40909311</a>
+        </div>
+      </div>
+      <div class="boogbeeld">
+        <img src="img/werk.jpg" alt="Twee kappers van mems aan het werk in de salon aan de Wilhelminastraat" width="1125" height="1500" fetchpriority="high">
+      </div>
+    </div>
+  </section>
+
+  <section class="bewijs">
+    <div class="bewijs-in">
+      <div class="bewijs-cel"><b>4,8</b><span>uit 1949 beoordelingen</span></div>
+      <div class="bewijs-cel"><b>6</b><span>kappers in de zaak</span></div>
+      <div class="bewijs-cel"><b>&euro; 18</b><span>vanaf, voor jongeren tot 16</span></div>
+      <div class="bewijs-cel"><b>2023</b><span>aan de Wilhelminastraat</span></div>
+    </div>
+  </section>
+
+  <section class="prijzen wrap">
+    <h2 class="onthul">Wat het kost</h2>
+    <p class="onthul">Alle behandelingen met de tijd die ervoor staat. Geen verrassingen bij het afrekenen.</p>
+    <div class="lijst">
+      <div class="regel onthul">
+        <h3>Knippen <span class="duur">30 tot 45 min</span></h3>
+        <div class="bedrag"><small>vanaf</small>&euro; 20</div>
+        <p>Het volledig in model brengen van je haar, zowel bovenop als aan de zijkanten.</p>
+      </div>
+      <div class="regel onthul">
+        <h3>Knippen en korte baard <span class="duur">30 tot 45 min</span></h3>
+        <div class="bedrag"><small>vanaf</small>&euro; 22,50</div>
+        <p>Het volledig in model zetten van je haar en je korte baard.</p>
+      </div>
+      <div class="regel onthul">
+        <h3>Knippen en lange baard <span class="duur">45 tot 60 min</span></h3>
+        <div class="bedrag"><small>vanaf</small>&euro; 25</div>
+        <p>Het volledig in model zetten van je haar en je lange baard.</p>
+      </div>
+      <div class="regel onthul">
+        <h3>Baard <span class="duur">15 min</span></h3>
+        <div class="bedrag"><small>vanaf</small>&euro; 12,50</div>
+        <p>Alleen het scheren en het contouren van je baard, dus niet je haar.</p>
+      </div>
+      <div class="regel onthul">
+        <h3>Baard plus <span class="duur">15 min</span></h3>
+        <div class="bedrag"><small>vanaf</small>&euro; 15</div>
+        <p>Je baard in model, en je kunt je hoofd kaal laten scheren of je contouren laten bijwerken.</p>
+      </div>
+      <div class="regel onthul">
+        <h3>Knippen tot 16 jaar <span class="duur">30 tot 45 min</span></h3>
+        <div class="bedrag"><small>vanaf</small>&euro; 18</div>
+      </div>
+      <div class="regel onthul">
+        <h3>Knippen tot 6 jaar <span class="duur">15 min</span></h3>
+        <div class="bedrag">&euro; 20</div>
+      </div>
+      <div class="regel onthul">
+        <h3>Knippen 65 plus <span class="duur">15 tot 30 min</span></h3>
+        <div class="bedrag">&euro; 20</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team">
+    <div class="wrap team-grid">
+      <div class="boogbeeld onthul">
+        <img src="img/merkteken.jpg" alt="Het verlichte woordmerk van mems in een van de boognissen in de salon" width="1125" height="1500" loading="lazy">
+      </div>
+      <div class="team-tekst onthul">
+        <h2>Zes kappers, en je kiest zelf wie</h2>
+        <p>Bij het maken van een afspraak kies je bij wie je in de stoel wilt. Ben je eenmaal gewend aan iemand, dan hoef je nooit meer uit te leggen hoe je het hebben wilt.</p>
+        <ul class="namen">
+          <li>Mehmed Akif</li>
+          <li>Mehmet Celik</li>
+          <li>Arda Oztas</li>
+          <li>Dean Visscher</li>
+          <li>Serhat Karadas</li>
+          <li>Enes</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="verhaal">
+    <div class="wrap verhaal-in">
+      <blockquote class="onthul">Vijf jaar knipte Mehmed Akif in een tuinhuisje. In 2023 opende hij zijn eigen zaak in hartje Didam.</blockquote>
+      <p class="onthul">Wat begon met een stoel en een spiegel is nu een salon met zes kappers, waar mensen van ver naartoe rijden.</p>
+    </div>
+  </section>
+
+  <section class="stemmen">
+    <div class="wrap">
+      <h2 class="onthul">Wat klanten schrijven</h2>
+      <div class="stem-grid">
+        <article class="stem onthul">
+          <p>Ik rij zelf een uurtje naar deze kapper toe en dat is het absoluut waard. De kapper luistert.</p>
+          <cite>Joey Tissen</cite>
+        </article>
+        <article class="stem onthul">
+          <p>Ik heb anderhalf uur mogen rijden. Het was absoluut de moeite waard. Een kapper met aparte kniptechnieken die je niet zomaar kan vinden.</p>
+          <cite>Dogukan Top</cite>
+        </article>
+        <article class="stem onthul">
+          <p>Ben effe binnengelopen voor de eerste keer. Top ervaring, mems heeft er een nieuwe klant bij.</p>
+          <cite>Theo van Onna</cite>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="boeken" id="boeken">
+    <div class="wrap">
+      <h2>Reserveer je stoel</h2>
+      <p>Kies je behandeling, je kapper en een tijd die je schikt. Je boekt rechtstreeks in de agenda van de zaak.</p>
+      <div class="boekvenster">
+        <iframe
+          src="https://dashboard.knipklok.nl/shop/135/appointment/barber/choose?locale=nl_NL"
+          title="Online een afspraak maken bij mems in Didam"
+          loading="lazy"></iframe>
+      </div>
+      <p class="boek-noot">Liever bellen? Dat kan op <a href="tel:+31640909311">06 40909311</a>.</p>
+    </div>
+  </section>
+
+  <section class="praktisch">
+    <div class="wrap praktisch-grid">
+      <div class="onthul">
+        <h2>Openingstijden</h2>
+        <ul class="uren">
+          <li class="dicht"><span>Maandag</span><span>Gesloten</span></li>
+          <li><span>Dinsdag</span><span>08:00 - 17:30</span></li>
+          <li><span>Woensdag</span><span>08:00 - 17:30</span></li>
+          <li><span>Donderdag</span><span>08:00 - 17:30</span></li>
+          <li class="laat"><span>Vrijdag</span><span>08:00 - 19:00</span></li>
+          <li><span>Zaterdag</span><span>08:00 - 16:00</span></li>
+          <li class="dicht"><span>Zondag</span><span>Gesloten</span></li>
+        </ul>
+      </div>
+      <div class="onthul">
+        <h2>Waar je ons vindt</h2>
+        <div class="adres">
+          <strong>mems</strong>
+          Wilhelminastraat 44<br>
+          6942 BM Didam<br><br>
+          <a href="tel:+31640909311">06 40909311</a><br>
+          <a href="https://maps.google.com/?q=Wilhelminastraat+44+Didam" target="_blank" rel="noopener">Route via Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="voet">
+  <div class="wrap voet-in">
+    <div>mems &nbsp;&middot;&nbsp; Wilhelminastraat 44, Didam &nbsp;&middot;&nbsp; Sinds 2023</div>
+    <div><a href="tel:+31640909311">06 40909311</a></div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var doelen = document.querySelectorAll('.onthul');
+  if (!('IntersectionObserver' in window)) {
+    doelen.forEach(function (d) { d.classList.add('zichtbaar'); });
+    return;
+  }
+  var kijker = new IntersectionObserver(function (rijen) {
+    rijen.forEach(function (rij) {
+      if (!rij.isIntersecting) return;
+      rij.target.classList.add('zichtbaar');
+      kijker.unobserve(rij.target);
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  doelen.forEach(function (d) { kijker.observe(d); });
+})();
+</script>
+</body>
+</html>
