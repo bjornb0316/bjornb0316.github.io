@@ -118,11 +118,18 @@ a{color:inherit}
 .stem cite{display:block;margin-top:.6rem;font-style:normal;font-weight:600;font-size:.86rem;color:var(--amber)}
 
 .boeken{background:var(--hoog);border-top:1px solid var(--rand);padding-block:clamp(3.5rem,8vw,6rem)}
-.boeken-doos{border:1px solid var(--rand);border-radius:var(--rond);background:var(--zwart);
-  padding:clamp(2rem,5vw,3.6rem);display:grid;grid-template-columns:1fr;gap:2rem;align-items:center}
-@media(min-width:900px){.boeken-doos{grid-template-columns:1.2fr .8fr}}
+.boeken-kop{max-width:52ch}
 .boeken h2{font-weight:700;letter-spacing:-.035em;line-height:1.04;font-size:clamp(1.9rem,5vw,2.9rem)}
+.boeken h3{font-weight:600;font-size:1.25rem;letter-spacing:-.01em}
 .boeken p{margin-top:.9rem;color:var(--zacht);max-width:42ch}
+/* Zijn eigen boekpagina, hier in de site gezet. De hoofdsite van knipklok
+   verbiedt inbedden, het boekgedeelte op dashboard.knipklok.nl niet. */
+.boekvenster{margin-top:2.2rem;background:#fff;border:1px solid var(--rand);
+  border-radius:var(--rond);overflow:hidden}
+.boekvenster iframe{display:block;width:100%;height:clamp(620px,82vh,880px);border:0}
+.boeken-doos{margin-top:1.6rem;border:1px solid var(--rand);border-radius:var(--rond);background:var(--zwart);
+  padding:clamp(1.6rem,4vw,2.6rem);display:grid;grid-template-columns:1fr;gap:2rem;align-items:center}
+@media(min-width:900px){.boeken-doos{grid-template-columns:1.2fr .8fr}}
 .adres{font-size:1.02rem;line-height:1.85;color:var(--zacht)}
 .adres strong{display:block;font-weight:700;font-size:1.12rem;color:var(--bot);letter-spacing:-.01em}
 .adres a{color:var(--amber);font-weight:600;text-underline-offset:3px}
@@ -142,7 +149,7 @@ a{color:inherit}
 <div class="voorstel">
   <div class="wrap">
     <span><b>Voorbeeldontwerp</b> gemaakt voor Million Hair door Bjorn Beerntsen.</span>
-    <span>Dit is geen offici&euml;le website van Million Hair.</span>
+    <span>Geen offici&euml;le website. Het boeken werkt w&eacute;l echt: dat is jullie eigen knipklok-agenda.</span>
     <span>Vragen? Bel of app Bjorn op <a href="tel:+31622658452">06 22658452</a></span>
   </div>
 </div>
@@ -245,12 +252,23 @@ a{color:inherit}
 
   <section class="boeken" id="boeken">
     <div class="wrap">
+      <div class="boeken-kop">
+        <h2>Een plekje vastleggen</h2>
+        <p>Kies hieronder een behandeling en een tijd die u schikt. U boekt rechtstreeks in de agenda van de zaak.</p>
+      </div>
+
+      <div class="boekvenster">
+        <iframe
+          src="https://dashboard.knipklok.nl/shop/503/appointment/barber/choose?locale=nl_NL"
+          title="Online een afspraak maken bij Million Hair Barbershop"
+          loading="lazy"></iframe>
+      </div>
+
       <div class="boeken-doos">
         <div>
-          <h2>Een plekje vastleggen</h2>
-          <p>Kies online een tijd die u schikt, of stuur een appje als u liever even overlegt. Binnenlopen mag ook, maar dan kan het zijn dat u even wacht.</p>
+          <h3>Liever even overleggen?</h3>
+          <p>Stuur een appje, meestal krijgt u binnen een paar minuten antwoord. Binnenlopen mag ook, maar dan kan het zijn dat u even wacht.</p>
           <div class="knoppen">
-            <a class="knop knop-hoofd" href="https://knipklok.nl/shops/barbershop-million-hair-zevenaar" target="_blank" rel="noopener">Online afspraak maken</a>
             <a class="knop knop-rand" href="https://wa.me/31684692360" target="_blank" rel="noopener">WhatsApp</a>
           </div>
         </div>
