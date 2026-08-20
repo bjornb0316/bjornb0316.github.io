@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nzs nails art Apeldoorn | Nagelstudio, zeven dagen per week open</title>
+<meta name="description" content="Nagelstudio aan de Kapelstraat in Apeldoorn. Elke dag open van 09:00 tot 19:00, ook in het weekend. 4,9 uit 110 reviews. Boek online een tijd die u schikt.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --aubergine:#4a2530;
+  --aubergine-diep:#331a22;
+  --goud:#c0954f;
+  --nude:#e9d8d0;
+  --nude-diep:#d6bcb1;
+  --room:#faf6f4;
+  --inkt:#2a1f22;
+  --grijs:#6f5d62;
+  --wit:#fff;
+  --rond:16px;
+  --pil:999px;
+  --marge:clamp(1.15rem,4.5vw,4rem);
+  --balk:0px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--room);color:var(--inkt);font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;padding-bottom:var(--balk);
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:var(--marge)}
+
+.voorstel{background:var(--aubergine-diep);color:#c9b3b9;font-size:.79rem;padding:.55rem 0;line-height:1.45}
+.voorstel .wrap{display:flex;flex-wrap:wrap;gap:.3rem 1rem;justify-content:center;text-align:center}
+.voorstel b{color:var(--goud);font-weight:600}
+
+.kop{position:sticky;top:0;z-index:60;background:rgba(250,246,244,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--nude)}
+.kop-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:68px}
+.merk{text-decoration:none;font-weight:800;font-size:1.08rem;letter-spacing:-.01em;line-height:1.15}
+.merk small{display:block;font-weight:500;font-size:.64rem;letter-spacing:.22em;color:var(--grijs);text-transform:uppercase;margin-top:.12rem}
+.kop-cta{
+  background:var(--aubergine);color:var(--wit);text-decoration:none;font-weight:600;font-size:.92rem;
+  padding:.62rem 1.2rem;border-radius:var(--pil);white-space:nowrap;transition:background .18s,transform .1s;
+}
+.kop-cta:hover{background:var(--aubergine-diep)}
+.kop-cta:active{transform:translateY(1px)}
+@media(max-width:640px){.kop-cta{display:none}}
+
+/* hero */
+.hero{padding-block:clamp(2rem,5vw,3.6rem) clamp(2.5rem,6vw,4.5rem)}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:2rem;align-items:center}
+@media(min-width:940px){.hero-grid{grid-template-columns:1.02fr .98fr;gap:clamp(2.5rem,6vw,4.5rem)}}
+.hero h1{font-weight:800;letter-spacing:-.035em;line-height:1.04;font-size:clamp(2.15rem,5.8vw,3.5rem)}
+.hero h1 span{color:var(--aubergine)}
+.hero-sub{margin-top:1rem;color:var(--grijs);font-size:clamp(1.02rem,2.2vw,1.15rem);max-width:40ch}
+.knoppen{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.8rem}
+.knop{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;text-decoration:none;font-weight:700;
+  border-radius:var(--pil);padding:.9rem 1.6rem;font-size:1rem;border:2px solid transparent;transition:all .18s;cursor:pointer}
+.knop-hoofd{background:var(--aubergine);color:var(--wit);border-color:var(--aubergine)}
+.knop-hoofd:hover{background:var(--aubergine-diep);border-color:var(--aubergine-diep)}
+.knop-hoofd:active{transform:translateY(1px)}
+.knop-rand{border-color:var(--aubergine);color:var(--aubergine)}
+.knop-rand:hover{background:var(--aubergine);color:var(--wit)}
+.hero-beeld{position:relative;border-radius:var(--rond);overflow:hidden;background:var(--nude)}
+.hero-beeld img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.hero-merk{
+  position:absolute;left:1rem;bottom:1rem;background:rgba(42,31,34,.85);backdrop-filter:blur(6px);
+  color:var(--wit);border-radius:var(--pil);padding:.5rem 1rem;font-size:.84rem;font-weight:600;
+}
+.hero-merk b{color:var(--goud)}
+
+/* bewijs */
+.bewijs{background:var(--aubergine);color:var(--wit)}
+.bewijs-in{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.18)}
+@media(min-width:820px){.bewijs-in{grid-template-columns:repeat(4,1fr)}}
+.bewijs-cel{background:var(--aubergine);padding:1.4rem var(--marge)}
+.bewijs-cel b{display:block;font-size:1.5rem;font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.bewijs-cel span{display:block;margin-top:.25rem;font-size:.85rem;color:#d6bfc6}
+.goud{color:var(--goud)}
+
+/* werk */
+.werk{padding-block:clamp(3rem,7vw,5rem)}
+.werk-kop{display:flex;flex-wrap:wrap;gap:1rem;align-items:baseline;justify-content:space-between}
+.werk h2{font-weight:800;letter-spacing:-.03em;font-size:clamp(1.8rem,4.4vw,2.6rem)}
+.werk-kop p{color:var(--grijs);font-size:.95rem}
+.mozaiek{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin-top:2rem}
+@media(min-width:820px){
+  .mozaiek{grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:1rem}
+  .mozaiek figure:nth-child(1){grid-column:span 2;grid-row:span 2}
+}
+.mozaiek figure{margin:0;border-radius:var(--rond);overflow:hidden;background:var(--nude)}
+.mozaiek img{width:100%;height:100%;min-height:160px;object-fit:cover;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+@media(prefers-reduced-motion:no-preference){.mozaiek figure:hover img{transform:scale(1.04)}}
+
+/* behandelingen */
+.behandel{background:var(--nude);padding-block:clamp(3rem,7vw,5rem)}
+.behandel h2{font-weight:800;letter-spacing:-.03em;font-size:clamp(1.8rem,4.4vw,2.6rem);max-width:20ch}
+.behandel > .wrap > p{margin-top:.8rem;color:var(--grijs);max-width:54ch}
+.b-grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:2rem}
+@media(min-width:760px){.b-grid{grid-template-columns:repeat(3,1fr)}}
+.b-kaart{background:var(--wit);border-radius:var(--rond);padding:1.5rem}
+.b-kaart h3{font-weight:800;font-size:1.1rem}
+.b-kaart p{margin-top:.45rem;color:var(--grijs);font-size:.96rem}
+
+/* boeken */
+.boeken{padding-block:clamp(3rem,7vw,5rem)}
+.boeken-kop{max-width:56ch}
+.boeken h2{font-weight:800;letter-spacing:-.03em;line-height:1.08;font-size:clamp(1.9rem,4.6vw,2.8rem)}
+.boeken h2 span{color:var(--aubergine)}
+.boeken-kop p{margin-top:.8rem;color:var(--grijs)}
+.widget-doos{
+  margin-top:2rem;border-radius:var(--rond);overflow:hidden;background:var(--wit);
+  border:1px solid var(--nude-diep);box-shadow:0 20px 55px rgba(42,31,34,.10);
+}
+.widget-doos iframe{width:100%;height:760px;border:0;display:block;background:var(--wit)}
+@media(max-width:640px){.widget-doos iframe{height:680px}}
+.widget-noot{margin-top:.9rem;font-size:.86rem;color:var(--grijs);line-height:1.55}
+
+/* stemmen */
+.stemmen{background:var(--inkt);color:var(--room);padding-block:clamp(3rem,7vw,5rem)}
+.stemmen h2{font-weight:800;letter-spacing:-.03em;font-size:clamp(1.8rem,4.4vw,2.6rem)}
+.stemmen > .wrap > p{margin-top:.5rem;color:#b09ba1}
+.stem-grid{display:grid;grid-template-columns:1fr;gap:1.2rem;margin-top:2rem}
+@media(min-width:860px){.stem-grid{grid-template-columns:repeat(3,1fr)}}
+.stem{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--rond);padding:1.4rem}
+.sterren{color:var(--goud);letter-spacing:.14em;font-size:.9rem}
+.stem p{margin-top:.7rem;font-size:.99rem;line-height:1.55}
+.stem cite{display:block;margin-top:.9rem;font-style:normal;font-weight:600;font-size:.85rem;color:#b09ba1}
+
+/* praktisch */
+.praktisch{padding-block:clamp(3rem,7vw,5rem)}
+.p-grid{display:grid;grid-template-columns:1fr;gap:2.4rem}
+@media(min-width:860px){.p-grid{grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,5rem)}}
+.praktisch h2{font-weight:800;letter-spacing:-.03em;font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:1.2rem}
+.tijden{list-style:none;background:var(--nude);border-radius:var(--rond);padding:1.2rem 1.4rem}
+.tijden li{display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;font-size:1rem}
+.tijden li + li{border-top:1px solid rgba(42,31,34,.09)}
+.tijden span:first-child{color:var(--grijs)}
+.tijden span:last-child{font-weight:700;font-variant-numeric:tabular-nums}
+.adres{font-size:1.04rem;line-height:1.85}
+.adres strong{display:block;font-weight:800;font-size:1.12rem}
+.adres a{color:var(--aubergine);font-weight:600;text-underline-offset:3px}
+
+.voet{background:var(--inkt);color:#9c888e;padding-block:2.2rem;font-size:.88rem}
+.voet-in{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:space-between}
+.voet a{color:var(--room);font-weight:600}
+
+/* vaste balk */
+.actiebalk{
+  position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;
+  background:rgba(42,31,34,.97);backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.14);
+  padding:.55rem var(--marge) calc(.55rem + env(safe-area-inset-bottom,0px));gap:.5rem;
+}
+.actiebalk a{flex:1;display:flex;align-items:center;justify-content:center;text-decoration:none;
+  font-weight:700;font-size:.92rem;padding:.75rem .4rem;border-radius:var(--pil);white-space:nowrap}
+.ab-boek{background:var(--goud);color:#2a1f22}
+.ab-insta{background:rgba(255,255,255,.14);color:var(--room)}
+.ab-route{background:rgba(255,255,255,.14);color:var(--room)}
+@media(max-width:860px){.actiebalk{display:flex} body{--balk:74px}}
+
+@media(prefers-reduced-motion:no-preference){
+  .onthul{opacity:0;transform:translateY(18px);transition:opacity .65s cubic-bezier(.16,1,.3,1),transform .65s cubic-bezier(.16,1,.3,1)}
+  .onthul.zichtbaar{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="voorstel">
+  <div class="wrap">
+    <span><b>Voorbeeldontwerp</b> gemaakt voor nzs nails art door Bjorn Beerntsen.</span>
+    <span>Dit is geen offici&euml;le website van nzs nails art.</span>
+  </div>
+</div>
+
+<header class="kop">
+  <div class="wrap kop-in">
+    <a class="merk" href="#top">nzs nails art<small>Apeldoorn</small></a>
+    <a class="kop-cta" href="#boeken">Online boeken</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Nagels laten doen, <span>ook op zondag.</span></h1>
+        <p class="hero-sub">Nagelstudio aan de Kapelstraat in Apeldoorn. Zeven dagen per week open van negen tot zeven, dus u hoeft er geen vrij voor te nemen.</p>
+        <div class="knoppen">
+          <a class="knop knop-hoofd" href="#boeken">Kies een tijd</a>
+          <a class="knop knop-rand" href="#werk">Bekijk ons werk</a>
+        </div>
+      </div>
+      <div class="hero-beeld">
+        <img src="img/hero.jpg" alt="Nagels met een luipaardprint en gouden accenten, gezet bij nzs nails art" width="1000" height="1000" fetchpriority="high">
+        <span class="hero-merk"><b>4,9</b> uit 110 reviews</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="bewijs">
+    <div class="bewijs-in">
+      <div class="bewijs-cel"><b>4,9 <span class="goud">&#9733;</span></b><span>gemiddeld op Google</span></div>
+      <div class="bewijs-cel"><b>110</b><span>klanten schreven een review</span></div>
+      <div class="bewijs-cel"><b>7 dagen</b><span>per week open, ook zaterdag en zondag</span></div>
+      <div class="bewijs-cel"><b>09:00 - 19:00</b><span>elke dag, dus ook na werktijd</span></div>
+    </div>
+  </section>
+
+  <section class="werk" id="werk">
+    <div class="wrap">
+      <div class="werk-kop">
+        <h2 class="onthul">Werk uit onze eigen stoel</h2>
+        <p class="onthul">Alles hieronder is hier gezet. Geen voorbeeldplaatjes.</p>
+      </div>
+      <div class="mozaiek">
+        <figure class="onthul"><img src="img/hero.jpg" alt="Luipaardprint French met gouden accenten" loading="lazy" width="1000" height="1000"></figure>
+        <figure class="onthul"><img src="img/n02.jpg" alt="Set nagels gezet bij nzs nails art in Apeldoorn" loading="lazy" width="1000" height="1000"></figure>
+        <figure class="onthul"><img src="img/n03.jpg" alt="Nagelontwerp met kleuraccent" loading="lazy" width="1000" height="1000"></figure>
+        <figure class="onthul"><img src="img/n04.jpg" alt="Verzorgde nagels in een neutrale tint" loading="lazy" width="1000" height="1000"></figure>
+        <figure class="onthul"><img src="img/n06.jpg" alt="Nagels met nail art" loading="lazy" width="1000" height="1000"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="behandel">
+    <div class="wrap">
+      <h2 class="onthul">Wat u bij ons kunt laten doen</h2>
+      <p class="onthul">Weet u nog niet precies wat u wilt? Kies bij het boeken gewoon een nieuwe set, dan kijken we samen wat past.</p>
+      <div class="b-grid">
+        <div class="b-kaart onthul">
+          <h3>Nieuwe set</h3>
+          <p>Van een rustige nude tot volledig nagelontwerp. U kiest de vorm, de lengte en de kleur.</p>
+        </div>
+        <div class="b-kaart onthul">
+          <h3>Bijwerken</h3>
+          <p>De aangroei wordt bijgewerkt in plaats van alles opnieuw. Gemiddeld elke drie tot vier weken.</p>
+        </div>
+        <div class="b-kaart onthul">
+          <h3>Nail art</h3>
+          <p>French, chrome, print of steentjes. Laat een foto zien van wat u mooi vindt, dan maken wij het.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="boeken" id="boeken">
+    <div class="wrap">
+      <div class="boeken-kop">
+        <h2 class="onthul">Kies zelf <span>een tijd die u schikt</span></h2>
+        <p class="onthul">Hieronder ziet u wat er vrij is. Kies een behandeling, een dag en een tijd, en het staat meteen genoteerd. Ook 's avonds en in het weekend.</p>
+      </div>
+      <div class="widget-doos onthul">
+        <iframe
+          src="https://widget.salonized.com/widget?color=%234a2530&amp;language=nl&amp;company=JUJ1EoJfDYLQyUJMGRJ3fZvz&amp;inline=true"
+          title="Online een afspraak maken bij nzs nails art"
+          loading="lazy"></iframe>
+      </div>
+      <p class="widget-noot">
+        Dit is het echte boeksysteem van nzs nails art, hier in de pagina gezet.
+        Een afspraak die u hier maakt komt gewoon in hun agenda te staan.
+      </p>
+    </div>
+  </section>
+
+  <section class="stemmen">
+    <div class="wrap">
+      <h2>Wat klanten schrijven</h2>
+      <p>110 reviews op Google, gemiddeld een 4,9.</p>
+      <div class="stem-grid">
+        <article class="stem">
+          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Ik kom hier altijd met veel plezier en ben iedere keer weer ontzettend blij met mijn nagels. Ze werken heel netjes, hygi&euml;nisch en nemen echt de tijd.</p>
+          <cite>Kim van Duuren</cite>
+        </article>
+        <article class="stem">
+          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Het resultaat is elke keer naar mijn wens, en als er tussendoor iets met mijn nagels is wordt het altijd snel opgelost.</p>
+          <cite>Feeke Geerts</cite>
+        </article>
+        <article class="stem">
+          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Inmiddels ga ik al meer dan een jaar naar deze top salon, waar veel aandacht, tijd en precisie in hun werk gaat.</p>
+          <cite>Jasmijn</cite>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="praktisch">
+    <div class="wrap p-grid">
+      <div class="onthul">
+        <h2>Openingstijden</h2>
+        <ul class="tijden">
+          <li><span>Maandag</span><span>09:00 - 19:00</span></li>
+          <li><span>Dinsdag</span><span>09:00 - 19:00</span></li>
+          <li><span>Woensdag</span><span>09:00 - 19:00</span></li>
+          <li><span>Donderdag</span><span>09:00 - 19:00</span></li>
+          <li><span>Vrijdag</span><span>09:00 - 19:00</span></li>
+          <li><span>Zaterdag</span><span>09:00 - 19:00</span></li>
+          <li><span>Zondag</span><span>09:00 - 19:00</span></li>
+        </ul>
+      </div>
+      <div class="onthul">
+        <h2>Waar u ons vindt</h2>
+        <div class="adres">
+          <strong>nzs nails art</strong>
+          Kapelstraat 4<br>
+          7311 BK Apeldoorn<br><br>
+          <a href="https://www.instagram.com/nzs_nails_art/" target="_blank" rel="noopener">Ons werk op Instagram</a><br>
+          <a href="https://maps.google.com/?q=Kapelstraat+4+Apeldoorn" target="_blank" rel="noopener">Route via Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="voet">
+  <div class="wrap voet-in">
+    <div>nzs nails art &nbsp;&middot;&nbsp; Kapelstraat 4, Apeldoorn &nbsp;&middot;&nbsp; Elke dag open</div>
+    <div><a href="#boeken">Online boeken</a></div>
+  </div>
+</footer>
+
+<nav class="actiebalk" aria-label="Snel boeken">
+  <a class="ab-boek" href="#boeken">Kies een tijd</a>
+  <a class="ab-insta" href="https://www.instagram.com/nzs_nails_art/" target="_blank" rel="noopener">Instagram</a>
+  <a class="ab-route" href="https://maps.google.com/?q=Kapelstraat+4+Apeldoorn" target="_blank" rel="noopener">Route</a>
+</nav>
+
+<script>
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+    document.querySelectorAll('.onthul').forEach(function (d) { d.classList.add('zichtbaar'); });
+    return;
+  }
+  var kijker = new IntersectionObserver(function (rijen) {
+    rijen.forEach(function (rij) {
+      if (!rij.isIntersecting) return;
+      rij.target.classList.add('zichtbaar');
+      kijker.unobserve(rij.target);
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.onthul').forEach(function (d) { kijker.observe(d); });
+})();
+</script>
+</body>
+</html>

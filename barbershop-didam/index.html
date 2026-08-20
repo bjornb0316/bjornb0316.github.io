@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barber Shop Didam | Herenkapper zonder afspraak aan de Hoofdstraat</title>
+<meta name="description" content="Barbershop aan de Hoofdstraat in Didam. Zonder afspraak binnenlopen, scherpe prijs, koffie erbij. 4,7 uit 87 reviews. Bel 06 83150779.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blauw:#1b6ca8;
+  --blauw-diep:#12507f;
+  --rood:#d8232a;
+  --inkt:#14181d;
+  --room:#f4f7f9;
+  --lijn:#d9e2e8;
+  --grijs:#5a666f;
+  --wit:#fff;
+  --rond:4px;
+  --marge:clamp(1.15rem,4.5vw,4rem);
+  --balk:0px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Barlow,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--room);color:var(--inkt);font-size:17px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;padding-bottom:var(--balk);
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:var(--marge)}
+
+.voorstel{background:var(--inkt);color:#93a1ab;font-size:.79rem;padding:.55rem 0;line-height:1.45}
+.voorstel .wrap{display:flex;flex-wrap:wrap;gap:.3rem 1rem;justify-content:center;text-align:center}
+.voorstel b{color:#7ec2f0;font-weight:600}
+
+.kop{position:sticky;top:0;z-index:60;background:var(--wit);border-bottom:3px solid var(--blauw)}
+.kop-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:66px}
+.merk{text-decoration:none;font-weight:800;font-size:1.05rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.15}
+.merk small{display:block;font-weight:500;font-size:.63rem;letter-spacing:.26em;color:var(--grijs)}
+.kop-bel{background:var(--blauw);color:var(--wit);text-decoration:none;font-weight:700;font-size:.92rem;
+  padding:.62rem 1.15rem;border-radius:var(--rond);white-space:nowrap;transition:background .18s,transform .1s}
+.kop-bel:hover{background:var(--blauw-diep)}
+.kop-bel:active{transform:translateY(1px)}
+@media(max-width:640px){.kop-bel{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:clamp(440px,72vh,620px);display:flex;align-items:flex-end;overflow:hidden;background:var(--inkt)}
+.hero-foto{position:absolute;inset:0}
+.hero-foto img{width:100%;height:100%;object-fit:cover;object-position:center 42%}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,24,29,.35) 0%,rgba(20,24,29,.70) 50%,rgba(20,24,29,.94) 100%)}
+.hero-in{position:relative;z-index:2;padding-block:clamp(2rem,5vw,3.4rem);color:var(--wit);width:100%}
+.hero h1{font-weight:800;letter-spacing:-.02em;line-height:1;text-transform:uppercase;font-size:clamp(2.3rem,7vw,4.4rem);max-width:13ch}
+.hero h1 span{color:#7ec2f0;display:block}
+.hero p{margin-top:1rem;font-size:clamp(1.02rem,2.2vw,1.16rem);color:#c8d3db;max-width:40ch}
+
+/* live status */
+.status{
+  display:inline-flex;align-items:center;gap:.6rem;margin-top:1.4rem;
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.24);
+  border-radius:var(--rond);padding:.6rem 1rem;font-size:.98rem;font-weight:600;
+}
+.stip{width:.65rem;height:.65rem;border-radius:50%;background:#4ade80;flex:0 0 auto}
+.status.dicht .stip{background:#f87171}
+.status b{font-weight:800}
+
+.knoppen{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}
+.knop{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;text-decoration:none;font-weight:700;
+  border-radius:var(--rond);padding:.9rem 1.6rem;font-size:1rem;border:2px solid transparent;transition:all .18s}
+.knop-hoofd{background:var(--blauw);color:var(--wit);border-color:var(--blauw)}
+.knop-hoofd:hover{background:var(--wit);color:var(--blauw-diep);border-color:var(--wit)}
+.knop-rand{border-color:rgba(255,255,255,.65);color:var(--wit)}
+.knop-rand:hover{background:var(--wit);color:var(--inkt)}
+
+/* bewijs */
+.bewijs{background:var(--blauw);color:var(--wit)}
+.bewijs-in{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.22)}
+@media(min-width:820px){.bewijs-in{grid-template-columns:repeat(4,1fr)}}
+.bewijs-cel{background:var(--blauw);padding:1.4rem var(--marge)}
+.bewijs-cel b{display:block;font-size:1.5rem;font-weight:800;line-height:1.1;text-transform:uppercase}
+.bewijs-cel span{display:block;margin-top:.25rem;font-size:.86rem;color:#cbe3f4}
+
+/* diensten */
+.diensten{padding-block:clamp(3rem,7vw,5rem)}
+.diensten h2{font-weight:800;text-transform:uppercase;letter-spacing:-.01em;font-size:clamp(1.8rem,4.4vw,2.5rem)}
+.d-grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:2rem}
+@media(min-width:760px){.d-grid{grid-template-columns:repeat(3,1fr)}}
+.d-kaart{background:var(--wit);border:1px solid var(--lijn);border-radius:var(--rond);padding:1.5rem;border-top:4px solid var(--rood)}
+.d-kaart h3{font-weight:800;font-size:1.1rem;text-transform:uppercase}
+.d-kaart p{margin-top:.45rem;color:var(--grijs);font-size:.96rem}
+
+/* tijden */
+.tijden-sec{background:var(--inkt);color:var(--room);padding-block:clamp(3rem,7vw,5rem)}
+.t-grid{display:grid;grid-template-columns:1fr;gap:2.4rem}
+@media(min-width:880px){.t-grid{grid-template-columns:.9fr 1.1fr;gap:clamp(2.5rem,6vw,5rem)}}
+.tijden-sec h2{font-weight:800;text-transform:uppercase;font-size:clamp(1.8rem,4.4vw,2.5rem);line-height:1.06}
+.tijden-sec h2 span{color:#7ec2f0}
+.tijden-sec > .wrap > .t-grid > div > p{margin-top:1rem;color:#93a1ab;max-width:38ch}
+.uren{list-style:none}
+.uren li{display:flex;justify-content:space-between;gap:1rem;padding:.75rem 0;border-bottom:1px solid rgba(255,255,255,.13);font-size:1.04rem}
+.uren li:last-child{border-bottom:0}
+.uren li span:first-child{color:#93a1ab}
+.uren li span:last-child{font-weight:700;font-variant-numeric:tabular-nums}
+.uren li.vandaag{background:rgba(126,194,240,.10);margin-inline:-.8rem;padding-inline:.8rem}
+.uren li.vandaag span:first-child{color:var(--wit);font-weight:700}
+.uren li.vandaag span:last-child{color:#7ec2f0}
+.uren li.dicht span{color:#5d6a74;font-weight:400}
+
+/* stemmen */
+.stemmen{padding-block:clamp(3rem,7vw,5rem);background:var(--wit);border-block:1px solid var(--lijn)}
+.stemmen h2{font-weight:800;text-transform:uppercase;font-size:clamp(1.8rem,4.4vw,2.5rem)}
+.stemmen > .wrap > p{margin-top:.4rem;color:var(--grijs)}
+.stem-grid{display:grid;grid-template-columns:1fr;gap:1.1rem;margin-top:2rem}
+@media(min-width:860px){.stem-grid{grid-template-columns:repeat(3,1fr)}}
+.stem{background:var(--room);border-radius:var(--rond);padding:1.4rem;border-left:4px solid var(--blauw)}
+.sterren{color:var(--blauw);letter-spacing:.14em;font-size:.9rem}
+.stem p{margin-top:.6rem;font-size:.98rem;line-height:1.5}
+.stem cite{display:block;margin-top:.9rem;font-style:normal;font-weight:700;font-size:.85rem;color:var(--grijs)}
+
+/* waar */
+.waar{padding-block:clamp(3rem,7vw,5rem)}
+.w-grid{display:grid;grid-template-columns:1fr;gap:2.2rem;align-items:center}
+@media(min-width:880px){.w-grid{grid-template-columns:1.1fr .9fr;gap:clamp(2.5rem,6vw,4.5rem)}}
+.waar img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:var(--rond)}
+.waar h2{font-weight:800;text-transform:uppercase;font-size:clamp(1.7rem,4.2vw,2.3rem)}
+.adres{margin-top:1.1rem;font-size:1.05rem;line-height:1.85}
+.adres strong{display:block;font-weight:800;font-size:1.12rem}
+.adres a{color:var(--blauw);font-weight:700;text-underline-offset:3px}
+
+.voet{background:var(--inkt);color:#8a959e;padding-block:2.2rem;font-size:.88rem}
+.voet-in{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:space-between}
+.voet a{color:var(--room);font-weight:700}
+
+.actiebalk{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;
+  background:rgba(20,24,29,.97);backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.14);
+  padding:.55rem var(--marge) calc(.55rem + env(safe-area-inset-bottom,0px));gap:.5rem}
+.actiebalk a{flex:1;display:flex;align-items:center;justify-content:center;text-decoration:none;
+  font-weight:700;font-size:.92rem;padding:.75rem .4rem;border-radius:var(--rond);white-space:nowrap}
+.ab-bel{background:var(--blauw);color:var(--wit)}
+.ab-wa{background:#25d366;color:#04250f}
+.ab-route{background:rgba(255,255,255,.14);color:var(--room)}
+@media(max-width:860px){.actiebalk{display:flex} body{--balk:74px}}
+
+@media(prefers-reduced-motion:no-preference){
+  .onthul{opacity:0;transform:translateY(18px);transition:opacity .65s cubic-bezier(.16,1,.3,1),transform .65s cubic-bezier(.16,1,.3,1)}
+  .onthul.zichtbaar{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="voorstel">
+  <div class="wrap">
+    <span><b>Voorbeeldontwerp</b> gemaakt voor Barber Shop Didam door Bjorn Beerntsen.</span>
+    <span>Dit is geen offici&euml;le website van Barber Shop Didam.</span>
+  </div>
+</div>
+
+<header class="kop">
+  <div class="wrap kop-in">
+    <a class="merk" href="#top">Barber Shop Didam<small>Hoofdstraat 14A</small></a>
+    <a class="kop-bel" href="tel:+31683150779">Bel 06 83150779</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-foto">
+      <img src="img/gevel.jpg" alt="De winkel van Barber Shop Didam aan de Hoofdstraat" width="1024" height="768" fetchpriority="high">
+    </div>
+    <div class="hero-scrim"></div>
+    <div class="hero-in">
+      <div class="wrap">
+        <h1>Knippen zonder<span>afspraak.</span></h1>
+        <p>Herenkapper aan de Hoofdstraat in Didam. Loop binnen wanneer het jou uitkomt, drink een kop koffie en ga strak geknipt weer verder.</p>
+        <div class="status" id="status" role="status">
+          <span class="stip"></span>
+          <span id="status-tekst">Openingstijden worden geladen</span>
+        </div>
+        <div class="knoppen">
+          <a class="knop knop-hoofd" href="tel:+31683150779">Bel 06 83150779</a>
+          <a class="knop knop-rand" href="https://wa.me/31683150779" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bewijs">
+    <div class="bewijs-in">
+      <div class="bewijs-cel"><b>4,7 &#9733;</b><span>gemiddeld op Google</span></div>
+      <div class="bewijs-cel"><b>87</b><span>mensen schreven een review</span></div>
+      <div class="bewijs-cel"><b>Geen afspraak</b><span>je hoeft vooraf niets te regelen</span></div>
+      <div class="bewijs-cel"><b>Zes dagen</b><span>per week open, ook zaterdag</span></div>
+    </div>
+  </section>
+
+  <section class="diensten">
+    <div class="wrap">
+      <h2 class="onthul">Waarvoor je binnen kunt lopen</h2>
+      <div class="d-grid">
+        <div class="d-kaart onthul">
+          <h3>Knippen</h3>
+          <p>Van een strakke fade tot gewoon een nette beurt. Zeg wat je wilt, of laat het aan ons over.</p>
+        </div>
+        <div class="d-kaart onthul">
+          <h3>Baard</h3>
+          <p>Trimmen, in model brengen en scheren. Contouren netjes afgewerkt.</p>
+        </div>
+        <div class="d-kaart onthul">
+          <h3>Kinderen</h3>
+          <p>Ook de kleintjes zijn welkom. We nemen de tijd, ook als ze er even geen zin in hebben.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tijden-sec">
+    <div class="wrap t-grid">
+      <div class="onthul">
+        <h2>Wanneer wij <span>open zijn</span></h2>
+        <p>Op vrijdag knippen we door tot zeven uur en zaterdag beginnen we al om negen. De dag van vandaag staat hieronder gemarkeerd.</p>
+      </div>
+      <ul class="uren" id="uren">
+        <li data-dag="1"><span>Maandag</span><span>12:00 - 18:00</span></li>
+        <li data-dag="2"><span>Dinsdag</span><span>10:00 - 18:00</span></li>
+        <li data-dag="3"><span>Woensdag</span><span>10:00 - 18:00</span></li>
+        <li data-dag="4"><span>Donderdag</span><span>10:00 - 18:00</span></li>
+        <li data-dag="5"><span>Vrijdag</span><span>10:00 - 19:00</span></li>
+        <li data-dag="6"><span>Zaterdag</span><span>09:00 - 17:00</span></li>
+        <li data-dag="0" class="dicht"><span>Zondag</span><span>Gesloten</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="stemmen">
+    <div class="wrap">
+      <h2>Wat klanten zeggen</h2>
+      <p>87 reviews op Google, gemiddeld een 4,7.</p>
+      <div class="stem-grid">
+        <article class="stem">
+          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Prima kapper. Er wordt snel en secuur gewerkt tegen een goede prijs.</p>
+          <cite>Rob Schel, Local Guide</cite>
+        </article>
+        <article class="stem">
+          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Zeer tevreden over de kwaliteit van het knippen. Vriendelijk personeel en de zaak altijd netjes schoon.</p>
+          <cite>Richard Verbucheln, Local Guide</cite>
+        </article>
+        <article class="stem">
+          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Super kapper. Ben altijd tevreden met het resultaat, ik ga nergens anders meer heen.</p>
+          <cite>Jeffrey Harmsen</cite>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="waar">
+    <div class="wrap w-grid">
+      <div class="onthul">
+        <img src="img/b03.jpg" alt="De stoelen en het interieur van Barber Shop Didam" width="1200" height="676" loading="lazy">
+      </div>
+      <div class="onthul">
+        <h2>Waar je ons vindt</h2>
+        <div class="adres">
+          <strong>Barber Shop Didam</strong>
+          Hoofdstraat 14A<br>
+          6942 AT Didam<br><br>
+          <a href="tel:+31683150779">06 83150779</a><br>
+          <a href="https://wa.me/31683150779" target="_blank" rel="noopener">Stuur een appje</a><br>
+          <a href="https://maps.google.com/?q=Hoofdstraat+14A+Didam" target="_blank" rel="noopener">Route via Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="voet">
+  <div class="wrap voet-in">
+    <div>Barber Shop Didam &nbsp;&middot;&nbsp; Hoofdstraat 14A, Didam &nbsp;&middot;&nbsp; Zonder afspraak</div>
+    <div><a href="tel:+31683150779">06 83150779</a></div>
+  </div>
+</footer>
+
+<nav class="actiebalk" aria-label="Snel contact">
+  <a class="ab-bel" href="tel:+31683150779">Bellen</a>
+  <a class="ab-wa" href="https://wa.me/31683150779" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="ab-route" href="https://maps.google.com/?q=Hoofdstraat+14A+Didam" target="_blank" rel="noopener">Route</a>
+</nav>
+
+<script>
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+    document.querySelectorAll('.onthul').forEach(function (d) { d.classList.add('zichtbaar'); });
+  } else {
+    var kijker = new IntersectionObserver(function (rijen) {
+      rijen.forEach(function (rij) {
+        if (!rij.isIntersecting) return;
+        rij.target.classList.add('zichtbaar');
+        kijker.unobserve(rij.target);
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.onthul').forEach(function (d) { kijker.observe(d); });
+  }
+})();
+
+// Bij een zaak zonder afspraak is de eerste vraag van een bezoeker: kan ik nu
+// langs? Daarom rekenen we dat hier uit in plaats van hem zelf te laten zoeken.
+(function () {
+  var UREN = {            // 0 = zondag
+    0: null,
+    1: [12 * 60, 18 * 60],
+    2: [10 * 60, 18 * 60],
+    3: [10 * 60, 18 * 60],
+    4: [10 * 60, 18 * 60],
+    5: [10 * 60, 19 * 60],
+    6: [9 * 60, 17 * 60]
+  };
+  var DAG = ['zondag', 'maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag'];
+
+  function klok(m) {
+    var u = Math.floor(m / 60), r = m % 60;
+    return (u < 10 ? '0' : '') + u + ':' + (r < 10 ? '0' : '') + r;
+  }
+
+  var nu = new Date();
+  var dag = nu.getDay();
+  var minuten = nu.getHours() * 60 + nu.getMinutes();
+  var vandaag = UREN[dag];
+
+  var doos = document.getElementById('status');
+  var tekst = document.getElementById('status-tekst');
+
+  // De dag van vandaag oplichten in de lijst
+  var regel = document.querySelector('#uren li[data-dag="' + dag + '"]');
+  if (regel) regel.classList.add('vandaag');
+
+  if (vandaag && minuten >= vandaag[0] && minuten < vandaag[1]) {
+    tekst.innerHTML = '<b>Nu open</b> tot ' + klok(vandaag[1]) + ', loop gerust binnen';
+    return;
+  }
+
+  doos.classList.add('dicht');
+
+  if (vandaag && minuten < vandaag[0]) {
+    tekst.innerHTML = '<b>Nu gesloten</b>, vandaag open vanaf ' + klok(vandaag[0]);
+    return;
+  }
+
+  // Zoek de eerstvolgende dag dat er iemand staat
+  for (var i = 1; i <= 7; i++) {
+    var d = (dag + i) % 7;
+    if (UREN[d]) {
+      var wanneer = (i === 1) ? 'morgen' : DAG[d];
+      tekst.innerHTML = '<b>Nu gesloten</b>, ' + wanneer + ' weer open vanaf ' + klok(UREN[d][0]);
+      return;
+    }
+  }
+})();
+</script>
+</body>
+</html>

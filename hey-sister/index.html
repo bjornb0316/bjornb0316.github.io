@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hey sister Beauty studio Apeldoorn | Nagels, doordeweeks tot 20:00</title>
+<meta name="description" content="Nagelstudio aan de Edisonlaan in Apeldoorn. Doordeweeks open tot 20:00, dus ook na uw werk. 5,0 uit 91 reviews. Kies online zelf een tijd.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --camel:#a97b58;
+  --camel-diep:#845b3e;
+  --goud:#c8a271;
+  --blush:#f2e4dc;
+  --creme:#faf5f0;
+  --inkt:#3a2e28;
+  --grijs:#7a6a60;
+  --wit:#fff;
+  --rond:20px;
+  --marge:clamp(1.15rem,4.5vw,4rem);
+  --balk:0px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--creme);color:var(--inkt);font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;padding-bottom:var(--balk);
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{max-width:1150px;margin:0 auto;padding-inline:var(--marge)}
+
+.voorstel{background:var(--inkt);color:#c3b3a9;font-size:.79rem;padding:.55rem 0;line-height:1.45}
+.voorstel .wrap{display:flex;flex-wrap:wrap;gap:.3rem 1rem;justify-content:center;text-align:center}
+.voorstel b{color:var(--goud);font-weight:700}
+
+.kop{position:sticky;top:0;z-index:60;background:rgba(250,245,240,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--blush)}
+.kop-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:66px}
+.merk{text-decoration:none;font-weight:700;font-size:1.06rem;letter-spacing:-.01em;line-height:1.2}
+.merk small{display:block;font-weight:400;font-size:.64rem;letter-spacing:.24em;color:var(--grijs);text-transform:uppercase}
+.kop-cta{background:var(--camel);color:var(--wit);text-decoration:none;font-weight:700;font-size:.9rem;
+  padding:.6rem 1.15rem;border-radius:var(--rond);white-space:nowrap;transition:background .18s,transform .1s}
+.kop-cta:hover{background:var(--camel-diep)}
+.kop-cta:active{transform:translateY(1px)}
+@media(max-width:640px){.kop-cta{display:none}}
+
+/* hero: gecentreerd, met een beeldstrook eronder */
+.hero{padding-block:clamp(2.4rem,6vw,4.2rem) 0;text-align:center}
+.hero h1{font-weight:700;letter-spacing:-.035em;line-height:1.05;font-size:clamp(2.15rem,6vw,3.6rem);max-width:16ch;margin-inline:auto}
+.hero h1 span{color:var(--camel)}
+.hero p{margin-top:1rem;color:var(--grijs);font-size:clamp(1.02rem,2.2vw,1.16rem);max-width:46ch;margin-inline:auto}
+.knoppen{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.8rem;justify-content:center}
+.knop{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;text-decoration:none;font-weight:700;
+  border-radius:var(--rond);padding:.9rem 1.6rem;font-size:1rem;border:2px solid transparent;transition:all .18s;cursor:pointer}
+.knop-hoofd{background:var(--camel);color:var(--wit);border-color:var(--camel)}
+.knop-hoofd:hover{background:var(--camel-diep);border-color:var(--camel-diep)}
+.knop-rand{border-color:var(--inkt);color:var(--inkt)}
+.knop-rand:hover{background:var(--inkt);color:var(--creme)}
+.strook{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin-top:clamp(2rem,5vw,3rem)}
+@media(max-width:620px){.strook{grid-template-columns:repeat(2,1fr)} .strook figure:nth-child(3){display:none}}
+.strook figure{margin:0;border-radius:var(--rond);overflow:hidden;background:var(--blush)}
+.strook img{width:100%;aspect-ratio:3/4;object-fit:cover}
+
+/* bewijs */
+.bewijs{background:var(--blush);margin-top:clamp(2.5rem,6vw,4rem)}
+.bewijs-in{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem;padding-block:1.8rem;text-align:center}
+@media(min-width:820px){.bewijs-in{grid-template-columns:repeat(4,1fr)}}
+.bewijs-cel b{display:block;font-size:1.5rem;font-weight:700;letter-spacing:-.02em;line-height:1.1;color:var(--camel-diep)}
+.bewijs-cel span{display:block;margin-top:.2rem;font-size:.86rem;color:var(--grijs)}
+
+/* boeken staat hoog: dat is de actie */
+.boeken{padding-block:clamp(3rem,7vw,5rem)}
+.boeken-kop{max-width:54ch}
+.boeken h2{font-weight:700;letter-spacing:-.03em;line-height:1.08;font-size:clamp(1.9rem,4.6vw,2.8rem)}
+.boeken h2 span{color:var(--camel)}
+.boeken-kop p{margin-top:.8rem;color:var(--grijs)}
+.widget-doos{margin-top:1.8rem;border-radius:var(--rond);overflow:hidden;background:var(--wit);
+  border:1px solid var(--blush);box-shadow:0 20px 55px rgba(58,46,40,.10)}
+.widget-doos iframe{width:100%;height:780px;border:0;display:block;background:var(--wit)}
+@media(max-width:640px){.widget-doos iframe{height:700px}}
+.widget-noot{margin-top:.9rem;font-size:.86rem;color:var(--grijs);line-height:1.55}
+
+/* behandelingen */
+.behandel{padding-block:clamp(3rem,7vw,5rem);background:var(--wit);border-block:1px solid var(--blush)}
+.behandel h2{font-weight:700;letter-spacing:-.03em;font-size:clamp(1.8rem,4.4vw,2.5rem);max-width:20ch}
+.b-grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:2rem}
+@media(min-width:760px){.b-grid{grid-template-columns:repeat(3,1fr)}}
+.b-kaart{background:var(--creme);border-radius:var(--rond);padding:1.5rem}
+.b-kaart h3{font-weight:700;font-size:1.08rem}
+.b-kaart p{margin-top:.45rem;color:var(--grijs);font-size:.95rem}
+
+/* team */
+.team{padding-block:clamp(3rem,7vw,5rem)}
+.team-grid{display:grid;grid-template-columns:1fr;gap:2.2rem;align-items:center}
+@media(min-width:900px){.team-grid{grid-template-columns:.85fr 1.15fr;gap:clamp(2.5rem,6vw,4.5rem)}}
+.team img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--rond)}
+.team h2{font-weight:700;letter-spacing:-.03em;line-height:1.1;font-size:clamp(1.8rem,4.4vw,2.5rem)}
+.team p{margin-top:1rem;color:var(--grijs);max-width:48ch}
+.citaat{margin-top:1.6rem;border-left:3px solid var(--goud);padding-left:1.2rem;font-size:1.08rem;line-height:1.55}
+.citaat cite{display:block;margin-top:.6rem;font-style:normal;font-size:.86rem;font-weight:700;color:var(--grijs)}
+
+/* stemmen */
+.stemmen{background:var(--blush);padding-block:clamp(3rem,7vw,5rem)}
+.stemmen h2{font-weight:700;letter-spacing:-.03em;font-size:clamp(1.8rem,4.4vw,2.5rem)}
+.stemmen > .wrap > p{margin-top:.5rem;color:var(--grijs)}
+.stem-grid{display:grid;grid-template-columns:1fr;gap:1.1rem;margin-top:2rem}
+@media(min-width:860px){.stem-grid{grid-template-columns:repeat(3,1fr)}}
+.stem{background:var(--wit);border-radius:var(--rond);padding:1.4rem}
+.sterren{color:var(--goud);letter-spacing:.14em;font-size:.9rem}
+.stem p{margin-top:.6rem;font-size:.98rem;line-height:1.55}
+.stem cite{display:block;margin-top:.9rem;font-style:normal;font-weight:700;font-size:.85rem;color:var(--grijs)}
+
+/* praktisch */
+.praktisch{padding-block:clamp(3rem,7vw,5rem)}
+.p-grid{display:grid;grid-template-columns:1fr;gap:2.4rem}
+@media(min-width:860px){.p-grid{grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,5rem)}}
+.praktisch h2{font-weight:700;letter-spacing:-.03em;font-size:clamp(1.6rem,4vw,2.1rem);margin-bottom:1.2rem}
+.tijden{list-style:none;background:var(--blush);border-radius:var(--rond);padding:1.2rem 1.4rem}
+.tijden li{display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;font-size:1rem}
+.tijden li + li{border-top:1px solid rgba(58,46,40,.09)}
+.tijden span:first-child{color:var(--grijs)}
+.tijden span:last-child{font-weight:700;font-variant-numeric:tabular-nums}
+.tijden li.laat span:last-child{color:var(--camel-diep)}
+.tijden li.dicht span{color:#a89a91;font-weight:400}
+.adres{font-size:1.04rem;line-height:1.85}
+.adres strong{display:block;font-weight:700;font-size:1.1rem}
+.adres a{color:var(--camel-diep);font-weight:700;text-underline-offset:3px}
+
+.voet{background:var(--inkt);color:#a3948a;padding-block:2.2rem;font-size:.88rem}
+.voet-in{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:space-between}
+.voet a{color:var(--creme);font-weight:700}
+
+.actiebalk{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;
+  background:rgba(58,46,40,.97);backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.14);
+  padding:.55rem var(--marge) calc(.55rem + env(safe-area-inset-bottom,0px));gap:.5rem}
+.actiebalk a{flex:1;display:flex;align-items:center;justify-content:center;text-decoration:none;
+  font-weight:700;font-size:.92rem;padding:.75rem .4rem;border-radius:var(--rond);white-space:nowrap}
+.ab-boek{background:var(--goud);color:#3a2e28}
+.ab-wa{background:#25d366;color:#04250f}
+.ab-route{background:rgba(255,255,255,.14);color:var(--creme)}
+@media(max-width:860px){.actiebalk{display:flex} body{--balk:74px}}
+
+@media(prefers-reduced-motion:no-preference){
+  .onthul{opacity:0;transform:translateY(18px);transition:opacity .65s cubic-bezier(.16,1,.3,1),transform .65s cubic-bezier(.16,1,.3,1)}
+  .onthul.zichtbaar{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="voorstel">
+  <div class="wrap">
+    <span><b>Voorbeeldontwerp</b> gemaakt voor Hey sister Beauty studio door Bjorn Beerntsen.</span>
+    <span>Dit is geen offici&euml;le website van Hey sister.</span>
+  </div>
+</div>
+
+<header class="kop">
+  <div class="wrap kop-in">
+    <a class="merk" href="#top">Hey sister<small>Beauty studio</small></a>
+    <a class="kop-cta" href="#boeken">Tijd kiezen</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>Mooie nagels, <span>ook na uw werk.</span></h1>
+      <p>Nagelstudio aan de Edisonlaan in Apeldoorn. Doordeweeks zijn wij tot acht uur 's avonds open, dus u hoeft er geen vrije middag voor te nemen.</p>
+      <div class="knoppen">
+        <a class="knop knop-hoofd" href="#boeken">Kies zelf een tijd</a>
+        <a class="knop knop-rand" href="https://wa.me/31625145898" target="_blank" rel="noopener">Even overleggen via WhatsApp</a>
+      </div>
+      <div class="strook">
+        <figure><img src="img/h01.jpg" alt="Nagels met een zacht roze naar wit verloop" width="825" height="1100" fetchpriority="high"></figure>
+        <figure><img src="img/h05.jpg" alt="Roze nagels met zwarte French en een hartje" width="969" height="1100" loading="lazy"></figure>
+        <figure><img src="img/h03.jpg" alt="Werk van Hey sister Beauty studio" width="825" height="1100" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="bewijs">
+    <div class="wrap bewijs-in">
+      <div class="bewijs-cel"><b>5,0 &#9733;</b><span>en geen enkele lagere beoordeling</span></div>
+      <div class="bewijs-cel"><b>91</b><span>klanten schreven een review</span></div>
+      <div class="bewijs-cel"><b>Tot 20:00</b><span>maandag tot en met vrijdag</span></div>
+      <div class="bewijs-cel"><b>7,5 jaar</b><span>zo lang komt onze langste klant al</span></div>
+    </div>
+  </section>
+
+  <section class="boeken" id="boeken">
+    <div class="wrap">
+      <div class="boeken-kop">
+        <h2 class="onthul">Kies hieronder <span>een moment dat u schikt</span></h2>
+        <p class="onthul">U ziet meteen wat er vrij is, ook de avonduren. Het staat direct genoteerd en u hoeft niemand te bellen.</p>
+      </div>
+      <div class="widget-doos onthul">
+        <iframe src="https://heysisternl.altegio.me/" title="Online een afspraak maken bij Hey sister Beauty studio" loading="lazy"></iframe>
+      </div>
+      <p class="widget-noot">
+        Dit is het echte boeksysteem van Hey sister, hier in de pagina gezet.
+        Een afspraak die u hier maakt komt gewoon in hun agenda te staan.
+      </p>
+    </div>
+  </section>
+
+  <section class="behandel">
+    <div class="wrap">
+      <h2 class="onthul">Wat u kunt laten doen</h2>
+      <div class="b-grid">
+        <div class="b-kaart onthul">
+          <h3>Gelnagels</h3>
+          <p>Een nieuwe set of het bijwerken van de aangroei. U kiest de vorm, de lengte en de kleur.</p>
+        </div>
+        <div class="b-kaart onthul">
+          <h3>Manicure</h3>
+          <p>Nagels en nagelriemen verzorgd, en wij eindigen altijd met een ontspannende handmassage.</p>
+        </div>
+        <div class="b-kaart onthul">
+          <h3>Nail art</h3>
+          <p>French, chrome, een klein hartje of een heel ontwerp. Laat zien wat u mooi vindt, dan maken wij het.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team">
+    <div class="wrap team-grid">
+      <div class="onthul">
+        <img src="img/h02.jpg" alt="Verzorgde nagels, gezet bij Hey sister Beauty studio" width="619" height="1100" loading="lazy">
+      </div>
+      <div class="onthul">
+        <h2>Een vaste plek, met dames die u kent</h2>
+        <p>Bij ons werkt een klein team, en dat merkt u. U wordt geholpen door iemand die weet hoe uw nagels reageren, wat u de vorige keer koos en wat u juist niet prettig vindt.</p>
+        <p>Er staat koffie klaar, en niemand kijkt op de klok. Zo hoort het ook.</p>
+        <blockquote class="citaat">
+          &#8220;Ik kom al 7,5 jaar bij Hey Sister en ben nog steeds ontzettend tevreden. Wat ik vooral waardeer, is dat ze oog hebben voor zelfs de kleinste details.&#8221;
+          <cite>Anastasia Komarov, via Google</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="stemmen">
+    <div class="wrap">
+      <h2>Wat klanten schrijven</h2>
+      <p>91 reviews op Google, allemaal vijf sterren.</p>
+      <div class="stem-grid">
+        <article class="stem">
+          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Alle dames die er werken zijn ontzettend lief, enthousiast en getalenteerd. Mijn nagels zijn altijd prachtig verzorgd.</p>
+          <cite>ThatsNienke</cite>
+        </article>
+        <article class="stem">
+          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Zeer kundig personeel, schone salon en goed advies over kleur en onderhoud.</p>
+          <cite>Via Google</cite>
+        </article>
+        <article class="stem">
+          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Lieve mensen die hier werken en alle tijd nemen voor een prachtig resultaat.</p>
+          <cite>Via Google</cite>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="praktisch">
+    <div class="wrap p-grid">
+      <div class="onthul">
+        <h2>Openingstijden</h2>
+        <ul class="tijden">
+          <li class="laat"><span>Maandag</span><span>09:30 - 20:00</span></li>
+          <li class="laat"><span>Dinsdag</span><span>09:30 - 20:00</span></li>
+          <li class="laat"><span>Woensdag</span><span>09:30 - 20:00</span></li>
+          <li class="laat"><span>Donderdag</span><span>09:30 - 20:00</span></li>
+          <li class="laat"><span>Vrijdag</span><span>09:30 - 20:00</span></li>
+          <li><span>Zaterdag</span><span>09:30 - 17:00</span></li>
+          <li class="dicht"><span>Zondag</span><span>Gesloten</span></li>
+        </ul>
+      </div>
+      <div class="onthul">
+        <h2>Waar u ons vindt</h2>
+        <div class="adres">
+          <strong>Hey sister Beauty studio</strong>
+          Edisonlaan 160<br>
+          7316 JR Apeldoorn<br>
+          <span style="color:var(--grijs);font-size:.95rem">Gevestigd in De Praktijk voor Voetverzorging</span><br><br>
+          <a href="https://wa.me/31625145898" target="_blank" rel="noopener">06 25145898 via WhatsApp</a><br>
+          <a href="https://maps.google.com/?q=Edisonlaan+160+Apeldoorn" target="_blank" rel="noopener">Route via Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="voet">
+  <div class="wrap voet-in">
+    <div>Hey sister Beauty studio &nbsp;&middot;&nbsp; Edisonlaan 160, Apeldoorn &nbsp;&middot;&nbsp; Doordeweeks tot 20:00</div>
+    <div><a href="#boeken">Tijd kiezen</a></div>
+  </div>
+</footer>
+
+<nav class="actiebalk" aria-label="Snel boeken">
+  <a class="ab-boek" href="#boeken">Tijd kiezen</a>
+  <a class="ab-wa" href="https://wa.me/31625145898" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="ab-route" href="https://maps.google.com/?q=Edisonlaan+160+Apeldoorn" target="_blank" rel="noopener">Route</a>
+</nav>
+
+<script>
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+    document.querySelectorAll('.onthul').forEach(function (d) { d.classList.add('zichtbaar'); });
+    return;
+  }
+  var kijker = new IntersectionObserver(function (rijen) {
+    rijen.forEach(function (rij) {
+      if (!rij.isIntersecting) return;
+      rij.target.classList.add('zichtbaar');
+      kijker.unobserve(rij.target);
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.onthul').forEach(function (d) { kijker.observe(d); });
+})();
+</script>
+</body>
+</html>
