@@ -49,17 +49,24 @@ a{color:inherit}
 .kop-cta:hover{background:var(--roos-diep)}
 .kop-cta:active{transform:translateY(1px)}
 
-/* hero: tekst naast een staand beeld, zodat het werk groot in beeld komt.
-   De foto is 3:4, dus in dit kader valt er niets weg. */
-.hero{padding-block:clamp(1.5rem,4vw,2.6rem) clamp(3rem,7vw,5rem)}
-.hero-grid{display:grid;grid-template-columns:1fr;gap:2rem;align-items:center}
-@media(min-width:900px){.hero-grid{grid-template-columns:1fr .92fr;gap:clamp(2.5rem,6vw,4.5rem)}}
-.hero-beeld{border-radius:var(--rond);overflow:hidden;background:var(--blos);box-shadow:0 22px 60px rgba(51,34,42,.13)}
-.hero-beeld img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 32%}
-@media(min-width:900px){.hero-beeld img{aspect-ratio:3/4;object-position:center}}
-.hero-tekst h1{font-weight:600;letter-spacing:-.03em;line-height:1.05;font-size:clamp(2.1rem,5.6vw,3.4rem)}
-.hero-tekst h1 span{color:var(--roos)}
-.hero-tekst p{margin-top:1rem;color:var(--grijs);font-size:1.05rem;max-width:40ch}
+/* hero: brede band met een kaart die eroverheen valt.
+   Het beeld is een uitsnede op de nagels, zodat de band vol werk staat
+   in plaats van vol vingers. */
+.hero{position:relative;padding-bottom:clamp(3rem,7vw,5rem)}
+.hero-beeld{position:relative;border-radius:var(--rond);overflow:hidden;margin-inline:var(--marge)}
+.hero-beeld img{width:100%;height:clamp(300px,52vh,540px);object-fit:cover;object-position:center 38%}
+.hero-kaart{
+  background:var(--wit);border-radius:var(--rond);
+  padding:clamp(1.6rem,4vw,2.8rem);
+  max-width:640px;margin:-64px auto 0;position:relative;z-index:2;
+  box-shadow:0 22px 60px rgba(51,34,42,.13);
+}
+@media(min-width:980px){
+  .hero-kaart{margin-left:calc(var(--marge) + 2.5rem);margin-right:0;margin-top:-110px}
+}
+.hero-kaart h1{font-weight:600;letter-spacing:-.03em;line-height:1.05;font-size:clamp(2.1rem,5.6vw,3.4rem)}
+.hero-kaart h1 span{color:var(--roos)}
+.hero-kaart p{margin-top:1rem;color:var(--grijs);font-size:1.05rem;max-width:40ch}
 .knoppen{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.8rem}
 .knop{
   display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
@@ -194,17 +201,15 @@ a{color:inherit}
 <main id="top">
 
   <section class="hero">
-    <div class="wrap hero-grid">
-      <div class="hero-tekst">
-        <h1>Nagels, <span>na werktijd.</span></h1>
-        <p>Nagelstudio aan de Nieuweweg in Doetinchem. Doordeweeks open tot 20:00, en zaterdagochtend al vanaf acht uur.</p>
-        <div class="knoppen">
-          <a class="knop knop-hoofd" href="#afspraak">Afspraak maken</a>
-          <a class="knop knop-rand" href="https://wa.me/31611957630" target="_blank" rel="noopener">WhatsApp</a>
-        </div>
-      </div>
-      <div class="hero-beeld">
-        <img src="img/hero.jpg" alt="Verzorgde nagels met een French manicure, gemaakt bij Eli en Nali" width="1100" height="1467" fetchpriority="high">
+    <div class="hero-beeld">
+      <img src="img/hero-breed.jpg" alt="Nagels met een French manicure, gezet bij Eli en Nali" width="1800" height="909" fetchpriority="high">
+    </div>
+    <div class="hero-kaart">
+      <h1>Nagels, <span>na werktijd.</span></h1>
+      <p>Nagelstudio aan de Nieuweweg in Doetinchem. Doordeweeks open tot 20:00, en zaterdagochtend al vanaf acht uur.</p>
+      <div class="knoppen">
+        <a class="knop knop-hoofd" href="#afspraak">Afspraak maken</a>
+        <a class="knop knop-rand" href="https://wa.me/31611957630" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
   </section>
