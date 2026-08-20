@@ -5,147 +5,179 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Million Hair Barbershop Zevenaar | Zeven dagen open, ook op zondag</title>
-<meta name="description" content="Barbershop aan de Nieuwe Doelenstraat in Zevenaar. Knippen vanaf 23,50 euro, knippen met baard vanaf 27,50. Zeven dagen per week open, ook op zondag.">
+<title>Million Hair Barbershop Zevenaar | Ook op zondag open</title>
+<meta name="description" content="Barbershop aan de Nieuwe Doelenstraat in Zevenaar. Knippen vanaf 23,50 euro. Zeven dagen per week open, ook op zondag van 10 tot 5.">
 <link rel="preload" as="image" href="img/gevel.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+/* Hun gevel is zwart geschilderd met een wit rond merkteken. Vandaar nacht
+   met amber: afgekeken, niet gekozen. */
 :root{
-  --zwart:#0e0f0d; --hoog:#191a17; --rand:#2b2d28; --bot:#f0eee7;
-  --zacht:#a3a49c; --amber:#d9a441; --amber-diep:#b8862c;
+  --zwart:#0c0d0b; --hoog:#171815; --rand:#2a2c26; --bot:#f2f0e9;
+  --zacht:#9d9e95; --amber:#e0a83c; --amber-diep:#b8862c;
   --rond:12px; --marge:clamp(1.25rem,5vw,4rem);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:"Space Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-  background:var(--zwart);color:var(--bot);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  background:var(--zwart);color:var(--bot);font-size:17px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 .wrap{max-width:1240px;margin:0 auto;padding-inline:var(--marge)}
 
-.voorstel{background:#000;color:var(--zacht);font-size:.8rem;padding:.6rem 0;line-height:1.45}
+.korrel{position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.2;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/></filter><rect width='140' height='140' filter='url(%23n)' opacity='.55'/></svg>")}
+
+.voorstel{background:#000;color:var(--zacht);font-size:.78rem;padding:.55rem 0;line-height:1.45;position:relative;z-index:70}
 .voorstel .wrap{display:flex;flex-wrap:wrap;gap:.3rem 1rem;justify-content:center;text-align:center}
 .voorstel b{color:var(--amber);font-weight:600}
 .voorstel a{color:inherit;font-weight:600;text-underline-offset:2px}
 
-.kop{position:sticky;top:0;z-index:50;background:rgba(14,15,13,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--rand)}
-.kop-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:70px}
-.merk{text-decoration:none;font-weight:700;font-size:1.12rem;letter-spacing:-.01em;line-height:1.1}
-.merk small{display:block;font-size:.62rem;letter-spacing:.3em;font-weight:500;color:var(--zacht);margin-top:.2rem}
-.kop-cta{background:var(--amber);color:var(--zwart);text-decoration:none;font-weight:600;font-size:.92rem;
-  padding:.65rem 1.2rem;border-radius:var(--rond);white-space:nowrap;transition:background .2s,transform .12s}
-.kop-cta:hover{background:var(--bot)}
-.kop-cta:active{transform:translateY(1px)}
-
-/* hero: de gevel draagt de hele sectie */
-.hero{position:relative;isolation:isolate;overflow:hidden}
+/* hero: de zwarte gevel vult het scherm */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
 .hero-foto{position:absolute;inset:0;z-index:0}
 .hero-foto img{width:100%;height:100%;object-fit:cover;object-position:center 46%}
 @media(prefers-reduced-motion:no-preference){
-  /* Heel traag inzoomen: genoeg om te leven, te traag om af te leiden. */
-  .hero-foto img{animation:adem 26s ease-in-out infinite alternate;transform-origin:center 46%}
-  @keyframes adem{from{transform:scale(1)}to{transform:scale(1.07)}}
+  .hero-foto img{animation:adem 28s ease-in-out infinite alternate;transform-origin:center 46%}
+  @keyframes adem{from{transform:scale(1.01)}to{transform:scale(1.12)}}
 }
 .hero-scrim{position:absolute;inset:0;z-index:1;
-  background:linear-gradient(180deg,rgba(14,15,13,.44) 0%,rgba(14,15,13,.30) 30%,rgba(14,15,13,.84) 74%,rgba(14,15,13,.97) 100%)}
-.hero-in{position:relative;z-index:2;display:flex;align-items:flex-end;
-  min-height:clamp(540px,86vh,860px);padding-block:clamp(2.5rem,6vw,4.5rem)}
-.hero-in .wrap{width:100%}
-.hero h1{font-weight:700;letter-spacing:-.04em;line-height:.96;font-size:clamp(2.8rem,9vw,6.2rem);max-width:13ch}
+  background:linear-gradient(180deg,rgba(12,13,11,.5) 0%,rgba(12,13,11,.24) 32%,rgba(12,13,11,.86) 76%,rgba(12,13,11,.98) 100%)}
+.hero-in{position:relative;z-index:2;width:100%;padding-block:clamp(3rem,8vh,5.5rem)}
+.hero h1{font-weight:700;letter-spacing:-.045em;line-height:.9;
+  font-size:clamp(3.2rem,12vw,8.5rem);max-width:11ch;text-transform:lowercase}
 .hero h1 span{color:var(--amber);display:block}
-.hero p{margin-top:1.3rem;color:#d5d6ce;font-size:clamp(1.05rem,2.3vw,1.28rem);max-width:40ch}
-.knoppen{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2.1rem}
+.hero p{margin-top:1.4rem;color:#d3d4cb;font-size:clamp(1.05rem,2.4vw,1.32rem);max-width:38ch}
+.knoppen{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2.2rem}
 .knop{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-weight:600;
-  white-space:nowrap;border-radius:var(--rond);padding:1rem 1.7rem;font-size:1.02rem;border:2px solid transparent;
-  transition:background .2s,color .2s,border-color .2s,transform .12s}
+  white-space:nowrap;border-radius:var(--rond);padding:1.05rem 1.9rem;font-size:1.02rem;border:2px solid transparent;
+  transition:background .25s,color .25s,border-color .25s,transform .12s}
 .knop-hoofd{background:var(--amber);color:var(--zwart);border-color:var(--amber)}
 .knop-hoofd:hover{background:var(--bot);border-color:var(--bot)}
 .knop-hoofd:active{transform:translateY(1px)}
-.knop-rand{border-color:rgba(240,238,231,.45);color:var(--bot)}
+.knop-rand{border-color:rgba(242,240,233,.45);color:var(--bot)}
 .knop-rand:hover{background:var(--bot);color:var(--zwart);border-color:var(--bot)}
 .knop-rand:active{transform:translateY(1px)}
 
-.bewijs{background:var(--hoog);border-block:1px solid var(--rand)}
-.bewijs-in{display:grid;grid-template-columns:repeat(2,1fr)}
-@media(min-width:820px){.bewijs-in{grid-template-columns:repeat(4,1fr)}}
-.bewijs-cel{padding:1.5rem var(--marge);border-right:1px solid var(--rand);border-bottom:1px solid var(--rand)}
-@media(min-width:820px){.bewijs-cel{border-bottom:0}.bewijs-cel:last-child{border-right:0}}
-.bewijs-cel b{display:block;font-size:1.6rem;font-weight:700;letter-spacing:-.02em;line-height:1}
-.bewijs-cel b em{font-style:normal;color:var(--amber)}
-.bewijs-cel span{display:block;margin-top:.35rem;font-size:.86rem;color:var(--zacht)}
+/* tellers */
+.tellers{background:var(--hoog);border-block:1px solid var(--rand);padding-block:clamp(2.6rem,6vw,4.2rem)}
+.tellers-in{display:grid;grid-template-columns:repeat(2,1fr);gap:2.2rem 1rem;text-align:center}
+@media(min-width:820px){.tellers-in{grid-template-columns:repeat(4,1fr)}}
+.teller b{display:block;font-weight:700;font-size:clamp(2.6rem,6.5vw,4.4rem);line-height:.92;
+  letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.teller span{display:block;margin-top:.6rem;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--zacht)}
 
-.prijzen{padding-block:clamp(3.5rem,8vw,6rem)}
-.prijzen h2{font-weight:700;letter-spacing:-.03em;font-size:clamp(2rem,5vw,3rem);max-width:16ch}
-.prijzen > .wrap > p{margin-top:.9rem;color:var(--zacht);max-width:48ch}
-.prijs-grid{display:grid;grid-template-columns:1fr;gap:1.2rem;margin-top:2.6rem}
-@media(min-width:760px){.prijs-grid{grid-template-columns:repeat(2,1fr);gap:1.4rem}}
-.prijs{background:var(--hoog);border:1px solid var(--rand);border-radius:var(--rond);
-  padding:clamp(1.6rem,4vw,2.4rem);display:flex;flex-direction:column;gap:.4rem}
-.prijs h3{font-weight:600;font-size:1.35rem;letter-spacing:-.01em}
-.prijs .duur{color:var(--zacht);font-size:.95rem}
-.prijs .bedrag{margin-top:auto;padding-top:1.5rem;font-weight:700;font-size:clamp(2.2rem,5vw,3rem);
-  letter-spacing:-.03em;line-height:1;color:var(--amber)}
-.prijs .bedrag small{display:block;font-size:.78rem;font-weight:500;letter-spacing:.1em;
-  text-transform:uppercase;color:var(--zacht);margin-bottom:.45rem}
-
-.zondag{background:var(--bot);color:var(--zwart);padding-block:clamp(3.5rem,8vw,6rem)}
-.zondag-grid{display:grid;grid-template-columns:1fr;gap:2.5rem}
-@media(min-width:900px){.zondag-grid{grid-template-columns:.9fr 1.1fr;gap:clamp(2.5rem,6vw,5rem);align-items:start}}
-.zondag h2{font-weight:700;letter-spacing:-.035em;line-height:1.03;font-size:clamp(2rem,5.4vw,3.2rem);max-width:14ch}
-.zondag h2 span{color:var(--amber-diep)}
-.zondag p{margin-top:1.1rem;color:#54554e;max-width:42ch}
-.uren{list-style:none;background:#fff;border-radius:var(--rond);padding:.6rem 1.4rem}
-.uren li{display:flex;justify-content:space-between;gap:1rem;padding:.82rem 0;border-bottom:1px solid #e4e2d9;font-size:1.03rem}
+/* zondag: het argument */
+.zondag{padding-block:clamp(4rem,10vw,7rem)}
+.zondag-in{display:grid;grid-template-columns:1fr;gap:2.6rem;align-items:center}
+@media(min-width:900px){.zondag-in{grid-template-columns:1.1fr .9fr;gap:clamp(2.5rem,6vw,5rem)}}
+.zondag h2{font-weight:700;letter-spacing:-.04em;line-height:.98;font-size:clamp(2.4rem,7vw,4.6rem);max-width:12ch}
+.zondag h2 span{color:var(--amber)}
+.zondag > .wrap > .zondag-in > div > p{margin-top:1.3rem;color:var(--zacht);max-width:40ch;font-size:1.06rem}
+.uren{list-style:none;background:var(--hoog);border:1px solid var(--rand);border-radius:var(--rond);padding:.5rem 1.5rem}
+.uren li{display:flex;justify-content:space-between;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--rand);font-size:1.04rem}
 .uren li:last-child{border-bottom:0}
-.uren li span:first-child{color:#6c6d65}
+.uren li span:first-child{color:var(--zacht)}
 .uren li span:last-child{font-weight:600;font-variant-numeric:tabular-nums}
-.uren li.uit span:first-child{color:var(--zwart);font-weight:600}
-.uren li.uit span:last-child{color:var(--amber-diep);font-weight:700}
-.merkje{display:inline-block;margin-left:.55rem;background:var(--amber);color:var(--zwart);font-size:.63rem;
+.uren li.uit span:first-child{color:var(--bot);font-weight:600}
+.uren li.uit span:last-child{color:var(--amber);font-weight:700}
+.merkje{display:inline-block;margin-left:.55rem;background:var(--amber);color:var(--zwart);font-size:.62rem;
   font-weight:700;letter-spacing:.08em;padding:.14rem .45rem;border-radius:var(--rond);vertical-align:middle}
 
+/* citaat over de volle breedte */
+.citaat{background:var(--amber);color:var(--zwart);padding-block:clamp(4rem,10vw,7rem);text-align:center}
+.citaat blockquote{font-weight:700;font-size:clamp(2.2rem,7.4vw,5.4rem);line-height:1.02;
+  letter-spacing:-.045em;max-width:14ch;margin-inline:auto}
+.citaat cite{display:block;margin-top:1.8rem;font-style:normal;font-size:.74rem;
+  letter-spacing:.28em;text-transform:uppercase;color:#6a4d13}
+
+/* boeken */
+.boeken{padding-block:clamp(3.5rem,8vw,6rem)}
+.boeken h2{font-weight:700;letter-spacing:-.035em;font-size:clamp(2rem,5.4vw,3.2rem)}
+.boeken > .wrap > p{margin-top:.9rem;color:var(--zacht);max-width:50ch}
+.boekvenster{margin-top:2.2rem;background:#fff;border:1px solid var(--rand);border-radius:var(--rond);overflow:hidden}
+.boekvenster iframe{display:block;width:100%;height:clamp(620px,82vh,880px);border:0}
+.boek-noot{margin-top:1rem;font-size:.92rem;color:var(--zacht)}
+.boek-noot a{color:var(--amber);font-weight:600;text-underline-offset:3px}
+
+/* prijzen */
+.prijzen{background:var(--hoog);border-block:1px solid var(--rand);padding-block:clamp(3.5rem,8vw,6rem)}
+.prijzen h2{font-weight:700;letter-spacing:-.035em;font-size:clamp(2rem,5.4vw,3.2rem)}
+.prijzen > .wrap > p{margin-top:.8rem;color:var(--zacht)}
+.lijst{margin-top:2.4rem;display:grid;grid-template-columns:1fr;gap:0}
+@media(min-width:820px){.lijst{grid-template-columns:1fr 1fr;column-gap:clamp(2.5rem,6vw,4.5rem)}}
+a.regel{display:grid;grid-template-columns:1fr auto;gap:.3rem 1.5rem;align-items:baseline;
+  padding:1.3rem 0;border-bottom:1px solid var(--rand);text-decoration:none;color:inherit;transition:background .2s}
+a.regel h3{font-weight:600;font-size:1.24rem;letter-spacing:-.01em}
+a.regel .duur{color:var(--zacht);font-size:.8rem;letter-spacing:.05em}
+a.regel .bedrag{font-weight:700;font-size:1.6rem;letter-spacing:-.03em;color:var(--amber);white-space:nowrap}
+a.regel .bedrag small{font-size:.64rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--zacht);margin-right:.4rem}
+a.regel .pak{grid-column:1/-1;margin-top:.35rem;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--amber);opacity:0;transform:translateY(-4px);transition:opacity .25s,transform .25s}
+a.regel:hover,a.regel:focus-visible{background:rgba(224,168,60,.08)}
+a.regel:hover .pak,a.regel:focus-visible .pak{opacity:1;transform:none}
+a.regel:focus-visible{outline:2px solid var(--amber);outline-offset:4px}
+@media(hover:none){a.regel .pak{opacity:1;transform:none}}
+
+/* Onur */
 .onur{padding-block:clamp(3.5rem,8vw,6rem)}
-.onur-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:center}
-@media(min-width:900px){.onur-grid{grid-template-columns:.75fr 1.25fr;gap:clamp(2.5rem,6vw,4.5rem)}}
+.onur-in{display:grid;grid-template-columns:1fr;gap:2.6rem;align-items:center}
+@media(min-width:900px){.onur-in{grid-template-columns:.7fr 1.3fr;gap:clamp(2.5rem,6vw,4.5rem)}}
 .onur figure{margin:0;border-radius:var(--rond);overflow:hidden;background:var(--hoog)}
 .onur figure img{width:100%;aspect-ratio:7/8;object-fit:cover}
-.onur h2{font-weight:700;letter-spacing:-.03em;line-height:1.06;font-size:clamp(1.9rem,4.8vw,2.8rem)}
-.onur-tekst > p{margin-top:1.1rem;color:var(--zacht);max-width:50ch}
-.stemmen{margin-top:2rem;display:grid;gap:1.4rem}
-.stem{border-left:2px solid var(--amber);padding-left:1.3rem}
-.stem p{margin:0;color:var(--bot);font-size:1.05rem;line-height:1.5}
-.stem cite{display:block;margin-top:.6rem;font-style:normal;font-weight:600;font-size:.86rem;color:var(--amber)}
+.onur h2{font-weight:700;letter-spacing:-.035em;line-height:1.04;font-size:clamp(1.9rem,5vw,3rem)}
+.onur-tekst > p{margin-top:1.1rem;color:var(--zacht);max-width:48ch}
+.stemmen{margin-top:2.2rem;display:grid;gap:1.5rem}
+.stem{border-left:2px solid var(--amber);padding-left:1.4rem}
+.stem p{margin:0;font-size:1.06rem;line-height:1.5}
+.stem cite{display:block;margin-top:.6rem;font-style:normal;font-weight:600;font-size:.84rem;color:var(--amber)}
 
-.boeken{background:var(--hoog);border-top:1px solid var(--rand);padding-block:clamp(3.5rem,8vw,6rem)}
-.boeken-kop{max-width:52ch}
-.boeken h2{font-weight:700;letter-spacing:-.035em;line-height:1.04;font-size:clamp(1.9rem,5vw,2.9rem)}
-.boeken h3{font-weight:600;font-size:1.25rem;letter-spacing:-.01em}
-.boeken p{margin-top:.9rem;color:var(--zacht);max-width:42ch}
-/* Zijn eigen boekpagina, hier in de site gezet. De hoofdsite van knipklok
-   verbiedt inbedden, het boekgedeelte op dashboard.knipklok.nl niet. */
-.boekvenster{margin-top:2.2rem;background:#fff;border:1px solid var(--rand);
-  border-radius:var(--rond);overflow:hidden}
-.boekvenster iframe{display:block;width:100%;height:clamp(620px,82vh,880px);border:0}
-.boeken-doos{margin-top:1.6rem;border:1px solid var(--rand);border-radius:var(--rond);background:var(--zwart);
-  padding:clamp(1.6rem,4vw,2.6rem);display:grid;grid-template-columns:1fr;gap:2rem;align-items:center}
-@media(min-width:900px){.boeken-doos{grid-template-columns:1.2fr .8fr}}
-.adres{font-size:1.02rem;line-height:1.85;color:var(--zacht)}
-.adres strong{display:block;font-weight:700;font-size:1.12rem;color:var(--bot);letter-spacing:-.01em}
+/* slotoproep */
+.slot{background:var(--bot);color:var(--zwart);padding-block:clamp(3.5rem,9vw,6.5rem);text-align:center}
+.slot h2{font-weight:700;letter-spacing:-.04em;line-height:1.02;font-size:clamp(2.2rem,6.4vw,4rem);max-width:16ch;margin-inline:auto}
+.slot p{margin-top:1.1rem;color:#55564f;max-width:42ch;margin-inline:auto}
+.slot .knoppen{justify-content:center;margin-top:2.2rem}
+.slot .knop-hoofd{background:var(--zwart);color:var(--bot);border-color:var(--zwart)}
+.slot .knop-hoofd:hover{background:var(--amber-diep);border-color:var(--amber-diep);color:var(--zwart)}
+.slot .knop-rand{border-color:var(--zwart);color:var(--zwart)}
+.slot .knop-rand:hover{background:var(--zwart);color:var(--bot)}
+
+.praktisch{padding-block:clamp(3rem,7vw,5rem);border-top:1px solid var(--rand)}
+.adres{font-size:1.04rem;line-height:1.9;color:var(--zacht)}
+.adres strong{display:block;font-weight:700;font-size:1.4rem;color:var(--bot);letter-spacing:-.02em}
 .adres a{color:var(--amber);font-weight:600;text-underline-offset:3px}
 
-.voet{border-top:1px solid var(--rand);padding-block:2.4rem;font-size:.9rem;color:var(--zacht)}
+.voet{border-top:1px solid var(--rand);padding-block:2.2rem;font-size:.88rem;color:var(--zacht)}
 .voet-in{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:space-between}
 .voet a{color:var(--bot);font-weight:600}
 
+.balk{position:fixed;left:0;right:0;bottom:0;z-index:55;display:flex;gap:.6rem;
+  padding:.7rem var(--marge) calc(.7rem + env(safe-area-inset-bottom));
+  background:rgba(12,13,11,.95);backdrop-filter:blur(12px);
+  transform:translateY(110%);transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.balk.aan{transform:none}
+.balk a{flex:1;text-align:center;padding:.85rem 1rem;border-radius:var(--rond);
+  text-decoration:none;font-weight:600;font-size:.95rem}
+.balk .prim{background:var(--amber);color:var(--zwart)}
+.balk .sec{border:1.5px solid rgba(242,240,233,.4);color:var(--bot)}
+@media(min-width:900px){
+  .balk{left:auto;right:2rem;bottom:2rem;padding:.55rem;border-radius:var(--rond);
+    box-shadow:0 18px 50px rgba(0,0,0,.5);gap:.45rem}
+  .balk a{flex:0 0 auto;padding:.8rem 1.5rem}
+}
+
 @media(prefers-reduced-motion:no-preference){
-  .js .onthul{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+  .js .onthul{opacity:0;transform:translateY(24px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
   .onthul.zichtbaar{opacity:1;transform:none}
+  .traag-1{transition-delay:.08s}.traag-2{transition-delay:.16s}
 }
 </style>
 </head>
 <body>
+<div class="korrel" aria-hidden="true"></div>
 
 <div class="voorstel">
   <div class="wrap">
@@ -154,13 +186,6 @@ a{color:inherit}
     <span>Vragen? Bel of app Bjorn op <a href="tel:+31622658452">06 22658452</a></span>
   </div>
 </div>
-
-<header class="kop">
-  <div class="wrap kop-in">
-    <a class="merk" href="#top">Million Hair<small>ZEVENAAR</small></a>
-    <a class="kop-cta" href="#boeken">Afspraak maken</a>
-  </div>
-</header>
 
 <main id="top">
 
@@ -171,49 +196,32 @@ a{color:inherit}
     <div class="hero-scrim" aria-hidden="true"></div>
     <div class="hero-in">
       <div class="wrap">
-        <h1>Ook op zondag<span>gewoon open.</span></h1>
+        <h1>ook op zondag<span>gewoon open</span></h1>
         <p>Barbershop in het centrum van Zevenaar. Zeven dagen per week, doordeweeks tot acht uur 's avonds.</p>
         <div class="knoppen">
-          <a class="knop knop-hoofd" href="#boeken">Afspraak maken</a>
-          <a class="knop knop-rand" href="https://wa.me/31684692360" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="knop knop-hoofd" href="#boeken">Reserveer je stoel</a>
+          <a class="knop knop-rand" href="https://wa.me/31684692360" target="_blank" rel="noopener">Stuur een appje</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="bewijs">
-    <div class="bewijs-in">
-      <div class="bewijs-cel"><b>4,8<em> &#9733;</em></b><span>uit 554 beoordelingen</span></div>
-      <div class="bewijs-cel"><b>7 dagen</b><span>per week open, zondag inbegrepen</span></div>
-      <div class="bewijs-cel"><b>&euro; 23,50</b><span>voor een knipbeurt</span></div>
-      <div class="bewijs-cel"><b>2019</b><span>aan de Nieuwe Doelenstraat</span></div>
-    </div>
-  </section>
-
-  <section class="prijzen wrap">
-    <h2 class="onthul">Wat het kost</h2>
-    <p class="onthul">Geen verrassingen achteraf. Dit zijn de tarieven, en daar komt niets bij.</p>
-    <div class="prijs-grid">
-      <div class="prijs onthul">
-        <h3>Knippen</h3>
-        <span class="duur">20 minuten</span>
-        <div class="bedrag"><small>vanaf</small>&euro; 23,50</div>
-      </div>
-      <div class="prijs onthul">
-        <h3>Knippen en baard</h3>
-        <span class="duur">30 minuten</span>
-        <div class="bedrag"><small>vanaf</small>&euro; 27,50</div>
-      </div>
+  <section class="tellers">
+    <div class="wrap tellers-in">
+      <div class="teller"><b data-tel="554">0</b><span>beoordelingen</span></div>
+      <div class="teller"><b data-tel="4,8">0</b><span>gemiddeld cijfer</span></div>
+      <div class="teller"><b data-tel="7">0</b><span>dagen per week open</span></div>
+      <div class="teller"><b data-tel="23,50" data-voor="&euro; ">0</b><span>knippen vanaf</span></div>
     </div>
   </section>
 
   <section class="zondag">
-    <div class="wrap zondag-grid">
+    <div class="wrap zondag-in">
       <div class="onthul">
         <h2>De enige die <span>zondag knipt.</span></h2>
-        <p>Doordeweeks geen tijd? Op zondag zit u hier van tien tot vijf gewoon in de stoel. En doordeweeks kunt u tot acht uur 's avonds terecht, dus ook na het werk.</p>
+        <p>Doordeweeks geen tijd? Op zondag zit je hier van tien tot vijf gewoon in de stoel. En doordeweeks kun je tot acht uur 's avonds terecht, dus ook na het werk.</p>
       </div>
-      <ul class="uren onthul">
+      <ul class="uren onthul traag-1">
         <li><span>Maandag</span><span>12:00 - 19:00</span></li>
         <li><span>Dinsdag</span><span>09:30 - 19:00</span></li>
         <li class="uit"><span>Woensdag</span><span>09:30 - 20:00<span class="merkje">avond</span></span></li>
@@ -225,22 +233,58 @@ a{color:inherit}
     </div>
   </section>
 
+  <section class="citaat">
+    <div class="wrap">
+      <blockquote class="onthul">Beste barber van heel 0316.</blockquote>
+      <cite class="onthul traag-1">Uit een review op Google</cite>
+    </div>
+  </section>
+
+  <section class="boeken" id="boeken">
+    <div class="wrap">
+      <h2>Reserveer je stoel</h2>
+      <p>Kies je behandeling en een tijd die je schikt. Je boekt rechtstreeks in de agenda van de zaak.</p>
+      <div class="boekvenster">
+        <iframe
+          src="https://dashboard.knipklok.nl/shop/503/appointment/barber/choose?locale=nl_NL"
+          title="Online een afspraak maken bij Million Hair Barbershop"
+          loading="lazy"></iframe>
+      </div>
+      <p class="boek-noot">Liever even overleggen? Stuur een <a href="https://wa.me/31684692360" target="_blank" rel="noopener">appje</a>, meestal krijg je binnen een paar minuten antwoord.</p>
+    </div>
+  </section>
+
+  <section class="prijzen">
+    <div class="wrap">
+      <h2 class="onthul">Wat het kost</h2>
+      <p class="onthul">Geen verrassingen achteraf. Klik op een behandeling om meteen te reserveren.</p>
+      <div class="lijst">
+        <a class="regel onthul" href="#boeken">
+          <h3>Knippen <span class="duur">20 min</span></h3>
+          <span class="bedrag"><small>vanaf</small>&euro;&nbsp;23,50</span>
+          <span class="pak">Reserveren</span>
+        </a>
+        <a class="regel onthul traag-1" href="#boeken">
+          <h3>Knippen en baard <span class="duur">30 min</span></h3>
+          <span class="bedrag"><small>vanaf</small>&euro;&nbsp;27,50</span>
+          <span class="pak">Reserveren</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <section class="onur wrap">
-    <div class="onur-grid">
+    <div class="onur-in">
       <figure class="onthul">
-        <img src="img/badge.jpg" alt="Het logo van Million Hair Barbershop op de winkelruit, sinds 2019" width="700" height="800" loading="lazy">
+        <img src="img/badge.jpg" alt="Het ronde merkteken van Million Hair Barbershop op de gevel, sinds 2019" width="700" height="800" loading="lazy">
       </figure>
-      <div class="onur-tekst onthul">
+      <div class="onur-tekst onthul traag-1">
         <h2>Bij Onur in de stoel</h2>
-        <p>E&eacute;n kapper, geen wisselende gezichten. U legt een keer uit hoe u het wilt en daarna weet hij het. Dat is waarom mensen hier jaren blijven komen.</p>
+        <p>E&eacute;n kapper, geen wisselende gezichten. Je legt een keer uit hoe je het wilt en daarna weet hij het. Dat is waarom mensen hier jaren blijven komen.</p>
         <div class="stemmen">
           <blockquote class="stem">
             <p>Ik heb bij veel kappers gezeten maar na telkens wisselen ben ik bij Onur terecht gekomen. Hij knipt als de beste en de prijs is relatief goedkoop.</p>
             <cite>Finn Peters</cite>
-          </blockquote>
-          <blockquote class="stem">
-            <p>Goede kapper, aardige vent en goede service.</p>
-            <cite>Marc Tomassen</cite>
           </blockquote>
           <blockquote class="stem">
             <p>Al jaren zeer tevreden.</p>
@@ -251,36 +295,23 @@ a{color:inherit}
     </div>
   </section>
 
-  <section class="boeken" id="boeken">
+  <section class="slot">
     <div class="wrap">
-      <div class="boeken-kop">
-        <h2>Een plekje vastleggen</h2>
-        <p>Kies hieronder een behandeling en een tijd die u schikt. U boekt rechtstreeks in de agenda van de zaak.</p>
+      <h2 class="onthul">Zin in een strakke knipbeurt?</h2>
+      <p class="onthul">Kies online een tijd, of stuur even een appje. Binnenlopen mag ook, maar dan kan het zijn dat je even wacht.</p>
+      <div class="knoppen onthul">
+        <a class="knop knop-hoofd" href="#boeken">Reserveer je stoel</a>
+        <a class="knop knop-rand" href="https://wa.me/31684692360" target="_blank" rel="noopener">Stuur een appje</a>
       </div>
+    </div>
+  </section>
 
-      <div class="boekvenster">
-        <iframe
-          src="https://dashboard.knipklok.nl/shop/503/appointment/barber/choose?locale=nl_NL"
-          title="Online een afspraak maken bij Million Hair Barbershop"
-          loading="lazy"></iframe>
-      </div>
-
-      <div class="boeken-doos">
-        <div>
-          <h3>Liever even overleggen?</h3>
-          <p>Stuur een appje, meestal krijgt u binnen een paar minuten antwoord. Binnenlopen mag ook, maar dan kan het zijn dat u even wacht.</p>
-          <div class="knoppen">
-            <a class="knop knop-rand" href="https://wa.me/31684692360" target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-        </div>
-        <div class="adres">
-          <strong>Million Hair Barbershop</strong>
-          Nieuwe Doelenstraat 8<br>
-          6901 AS Zevenaar<br><br>
-          <a href="tel:+31684692360">06 84692360</a><br>
-          <a href="https://maps.google.com/?q=Nieuwe+Doelenstraat+8+Zevenaar" target="_blank" rel="noopener">Route via Google Maps</a>
-        </div>
-      </div>
+  <section class="praktisch wrap">
+    <div class="adres onthul">
+      <strong>Million Hair Barbershop</strong>
+      Nieuwe Doelenstraat 8, 6901 AS Zevenaar<br>
+      <a href="tel:+31684692360">06 84692360</a> &nbsp;&middot;&nbsp;
+      <a href="https://maps.google.com/?q=Nieuwe+Doelenstraat+8+Zevenaar" target="_blank" rel="noopener">Route via Google Maps</a>
     </div>
   </section>
 </main>
@@ -292,22 +323,61 @@ a{color:inherit}
   </div>
 </footer>
 
+<div class="balk" id="balk">
+  <a class="prim" href="#boeken">Reserveren</a>
+  <a class="sec" href="https://wa.me/31684692360" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
 <script>
 (function () {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var stil = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   var doelen = document.querySelectorAll('.onthul');
-  if (!('IntersectionObserver' in window)) {
+  if (stil || !('IntersectionObserver' in window)) {
     doelen.forEach(function (d) { d.classList.add('zichtbaar'); });
-    return;
+  } else {
+    var kijker = new IntersectionObserver(function (rijen) {
+      rijen.forEach(function (rij) {
+        if (!rij.isIntersecting) return;
+        rij.target.classList.add('zichtbaar');
+        kijker.unobserve(rij.target);
+      });
+    }, { threshold: 0.16, rootMargin: '0px 0px -60px 0px' });
+    doelen.forEach(function (d) { kijker.observe(d); });
   }
-  var kijker = new IntersectionObserver(function (rijen) {
-    rijen.forEach(function (rij) {
-      if (!rij.isIntersecting) return;
-      rij.target.classList.add('zichtbaar');
-      kijker.unobserve(rij.target);
-    });
-  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-  doelen.forEach(function (d) { kijker.observe(d); });
+
+  var tellers = document.querySelectorAll('[data-tel]');
+  function zet(el, tekst) { el.textContent = (el.dataset.voor || '') + tekst; }
+  function loop(el) {
+    var doel = el.dataset.tel;
+    var komma = doel.indexOf(',') > -1;
+    var eind = parseFloat(doel.replace(',', '.'));
+    if (stil) { zet(el, doel); return; }
+    var start = performance.now(), duur = 1500;
+    (function stap(nu) {
+      var p = Math.min((nu - start) / duur, 1);
+      var e = 1 - Math.pow(1 - p, 3);
+      var w = eind * e;
+      zet(el, komma ? w.toFixed(2).replace('.', ',') : Math.round(w).toString());
+      if (p < 1) requestAnimationFrame(stap); else zet(el, doel);
+    })(start);
+  }
+  if ('IntersectionObserver' in window) {
+    var tk = new IntersectionObserver(function (rijen) {
+      rijen.forEach(function (r) { if (r.isIntersecting) { loop(r.target); tk.unobserve(r.target); } });
+    }, { threshold: 0.5 });
+    tellers.forEach(function (t) { tk.observe(t); });
+  } else {
+    tellers.forEach(function (t) { zet(t, t.dataset.tel); });
+  }
+
+  var balk = document.getElementById('balk');
+  var hero = document.querySelector('.hero');
+  if ('IntersectionObserver' in window && balk && hero) {
+    new IntersectionObserver(function (rijen) {
+      balk.classList.toggle('aan', !rijen[0].isIntersecting);
+    }, { threshold: 0 }).observe(hero);
+  }
 })();
 </script>
 </body>
