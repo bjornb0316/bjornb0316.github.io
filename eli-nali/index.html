@@ -65,7 +65,11 @@ a{color:inherit}
   .hero-sluier{background:linear-gradient(90deg,rgba(250,242,241,.95) 0%,rgba(250,242,241,.88) 34%,rgba(250,242,241,0) 62%)}
 }
 .hero-in{position:relative;z-index:2;display:flex;align-items:flex-end;
-  min-height:clamp(440px,66vh,640px);padding-block:clamp(2.2rem,5vw,3.5rem);
+  /* De 31vw houdt de hero op een heel breed scherm mee omhoog. Zonder die
+     ondergrens wordt het vlak breder dan de 3.4:1 van het beeld en gaat de
+     browser alsnog boven en onder snijden, precies waar de vingers zitten. */
+  min-height:max(clamp(440px,66vh,640px), 31vw);
+  padding-block:clamp(2.2rem,5vw,3.5rem);
 }
 @media(min-width:900px){.hero-in{align-items:center}}
 .hero-in .wrap{width:100%}
