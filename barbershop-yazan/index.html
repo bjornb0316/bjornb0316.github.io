@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="nl" class="">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.className+=' js';</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Barbershop Yazan Zutphen &middot; met of zonder afspraak</title>
+<meta name="description" content="Barbershop Yazan aan de Laarstraat in Zutphen. Knippen met of zonder afspraak, zes dagen per week, doordeweeks tot in de avond.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --kalk:#f4f1ec;
+  --steen:#e7e2d9;
+  --zand:#dbd5c9;
+  --inkt:#17171a;
+  --grafiet:#2c2c30;
+  --rook:#6f6c66;
+  --rood:#b3251f;
+  --rood-diep:#8c1a15;
+  --noot:#8a5a3b;
+  --rand:rgba(23,23,26,.14);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--kalk);color:var(--grafiet);
+  font-family:"Inter Tight","Helvetica Neue",Arial,sans-serif;
+  font-size:clamp(1rem,.96rem + .2vw,1.1rem);line-height:1.62;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3,.telling b,.bedrag,.kapper b{font-family:"Zilla Slab",Georgia,serif}
+
+/* ---------- balk van Bjorn ---------- */
+.voorstel{
+  background:var(--inkt);color:var(--zand);
+  font-size:.78rem;line-height:1.5;padding:.6rem 1.2rem;text-align:center;
+}
+.voorstel strong{color:#fff;font-weight:600}
+.voorstel a{color:#fff;text-underline-offset:3px}
+
+/* ---------- opschrift ---------- */
+.opschrift{
+  display:inline-block;font-family:"Inter Tight",Arial,sans-serif;font-weight:600;
+  text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;color:var(--rood);
+}
+.opschrift::before{content:"";display:inline-block;width:22px;height:2px;background:var(--rood);
+  vertical-align:middle;margin-right:.7rem;margin-bottom:.15rem}
+
+/* ---------- knoppen ---------- */
+.knop{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  background:var(--rood);color:#fff;text-decoration:none;border:2px solid var(--rood);
+  font-family:"Inter Tight",Arial,sans-serif;font-weight:600;
+  text-transform:uppercase;letter-spacing:.1em;font-size:.84rem;
+  padding:1.05rem 1.9rem;border-radius:999px;
+  transition:background .18s ease,border-color .18s ease,transform .18s ease,color .18s ease;
+}
+.knop:hover,.knop:focus-visible{background:var(--rood-diep);border-color:var(--rood-diep);transform:translateY(-2px)}
+.knop.stil{background:transparent;color:var(--inkt);border-color:var(--rand)}
+.knop.stil:hover,.knop.stil:focus-visible{background:var(--inkt);border-color:var(--inkt);color:#fff}
+:focus-visible{outline:2px solid var(--rood);outline-offset:3px}
+
+/* ---------- zegel ---------- */
+.zegel{width:100%;height:auto;display:block}
+.zegel .ring{fill:var(--inkt)}
+.zegel .rand2{fill:none;stroke:rgba(255,255,255,.28);stroke-width:1}
+.zegel text{fill:#fff;font-family:"Inter Tight",Arial,sans-serif;font-size:10.5px;
+  font-weight:600;letter-spacing:2.1px;text-transform:uppercase}
+.js .draai{animation:rond 44s linear infinite;transform-origin:100px 100px}
+@keyframes rond{to{transform:rotate(360deg)}}
+
+.stand{position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;padding:16%}
+.stand .lamp{width:9px;height:9px;border-radius:50%;background:var(--rook);margin-bottom:.5rem;flex:none}
+.stand.open .lamp{background:#3fbf6a;box-shadow:0 0 0 4px rgba(63,191,106,.22)}
+.stand .kop{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:#fff;
+  font-size:clamp(.95rem,2.4vw,1.35rem);line-height:1.1}
+.stand .sub{color:rgba(255,255,255,.72);font-size:clamp(.62rem,1.5vw,.78rem);
+  text-transform:uppercase;letter-spacing:.13em;margin-top:.3rem;font-weight:500}
+
+/* ---------- hero ---------- */
+.hero{position:relative;display:grid;grid-template-rows:auto 1fr;min-height:100svh;background:var(--kalk)}
+.hero-beeld{position:relative;overflow:hidden;background:var(--zand);grid-column:1;grid-row:1}
+.hero-beeld img{width:100%;height:100%;object-fit:cover;object-position:52% 42%;aspect-ratio:16/10}
+.hero-tekst{position:relative;display:flex;flex-direction:column;justify-content:center;
+  gap:1.15rem;padding:2.2rem 1.4rem 3.2rem;grid-column:1;grid-row:2}
+.plaats{font-family:"Inter Tight",Arial,sans-serif;font-weight:600;text-transform:uppercase;
+  letter-spacing:.28em;font-size:.7rem;color:var(--rood)}
+.woordmerk{font-family:"Zilla Slab",Georgia,serif;font-weight:700;color:var(--inkt);
+  font-size:clamp(3.6rem,16vw,9rem);line-height:.88;letter-spacing:-.025em;text-transform:uppercase}
+.woordmerk small{display:block;font-weight:400;font-size:.26em;letter-spacing:.02em;
+  color:var(--rook);text-transform:none;margin-top:.55rem}
+.hero-onder{max-width:36ch;color:var(--grafiet)}
+.knoppen{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:.3rem}
+/* het zegel zit in dezelfde rastercel als de foto en hangt over de onderrand.
+   Zo klopt het altijd, ook als er een schuifbalk bij komt. */
+.hero-zegel{position:relative;grid-column:1;grid-row:1;
+  align-self:end;justify-self:end;margin-right:1.2rem;
+  width:clamp(104px,25vw,150px);z-index:3;transform:translateY(50%)}
+
+@media(min-width:940px) and (min-aspect-ratio:1/1){
+  .hero{grid-template-rows:1fr;grid-template-columns:minmax(0,1.06fr) minmax(0,1fr)}
+  .hero-beeld{grid-column:1;grid-row:1}
+  .hero-beeld img{aspect-ratio:auto;object-position:56% 45%}
+  /* de tekst begint voorbij de halve zegel, anders loopt het woordmerk eronderdoor */
+  .hero-tekst{grid-column:2;grid-row:1;
+    padding:4rem clamp(2rem,5vw,5rem) 4rem calc(clamp(140px,13vw,186px) / 2 + 2rem)}
+  /* liggend hangt hetzelfde zegel op de zijgrens in plaats van de onderrand */
+  .hero-zegel{grid-column:1;grid-row:1;justify-self:end;align-self:center;margin-right:0;
+    width:clamp(140px,13vw,186px);transform:translateX(50%)}
+}
+
+/* ---------- secties ---------- */
+section{padding:clamp(4rem,9vw,7rem) 1.4rem}
+.mid{max-width:1160px;margin:0 auto}
+.kop{font-size:clamp(2rem,5vw,3.4rem);line-height:1.06;color:var(--inkt);
+  font-weight:700;letter-spacing:-.02em}
+.kop .dun{font-weight:400;color:var(--rook)}
+.inlei{max-width:56ch;margin-top:1rem}
+.sectiekop{display:flex;flex-direction:column;gap:1rem;align-items:flex-start;margin-bottom:2.6rem}
+
+/* ---------- tellers ---------- */
+.tellers{background:var(--inkt);color:var(--zand)}
+.tellerrij{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.13)}
+@media(min-width:820px){.tellerrij{grid-template-columns:repeat(4,1fr)}}
+.telling{background:var(--inkt);padding:2.2rem 1rem;text-align:center}
+.telling b{display:block;font-size:clamp(2.4rem,6.6vw,3.9rem);line-height:1;color:#fff;font-weight:700}
+.telling span{display:block;margin-top:.6rem;font-size:.72rem;text-transform:uppercase;
+  letter-spacing:.18em;color:rgba(255,255,255,.6)}
+
+/* ---------- beeldstrook ---------- */
+.strook{display:grid;gap:1.1rem}
+@media(min-width:800px){.strook{grid-template-columns:1.35fr 1fr;align-items:end}}
+.beeld{position:relative;overflow:hidden;margin:0;background:var(--zand);border-radius:4px}
+.beeld img{width:100%;object-fit:cover;transition:transform .8s cubic-bezier(.22,.61,.36,1)}
+.beeld:hover img,.beeld:focus-within img{transform:scale(1.03)}
+.beeld.a img{aspect-ratio:4/3}
+.beeld.b img{aspect-ratio:3/4}
+.beeld figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.5rem 1.2rem 1.1rem;
+  background:linear-gradient(to top,rgba(23,23,26,.88),rgba(23,23,26,0));
+  color:#fff;font-size:.76rem;text-transform:uppercase;letter-spacing:.14em;font-weight:600}
+
+/* ---------- citaat ---------- */
+.citaat{background:var(--steen);text-align:center}
+.citaat blockquote{max-width:16ch;margin:0 auto;font-family:"Zilla Slab",Georgia,serif;
+  font-weight:700;font-size:clamp(2.6rem,9vw,6rem);line-height:.98;color:var(--inkt);letter-spacing:-.03em}
+.citaat cite{display:block;margin-top:1.6rem;font-style:normal;font-size:.76rem;
+  text-transform:uppercase;letter-spacing:.2em;color:var(--rook);font-weight:600}
+
+/* ---------- boeken ---------- */
+.boeken{background:var(--kalk)}
+.nu{display:flex;flex-wrap:wrap;gap:1rem 1.6rem;align-items:center;
+  border:2px solid var(--inkt);border-radius:999px;padding:.9rem 1.5rem;margin-top:.4rem;
+  font-weight:500;color:var(--inkt)}
+.nu .lamp{width:10px;height:10px;border-radius:50%;background:var(--rook);flex:none}
+.nu.open .lamp{background:#2f9e56;box-shadow:0 0 0 4px rgba(47,158,86,.2)}
+.agenda{border:1px solid var(--rand);border-radius:6px;overflow:hidden;background:#fff;margin-top:2rem}
+.agenda iframe{display:block;width:100%;height:760px;border:0}
+.agenda-onder{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;justify-content:center;
+  margin-top:1.5rem;color:var(--rook);font-size:.9rem;text-align:center}
+.inloop{display:flex;gap:1rem;border-left:3px solid var(--rood);
+  padding:.9rem 0 .9rem 1.2rem;margin-top:2rem;max-width:56ch}
+.inloop b{color:var(--inkt);font-family:"Zilla Slab",Georgia,serif;font-weight:600}
+
+/* ---------- prijzen ---------- */
+.lijst{border-top:2px solid var(--inkt);margin-top:2.2rem}
+.regel{display:grid;grid-template-columns:1fr auto;gap:.3rem 1.4rem;align-items:baseline;
+  padding:1.1rem .2rem;border-bottom:1px solid var(--rand);text-decoration:none;color:inherit;
+  transition:background .18s ease,padding-left .18s ease}
+.regel:hover,.regel:focus-visible{background:rgba(179,37,31,.07);padding-left:.9rem}
+.regel h3{font-size:1.05rem;color:var(--inkt);font-weight:600}
+.regel .duur{display:block;font-family:"Inter Tight",Arial,sans-serif;font-weight:500;
+  font-size:.74rem;text-transform:uppercase;letter-spacing:.14em;color:var(--rook);margin-top:.28rem}
+.regel .wat{grid-column:1/-1;font-size:.9rem;color:var(--rook);max-width:60ch;margin-top:.45rem}
+.regel .bedrag{font-weight:700;font-size:1.5rem;color:var(--inkt);white-space:nowrap}
+.regel .pak{grid-column:1/-1;justify-self:start;margin-top:.55rem;font-size:.7rem;font-weight:600;
+  text-transform:uppercase;letter-spacing:.16em;color:var(--rood);
+  opacity:0;transform:translateY(-4px);transition:opacity .2s ease,transform .2s ease}
+.regel:hover .pak,.regel:focus-visible .pak{opacity:1;transform:none}
+.regel.top{background:rgba(179,37,31,.06)}
+
+/* ---------- team ---------- */
+.team{background:var(--steen)}
+.teamrij{display:grid;gap:1.4rem;margin-top:2.2rem}
+@media(min-width:760px){.teamrij{grid-template-columns:1fr 1fr;align-items:center}}
+.kapperkaart{display:flex;gap:1.2rem;align-items:center;background:var(--kalk);
+  border-radius:6px;padding:1.4rem 1.5rem}
+.kapperkaart .cirkel{width:56px;height:56px;border-radius:50%;background:var(--inkt);color:#fff;
+  display:grid;place-items:center;font-family:"Zilla Slab",Georgia,serif;font-weight:700;
+  font-size:1.4rem;flex:none}
+.kapperkaart b{display:block;font-family:"Zilla Slab",Georgia,serif;font-size:1.35rem;
+  color:var(--inkt);font-weight:600;line-height:1.15}
+.kapperkaart span{display:block;font-size:.74rem;text-transform:uppercase;letter-spacing:.16em;
+  color:var(--rood);font-weight:600;margin-top:.25rem}
+
+/* ---------- slot ---------- */
+.slot{background:var(--inkt);color:var(--zand);text-align:center}
+.slot .kop{color:#fff;max-width:17ch;margin:0 auto}
+.slot .kop .dun{color:rgba(255,255,255,.55)}
+.slot .knoppen{justify-content:center;margin-top:2rem}
+.slot .knop.stil{color:#fff;border-color:rgba(255,255,255,.3)}
+.slot .knop.stil:hover,.slot .knop.stil:focus-visible{background:#fff;color:var(--inkt);border-color:#fff}
+.slotzegel{width:clamp(96px,17vw,124px);margin:0 auto 2rem;position:relative}
+.slot .zegel .ring{fill:var(--rood)}
+
+/* ---------- praktisch ---------- */
+.praktisch{background:var(--kalk)}
+.praktrij{display:grid;gap:2.4rem;margin-top:2.2rem}
+@media(min-width:880px){.praktrij{grid-template-columns:1.1fr .9fr;gap:3.4rem}}
+.uren{width:100%;border-collapse:collapse}
+.uren th,.uren td{text-align:left;padding:.72rem 0;border-bottom:1px solid var(--rand)}
+.uren th{font-weight:500;color:var(--grafiet);text-transform:capitalize}
+.uren td{text-align:right;color:var(--inkt);font-variant-numeric:tabular-nums;font-weight:500}
+.uren tr.dicht th,.uren tr.dicht td{color:var(--rook);font-weight:400}
+.uren tr.vandaag th,.uren tr.vandaag td{color:var(--rood);font-weight:700}
+.uren tr.vandaag th::after{content:" vandaag";font-size:.68rem;text-transform:uppercase;
+  letter-spacing:.14em;font-weight:600}
+.adres p{margin-bottom:1rem}
+.adres a.lijn{color:var(--inkt);text-decoration:none;border-bottom:2px solid var(--rood);padding-bottom:1px;font-weight:500}
+.verborgen{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- voet ---------- */
+footer{background:var(--steen);padding:2.4rem 1.4rem 7rem;text-align:center;
+  font-size:.79rem;color:var(--rook);line-height:1.7}
+footer strong{color:var(--inkt);font-weight:600}
+
+/* ---------- meeschuivende balk ---------- */
+.balk{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;gap:1px;
+  background:var(--rand);transform:translateY(115%);transition:transform .3s ease}
+.balk.aan{transform:none}
+.balk a{flex:1;display:flex;align-items:center;justify-content:center;padding:1.05rem .6rem;
+  text-decoration:none;background:var(--kalk);color:var(--inkt);font-weight:600;
+  font-size:.78rem;text-transform:uppercase;letter-spacing:.1em}
+.balk a.hoofd{background:var(--rood);color:#fff;flex:1.5}
+@media(min-width:900px){
+  .balk{left:auto;right:1.5rem;bottom:1.5rem;width:auto;background:transparent;gap:.55rem}
+  .balk a{padding:.9rem 1.5rem;border-radius:999px;border:2px solid var(--rand);
+    box-shadow:0 6px 24px rgba(23,23,26,.14)}
+  .balk a.hoofd{border-color:var(--rood)}
+}
+
+/* ---------- onthullen ---------- */
+.js .onthul{opacity:0;transform:translateY(24px)}
+.onthul{transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)}
+.onthul.zicht{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .onthul,.onthul{opacity:1;transform:none;transition:none}
+  .js .draai{animation:none}
+  .beeld img,.knop,.regel,.balk{transition:none}
+}
+</style>
+</head>
+<body>
+
+<div class="voorstel">
+  Dit is een <strong>voorstel</strong> gemaakt door Bjorn Beerntsen, niet de offici&euml;le website van Barbershop Yazan.
+  Vragen? Bel of app Bjorn op <a href="tel:+31622658452">06 22 65 84 52</a>.
+</div>
+
+<header class="hero">
+  <div class="hero-beeld">
+    <img src="img/hero.jpg" width="1440" height="808" alt="Een kapper van Barbershop Yazan zet geconcentreerd een haarlijn bij een jonge klant, tegen een witgekalkte bakstenen muur.">
+  </div>
+
+  <div class="hero-zegel">
+    <div style="position:relative">
+      <svg class="zegel" viewBox="0 0 200 200" role="img" aria-labelledby="zt1">
+        <title id="zt1">Barbershop Yazan, Laarstraat 9 Zutphen</title>
+        <defs><path id="boog1" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"></path></defs>
+        <circle class="ring" cx="100" cy="100" r="100"></circle>
+        <circle class="rand2" cx="100" cy="100" r="88"></circle>
+        <g class="draai"><text><textPath href="#boog1" startOffset="0%">Barbershop Yazan &middot; Laarstraat 9 Zutphen &middot; Met of zonder afspraak &middot; </textPath></text></g>
+      </svg>
+      <div class="stand" id="stand">
+        <span class="lamp"></span>
+        <span class="kop" id="standKop">Zes dagen</span>
+        <span class="sub" id="standSub">per week open</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-tekst">
+    <p class="plaats">Laarstraat 9 &middot; Zutphen</p>
+    <h1 class="woordmerk">Yazan<small>Barbershop, met of zonder afspraak</small></h1>
+    <p class="hero-onder">Yazan en Jano knippen zes dagen per week, doordeweeks door tot in de avond. Loop binnen, of leg vooraf een tijd vast en sta niet te wachten.</p>
+    <div class="knoppen">
+      <a class="knop" href="#boeken">Tijd vastleggen</a>
+      <a class="knop stil" href="tel:+31684933184">Bel 06 84 93 31 84</a>
+    </div>
+  </div>
+</header>
+
+<section class="tellers">
+  <div class="mid">
+    <div class="tellerrij">
+      <div class="telling onthul"><b data-tel="1837">0</b><span>Beoordelingen</span></div>
+      <div class="telling onthul"><b data-tel="4,9">0</b><span>Gemiddeld cijfer</span></div>
+      <div class="telling onthul"><b data-tel="434">0</b><span>Geschreven reviews</span></div>
+      <div class="telling onthul"><b data-tel="6">0</b><span>Dagen per week open</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="mid">
+    <div class="sectiekop onthul">
+      <p class="opschrift">De zaak</p>
+      <h2 class="kop">Aan de Laarstraat,<br><span class="dun">zes dagen in de week</span></h2>
+      <p class="inlei">Een vaste stoel in het centrum van Zutphen. Witte baksteen, rode kozijnen en een klok aan de muur die iedereen hier kent.</p>
+    </div>
+    <div class="strook onthul">
+      <figure class="beeld a">
+        <img src="img/zaak.jpg" width="1500" height="1125" alt="Binnen bij Barbershop Yazan: een barbierstoel met houten armleuningen tegen een witgekalkte muur, rode kozijnen en de deur open naar de straat.">
+        <figcaption>Witte steen &middot; rode kozijnen</figcaption>
+      </figure>
+      <figure class="beeld b">
+        <img src="img/gevel.jpg" width="1200" height="1600" alt="De gevel van Barbershop Yazan met het logo op de ruit en een stoepbord met de tekst knippen met of zonder afspraak.">
+        <figcaption>Zo staat het op de stoep</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="citaat">
+  <div class="mid">
+    <blockquote class="onthul">Op tijd is op tijd.</blockquote>
+    <cite class="onthul">Bertus Bosvelt &middot; geholpen door Jano</cite>
+  </div>
+</section>
+
+<section class="boeken" id="boeken">
+  <div class="mid">
+    <div class="sectiekop onthul">
+      <p class="opschrift">Uw tijd</p>
+      <h2 class="kop">Kies uw kapper,<br><span class="dun">kies uw moment</span></h2>
+      <p class="inlei">Hieronder staat de echte agenda van de zaak. Kies Yazan of Jano, kies een behandeling en leg uw tijd vast.</p>
+      <p class="nu" id="nuBalk"><span class="lamp"></span> <span id="nuTekst">Zes dagen per week open, doordeweeks tot in de avond</span></p>
+    </div>
+    <div class="agenda onthul">
+      <iframe src="https://dashboard.knipklok.nl/shop/209/appointment/barber/choose" title="Online een tijd vastleggen bij Barbershop Yazan"></iframe>
+    </div>
+    <p class="agenda-onder">
+      Liever even overleggen?
+      <a class="knop stil" href="tel:+31684933184">Bel de zaak</a>
+      <a class="knop stil" href="https://wa.me/31684933184" target="_blank" rel="noopener">Stuur een appje</a>
+    </p>
+    <div class="inloop onthul">
+      <p><b>Zonder afspraak mag ook.</b><br>Zo staat het op het bord voor de deur en zo blijft het. Een tijd vastleggen scheelt u alleen het wachten, zeker op donderdag en vrijdag als het druk is.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="mid">
+    <div class="sectiekop onthul">
+      <p class="opschrift">Behandelingen</p>
+      <h2 class="kop">Wat het kost,<br><span class="dun">en hoe lang het duurt</span></h2>
+      <p class="inlei">Elke regel hieronder is meteen een knop. Tik op wat u wilt en u staat in de agenda.</p>
+    </div>
+    <div class="lijst onthul">
+
+      <a class="regel" href="#boeken">
+        <h3>Heren knippen<span class="duur">30 tot 45 minuten</span></h3>
+        <span class="bedrag">&euro;&nbsp;27</span>
+        <span class="pak">Tijd vastleggen</span>
+      </a>
+
+      <a class="regel" href="#boeken">
+        <h3>Heren kort, alles met de tondeuse<span class="duur">15 tot 30 minuten</span></h3>
+        <span class="bedrag">&euro;&nbsp;21</span>
+        <span class="pak">Tijd vastleggen</span>
+      </a>
+
+      <a class="regel" href="#boeken">
+        <h3>Zijkanten en achterkant opscheren<span class="duur">15 tot 30 minuten</span></h3>
+        <span class="bedrag">&euro;&nbsp;20</span>
+        <span class="pak">Tijd vastleggen</span>
+      </a>
+
+      <a class="regel" href="#boeken">
+        <h3>Kinderen tot 10 jaar<span class="duur">30 minuten</span></h3>
+        <span class="bedrag">&euro;&nbsp;22</span>
+        <span class="pak">Tijd vastleggen</span>
+      </a>
+
+      <a class="regel" href="#boeken">
+        <h3>Dames knippen<span class="duur">45 minuten</span></h3>
+        <span class="bedrag">&euro;&nbsp;34</span>
+        <span class="pak">Tijd vastleggen</span>
+      </a>
+
+      <a class="regel" href="#boeken">
+        <h3>Baard bijwerken en contouren<span class="duur">15 tot 30 minuten</span></h3>
+        <span class="bedrag">&euro;&nbsp;17</span>
+        <span class="pak">Tijd vastleggen</span>
+      </a>
+
+      <a class="regel" href="#boeken">
+        <h3>Epileren en haar harsen<span class="duur">15 minuten</span></h3>
+        <span class="bedrag">&euro;&nbsp;17</span>
+        <span class="pak">Tijd vastleggen</span>
+      </a>
+
+      <a class="regel" href="#boeken">
+        <h3>Zijkanten en achterkant opscheren en de baard bijwerken<span class="duur">30 tot 45 minuten</span></h3>
+        <span class="bedrag">&euro;&nbsp;27</span>
+        <span class="pak">Tijd vastleggen</span>
+      </a>
+
+      <a class="regel" href="#boeken">
+        <h3>Knippen en baard bijwerken<span class="duur">45 minuten</span></h3>
+        <span class="bedrag">&euro;&nbsp;34</span>
+        <span class="pak">Tijd vastleggen</span>
+      </a>
+
+      <a class="regel" href="#boeken">
+        <h3>Knippen met harsen of oorkaarsen<span class="duur">45 minuten</span></h3>
+        <span class="bedrag">&euro;&nbsp;34</span>
+        <span class="pak">Tijd vastleggen</span>
+      </a>
+
+      <a class="regel" href="#boeken">
+        <h3>Knippen, baard bijwerken en harsen of oorkaarsen<span class="duur">45 tot 60 minuten</span></h3>
+        <span class="bedrag">&euro;&nbsp;40</span>
+        <span class="pak">Tijd vastleggen</span>
+      </a>
+
+      <a class="regel top" href="#boeken">
+        <h3>VIP Pakket<span class="duur">60 minuten</span></h3>
+        <span class="bedrag">&euro;&nbsp;56</span>
+        <span class="wat">Knippen, baard bijwerken, gezichtsbehandeling en het gezicht met een stoomapparaat en massage.</span>
+        <span class="pak">Tijd vastleggen</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="team">
+  <div class="mid">
+    <div class="sectiekop onthul">
+      <p class="opschrift">Achter de stoel</p>
+      <h2 class="kop">U kiest zelf<br><span class="dun">wie u knipt</span></h2>
+      <p class="inlei">Heeft u een vaste kapper? Kies die gewoon in de agenda, dan zit u bij wie u gewend bent.</p>
+    </div>
+    <div class="teamrij onthul">
+      <div>
+        <div class="kapperkaart" style="margin-bottom:1rem">
+          <span class="cirkel" aria-hidden="true">Y</span>
+          <span><b>Yazan Sharof</b><span>Kapper en eigenaar</span></span>
+        </div>
+        <div class="kapperkaart">
+          <span class="cirkel" aria-hidden="true">J</span>
+          <span><b>Jano</b><span>Kapper</span></span>
+        </div>
+      </div>
+      <figure class="beeld a" style="margin:0">
+        <img src="img/team.jpg" width="720" height="1280" alt="Een kapper van Barbershop Yazan steekt zijn duim op naast een klant met een verse coupe, in een cape met het logo van de zaak.">
+        <figcaption>Vers geknipt aan de Laarstraat</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="slot">
+  <div class="mid">
+    <div class="slotzegel onthul">
+      <svg class="zegel" viewBox="0 0 200 200" role="img" aria-labelledby="zt2">
+        <title id="zt2">Barbershop Yazan Zutphen</title>
+        <defs><path id="boog2" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"></path></defs>
+        <circle class="ring" cx="100" cy="100" r="100"></circle>
+        <circle class="rand2" cx="100" cy="100" r="88"></circle>
+        <g class="draai"><text><textPath href="#boog2" startOffset="0%">Barbershop Yazan &middot; Zutphen &middot; Barbershop Yazan &middot; Zutphen &middot; </textPath></text></g>
+      </svg>
+      <div class="stand">
+        <span class="kop" style="font-size:1.6rem">4,9</span>
+        <span class="sub">uit 1837</span>
+      </div>
+    </div>
+    <h2 class="kop onthul">Zullen we<br><span class="dun">een tijd afspreken?</span></h2>
+    <div class="knoppen onthul">
+      <a class="knop" href="#boeken">Tijd vastleggen</a>
+      <a class="knop stil" href="https://wa.me/31684933184" target="_blank" rel="noopener">Stuur een appje</a>
+    </div>
+  </div>
+</section>
+
+<section class="praktisch">
+  <div class="mid">
+    <div class="sectiekop onthul">
+      <p class="opschrift">Praktisch</p>
+      <h2 class="kop">Openingstijden<br><span class="dun">en de weg</span></h2>
+    </div>
+    <div class="praktrij onthul">
+      <table class="uren" id="urenTabel">
+        <caption class="verborgen">Openingstijden van Barbershop Yazan</caption>
+        <tbody>
+          <tr class="dicht" data-dag="1"><th scope="row">maandag</th><td>gesloten</td></tr>
+          <tr data-dag="2"><th scope="row">dinsdag</th><td>09.30 tot 19.00</td></tr>
+          <tr data-dag="3"><th scope="row">woensdag</th><td>09.30 tot 18.15</td></tr>
+          <tr data-dag="4"><th scope="row">donderdag</th><td>09.30 tot 19.30</td></tr>
+          <tr data-dag="5"><th scope="row">vrijdag</th><td>09.30 tot 19.00</td></tr>
+          <tr data-dag="6"><th scope="row">zaterdag</th><td>09.30 tot 17.00</td></tr>
+          <tr class="dicht" data-dag="0"><th scope="row">zondag</th><td>gesloten</td></tr>
+        </tbody>
+      </table>
+      <div class="adres">
+        <p><strong style="color:var(--inkt)">Barbershop Yazan</strong><br>Laarstraat 9<br>Zutphen</p>
+        <p><a class="lijn" href="tel:+31684933184">06 84 93 31 84</a></p>
+        <p><a class="lijn" href="https://wa.me/31684933184" target="_blank" rel="noopener">Stuur een appje</a></p>
+        <p style="margin-top:1.5rem"><a class="knop" href="#boeken">Tijd vastleggen</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><strong>Voorstel voor Barbershop Yazan</strong><br>
+  Gemaakt door Bjorn Beerntsen &middot; Capital BB &middot; <a href="tel:+31622658452" style="color:var(--grafiet)">06 22 65 84 52</a></p>
+  <p style="margin-top:.9rem">Dit is geen offici&euml;le website van Barbershop Yazan. Alle gegevens komen van hun eigen pagina op knipklok en van hun eigen foto&rsquo;s.</p>
+</footer>
+
+<nav class="balk" id="balk" aria-label="Snel een tijd vastleggen">
+  <a class="hoofd" href="#boeken">Tijd vastleggen</a>
+  <a href="tel:+31684933184">Bellen</a>
+  <a href="https://wa.me/31684933184" target="_blank" rel="noopener">Appen</a>
+</nav>
+
+<script>
+(function(){
+  var traag = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- openingstijden, in minuten na middernacht ---- */
+  /* index = dag van de week volgens getDay(): 0 is zondag */
+  var UREN = [null, null, [570,1140], [570,1095], [570,1170], [570,1140], [570,1020]];
+  var DAGEN = ['zondag','maandag','dinsdag','woensdag','donderdag','vrijdag','zaterdag'];
+
+  function klok(m){
+    var u = Math.floor(m/60), r = m%60;
+    return (u<10?'0':'') + u + '.' + (r<10?'0':'') + r;
+  }
+
+  function stand(){
+    var nu = new Date();
+    var dag = nu.getDay(), min = nu.getHours()*60 + nu.getMinutes();
+    var vandaag = UREN[dag];
+    if (vandaag && min >= vandaag[0] && min < vandaag[1]){
+      return {open:true, kop:'Nu open', sub:'tot ' + klok(vandaag[1]),
+              zin:'Nu open, tot ' + klok(vandaag[1]) + (vandaag[1] >= 1080 ? ' vanavond' : ' vanmiddag')};
+    }
+    if (vandaag && min < vandaag[0]){
+      return {open:false, kop:'Vandaag open', sub:'vanaf ' + klok(vandaag[0]),
+              zin:'Vandaag open vanaf ' + klok(vandaag[0])};
+    }
+    for (var i=1;i<=7;i++){
+      var d = (dag+i)%7, u = UREN[d];
+      if (u){
+        var naam = (i===1) ? 'morgen' : DAGEN[d];
+        return {open:false, kop:(i===1?'Morgen':'Weer open'), sub:(i===1?'vanaf '+klok(u[0]):naam+' '+klok(u[0])),
+                zin:'Nu gesloten. ' + (naam.charAt(0).toUpperCase()+naam.slice(1)) + ' weer open vanaf ' + klok(u[0])};
+      }
+    }
+    return null;
+  }
+
+  var s = stand();
+  if (s){
+    var doos = document.getElementById('stand');
+    document.getElementById('standKop').textContent = s.kop;
+    document.getElementById('standSub').textContent = s.sub;
+    if (s.open && doos) doos.classList.add('open');
+    var balkje = document.getElementById('nuBalk');
+    document.getElementById('nuTekst').textContent = s.zin;
+    if (s.open && balkje) balkje.classList.add('open');
+  }
+
+  /* vandaag oplichten in de tabel */
+  var vandaagRij = document.querySelector('#urenTabel tr[data-dag="' + (new Date()).getDay() + '"]');
+  if (vandaagRij) vandaagRij.classList.add('vandaag');
+
+  /* ---- onthullen ---- */
+  var items = document.querySelectorAll('.onthul');
+  if (!('IntersectionObserver' in window) || traag){
+    for (var i=0;i<items.length;i++) items[i].classList.add('zicht');
+  } else {
+    var kijker = new IntersectionObserver(function(rijen){
+      rijen.forEach(function(r){
+        if (r.isIntersecting){ r.target.classList.add('zicht'); kijker.unobserve(r.target); }
+      });
+    }, {threshold:.14, rootMargin:'0px 0px -8% 0px'});
+    for (var j=0;j<items.length;j++) kijker.observe(items[j]);
+  }
+
+  /* ---- tellen ---- */
+  function tel(el){
+    var doel = el.getAttribute('data-tel');
+    if (traag){ el.textContent = doel; return; }
+    var komma = doel.indexOf(',') > -1;
+    var eind = parseFloat(doel.replace(',', '.'));
+    var start = null, duur = 1500;
+    function stap(t){
+      if (!start) start = t;
+      var p = Math.min((t - start) / duur, 1);
+      var e = 1 - Math.pow(1 - p, 3);
+      var w = eind * e;
+      el.textContent = komma ? w.toFixed(1).replace('.', ',') : Math.round(w).toLocaleString('nl-NL');
+      if (p < 1) requestAnimationFrame(stap);
+    }
+    requestAnimationFrame(stap);
+  }
+  var cijfers = document.querySelectorAll('[data-tel]');
+  if (!('IntersectionObserver' in window)){
+    for (var k=0;k<cijfers.length;k++) cijfers[k].textContent = cijfers[k].getAttribute('data-tel');
+  } else {
+    var teller = new IntersectionObserver(function(rijen){
+      rijen.forEach(function(r){
+        if (r.isIntersecting){ tel(r.target); teller.unobserve(r.target); }
+      });
+    }, {threshold:.5});
+    for (var m=0;m<cijfers.length;m++) teller.observe(cijfers[m]);
+  }
+
+  /* ---- balk ---- */
+  var balk = document.getElementById('balk');
+  var hero = document.querySelector('.hero');
+  if (balk && hero && 'IntersectionObserver' in window){
+    new IntersectionObserver(function(rijen){
+      balk.classList.toggle('aan', !rijen[0].isIntersecting);
+    }, {threshold:0}).observe(hero);
+  } else if (balk){
+    balk.classList.add('aan');
+  }
+})();
+</script>
+</body>
+</html>
