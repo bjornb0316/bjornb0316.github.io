@@ -1,757 +1,490 @@
 <!doctype html>
-<html lang="nl">
+<html lang="nl" class="">
 <head>
-<script>document.documentElement.className+=' js';</script>
 <meta charset="utf-8">
+<script>document.documentElement.className+=' js';</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hair-Centre Winterswijk | Dames &amp; heren kapsalon, met of zonder afspraak</title>
-<meta name="description" content="Kapsalon in het centrum van Winterswijk voor dames, heren en kinderen. Loop binnen zonder afspraak of bel 0543 796 513. Vrijdag tot 21:00 open.">
+<title>Hair-Centre Winterswijk &middot; Dames &amp; heren kapsalon &middot; met &amp; zonder afspraak</title>
+<meta name="description" content="Hair-Centre aan de Wilhelminastraat in Winterswijk. Dames en heren kapsalon, met en zonder afspraak. Vrijdag tot negen uur open.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,400;0,700;0,900;1,700;1,900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --lime:#8dc63f;
-  --lime-diep:#6ea52c;
-  --inkt:#14150f;
-  --inkt-zacht:#3a3c33;
-  --bot:#f6f5f0;
-  --lijn:#dedcd2;
-  --wit:#ffffff;
-  --marge:clamp(1.25rem,5vw,4.5rem);
+  --limoen:#a8d92c;
+  --limoen-fel:#bdf03a;
+  --limoen-diep:#88b420;
+  --inkt:#101012;
+  --kool:#1c1c1f;
+  --rook:#6b6b70;
+  --mist:#d7d7d4;
+  --papier:#fbfbf9;
+  --rand:rgba(16,16,18,.13);
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{
-  font-family:Archivo,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-  background:var(--bot);color:var(--inkt);
-  font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  background:var(--papier);color:var(--kool);
+  font-family:Manrope,"Helvetica Neue",Arial,sans-serif;
+  font-size:clamp(1rem,.96rem + .2vw,1.1rem);line-height:1.62;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;
 }
-img{max-width:100%;height:auto;display:block}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit}
-.wrap{max-width:1240px;margin:0 auto;padding-inline:var(--marge)}
+h1,h2,h3,.telling b,.groot{font-family:Chivo,"Helvetica Neue",Arial,sans-serif}
 
-/* ---------- voorstelbalk ---------- */
-.voorstel{
-  background:var(--inkt);color:#c9cbbe;font-size:.8rem;line-height:1.45;
-  padding:.6rem 0;border-bottom:1px solid rgba(255,255,255,.12);
-}
-.voorstel .wrap{display:flex;flex-wrap:wrap;gap:.35rem 1rem;align-items:baseline;justify-content:center;text-align:center}
-.voorstel b{color:var(--lime);font-weight:700}
-.voorstel a{color:inherit;font-weight:600;text-underline-offset:2px}
+/* ---------- balk van Bjorn ---------- */
+.voorstel{background:var(--inkt);color:var(--mist);font-size:.78rem;line-height:1.5;
+  padding:.6rem 1.2rem;text-align:center}
+.voorstel strong{color:#fff;font-weight:700}
+.voorstel a{color:var(--limoen-fel);text-underline-offset:3px}
 
-/* ---------- kop ---------- */
-.kop{
-  position:sticky;top:0;z-index:50;
-  background:rgba(246,245,240,.92);backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--lijn);
-}
-.kop-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:72px}
-.merk{display:flex;align-items:center;gap:.7rem;text-decoration:none}
-.merk img{width:42px;height:42px;object-fit:cover}
-.merk b{font-weight:800;letter-spacing:-.02em;font-size:1.05rem;line-height:1.1}
-.merk span{display:block;font-weight:500;font-size:.7rem;letter-spacing:.16em;color:var(--inkt-zacht)}
-.kop-bel{
-  display:inline-flex;align-items:center;gap:.5rem;white-space:nowrap;
-  background:var(--inkt);color:var(--wit);text-decoration:none;
-  font-weight:600;font-size:.95rem;padding:.7rem 1.15rem;
-  transition:background .2s ease,transform .12s ease;
-}
-.kop-bel:hover{background:var(--lime-diep)}
-.kop-bel:active{transform:translateY(1px)}
+/* ---------- schuine limoenlabel, van hun eigen schuine logo ---------- */
+.label{display:inline-block;background:var(--limoen);color:var(--inkt);
+  font-family:Chivo,Arial,sans-serif;font-weight:900;font-style:italic;
+  text-transform:uppercase;letter-spacing:.08em;font-size:.76rem;
+  padding:.45rem 1.1rem .4rem;transform:skewX(-9deg)}
+.label span{display:inline-block;transform:skewX(9deg)}
 
-/* ---------- hero: asymmetrische splitsing ---------- */
-.hero{padding-block:clamp(2.5rem,6vw,5rem) clamp(2rem,5vw,4rem)}
-.hero-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:center}
-@media(min-width:900px){.hero-grid{grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem)}}
-.hero h1{
-  font-weight:800;letter-spacing:-.035em;line-height:1.02;
-  font-size:clamp(2.6rem,7.5vw,4.6rem);
-}
-.hero h1 em{font-style:normal;color:var(--lime-diep);display:block}
-.hero p{
-  margin-top:1.35rem;font-size:clamp(1.05rem,2.2vw,1.2rem);
-  color:var(--inkt-zacht);max-width:34ch;
-}
-.knoppen{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:2rem}
-.knop{
-  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
-  text-decoration:none;font-weight:600;white-space:nowrap;
-  padding:1rem 1.6rem;font-size:1.02rem;
-  transition:transform .12s ease,background .2s ease,color .2s ease;
-}
-.knop-hoofd{background:var(--lime);color:var(--inkt);border:2px solid var(--lime)}
-.knop-hoofd:hover{background:var(--lime-diep);border-color:var(--lime-diep);color:var(--wit)}
-.knop-hoofd:active{transform:translateY(1px)}
-.knop-rand{background:transparent;color:var(--inkt);border:2px solid var(--inkt)}
-.knop-rand:hover{background:var(--inkt);color:var(--bot)}
-.knop-rand:active{transform:translateY(1px)}
-.hero-beeld{position:relative}
-.hero-beeld img{width:100%;aspect-ratio:4/3;object-fit:cover}
-.hero-beeld::after{
-  content:"";position:absolute;left:-14px;bottom:-14px;width:96px;height:96px;
-  background:var(--lime);z-index:-1;
+/* ---------- knoppen ---------- */
+.knop{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  background:var(--inkt);color:#fff;text-decoration:none;border:2px solid var(--inkt);
+  font-family:Chivo,Arial,sans-serif;font-weight:900;font-style:italic;
+  text-transform:uppercase;letter-spacing:.06em;font-size:.9rem;
+  padding:1.05rem 1.9rem;transition:background .16s ease,color .16s ease,transform .16s ease}
+.knop:hover,.knop:focus-visible{background:var(--limoen);color:var(--inkt);border-color:var(--limoen);transform:translateY(-2px)}
+.knop.limoen{background:var(--limoen);color:var(--inkt);border-color:var(--limoen)}
+.knop.limoen:hover,.knop.limoen:focus-visible{background:var(--inkt);color:#fff;border-color:var(--inkt)}
+.knop.leeg{background:transparent;color:var(--inkt)}
+.knop.leeg:hover,.knop.leeg:focus-visible{background:var(--inkt);color:#fff}
+:focus-visible{outline:3px solid var(--limoen-diep);outline-offset:3px}
+
+/* ---------- hero ---------- */
+.hero{display:grid;grid-template-rows:auto auto;min-height:100svh;background:var(--limoen)}
+.hero-vlak{display:flex;flex-direction:column;justify-content:center;gap:1.1rem;
+  padding:2.4rem 1.4rem 2.8rem;background:var(--limoen);color:var(--inkt)}
+.hero-beeld{position:relative;overflow:hidden;background:var(--inkt)}
+.hero-beeld img{width:100%;height:100%;object-fit:cover;object-position:32% 62%;aspect-ratio:16/11}
+.plaats{font-family:Chivo,Arial,sans-serif;font-weight:700;text-transform:uppercase;
+  letter-spacing:.2em;font-size:.72rem}
+.woordmerk{font-family:Chivo,Arial,sans-serif;font-weight:900;font-style:italic;
+  font-size:clamp(3rem,13.5vw,7.6rem);line-height:.88;letter-spacing:-.035em;text-transform:uppercase}
+.woordmerk small{display:block;font-style:normal;font-weight:700;font-size:.19em;
+  letter-spacing:.24em;margin-top:.6rem}
+.hero-onder{max-width:34ch;font-weight:500}
+.knoppen{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:.4rem}
+.nu-strook{display:flex;align-items:center;gap:.6rem;margin-top:.5rem;
+  font-family:Chivo,Arial,sans-serif;font-weight:700;font-size:.86rem;text-transform:uppercase;letter-spacing:.06em}
+.lamp{width:10px;height:10px;border-radius:50%;background:var(--inkt);opacity:.3;flex:none}
+.nu-strook.open .lamp{opacity:1;background:var(--inkt);box-shadow:0 0 0 4px rgba(16,16,18,.16)}
+
+@media(min-width:900px) and (min-aspect-ratio:1/1){
+  .hero{grid-template-rows:1fr;grid-template-columns:minmax(0,1fr) minmax(0,1.04fr)}
+  .hero-vlak{grid-column:1;grid-row:1;padding:4rem clamp(2rem,4.5vw,4.5rem)}
+  .hero-beeld{grid-column:2;grid-row:1}
+  .hero-beeld img{aspect-ratio:auto;object-position:34% 60%}
 }
 
-/* ---------- bewijsstrook ---------- */
-.bewijs{background:var(--inkt);color:var(--bot)}
-.bewijs-in{
-  display:grid;grid-template-columns:repeat(2,1fr);
-  gap:1px;background:rgba(255,255,255,.14);
-}
-@media(min-width:760px){.bewijs-in{grid-template-columns:repeat(4,1fr)}}
-.bewijs-cel{background:var(--inkt);padding:1.6rem var(--marge)}
-.bewijs-cel b{display:block;font-size:1.7rem;font-weight:800;letter-spacing:-.02em;line-height:1}
-.bewijs-cel span{display:block;margin-top:.35rem;font-size:.85rem;color:#b9bbaf}
-.sterren{color:var(--lime)}
+/* ---------- secties ---------- */
+section{padding:clamp(3.6rem,8.5vw,6.5rem) 1.4rem}
+.mid{max-width:1140px;margin:0 auto}
+.kop{font-family:Chivo,Arial,sans-serif;font-weight:900;font-style:italic;
+  font-size:clamp(2rem,5.2vw,3.4rem);line-height:1.02;letter-spacing:-.03em;
+  text-transform:uppercase;color:var(--inkt)}
+.kop .dun{font-style:normal;font-weight:400;color:var(--rook);text-transform:none;letter-spacing:-.01em}
+.inlei{max-width:54ch;margin-top:1rem}
+.sectiekop{display:flex;flex-direction:column;gap:1rem;align-items:flex-start;margin-bottom:2.4rem}
 
-/* ---------- belofte: donker, groot ---------- */
-.belofte{background:var(--inkt);color:var(--bot);padding-block:clamp(3.5rem,8vw,6.5rem)}
-.belofte h2{
-  font-weight:800;letter-spacing:-.03em;line-height:1.05;
-  font-size:clamp(2rem,5.5vw,3.4rem);max-width:16ch;
-}
-.belofte h2 mark{background:none;color:var(--lime)}
-.belofte-rij{display:grid;grid-template-columns:1fr;gap:2rem;margin-top:3rem}
-@media(min-width:820px){.belofte-rij{grid-template-columns:repeat(3,1fr);gap:2.5rem}}
-.belofte-blok{border-top:2px solid var(--lime);padding-top:1.1rem}
-.belofte-blok h3{font-size:1.15rem;font-weight:700;letter-spacing:-.01em}
-.belofte-blok p{margin-top:.5rem;color:#b9bbaf;font-size:.98rem}
+/* ---------- tellers ---------- */
+.tellers{background:var(--inkt);color:#fff}
+.tellerrij{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.14)}
+@media(min-width:800px){.tellerrij{grid-template-columns:repeat(4,1fr)}}
+.telling{background:var(--inkt);padding:2.1rem 1rem;text-align:center}
+.telling b{display:block;font-weight:900;font-style:italic;color:var(--limoen-fel);
+  font-size:clamp(2.3rem,6.4vw,3.8rem);line-height:1;letter-spacing:-.03em}
+.telling span{display:block;margin-top:.55rem;font-size:.72rem;text-transform:uppercase;
+  letter-spacing:.16em;color:rgba(255,255,255,.62);font-weight:600}
 
-/* ---------- vakman: beeld + tekst ---------- */
-.vakman{padding-block:clamp(3.5rem,8vw,6rem)}
-.vakman-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:center}
-@media(min-width:900px){.vakman-grid{grid-template-columns:.9fr 1.1fr;gap:clamp(2.5rem,5vw,5rem)}}
-.vakman img{width:100%;aspect-ratio:3/4;object-fit:cover}
-.vakman h2{font-weight:800;letter-spacing:-.03em;line-height:1.06;font-size:clamp(1.9rem,4.6vw,3rem)}
-.vakman p{margin-top:1.2rem;color:var(--inkt-zacht);max-width:52ch}
-.citaat-groot{
-  margin-top:2rem;border-left:4px solid var(--lime);padding-left:1.4rem;
-  font-size:1.12rem;line-height:1.5;
-}
-.citaat-groot cite{
-  display:block;margin-top:.7rem;font-style:normal;font-size:.88rem;
-  color:var(--inkt-zacht);font-weight:600;
-}
+/* ---------- beeldstrook ---------- */
+.strook{display:grid;gap:1.1rem}
+@media(min-width:780px){.strook{grid-template-columns:1fr 1fr}}
+.beeld{position:relative;overflow:hidden;margin:0;background:var(--inkt)}
+.beeld img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .8s cubic-bezier(.22,.61,.36,1)}
+.beeld:hover img,.beeld:focus-within img{transform:scale(1.04)}
+.beeld figcaption{position:absolute;left:0;bottom:0;padding:.5rem 1rem .45rem;
+  background:var(--limoen);color:var(--inkt);font-family:Chivo,Arial,sans-serif;
+  font-weight:900;font-style:italic;font-size:.76rem;text-transform:uppercase;letter-spacing:.06em}
 
-/* ---------- reviews ---------- */
-.reviews{background:var(--wit);padding-block:clamp(3.5rem,8vw,6rem);border-block:1px solid var(--lijn)}
-.reviews-kop{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:1rem}
-.reviews-kop h2{font-weight:800;letter-spacing:-.03em;font-size:clamp(1.8rem,4.2vw,2.6rem)}
-.reviews-kop p{color:var(--inkt-zacht);font-size:.95rem}
-.review-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;margin-top:2.5rem}
-@media(min-width:800px){.review-grid{grid-template-columns:repeat(3,1fr)}}
-.review{border:1px solid var(--lijn);padding:1.6rem;background:var(--bot)}
-.review .sterren{font-size:.95rem;letter-spacing:.12em;color:var(--lime-diep)}
-.review p{margin-top:.8rem;font-size:1rem;line-height:1.5}
-.review cite{display:block;margin-top:1rem;font-style:normal;font-weight:600;font-size:.85rem;color:var(--inkt-zacht)}
+/* ---------- citaat ---------- */
+.citaat{background:var(--inkt);text-align:center;color:#fff}
+.citaat blockquote{max-width:14ch;margin:0 auto;font-family:Chivo,Arial,sans-serif;
+  font-weight:900;font-style:italic;font-size:clamp(2.8rem,11vw,7rem);line-height:.94;
+  letter-spacing:-.04em;text-transform:uppercase;color:var(--limoen-fel)}
+.citaat cite{display:block;margin-top:1.6rem;font-style:normal;font-size:.76rem;
+  text-transform:uppercase;letter-spacing:.18em;color:rgba(255,255,255,.62);font-weight:600}
 
-/* ---------- praktisch ---------- */
-.praktisch{padding-block:clamp(3.5rem,8vw,6rem)}
-.praktisch-grid{display:grid;grid-template-columns:1fr;gap:3rem}
-@media(min-width:880px){.praktisch-grid{grid-template-columns:1.1fr .9fr;gap:clamp(2.5rem,6vw,5rem)}}
-.praktisch h2{font-weight:800;letter-spacing:-.03em;font-size:clamp(1.8rem,4.2vw,2.6rem);margin-bottom:1.8rem}
-.uren{width:100%;border-collapse:collapse}
-.uren tr{border-bottom:1px solid var(--lijn)}
-.uren tr:last-child{border-bottom:0}
-.uren th{text-align:left;font-weight:500;padding:.85rem 0;color:var(--inkt-zacht)}
-.uren td{text-align:right;padding:.85rem 0;font-weight:600;font-variant-numeric:tabular-nums}
-.uren tr.laat th,.uren tr.laat td{color:var(--inkt);font-weight:800}
-.uren tr.laat td::after{
-  content:"tot laat";display:inline-block;margin-left:.6rem;
-  background:var(--lime);color:var(--inkt);font-size:.68rem;font-weight:700;
-  letter-spacing:.08em;padding:.2rem .45rem;vertical-align:middle;
-}
-.uren tr.dicht td{color:#9a9c90;font-weight:500}
-.adres{font-size:1.05rem;line-height:1.7}
-.adres strong{display:block;font-size:1.2rem;font-weight:800;letter-spacing:-.02em}
-.adres a{font-weight:600;color:var(--lime-diep);text-decoration-thickness:2px;text-underline-offset:3px}
-.praktisch-beeld{margin-top:1.8rem}
-.praktisch-beeld img{width:100%;aspect-ratio:16/10;object-fit:cover}
+/* ---------- afspraak ---------- */
+.afspraak{background:var(--limoen)}
+.afspraak .kop,.afspraak .inlei{color:var(--inkt)}
+.afsprkaart{display:grid;gap:1.4rem;margin-top:2rem}
+@media(min-width:860px){.afsprkaart{grid-template-columns:1fr 1fr;gap:1.6rem}}
+.vak{background:var(--papier);padding:1.7rem 1.6rem}
+.vak h3{font-weight:900;font-style:italic;font-size:1.3rem;text-transform:uppercase;
+  letter-spacing:-.01em;color:var(--inkt);margin-bottom:.7rem}
+.telgroot{display:inline-flex;align-items:center;gap:.6rem;font-family:Chivo,Arial,sans-serif;
+  font-weight:900;font-style:italic;font-size:clamp(1.9rem,5.5vw,2.6rem);letter-spacing:-.03em;
+  color:var(--inkt);text-decoration:none;line-height:1.05;margin:.4rem 0 .2rem}
+.telgroot:hover,.telgroot:focus-visible{color:var(--limoen-diep)}
+.uren{width:100%;border-collapse:collapse;margin-top:.4rem}
+.uren th,.uren td{text-align:left;padding:.5rem 0;border-bottom:1px solid var(--rand);font-size:.95rem}
+.uren th{font-weight:500;text-transform:capitalize}
+.uren td{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+.uren tr.dicht th,.uren tr.dicht td{color:var(--rook);font-weight:400}
+.uren tr.vandaag th,.uren tr.vandaag td{background:var(--limoen);font-weight:800}
+.uren tr.vandaag th{padding-left:.5rem}
+.uren tr.vandaag td{padding-right:.5rem}
+
+/* ---------- waarvoor ---------- */
+.rijen{border-top:3px solid var(--inkt);margin-top:2rem}
+.rij{display:grid;grid-template-columns:1fr auto;gap:.3rem 1.2rem;align-items:center;
+  padding:1.25rem .2rem;border-bottom:1px solid var(--rand);text-decoration:none;color:inherit;
+  transition:background .16s ease,padding-left .16s ease}
+.rij:hover,.rij:focus-visible{background:var(--limoen);padding-left:.9rem}
+.rij h3{font-weight:900;font-style:italic;font-size:1.2rem;text-transform:uppercase;letter-spacing:-.01em}
+.rij .wat{grid-column:1/-1;color:var(--rook);font-size:.94rem;max-width:58ch;margin-top:.3rem}
+.rij:hover .wat,.rij:focus-visible .wat{color:var(--inkt)}
+.rij .pijl{font-family:Chivo,Arial,sans-serif;font-weight:900;font-style:italic;
+  font-size:.76rem;text-transform:uppercase;letter-spacing:.1em;white-space:nowrap;color:var(--rook)}
+.rij:hover .pijl,.rij:focus-visible .pijl{color:var(--inkt)}
+
+/* ---------- stemmen ---------- */
+.stemmen{background:var(--inkt);color:var(--mist)}
+.stemmen .kop{color:#fff}
+.stemrij{display:grid;gap:1.1rem;margin-top:2.2rem}
+@media(min-width:760px){.stemrij{grid-template-columns:repeat(3,1fr)}}
+.stem{background:var(--kool);padding:1.5rem 1.4rem;border-top:4px solid var(--limoen)}
+.stem p{font-size:.98rem;line-height:1.6}
+.stem cite{display:block;margin-top:.9rem;font-style:normal;font-size:.74rem;
+  text-transform:uppercase;letter-spacing:.14em;color:var(--limoen-fel);font-weight:700}
 
 /* ---------- slot ---------- */
-.slot{background:var(--lime);color:var(--inkt);padding-block:clamp(3.5rem,8vw,5.5rem);text-align:center}
-.slot h2{font-weight:800;letter-spacing:-.035em;line-height:1.05;font-size:clamp(2rem,6vw,3.6rem);max-width:18ch;margin-inline:auto}
-.slot p{margin-top:1.1rem;font-size:1.1rem;max-width:44ch;margin-inline:auto}
-.slot .knoppen{justify-content:center;margin-top:2.2rem}
-.slot .knop-hoofd{background:var(--inkt);color:var(--bot);border-color:var(--inkt)}
-.slot .knop-hoofd:hover{background:var(--wit);color:var(--inkt);border-color:var(--wit)}
-.slot .knop-rand{border-color:var(--inkt);color:var(--inkt)}
-.slot .knop-rand:hover{background:var(--inkt);color:var(--lime)}
+.slot{background:var(--limoen);text-align:center}
+.slot .kop{max-width:16ch;margin:0 auto;color:var(--inkt)}
+.slot .knoppen{justify-content:center;margin-top:1.9rem}
 
-.voet{background:var(--inkt);color:#9a9c90;padding-block:2.5rem;font-size:.9rem}
-.voet-in{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
-.voet a{color:var(--bot);font-weight:600}
+/* ---------- praktisch ---------- */
+.praktisch{background:var(--papier)}
+.praktrij{display:grid;gap:2rem;margin-top:2rem}
+@media(min-width:820px){.praktrij{grid-template-columns:1fr 1fr;gap:3rem}}
+.adres p{margin-bottom:.9rem}
+.adres a.lijn{color:var(--inkt);text-decoration:none;border-bottom:3px solid var(--limoen);font-weight:600}
+.verborgen{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-/* ---------- afspraak plannen ---------- */
-.afspraak{background:var(--wit);padding-block:clamp(3.5rem,8vw,6rem);border-block:1px solid var(--lijn)}
-.afspraak-kop{max-width:52ch}
-.afspraak-kop h2{font-weight:800;letter-spacing:-.03em;line-height:1.06;font-size:clamp(1.9rem,4.6vw,2.9rem)}
-.afspraak-kop p{margin-top:.9rem;color:var(--inkt-zacht)}
-.boeker{margin-top:2.5rem;display:grid;grid-template-columns:1fr;gap:0;border:1px solid var(--lijn);background:var(--bot)}
-@media(min-width:940px){.boeker{grid-template-columns:1.35fr .65fr}}
-.boeker-stappen{padding:clamp(1.4rem,3.5vw,2.2rem);display:grid;gap:2rem}
-.boeker-zij{
-  background:var(--inkt);color:var(--bot);padding:clamp(1.4rem,3.5vw,2.2rem);
-  display:flex;flex-direction:column;justify-content:space-between;gap:1.5rem;
-}
-.stap-blok{border:0;padding:0;margin:0;min-width:0}
-.stap-blok legend{
-  padding:0;font-weight:800;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--inkt-zacht);margin-bottom:.9rem;
-}
-.stap-blok legend b{
-  display:inline-flex;align-items:center;justify-content:center;width:1.35rem;height:1.35rem;
-  background:var(--lime);color:var(--inkt);margin-right:.55rem;font-size:.8rem;
-}
-.keuzes{display:flex;flex-wrap:wrap;gap:.55rem}
-.keuze{position:relative}
-.keuze input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
-.keuze span{
-  display:inline-flex;flex-direction:column;gap:.1rem;cursor:pointer;
-  border:2px solid var(--lijn);background:var(--wit);padding:.62rem 1rem;
-  font-size:.95rem;font-weight:600;transition:border-color .15s,background .15s,color .15s;
-}
-.keuze span small{font-weight:500;font-size:.78rem;color:var(--inkt-zacht)}
-.keuze input:hover + span{border-color:var(--inkt-zacht)}
-.keuze input:focus-visible + span{outline:3px solid var(--lime-diep);outline-offset:2px}
-.keuze input:checked + span{border-color:var(--inkt);background:var(--inkt);color:var(--bot)}
-.keuze input:checked + span small{color:#b9bbaf}
-.keuze input:disabled + span{opacity:.4;cursor:not-allowed;text-decoration:line-through}
+/* ---------- voet ---------- */
+footer{background:var(--inkt);color:var(--rook);padding:2.4rem 1.4rem 7rem;
+  text-align:center;font-size:.79rem;line-height:1.7}
+footer strong{color:#fff;font-weight:700}
+footer a{color:var(--limoen-fel)}
 
-.dagen{display:grid;grid-auto-flow:column;grid-auto-columns:5.2rem;gap:.5rem;overflow-x:auto;padding-bottom:.6rem;scroll-snap-type:x proximity}
-.dagen::-webkit-scrollbar{height:6px}
-.dagen::-webkit-scrollbar-thumb{background:#cbc9bd}
-.dagen .keuze span{align-items:center;text-align:center;padding:.7rem .3rem;scroll-snap-align:start}
-.dagen .keuze span b{font-size:1.15rem;font-weight:800;line-height:1.1}
-
-.tijden{display:grid;grid-template-columns:repeat(auto-fill,minmax(5.1rem,1fr));gap:.5rem}
-.tijden .keuze span{justify-content:center;align-items:center;padding:.62rem .3rem;font-variant-numeric:tabular-nums}
-.leeg{
-  border:1px dashed var(--lijn);padding:1.1rem;color:var(--inkt-zacht);font-size:.95rem;
-  background:var(--wit);
-}
-.laat-merk{
-  display:inline-block;margin-left:.5rem;background:var(--lime);color:var(--inkt);
-  font-size:.62rem;font-weight:800;letter-spacing:.08em;padding:.12rem .4rem;vertical-align:middle;
+/* ---------- meeschuivende balk ---------- */
+.balk{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;gap:2px;
+  background:var(--inkt);transform:translateY(115%);transition:transform .3s ease}
+.balk.aan{transform:none}
+.balk a{flex:1;display:flex;align-items:center;justify-content:center;padding:1.05rem .6rem;
+  text-decoration:none;background:var(--inkt);color:#fff;font-family:Chivo,Arial,sans-serif;
+  font-weight:900;font-style:italic;font-size:.82rem;text-transform:uppercase;letter-spacing:.05em}
+.balk a.hoofd{background:var(--limoen);color:var(--inkt);flex:1.7}
+@media(min-width:900px){
+  .balk{left:auto;right:1.5rem;bottom:1.5rem;width:auto;background:transparent;gap:.55rem}
+  .balk a{padding:.95rem 1.6rem;box-shadow:0 8px 26px rgba(16,16,18,.22)}
 }
 
-.velden{display:grid;grid-template-columns:1fr;gap:1rem}
-@media(min-width:620px){.velden{grid-template-columns:1fr 1fr}}
-.veld{display:flex;flex-direction:column;gap:.4rem;min-width:0}
-.veld label{font-weight:600;font-size:.92rem}
-.veld input{
-  font:inherit;font-size:1rem;padding:.75rem .85rem;border:2px solid var(--lijn);
-  background:var(--wit);color:var(--inkt);border-radius:0;
-}
-.veld input::placeholder{color:#8f9186}
-.veld input:focus{outline:3px solid var(--lime-diep);outline-offset:1px;border-color:var(--inkt)}
-.veld small{font-size:.82rem;color:var(--inkt-zacht)}
-.veld.fout input{border-color:#a8201a}
-.veld .melding{font-size:.85rem;color:#a8201a;font-weight:600;display:none}
-.veld.fout .melding{display:block}
-
-.samenvatting{font-size:1rem;line-height:1.55}
-.samenvatting h3{font-weight:800;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#b9bbaf;margin-bottom:.9rem}
-.samenvatting dl{display:grid;grid-template-columns:auto 1fr;gap:.45rem 1rem}
-.samenvatting dt{color:#b9bbaf;font-size:.9rem}
-.samenvatting dd{font-weight:600;text-align:right}
-.samenvatting .nog{color:#8d8f84;font-style:italic;font-weight:500}
-.boeker-zij .knop{width:100%}
-.boeker-zij .knop-hoofd{border-color:var(--lime)}
-.boeker-zij .knop-hoofd:hover{background:var(--bot);border-color:var(--bot);color:var(--inkt)}
-.zij-noot{font-size:.85rem;color:#8d8f84;line-height:1.5}
-
-.uitkomst{display:none}
-.uitkomst.aan{display:block}
-.uitkomst h3{font-weight:800;font-size:clamp(1.2rem,2.6vw,1.5rem);letter-spacing:-.02em;line-height:1.2}
-.uitkomst .regels{margin-top:1rem;border-top:2px solid var(--lime);padding-top:1rem;font-size:1.02rem}
-.uitkomst .regels b{display:block;font-size:1.15rem}
-.demo-noot{
-  margin-top:1.4rem;background:rgba(141,198,63,.14);border-left:3px solid var(--lime);
-  padding:.9rem 1.1rem;font-size:.9rem;color:#d7d9cd;line-height:1.55;
-}
-.opnieuw{margin-top:1.2rem;background:none;border:0;color:var(--lime);font:inherit;font-weight:600;font-size:.92rem;cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:3px}
-.opnieuw:hover{color:var(--bot)}
-
-/* ---------- beweging ---------- */
-@media(prefers-reduced-motion:no-preference){
-  .js .onthul{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
-  .onthul.zichtbaar{opacity:1;transform:none}
+/* ---------- onthullen ---------- */
+.js .onthul{opacity:0;transform:translateY(22px)}
+.onthul{transition:opacity .65s cubic-bezier(.22,.61,.36,1),transform .65s cubic-bezier(.22,.61,.36,1)}
+.onthul.zicht{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .onthul,.onthul{opacity:1;transform:none;transition:none}
+  .beeld img,.knop,.rij,.balk{transition:none}
 }
 </style>
 </head>
 <body>
 
 <div class="voorstel">
-  <div class="wrap">
-    <span><b>Voorbeeldontwerp</b> gemaakt voor Hair-Centre door Bjorn Beerntsen.</span>
-    <span>Dit is geen offici&euml;le website van Hair-Centre.</span>
-    <span>Vragen? Bel of app Bjorn op <a href="tel:+31622658452">06 22658452</a></span>
-  </div>
+  Dit is een <strong>voorstel</strong> gemaakt door Bjorn Beerntsen, niet de offici&euml;le website van Hair-Centre.
+  Vragen? Bel of app Bjorn op <a href="tel:+31622658452">06 22 65 84 52</a>.
 </div>
 
-<header class="kop">
-  <div class="wrap kop-in">
-    <a class="merk" href="#top">
-      <img src="img/logo.jpg" alt="Logo Hair-Centre Winterswijk">
-      <b>Hair-Centre<span>WINTERSWIJK</span></b>
-    </a>
-    <a class="kop-bel" href="tel:+31543796513">Bel 0543 796 513</a>
+<header class="hero">
+  <div class="hero-vlak">
+    <p class="plaats">Wilhelminastraat 13 &middot; Winterswijk</p>
+    <h1 class="woordmerk">Hair<br>Centre<small>Dames &amp; heren kapsalon</small></h1>
+    <p class="hero-onder">Met &amp; zonder afspraak. Loop gerust binnen, of bel even. Wij nemen de tijd, ook voor de kleintjes.</p>
+    <div class="knoppen">
+      <a class="knop" href="tel:+31543796513">Bel 0543 796 513</a>
+      <a class="knop leeg" href="#afspraak">Openingstijden</a>
+    </div>
+    <p class="nu-strook" id="nuStrook"><span class="lamp"></span> <span id="nuTekst">Zes dagen per week open</span></p>
+  </div>
+  <div class="hero-beeld">
+    <img src="img/pand.jpg" width="1500" height="1125" alt="Het pand van Hair-Centre aan de Wilhelminastraat in Winterswijk, met de groene banier en de groene raamstickers met de naam van de zaak.">
   </div>
 </header>
 
-<main id="top">
-
-  <section class="hero wrap">
-    <div class="hero-grid">
-      <div>
-        <h1>Even langs de kapper.<em>Zonder gedoe.</em></h1>
-        <p>Dames, heren en kinderen. Loop binnen wanneer het jou uitkomt, of bel even vooruit.</p>
-        <div class="knoppen">
-          <a class="knop knop-hoofd" href="#afspraak">Tijd reserveren</a>
-          <a class="knop knop-rand" href="tel:+31543796513">Bel 0543 796 513</a>
-        </div>
-      </div>
-      <div class="hero-beeld">
-        <img src="img/pand.jpg" alt="De winkel van Hair-Centre aan de Wilhelminastraat in Winterswijk" width="1600" height="1200" fetchpriority="high">
-      </div>
+<section class="tellers">
+  <div class="mid">
+    <div class="tellerrij">
+      <div class="telling onthul"><b data-tel="4,9">0</b><span>Gemiddeld cijfer</span></div>
+      <div class="telling onthul"><b data-tel="116">0</b><span>Reviews op Google</span></div>
+      <div class="telling onthul"><b data-tel="6">0</b><span>Dagen per week open</span></div>
+      <div class="telling onthul"><b data-tel="21">0</b><span>Vrijdag tot negen uur</span></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="bewijs">
-    <div class="bewijs-in">
-      <div class="bewijs-cel"><b>4,9<span class="sterren"> &#9733;</span></b><span>gemiddeld op Google</span></div>
-      <div class="bewijs-cel"><b>116</b><span>mensen lieten een review achter</span></div>
-      <div class="bewijs-cel"><b>6 dagen</b><span>per week open</span></div>
-      <div class="bewijs-cel"><b>21:00</b><span>op vrijdag nog open</span></div>
+<section>
+  <div class="mid">
+    <div class="sectiekop onthul">
+      <p class="label"><span>In de zaak</span></p>
+      <h2 class="kop">Rustig aan,<br><span class="dun">niemand hoeft te haasten</span></h2>
+      <p class="inlei">In bijna elke review staat dezelfde zin: hij neemt alle tijd. Ook als er een kind in de stoel zit dat er even geen zin in heeft.</p>
     </div>
-  </section>
-
-  <section class="belofte">
-    <div class="wrap">
-      <h2 class="onthul">Met afspraak of <mark>gewoon binnenlopen.</mark></h2>
-      <div class="belofte-rij">
-        <div class="belofte-blok onthul">
-          <h3>Geen afspraak nodig</h3>
-          <p>Je hoeft niets vooruit te regelen. Kom langs wanneer het uitkomt, dan kijken we wanneer je aan de beurt bent.</p>
-        </div>
-        <div class="belofte-blok onthul">
-          <h3>Dames en heren</h3>
-          <p>Knippen, kleuren, baard bijwerken. Voor het hele gezin onder hetzelfde dak, in het centrum van Winterswijk.</p>
-        </div>
-        <div class="belofte-blok onthul">
-          <h3>Vrijdag tot 21:00</h3>
-          <p>Werk je tot vijf uur? Op vrijdagavond zit je hier nog gewoon in de stoel. Ook zaterdag tot 17:00 open.</p>
-        </div>
-      </div>
+    <div class="strook onthul">
+      <figure class="beeld">
+        <img src="img/kapper.jpg" width="548" height="1200" alt="De kapper van Hair-Centre aan het werk met een klant in de stoel.">
+        <figcaption>Aan het werk</figcaption>
+      </figure>
+      <figure class="beeld">
+        <img src="img/interieur.jpg" width="720" height="960" alt="Het interieur van de kapsalon met de stoelen en de spiegels.">
+        <figcaption>De salon</figcaption>
+      </figure>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="afspraak" id="afspraak">
-    <div class="wrap">
-      <div class="afspraak-kop">
-        <h2>Liever een tijd vastleggen?</h2>
-        <p>Kies hieronder wat u komt doen en wanneer het u schikt. Wilt u liever niets regelen, loop dan gewoon binnen. Beide kan bij ons.</p>
-      </div>
+<section class="citaat">
+  <div class="mid">
+    <blockquote class="onthul">Neemt alle tijd</blockquote>
+    <cite class="onthul">Ian &middot; klant sinds de opening</cite>
+  </div>
+</section>
 
-      <form class="boeker" id="boeker" novalidate>
-        <div class="boeker-stappen">
-          <fieldset class="stap-blok">
-            <legend><b>1</b> Wat komt u doen?</legend>
-            <div class="keuzes" id="diensten"></div>
-          </fieldset>
-
-          <fieldset class="stap-blok">
-            <legend><b>2</b> Welke dag?</legend>
-            <div class="dagen" id="dagen"></div>
-          </fieldset>
-
-          <fieldset class="stap-blok">
-            <legend><b>3</b> Hoe laat?</legend>
-            <div id="tijden-houder">
-              <p class="leeg">Kies eerst een dag, dan laten wij zien welke tijden nog vrij zijn.</p>
-            </div>
-          </fieldset>
-
-          <fieldset class="stap-blok">
-            <legend><b>4</b> Uw gegevens</legend>
-            <div class="velden">
-              <div class="veld" id="veld-naam">
-                <label for="naam">Naam</label>
-                <input type="text" id="naam" name="naam" autocomplete="name" placeholder="Uw naam">
-                <span class="melding">Vul uw naam in, dan weten wij voor wie de stoel is.</span>
-              </div>
-              <div class="veld" id="veld-tel">
-                <label for="telefoon">Telefoonnummer</label>
-                <input type="tel" id="telefoon" name="telefoon" autocomplete="tel" placeholder="06 12345678" inputmode="tel">
-                <span class="melding">Vul een telefoonnummer in, voor als er iets tussenkomt.</span>
-              </div>
-            </div>
-          </fieldset>
-        </div>
-
-        <aside class="boeker-zij">
-          <div class="samenvatting" id="samenvatting">
-            <h3>Uw afspraak</h3>
-            <dl>
-              <dt>Behandeling</dt><dd id="sam-dienst" class="nog">nog kiezen</dd>
-              <dt>Dag</dt><dd id="sam-dag" class="nog">nog kiezen</dd>
-              <dt>Tijd</dt><dd id="sam-tijd" class="nog">nog kiezen</dd>
-            </dl>
-          </div>
-          <div>
-            <button class="knop knop-hoofd" type="submit" id="bevestig">Afspraak bevestigen</button>
-            <p class="zij-noot" id="zij-noot">U krijgt hierna te zien wat er precies is doorgegeven. Er wordt niets afgeschreven en u zit nergens aan vast.</p>
-          </div>
-
-          <div class="uitkomst" id="uitkomst" role="status" aria-live="polite">
-            <h3>Uw afspraak staat genoteerd</h3>
-            <div class="regels" id="uitkomst-regels"></div>
-            <p class="demo-noot">
-              Dit is een voorbeeldontwerp, dus er is nu niets echt vastgelegd.
-              Op een werkende website komt deze afspraak meteen in de agenda van de kapsalon
-              te staan en krijgt de klant een bevestiging per sms.
-            </p>
-            <button type="button" class="opnieuw" id="opnieuw">Nog een tijd kiezen</button>
-          </div>
-        </aside>
-      </form>
+<section class="afspraak" id="afspraak">
+  <div class="mid">
+    <div class="sectiekop onthul">
+      <p class="label" style="background:var(--inkt);color:var(--limoen)"><span>Langskomen</span></p>
+      <h2 class="kop">Met afspraak,<br><span class="dun">of gewoon binnenlopen</span></h2>
+      <p class="inlei">Allebei mag. Zo staat het ook op de ruit. Wilt u zeker weten dat u meteen aan de beurt bent, bel dan even.</p>
     </div>
-  </section>
-
-  <section class="vakman wrap">
-    <div class="vakman-grid">
-      <div class="onthul">
-        <img src="img/kapper.jpg" alt="De kapper van Hair-Centre met een klant in de stoel" width="1600" height="1200" loading="lazy">
+    <div class="afsprkaart onthul">
+      <div class="vak">
+        <h3>Bel de zaak</h3>
+        <a class="telgroot" href="tel:+31543796513">0543 796 513</a>
+        <p style="color:var(--rook);font-size:.92rem">Een vaste lijn, dus WhatsApp werkt hier niet. Even bellen is het snelst.</p>
+        <p style="margin-top:1.2rem"><a class="knop limoen" href="tel:+31543796513">Nu bellen</a></p>
       </div>
-      <div class="onthul">
-        <h2>Wij nemen de tijd. Ook als uw kind daar even geen zin in heeft.</h2>
-        <p>Kinderen knippen is iets anders dan volwassenen knippen. Soms gaat het in een keer goed en soms duurt het wat langer. Dat is prima. Er staat niemand op de klok, en we sturen niemand met een half kapsel de deur uit.</p>
-        <blockquote class="citaat-groot">
-          &#8220;Ik kom al vier jaar met veel plezier bij deze kapper, altijd samen met mijn zoontje van 4. Wat ik enorm waardeer, is de manier waarop er met kinderen wordt omgegaan.&#8221;
-          <cite>Ezra Pietersz, via Google</cite>
-        </blockquote>
-      </div>
-    </div>
-  </section>
-
-  <section class="reviews">
-    <div class="wrap">
-      <div class="reviews-kop">
-        <h2>Wat klanten schrijven</h2>
-        <p>116 reviews op Google, gemiddeld 4,9</p>
-      </div>
-      <div class="review-grid">
-        <article class="review onthul">
-          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>Een geweldige kapper. Het resultaat was echt prachtig en de prijs was heel erg goed voor het werk dat hij gedaan heeft.</p>
-          <cite>Ibrahim Amousi</cite>
-        </article>
-        <article class="review onthul">
-          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>Sinds de opening al klant en altijd tevreden. Super vriendelijke kapper en neemt alle tijd.</p>
-          <cite>Ian</cite>
-        </article>
-        <article class="review onthul">
-          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>Vriendelijke kapper met oog voor detail en aandacht voor de klant.</p>
-          <cite>Via Google</cite>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="praktisch wrap" id="openingstijden">
-    <div class="praktisch-grid">
-      <div class="onthul">
-        <h2>Openingstijden</h2>
-        <table class="uren">
+      <div class="vak">
+        <h3>Wanneer open</h3>
+        <table class="uren" id="urenTabel">
+          <caption class="verborgen">Openingstijden van Hair-Centre Winterswijk</caption>
           <tbody>
-            <tr><th>Maandag</th><td>11:00 - 18:00</td></tr>
-            <tr><th>Dinsdag</th><td>09:00 - 18:00</td></tr>
-            <tr><th>Woensdag</th><td>09:00 - 18:00</td></tr>
-            <tr><th>Donderdag</th><td>09:00 - 18:00</td></tr>
-            <tr class="laat"><th>Vrijdag</th><td>09:00 - 21:00</td></tr>
-            <tr><th>Zaterdag</th><td>09:00 - 17:00</td></tr>
-            <tr class="dicht"><th>Zondag</th><td>Gesloten</td></tr>
+            <tr data-dag="1"><th scope="row">maandag</th><td>11.00 tot 18.00</td></tr>
+            <tr data-dag="2"><th scope="row">dinsdag</th><td>09.00 tot 18.00</td></tr>
+            <tr data-dag="3"><th scope="row">woensdag</th><td>09.00 tot 18.00</td></tr>
+            <tr data-dag="4"><th scope="row">donderdag</th><td>09.00 tot 18.00</td></tr>
+            <tr data-dag="5"><th scope="row">vrijdag</th><td>09.00 tot 21.00</td></tr>
+            <tr data-dag="6"><th scope="row">zaterdag</th><td>09.00 tot 17.00</td></tr>
+            <tr class="dicht" data-dag="0"><th scope="row">zondag</th><td>gesloten</td></tr>
           </tbody>
         </table>
-      </div>
-      <div class="onthul">
-        <h2>Waar u ons vindt</h2>
-        <div class="adres">
-          <strong>Hair-Centre Winterswijk</strong>
-          Wilhelminastraat 13<br>
-          7101 CM Winterswijk<br><br>
-          <a href="tel:+31543796513">0543 796 513</a><br>
-          <a href="https://maps.google.com/?q=Wilhelminastraat+13+Winterswijk" target="_blank" rel="noopener">Route via Google Maps</a>
-        </div>
-        <div class="praktisch-beeld">
-          <img src="img/interieur.jpg" alt="Het interieur van de kapsalon met de stoelen en spiegels" width="1600" height="1200" loading="lazy">
-        </div>
+        <p style="margin-top:.9rem;font-size:.92rem"><strong>Op vrijdag tot negen uur &rsquo;s avonds.</strong> Handig als u pas na het werk toekomt aan een knipbeurt.</p>
       </div>
     </div>
-  </section>
-
-  <section class="slot">
-    <div class="wrap">
-      <h2>Tijd voor een knipbeurt?</h2>
-      <p>Bel even, of loop gewoon binnen aan de Wilhelminastraat. Wij zorgen dat u goed geknipt weer buiten staat.</p>
-      <div class="knoppen">
-        <a class="knop knop-hoofd" href="tel:+31543796513">Bel 0543 796 513</a>
-        <a class="knop knop-rand" href="https://maps.google.com/?q=Wilhelminastraat+13+Winterswijk" target="_blank" rel="noopener">Route hierheen</a>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="voet">
-  <div class="wrap voet-in">
-    <div>Hair-Centre Winterswijk &nbsp;&middot;&nbsp; Wilhelminastraat 13 &nbsp;&middot;&nbsp; Dames &amp; heren kapsalon</div>
-    <div><a href="tel:+31543796513">0543 796 513</a></div>
   </div>
+</section>
+
+<section>
+  <div class="mid">
+    <div class="sectiekop onthul">
+      <p class="label"><span>Waarvoor</span></p>
+      <h2 class="kop">Voor het hele<br><span class="dun">gezin</span></h2>
+      <p class="inlei">Tik op een regel om te bellen.</p>
+    </div>
+    <div class="rijen onthul">
+      <a class="rij" href="tel:+31543796513">
+        <h3>Heren</h3>
+        <span class="pijl">Bellen</span>
+        <span class="wat">Knippen en verzorgen, met of zonder afspraak.</span>
+      </a>
+      <a class="rij" href="tel:+31543796513">
+        <h3>Dames</h3>
+        <span class="pijl">Bellen</span>
+        <span class="wat">Dames en heren kapsalon, zo staat het op hun eigen ruit.</span>
+      </a>
+      <a class="rij" href="tel:+31543796513">
+        <h3>Kinderen</h3>
+        <span class="pijl">Bellen</span>
+        <span class="wat">Waar de meeste reviews over gaan. Ouders schrijven dat hij alle tijd neemt om een kind op zijn gemak te stellen, ook als het even niet meewerkt.</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="stemmen">
+  <div class="mid">
+    <div class="sectiekop onthul">
+      <p class="label"><span>Wat klanten schrijven</span></p>
+      <h2 class="kop">116 reviews,<br><span class="dun" style="color:rgba(255,255,255,.5)">gemiddeld een 4,9</span></h2>
+    </div>
+    <div class="stemrij onthul">
+      <div class="stem">
+        <p>&ldquo;Ik kom al vier jaar met veel plezier bij deze kapper, altijd samen met mijn zoontje van 4. Wat ik enorm waardeer, is de manier waarop er met kinderen wordt omgegaan. Zelfs als mijn zoon geen zin heeft, neemt de kapper alle tijd om hem op zijn gemak te stellen.&rdquo;</p>
+        <cite>Ezra Pietersz</cite>
+      </div>
+      <div class="stem">
+        <p>&ldquo;Een geweldige kapper! Het resultaat was echt prachtig en de prijs was heel erg goed voor het werk dat hij gedaan heeft. Super service en topkwaliteit voor een zeer passende prijs.&rdquo;</p>
+        <cite>Ibrahim Amousi</cite>
+      </div>
+      <div class="stem">
+        <p>&ldquo;Sinds de opening al klant en altijd tevreden! Super vriendelijke kapper en neemt alle tijd.&rdquo;</p>
+        <cite>Ian</cite>
+      </div>
+    </div>
+    <p class="onthul" style="margin-top:1.6rem;font-size:.95rem;color:var(--rook)">
+      Ook geschreven: &ldquo;Vriendelijke kapper met oog voor detail en aandacht voor de klant.&rdquo;
+      &nbsp;&middot;&nbsp; &ldquo;Goed en goedkoop, voor een snel resultaat.&rdquo;
+      &nbsp;&middot;&nbsp; &ldquo;Kon er even tussendoor vandaag, top, en natuurlijk goed geknipt.&rdquo;
+    </p>
+  </div>
+</section>
+
+<section class="slot">
+  <div class="mid">
+    <p class="label onthul" style="background:var(--inkt);color:var(--limoen)"><span>Tot ziens aan de Wilhelminastraat</span></p>
+    <h2 class="kop onthul" style="margin-top:1.3rem">Tijd voor<br><span class="dun">een knipbeurt?</span></h2>
+    <div class="knoppen onthul">
+      <a class="knop" href="tel:+31543796513">Bel 0543 796 513</a>
+      <a class="knop leeg" href="https://www.google.com/maps/search/Hair-Centre+Wilhelminastraat+13+Winterswijk" target="_blank" rel="noopener">Route hierheen</a>
+    </div>
+  </div>
+</section>
+
+<section class="praktisch">
+  <div class="mid">
+    <div class="sectiekop onthul">
+      <p class="label"><span>Praktisch</span></p>
+      <h2 class="kop">Waar u ons<br><span class="dun">vindt</span></h2>
+    </div>
+    <div class="praktrij onthul">
+      <div class="adres">
+        <p><strong>Hair-Centre Winterswijk</strong><br>Wilhelminastraat 13<br>7101 CM Winterswijk</p>
+        <p><a class="lijn" href="tel:+31543796513">0543 796 513</a></p>
+        <p><a class="lijn" href="https://www.google.com/maps/search/Hair-Centre+Wilhelminastraat+13+Winterswijk" target="_blank" rel="noopener">Route via Google Maps</a></p>
+      </div>
+      <div>
+        <p style="font-weight:600;color:var(--inkt)">Dames &amp; heren kapsalon, met &amp; zonder afspraak.</p>
+        <p style="margin-top:.7rem;color:var(--rook)">Precies zoals het op de ruit staat aan de Wilhelminastraat.</p>
+        <p style="margin-top:1.4rem"><a class="knop limoen" href="tel:+31543796513">Nu bellen</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><strong>Voorstel voor Hair-Centre Winterswijk</strong><br>
+  Gemaakt door Bjorn Beerntsen &middot; Capital BB &middot; <a href="tel:+31622658452">06 22 65 84 52</a></p>
+  <p style="margin-top:.9rem">Dit is geen offici&euml;le website van Hair-Centre. Alle gegevens komen van hun eigen gevel, hun eigen foto&rsquo;s en hun eigen reviews.</p>
 </footer>
 
+<nav class="balk" id="balk" aria-label="Snel contact">
+  <a class="hoofd" href="tel:+31543796513">Bel 0543 796 513</a>
+  <a href="#afspraak">Open?</a>
+</nav>
+
 <script>
-// Onthullen bij scrollen. Alleen als de bezoeker beweging niet heeft uitgezet.
-(function () {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var doelen = document.querySelectorAll('.onthul');
-  if (!('IntersectionObserver' in window)) {
-    doelen.forEach(function (d) { d.classList.add('zichtbaar'); });
-    return;
-  }
-  var kijker = new IntersectionObserver(function (rijen) {
-    rijen.forEach(function (rij) {
-      if (!rij.isIntersecting) return;
-      rij.target.classList.add('zichtbaar');
-      kijker.unobserve(rij.target);
-    });
-  }, { threshold: 0.18, rootMargin: '0px 0px -40px 0px' });
-  doelen.forEach(function (d) { kijker.observe(d); });
-})();
+(function(){
+  var traag = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// Afspraakplanner. De vrije tijden worden afgeleid uit de echte openingstijden,
-// dus zondag valt vanzelf weg en de vrijdagavond loopt door tot negen uur.
-(function () {
-  var form = document.getElementById('boeker');
-  if (!form) return;
+  /* openingstijden in minuten na middernacht, index = getDay(), 0 is zondag */
+  var UREN = [null, [660,1080], [540,1080], [540,1080], [540,1080], [540,1260], [540,1020]];
+  var DAGEN = ['zondag','maandag','dinsdag','woensdag','donderdag','vrijdag','zaterdag'];
+  function klok(m){ var u=Math.floor(m/60), r=m%60; return (u<10?'0':'')+u+'.'+(r<10?'0':'')+r; }
 
-  var UREN = {           // per weekdag, 0 = zondag. null betekent gesloten.
-    0: null,
-    1: [11 * 60, 18 * 60],
-    2: [9 * 60, 18 * 60],
-    3: [9 * 60, 18 * 60],
-    4: [9 * 60, 18 * 60],
-    5: [9 * 60, 21 * 60],
-    6: [9 * 60, 17 * 60]
-  };
-  var DIENSTEN = [
-    { id: 'heren',   naam: 'Heren knippen',        duur: 30 },
-    { id: 'dames',   naam: 'Dames knippen',        duur: 45 },
-    { id: 'kind',    naam: 'Kinderen knippen',     duur: 30 },
-    { id: 'baard',   naam: 'Knippen en baard',     duur: 45 },
-    { id: 'wassen',  naam: 'Wassen, knippen, drogen', duur: 60 }
-  ];
-  var STAP = 30;          // minuten tussen twee starttijden
-  var DAGEN_VOORUIT = 14;
-  var AVOND_VANAF = 18 * 60;
-
-  var DAGNAAM = ['zo', 'ma', 'di', 'wo', 'do', 'vr', 'za'];
-  var DAGVOLUIT = ['zondag', 'maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag'];
-  var MAAND = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli',
-               'augustus', 'september', 'oktober', 'november', 'december'];
-
-  var keuze = { dienst: null, datum: null, tijd: null };
-
-  function klok(minuten) {
-    var u = Math.floor(minuten / 60), m = minuten % 60;
-    return (u < 10 ? '0' : '') + u + ':' + (m < 10 ? '0' : '') + m;
-  }
-
-  function zelfdeDag(a, b) {
-    return a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
-  }
-
-  function vrijeTijden(datum, duur) {
-    var uren = UREN[datum.getDay()];
-    if (!uren) return [];
-    var nu = new Date();
-    var vandaag = zelfdeDag(datum, nu);
-    var nuMinuten = nu.getHours() * 60 + nu.getMinutes();
-    var lijst = [];
-    for (var t = uren[0]; t + duur <= uren[1]; t += STAP) {
-      // Voor vandaag alleen tijden die minstens een uur weg liggen.
-      if (vandaag && t < nuMinuten + 60) continue;
-      lijst.push(t);
+  function stand(){
+    var nu = new Date(), dag = nu.getDay(), min = nu.getHours()*60 + nu.getMinutes();
+    var v = UREN[dag];
+    if (v && min >= v[0] && min < v[1])
+      return { open:true, zin:'Nu open, u kunt zo binnenlopen tot ' + klok(v[1]) };
+    if (v && min < v[0])
+      return { open:false, zin:'Vandaag open vanaf ' + klok(v[0]) };
+    for (var i=1;i<=7;i++){
+      var d=(dag+i)%7, u=UREN[d];
+      if (u){
+        var naam = (i===1) ? 'morgen' : DAGEN[d];
+        return { open:false, zin:'Nu gesloten. ' + naam.charAt(0).toUpperCase()+naam.slice(1) + ' open vanaf ' + klok(u[0]) };
+      }
     }
-    return lijst;
+    return null;
   }
 
-  function maakKeuze(soort, waarde, binnenkant, uitgeschakeld) {
-    var wrap = document.createElement('label');
-    wrap.className = 'keuze';
-    var input = document.createElement('input');
-    input.type = 'radio';
-    input.name = soort;
-    input.value = waarde;
-    if (uitgeschakeld) input.disabled = true;
-    var span = document.createElement('span');
-    span.innerHTML = binnenkant;
-    wrap.appendChild(input);
-    wrap.appendChild(span);
-    return { wrap: wrap, input: input };
+  var s = stand();
+  if (s){
+    var t = document.getElementById('nuTekst');
+    if (t) t.textContent = s.zin;
+    var strook = document.getElementById('nuStrook');
+    if (s.open && strook) strook.classList.add('open');
+  }
+  var rij = document.querySelector('#urenTabel tr[data-dag="' + (new Date()).getDay() + '"]');
+  if (rij) rij.classList.add('vandaag');
+
+  /* onthullen */
+  var items = document.querySelectorAll('.onthul');
+  if (!('IntersectionObserver' in window) || traag){
+    for (var i=0;i<items.length;i++) items[i].classList.add('zicht');
+  } else {
+    var kijker = new IntersectionObserver(function(rijen){
+      rijen.forEach(function(r){ if (r.isIntersecting){ r.target.classList.add('zicht'); kijker.unobserve(r.target); } });
+    }, {threshold:.14, rootMargin:'0px 0px -8% 0px'});
+    for (var j=0;j<items.length;j++) kijker.observe(items[j]);
   }
 
-  // Stap 1: de behandelingen
-  var houderDiensten = document.getElementById('diensten');
-  DIENSTEN.forEach(function (d) {
-    var k = maakKeuze('dienst', d.id, d.naam + '<small>' + d.duur + ' minuten</small>', false);
-    k.input.addEventListener('change', function () {
-      keuze.dienst = d;
-      keuze.tijd = null;          // een andere duur betekent andere vrije tijden
-      toonTijden();
-      werkBij();
-    });
-    houderDiensten.appendChild(k.wrap);
-  });
-
-  // Stap 2: de dagen
-  var houderDagen = document.getElementById('dagen');
-  (function () {
-    var vandaag = new Date();
-    for (var i = 0; i < DAGEN_VOORUIT; i++) {
-      var d = new Date(vandaag.getFullYear(), vandaag.getMonth(), vandaag.getDate() + i);
-      var open = !!UREN[d.getDay()];
-      var label = DAGNAAM[d.getDay()] + '<b>' + d.getDate() + '</b>' +
-                  '<small>' + (open ? MAAND[d.getMonth()].slice(0, 3) : 'dicht') + '</small>';
-      // Bewust niet toISOString: dat rekent naar UTC en levert in de zomertijd
-      // de dag ervoor op.
-      var sleutel = d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
-      var k = maakKeuze('dag', sleutel, label, !open);
-      (function (datum) {
-        k.input.addEventListener('change', function () {
-          keuze.datum = datum;
-          keuze.tijd = null;
-          toonTijden();
-          werkBij();
-        });
-      })(d);
-      houderDagen.appendChild(k.wrap);
+  /* tellen */
+  function tel(el){
+    var doel = el.getAttribute('data-tel');
+    if (traag){ el.textContent = doel; return; }
+    var komma = doel.indexOf(',') > -1;
+    var eind = parseFloat(doel.replace(',', '.'));
+    var start = null, duur = 1400;
+    function stap(ts){
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / duur, 1);
+      var e = 1 - Math.pow(1 - p, 3);
+      var w = eind * e;
+      el.textContent = komma ? w.toFixed(1).replace('.', ',') : Math.round(w).toLocaleString('nl-NL');
+      if (p < 1) requestAnimationFrame(stap);
     }
-  })();
-
-  // Stap 3: de tijden
-  var houderTijden = document.getElementById('tijden-houder');
-
-  function toonTijden() {
-    houderTijden.innerHTML = '';
-    if (!keuze.datum) {
-      houderTijden.innerHTML = '<p class="leeg">Kies eerst een dag, dan laten wij zien welke tijden nog vrij zijn.</p>';
-      return;
-    }
-    var duur = keuze.dienst ? keuze.dienst.duur : 30;
-    var tijden = vrijeTijden(keuze.datum, duur);
-    if (!tijden.length) {
-      houderTijden.innerHTML = '<p class="leeg">Op deze dag is er geen tijd meer vrij. Kiest u een andere dag, of belt u even; soms kunnen wij nog iets schuiven.</p>';
-      return;
-    }
-    var raster = document.createElement('div');
-    raster.className = 'tijden';
-    tijden.forEach(function (t) {
-      var merk = (t >= AVOND_VANAF) ? '<span class="laat-merk">avond</span>' : '';
-      var k = maakKeuze('tijd', String(t), klok(t) + merk, false);
-      k.input.addEventListener('change', function () {
-        keuze.tijd = t;
-        werkBij();
-      });
-      raster.appendChild(k.wrap);
-    });
-    houderTijden.appendChild(raster);
+    requestAnimationFrame(stap);
+  }
+  var cijfers = document.querySelectorAll('[data-tel]');
+  if (!('IntersectionObserver' in window)){
+    for (var k=0;k<cijfers.length;k++) cijfers[k].textContent = cijfers[k].getAttribute('data-tel');
+  } else {
+    var teller = new IntersectionObserver(function(rijen){
+      rijen.forEach(function(r){ if (r.isIntersecting){ tel(r.target); teller.unobserve(r.target); } });
+    }, {threshold:.5});
+    for (var m=0;m<cijfers.length;m++) teller.observe(cijfers[m]);
   }
 
-  // De samenvatting rechts
-  function schrijf(id, tekst, gekozen) {
-    var el = document.getElementById(id);
-    el.textContent = tekst;
-    el.classList.toggle('nog', !gekozen);
-  }
-
-  function datumTekst(d) {
-    return DAGVOLUIT[d.getDay()] + ' ' + d.getDate() + ' ' + MAAND[d.getMonth()];
-  }
-
-  function werkBij() {
-    schrijf('sam-dienst', keuze.dienst ? keuze.dienst.naam : 'nog kiezen', !!keuze.dienst);
-    schrijf('sam-dag', keuze.datum ? datumTekst(keuze.datum) : 'nog kiezen', !!keuze.datum);
-    schrijf('sam-tijd', keuze.tijd !== null ? klok(keuze.tijd) + ' uur' : 'nog kiezen', keuze.tijd !== null);
-  }
-
-  // Bevestigen
-  var naamVeld = document.getElementById('naam');
-  var telVeld = document.getElementById('telefoon');
-
-  function markeer(wrapperId, fout) {
-    document.getElementById(wrapperId).classList.toggle('fout', fout);
-  }
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    var naamLeeg = !naamVeld.value.trim();
-    var telLeeg = telVeld.value.replace(/\D/g, '').length < 9;
-    markeer('veld-naam', naamLeeg);
-    markeer('veld-tel', telLeeg);
-
-    var ontbreekt = [];
-    if (!keuze.dienst) ontbreekt.push('een behandeling');
-    if (!keuze.datum) ontbreekt.push('een dag');
-    if (keuze.tijd === null) ontbreekt.push('een tijd');
-
-    var noot = document.getElementById('zij-noot');
-    if (ontbreekt.length) {
-      noot.textContent = 'Kiest u nog ' + ontbreekt.join(' en ') + ', dan kunnen wij het vastleggen.';
-      noot.style.color = '#f0b8b5';
-      return;
-    }
-    if (naamLeeg || telLeeg) {
-      noot.textContent = 'Vult u uw gegevens nog even aan.';
-      noot.style.color = '#f0b8b5';
-      (naamLeeg ? naamVeld : telVeld).focus();
-      return;
-    }
-
-    document.getElementById('uitkomst-regels').innerHTML =
-      '<b>' + keuze.dienst.naam + '</b>' +
-      datumTekst(keuze.datum) + ' om ' + klok(keuze.tijd) + ' uur<br>' +
-      'op naam van ' + naamVeld.value.trim() + '<br>' +
-      telVeld.value.trim();
-
-    document.getElementById('samenvatting').style.display = 'none';
-    document.getElementById('bevestig').style.display = 'none';
-    noot.style.display = 'none';
-    document.getElementById('uitkomst').classList.add('aan');
-  });
-
-  document.getElementById('opnieuw').addEventListener('click', function () {
-    form.reset();
-    keuze = { dienst: null, datum: null, tijd: null };
-    toonTijden();
-    werkBij();
-    markeer('veld-naam', false);
-    markeer('veld-tel', false);
-    var noot = document.getElementById('zij-noot');
-    noot.textContent = 'U krijgt hierna te zien wat er precies is doorgegeven. Er wordt niets afgeschreven en u zit nergens aan vast.';
-    noot.style.color = '';
-    noot.style.display = '';
-    document.getElementById('samenvatting').style.display = '';
-    document.getElementById('bevestig').style.display = '';
-    document.getElementById('uitkomst').classList.remove('aan');
-    var zacht = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    document.getElementById('afspraak').scrollIntoView({ behavior: zacht ? 'smooth' : 'auto', block: 'start' });
-  });
+  /* balk */
+  var balk = document.getElementById('balk'), hero = document.querySelector('.hero');
+  if (balk && hero && 'IntersectionObserver' in window){
+    new IntersectionObserver(function(rijen){
+      balk.classList.toggle('aan', !rijen[0].isIntersecting);
+    }, {threshold:0}).observe(hero);
+  } else if (balk){ balk.classList.add('aan'); }
 })();
 </script>
 </body>
