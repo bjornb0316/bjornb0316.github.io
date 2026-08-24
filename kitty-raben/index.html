@@ -147,6 +147,20 @@ section{padding:clamp(4.5rem,10vw,8rem) 1.5rem}
   font-size:1.5rem;color:var(--bloem);line-height:1}
 .stap h3{font-size:1.5rem;margin-bottom:.5rem;color:#3a3230}
 
+/* ---------- wie zij is ---------- */
+.overmij{background:var(--zand)}
+.overrij{display:grid;gap:2.4rem;align-items:center}
+@media(min-width:860px){.overrij{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:4rem}}
+.portret{position:relative;margin:0}
+.portret img{width:100%;max-width:380px;aspect-ratio:1;object-fit:cover;object-position:50% 22%;
+  border-radius:50%;margin:0 auto;background:var(--room)}
+.portret figcaption{text-align:center;margin-top:1.2rem;font-family:Jost,Arial,sans-serif;
+  font-size:.66rem;text-transform:uppercase;letter-spacing:.28em;color:var(--rook)}
+.overtekst .kop{margin-bottom:1.2rem}
+.overtekst p + p{margin-top:1rem}
+.overtekst .ondertekening{margin-top:1.6rem;font-family:"Cormorant Garamond",Georgia,serif;
+  font-style:italic;font-size:1.5rem;color:var(--bloem-diep)}
+
 /* ---------- citaat ---------- */
 .citaat{position:relative;color:var(--room);text-align:center;overflow:hidden}
 .citaat .mid{position:relative;z-index:2}
@@ -334,6 +348,24 @@ footer a{color:var(--bloem)}
         <b>iii</b>
         <h3>Advies voor thuis</h3>
         <p>Na afloop krijgt u geheel vrijblijvend een huidverzorgingsadvies voor thuis mee.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="overmij">
+  <div class="mid">
+    <div class="overrij onthul">
+      <figure class="portret">
+        <img src="img/kitty.jpg" width="700" height="700" alt="Kitty Raben, schoonheidsspecialiste in Didam.">
+        <figcaption>Kitty Raben</figcaption>
+      </figure>
+      <div class="overtekst">
+        <p class="opschrift">Wie u treft</p>
+        <h2 class="kop" style="margin-top:1.1rem">U zit bij mij,<br><em>niet bij een balie</em></h2>
+        <p>Bij mij is het altijd &eacute;&eacute;n op &eacute;&eacute;n. Ik neem de tijd om te kijken wat uw huid nodig heeft, en u gaat naar huis met een advies waar u thuis echt iets aan hebt.</p>
+        <p>Ik werk met producten op basis van mineralen uit de Dode Zee, en geef er ook workshops over. Kom gerust met een paar vriendinnen.</p>
+        <p class="ondertekening">Graag tot ziens in mijn praktijk.</p>
       </div>
     </div>
   </div>
