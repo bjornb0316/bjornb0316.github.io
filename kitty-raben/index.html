@@ -12,23 +12,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --nacht:#0b1113;
-  --diep:#102126;
-  --zee:#235a5f;
-  --zeelicht:#3d8b8c;
-  --zout:#f5f1ea;
-  --zand:#e3d9c9;
-  --steen:#c9c1b4;
-  --koper:#bf8a55;
-  --koper-diep:#9d6d3d;
-  --rook:#7d8688;
-  --rand:rgba(245,241,234,.16);
-  --rand-donker:rgba(11,17,19,.14);
+  --inkt:#3a3230;
+  --mokka:#6f574c;
+  --mokka-diep:#42332c;
+  --noot:#8b6a5c;
+  --room:#f8f4ef;
+  --zand:#e9ded4;
+  --steen:#cfc0b4;
+  --bloem:#c08bad;
+  --bloem-diep:#9d6b8b;
+  --rook:#8a7a72;
+  --rand:rgba(248,244,239,.18);
+  --rand-donker:rgba(58,50,48,.14);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{
-  background:var(--zout);color:#243033;
+  background:var(--room);color:#463c39;
   font-family:Jost,"Helvetica Neue",Arial,sans-serif;font-weight:300;
   font-size:clamp(1rem,.95rem + .25vw,1.14rem);line-height:1.72;
   overflow-x:hidden;-webkit-font-smoothing:antialiased;
@@ -38,41 +38,41 @@ a{color:inherit}
 h1,h2,h3,blockquote,.cijfer{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300}
 
 /* ---------- balk van Bjorn ---------- */
-.voorstel{background:var(--nacht);color:var(--steen);font-size:.76rem;line-height:1.55;
+.voorstel{background:var(--mokka-diep);color:var(--steen);font-size:.76rem;line-height:1.55;
   padding:.62rem 1.2rem;text-align:center;letter-spacing:.01em}
-.voorstel strong{color:var(--zout);font-weight:500}
-.voorstel a{color:var(--koper);text-underline-offset:3px}
+.voorstel strong{color:var(--room);font-weight:500}
+.voorstel a{color:var(--bloem);text-underline-offset:3px}
 
 /* ---------- fijne opschriften ---------- */
 .opschrift{display:inline-flex;align-items:center;gap:.9rem;font-family:Jost,Arial,sans-serif;
-  font-weight:400;text-transform:uppercase;letter-spacing:.42em;font-size:.66rem;color:var(--koper)}
-.opschrift::before{content:"";width:34px;height:1px;background:var(--koper);flex:none}
-.op-licht{color:var(--koper)}
+  font-weight:400;text-transform:uppercase;letter-spacing:.42em;font-size:.66rem;color:var(--bloem)}
+.opschrift::before{content:"";width:34px;height:1px;background:var(--bloem);flex:none}
+.op-licht{color:var(--bloem)}
 
 /* ---------- knoppen ---------- */
 .knop{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
-  background:var(--nacht);color:var(--zout);text-decoration:none;border:1px solid var(--nacht);
+  background:var(--mokka-diep);color:var(--room);text-decoration:none;border:1px solid var(--mokka-diep);
   font-family:Jost,Arial,sans-serif;font-weight:400;text-transform:uppercase;
   letter-spacing:.22em;font-size:.72rem;padding:1.15rem 2.2rem;
   transition:background .3s ease,color .3s ease,border-color .3s ease,letter-spacing .3s ease}
-.knop:hover,.knop:focus-visible{background:var(--koper);border-color:var(--koper);color:var(--nacht);letter-spacing:.27em}
-.knop.licht{background:transparent;color:var(--zout);border-color:var(--rand)}
-.knop.licht:hover,.knop.licht:focus-visible{background:var(--zout);color:var(--nacht);border-color:var(--zout)}
-.knop.omlijnd{background:transparent;color:var(--nacht);border-color:var(--rand-donker)}
-.knop.omlijnd:hover,.knop.omlijnd:focus-visible{background:var(--nacht);color:var(--zout);border-color:var(--nacht)}
-:focus-visible{outline:2px solid var(--koper);outline-offset:4px}
+.knop:hover,.knop:focus-visible{background:var(--bloem);border-color:var(--bloem);color:var(--mokka-diep);letter-spacing:.27em}
+.knop.licht{background:transparent;color:var(--room);border-color:var(--rand)}
+.knop.licht:hover,.knop.licht:focus-visible{background:var(--room);color:var(--mokka-diep);border-color:var(--room)}
+.knop.omlijnd{background:transparent;color:var(--mokka-diep);border-color:var(--rand-donker)}
+.knop.omlijnd:hover,.knop.omlijnd:focus-visible{background:var(--mokka-diep);color:var(--room);border-color:var(--mokka-diep)}
+:focus-visible{outline:2px solid var(--bloem);outline-offset:4px}
 
 /* ---------- het mineraalveld: haar dode zee, in licht ---------- */
-.veld{position:absolute;inset:0;overflow:hidden;background:var(--nacht);z-index:0}
+.veld{position:absolute;inset:0;overflow:hidden;background:var(--mokka-diep);z-index:0}
 .gloed{position:absolute;border-radius:50%;filter:blur(2px);opacity:.85;will-change:transform}
 .g1{width:120vmax;height:120vmax;left:-30vmax;top:-45vmax;
-  background:radial-gradient(circle at 50% 50%,rgba(35,90,95,.85) 0%,rgba(35,90,95,.28) 42%,rgba(35,90,95,0) 68%)}
+  background:radial-gradient(circle at 50% 50%,rgba(139,106,92,.85) 0%,rgba(139,106,92,.28) 42%,rgba(139,106,92,0) 68%)}
 .g2{width:95vmax;height:95vmax;right:-28vmax;top:-18vmax;
-  background:radial-gradient(circle at 50% 50%,rgba(191,138,85,.5) 0%,rgba(191,138,85,.16) 40%,rgba(191,138,85,0) 66%)}
+  background:radial-gradient(circle at 50% 50%,rgba(192,139,173,.5) 0%,rgba(192,139,173,.16) 40%,rgba(192,139,173,0) 66%)}
 .g3{width:110vmax;height:110vmax;left:8vmax;bottom:-58vmax;
-  background:radial-gradient(circle at 50% 50%,rgba(61,139,140,.55) 0%,rgba(61,139,140,.14) 44%,rgba(61,139,140,0) 70%)}
+  background:radial-gradient(circle at 50% 50%,rgba(111,87,76,.55) 0%,rgba(111,87,76,.14) 44%,rgba(111,87,76,0) 70%)}
 .g4{width:70vmax;height:70vmax;right:2vmax;bottom:-26vmax;
-  background:radial-gradient(circle at 50% 50%,rgba(227,217,201,.28) 0%,rgba(227,217,201,.06) 42%,rgba(227,217,201,0) 68%)}
+  background:radial-gradient(circle at 50% 50%,rgba(233,222,212,.28) 0%,rgba(233,222,212,.06) 42%,rgba(233,222,212,0) 68%)}
 .js .g1{animation:drijf1 46s ease-in-out infinite alternate}
 .js .g2{animation:drijf2 38s ease-in-out infinite alternate}
 .js .g3{animation:drijf3 54s ease-in-out infinite alternate}
@@ -80,27 +80,39 @@ h1,h2,h3,blockquote,.cijfer{font-family:"Cormorant Garamond",Georgia,serif;font-
 @keyframes drijf1{to{transform:translate3d(9vmax,7vmax,0) scale(1.12)}}
 @keyframes drijf2{to{transform:translate3d(-8vmax,6vmax,0) scale(1.18)}}
 @keyframes drijf3{to{transform:translate3d(7vmax,-8vmax,0) scale(1.09)}}
-/* zoutkorrel eroverheen */
-.korrel{position:absolute;inset:0;opacity:.06;pointer-events:none;
-  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='r'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/></filter><rect width='140' height='140' filter='url(%23r)'/></svg>")}
+/* zachte lichtsprankels, zoals de bokeh die zij zelf over haar foto's legt */
+.korrel{position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:
+    radial-gradient(circle at 12% 22%,rgba(255,255,255,.55) 0,rgba(255,255,255,0) 3px),
+    radial-gradient(circle at 27% 68%,rgba(255,255,255,.4) 0,rgba(255,255,255,0) 4px),
+    radial-gradient(circle at 43% 15%,rgba(255,255,255,.5) 0,rgba(255,255,255,0) 2.5px),
+    radial-gradient(circle at 58% 80%,rgba(255,255,255,.42) 0,rgba(255,255,255,0) 5px),
+    radial-gradient(circle at 71% 34%,rgba(255,255,255,.5) 0,rgba(255,255,255,0) 3px),
+    radial-gradient(circle at 86% 61%,rgba(255,255,255,.38) 0,rgba(255,255,255,0) 4px),
+    radial-gradient(circle at 92% 12%,rgba(255,255,255,.45) 0,rgba(255,255,255,0) 2.5px),
+    radial-gradient(circle at 6% 88%,rgba(255,255,255,.4) 0,rgba(255,255,255,0) 3.5px);
+  background-size:340px 300px;
+  background-repeat:repeat}
+.js .korrel{animation:sprankel 26s ease-in-out infinite alternate}
+@keyframes sprankel{to{opacity:.24;transform:translate3d(14px,-18px,0)}}
 
 /* ---------- hero ---------- */
 .hero{position:relative;min-height:100svh;display:grid;place-items:center;
-  padding:5rem 1.5rem 4.5rem;text-align:center;color:var(--zout);overflow:hidden}
+  padding:5rem 1.5rem 4.5rem;text-align:center;color:var(--room);overflow:hidden}
 .hero-in{position:relative;z-index:2;max-width:52rem;display:flex;flex-direction:column;
   align-items:center;gap:1.6rem}
 .rol{font-family:Jost,Arial,sans-serif;font-weight:300;text-transform:uppercase;
   letter-spacing:.62em;font-size:clamp(.6rem,1.7vw,.76rem);color:var(--zand);margin-right:-.62em}
 .woordmerk{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;
   font-size:clamp(3.1rem,12.5vw,8.2rem);line-height:.94;letter-spacing:.04em;
-  text-transform:uppercase;color:var(--zout)}
-.streep{width:60px;height:1px;background:var(--koper)}
+  text-transform:uppercase;color:var(--room)}
+.streep{width:60px;height:1px;background:var(--bloem)}
 .hero-zin{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:300;
   font-size:clamp(1.35rem,3.4vw,2.05rem);line-height:1.45;color:var(--zand);max-width:26ch}
 .hero-knoppen{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center;margin-top:.5rem}
-.hero-knoppen .knop{background:var(--zout);color:var(--nacht);border-color:var(--zout)}
-.hero-knoppen .knop:hover,.hero-knoppen .knop:focus-visible{background:var(--koper);border-color:var(--koper);color:var(--nacht)}
-.hero-knoppen .knop.licht{background:transparent;color:var(--zout);border-color:var(--rand)}
+.hero-knoppen .knop{background:var(--room);color:var(--mokka-diep);border-color:var(--room)}
+.hero-knoppen .knop:hover,.hero-knoppen .knop:focus-visible{background:var(--bloem);border-color:var(--bloem);color:var(--mokka-diep)}
+.hero-knoppen .knop.licht{background:transparent;color:var(--room);border-color:var(--rand)}
 .hero-voet{position:absolute;left:0;right:0;bottom:1.4rem;z-index:2;text-align:center;
   font-family:Jost,Arial,sans-serif;font-size:.68rem;text-transform:uppercase;
   letter-spacing:.3em;color:rgba(245,241,234,.5)}
@@ -109,54 +121,54 @@ h1,h2,h3,blockquote,.cijfer{font-family:"Cormorant Garamond",Georgia,serif;font-
 section{padding:clamp(4.5rem,10vw,8rem) 1.5rem}
 .mid{max-width:1120px;margin:0 auto}
 .smal{max-width:760px;margin:0 auto}
-.kop{font-size:clamp(2.1rem,5.4vw,3.7rem);line-height:1.1;letter-spacing:.005em;color:#1a2427}
-.kop em{font-style:italic;color:var(--zee)}
-.inlei{max-width:58ch;margin-top:1.3rem;color:#3c4a4d}
+.kop{font-size:clamp(2.1rem,5.4vw,3.7rem);line-height:1.1;letter-spacing:.005em;color:#3a3230}
+.kop em{font-style:italic;color:var(--bloem-diep)}
+.inlei{max-width:58ch;margin-top:1.3rem;color:#5d504b}
 .sectiekop{display:flex;flex-direction:column;gap:1.2rem;align-items:flex-start;margin-bottom:3rem}
 .midden .sectiekop{align-items:center;text-align:center}
 .midden .inlei{margin-left:auto;margin-right:auto}
 
 /* ---------- feitenstrook ---------- */
-.feiten{background:var(--diep);color:var(--zand)}
+.feiten{background:var(--mokka);color:var(--zand)}
 .feitrij{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(245,241,234,.13)}
 @media(min-width:840px){.feitrij{grid-template-columns:repeat(4,1fr)}}
-.feit{background:var(--diep);padding:2.4rem 1.2rem;text-align:center}
-.feit .cijfer{display:block;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1;color:var(--zout);font-weight:300}
+.feit{background:var(--mokka);padding:2.4rem 1.2rem;text-align:center}
+.feit .cijfer{display:block;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1;color:var(--room);font-weight:300}
 .feit span{display:block;margin-top:.8rem;font-family:Jost,Arial,sans-serif;font-size:.66rem;
-  text-transform:uppercase;letter-spacing:.24em;color:rgba(227,217,201,.62)}
+  text-transform:uppercase;letter-spacing:.24em;color:rgba(233,222,212,.62)}
 
 /* ---------- belofte ---------- */
-.belofte{background:var(--zout)}
+.belofte{background:var(--room)}
 .beloftekaart{display:grid;gap:2.5rem;margin-top:2.4rem}
 @media(min-width:860px){.beloftekaart{grid-template-columns:repeat(3,1fr);gap:2.8rem}}
 .stap{position:relative;padding-top:2.2rem;border-top:1px solid var(--rand-donker)}
-.stap b{position:absolute;top:-.75rem;left:0;background:var(--zout);padding-right:.9rem;
+.stap b{position:absolute;top:-.75rem;left:0;background:var(--room);padding-right:.9rem;
   font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;font-style:italic;
-  font-size:1.5rem;color:var(--koper);line-height:1}
-.stap h3{font-size:1.5rem;margin-bottom:.5rem;color:#1a2427}
+  font-size:1.5rem;color:var(--bloem);line-height:1}
+.stap h3{font-size:1.5rem;margin-bottom:.5rem;color:#3a3230}
 
 /* ---------- citaat ---------- */
-.citaat{position:relative;color:var(--zout);text-align:center;overflow:hidden}
+.citaat{position:relative;color:var(--room);text-align:center;overflow:hidden}
 .citaat .mid{position:relative;z-index:2}
 .citaat blockquote{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;font-style:italic;
   font-size:clamp(1.9rem,5.6vw,3.6rem);line-height:1.24;max-width:20ch;margin:0 auto;letter-spacing:.01em}
 .citaat cite{display:block;margin-top:2rem;font-family:Jost,Arial,sans-serif;font-style:normal;
-  font-size:.66rem;text-transform:uppercase;letter-spacing:.3em;color:rgba(227,217,201,.6)}
+  font-size:.66rem;text-transform:uppercase;letter-spacing:.3em;color:rgba(233,222,212,.6)}
 
 /* ---------- afspraakbouwer ---------- */
 .bouwer{background:var(--zand)}
-.paneel{background:var(--zout);padding:clamp(1.6rem,4vw,3rem);margin-top:2.4rem;
+.paneel{background:var(--room);padding:clamp(1.6rem,4vw,3rem);margin-top:2.4rem;
   border:1px solid rgba(11,17,19,.1)}
 .vraag{margin-bottom:2.2rem}
 .vraag > legend,.vraag > p.vr{font-family:Jost,Arial,sans-serif;font-weight:500;font-size:.68rem;
-  text-transform:uppercase;letter-spacing:.24em;color:var(--zee);margin-bottom:1rem;padding:0}
+  text-transform:uppercase;letter-spacing:.24em;color:var(--bloem-diep);margin-bottom:1rem;padding:0}
 .keuzes{display:flex;flex-wrap:wrap;gap:.55rem}
 .keuze{position:relative}
 .keuze input{position:absolute;opacity:0;width:100%;height:100%;left:0;top:0;margin:0;cursor:pointer}
 .keuze span{display:block;border:1px solid var(--rand-donker);padding:.7rem 1.1rem;
   font-size:.92rem;transition:background .2s ease,border-color .2s ease,color .2s ease;cursor:pointer}
-.keuze input:checked + span{background:var(--nacht);border-color:var(--nacht);color:var(--zout)}
-.keuze input:focus-visible + span{outline:2px solid var(--koper);outline-offset:3px}
+.keuze input:checked + span{background:var(--mokka-diep);border-color:var(--mokka-diep);color:var(--room)}
+.keuze input:focus-visible + span{outline:2px solid var(--bloem);outline-offset:3px}
 .keuze span small{display:block;font-size:.72rem;color:var(--rook);margin-top:.1rem}
 .keuze input:checked + span small{color:rgba(245,241,234,.66)}
 .veldrij{display:grid;gap:1rem}
@@ -165,12 +177,12 @@ section{padding:clamp(4.5rem,10vw,8rem) 1.5rem}
 .invoer label{font-family:Jost,Arial,sans-serif;font-size:.68rem;text-transform:uppercase;
   letter-spacing:.2em;color:var(--rook)}
 .invoer input,.invoer textarea{border:1px solid var(--rand-donker);background:transparent;
-  padding:.8rem .9rem;font-family:Jost,Arial,sans-serif;font-size:1rem;color:#243033;font-weight:300}
-.invoer input:focus,.invoer textarea:focus{outline:2px solid var(--koper);outline-offset:2px;border-color:var(--koper)}
-.voorbeeld{margin-top:1.6rem;background:var(--diep);color:var(--zand);padding:1.3rem 1.4rem;
-  font-size:.94rem;line-height:1.65;white-space:pre-wrap;border-left:2px solid var(--koper)}
+  padding:.8rem .9rem;font-family:Jost,Arial,sans-serif;font-size:1rem;color:#463c39;font-weight:300}
+.invoer input:focus,.invoer textarea:focus{outline:2px solid var(--bloem);outline-offset:2px;border-color:var(--bloem)}
+.voorbeeld{margin-top:1.6rem;background:var(--mokka);color:var(--zand);padding:1.3rem 1.4rem;
+  font-size:.94rem;line-height:1.65;white-space:pre-wrap;border-left:2px solid var(--bloem)}
 .voorbeeld b{display:block;font-family:Jost,Arial,sans-serif;font-weight:500;font-size:.64rem;
-  text-transform:uppercase;letter-spacing:.24em;color:var(--koper);margin-bottom:.7rem}
+  text-transform:uppercase;letter-spacing:.24em;color:var(--bloem);margin-bottom:.7rem}
 .verstuurrij{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem;align-items:center}
 .geenjs{display:none}
 html:not(.js) .geenjs{display:block}
@@ -178,49 +190,49 @@ html:not(.js) .alleenjs{display:none}
 
 /* ---------- prijslijst ---------- */
 .groep{margin-top:3rem}
-.groep > h3{font-size:1.9rem;color:#1a2427;padding-bottom:.7rem;border-bottom:1px solid var(--rand-donker)}
+.groep > h3{font-size:1.9rem;color:#3a3230;padding-bottom:.7rem;border-bottom:1px solid var(--rand-donker)}
 .regel{display:grid;grid-template-columns:1fr auto;gap:.2rem 1.4rem;align-items:baseline;
   padding:1.15rem .3rem;border-bottom:1px solid rgba(11,17,19,.08);text-decoration:none;color:inherit;
   transition:background .22s ease,padding-left .22s ease}
-.regel:hover,.regel:focus-visible{background:rgba(35,90,95,.07);padding-left:.9rem}
-.regel h4{font-family:Jost,Arial,sans-serif;font-weight:400;font-size:1.06rem;color:#1a2427}
+.regel:hover,.regel:focus-visible{background:rgba(139,106,92,.07);padding-left:.9rem}
+.regel h4{font-family:Jost,Arial,sans-serif;font-weight:400;font-size:1.06rem;color:#3a3230}
 .regel .duur{display:block;font-size:.74rem;text-transform:uppercase;letter-spacing:.16em;
   color:var(--rook);margin-top:.28rem}
-.regel .wat{grid-column:1/-1;font-size:.94rem;color:#4a5658;max-width:64ch;margin-top:.5rem}
+.regel .wat{grid-column:1/-1;font-size:.94rem;color:#6b5c56;max-width:64ch;margin-top:.5rem}
 .regel .bedrag{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:1.6rem;
-  color:var(--zee);white-space:nowrap}
+  color:var(--bloem-diep);white-space:nowrap}
 .regel .pak{grid-column:1/-1;justify-self:start;margin-top:.6rem;font-family:Jost,Arial,sans-serif;
-  font-size:.64rem;text-transform:uppercase;letter-spacing:.22em;color:var(--koper);
+  font-size:.64rem;text-transform:uppercase;letter-spacing:.22em;color:var(--bloem);
   opacity:0;transform:translateY(-4px);transition:opacity .22s ease,transform .22s ease}
 .regel:hover .pak,.regel:focus-visible .pak{opacity:1;transform:none}
 
 /* ---------- workshops ---------- */
-.workshops{background:var(--diep);color:var(--zand)}
-.workshops .kop{color:var(--zout)}
-.workshops .kop em{color:var(--koper)}
-.workshops .inlei{color:rgba(227,217,201,.78)}
+.workshops{background:var(--mokka);color:var(--zand)}
+.workshops .kop{color:var(--room)}
+.workshops .kop em{color:var(--bloem)}
+.workshops .inlei{color:rgba(233,222,212,.78)}
 .wsrij{display:grid;gap:1px;background:rgba(245,241,234,.14);margin-top:2.6rem}
 @media(min-width:760px){.wsrij{grid-template-columns:repeat(2,1fr)}}
-.ws{background:var(--diep);padding:2rem 1.7rem;text-decoration:none;color:inherit;display:block;
+.ws{background:var(--mokka);padding:2rem 1.7rem;text-decoration:none;color:inherit;display:block;
   transition:background .25s ease}
-.ws:hover,.ws:focus-visible{background:#16303a}
-.ws h3{font-size:1.75rem;color:var(--zout);margin-bottom:.2rem}
-.ws .prijs{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.3rem;color:var(--koper)}
-.ws p{font-size:.94rem;margin-top:.7rem;color:rgba(227,217,201,.8)}
+.ws:hover,.ws:focus-visible{background:#5a463c}
+.ws h3{font-size:1.75rem;color:var(--room);margin-bottom:.2rem}
+.ws .prijs{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.3rem;color:var(--bloem)}
+.ws p{font-size:.94rem;margin-top:.7rem;color:rgba(233,222,212,.8)}
 .ws .duur{display:block;margin-top:.9rem;font-family:Jost,Arial,sans-serif;font-size:.64rem;
-  text-transform:uppercase;letter-spacing:.22em;color:rgba(227,217,201,.55)}
+  text-transform:uppercase;letter-spacing:.22em;color:rgba(233,222,212,.55)}
 
 /* ---------- dode zee ---------- */
-.zee{background:var(--zout)}
+.zee{background:var(--room)}
 .merken{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.8rem}
 .merk{border:1px solid var(--rand-donker);padding:.55rem 1.1rem;font-family:Jost,Arial,sans-serif;
-  font-size:.7rem;text-transform:uppercase;letter-spacing:.2em;color:var(--zee)}
+  font-size:.7rem;text-transform:uppercase;letter-spacing:.2em;color:var(--bloem-diep)}
 
 /* ---------- slot ---------- */
-.slot{position:relative;color:var(--zout);text-align:center;overflow:hidden}
+.slot{position:relative;color:var(--room);text-align:center;overflow:hidden}
 .slot .mid{position:relative;z-index:2}
-.slot .kop{color:var(--zout);max-width:18ch;margin:0 auto}
-.slot .kop em{color:var(--koper)}
+.slot .kop{color:var(--room);max-width:18ch;margin:0 auto}
+.slot .kop em{color:var(--bloem)}
 .slot .hero-knoppen{margin-top:2.4rem}
 
 /* ---------- praktisch ---------- */
@@ -228,24 +240,24 @@ html:not(.js) .alleenjs{display:none}
 .praktrij{display:grid;gap:2.4rem;margin-top:2.4rem}
 @media(min-width:860px){.praktrij{grid-template-columns:1.05fr .95fr;gap:3.4rem}}
 .praktrij p{margin-bottom:1rem}
-.lijn{color:#1a2427;text-decoration:none;border-bottom:1px solid var(--koper);padding-bottom:2px}
-.lijn:hover,.lijn:focus-visible{color:var(--koper-diep)}
+.lijn{color:#3a3230;text-decoration:none;border-bottom:1px solid var(--bloem);padding-bottom:2px}
+.lijn:hover,.lijn:focus-visible{color:var(--bloem-diep)}
 .verborgen{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 /* ---------- voet ---------- */
-footer{background:var(--nacht);color:var(--rook);padding:2.8rem 1.5rem 7.5rem;
+footer{background:var(--mokka-diep);color:var(--rook);padding:2.8rem 1.5rem 7.5rem;
   text-align:center;font-size:.78rem;line-height:1.75}
 footer strong{color:var(--zand);font-weight:400}
-footer a{color:var(--koper)}
+footer a{color:var(--bloem)}
 
 /* ---------- meeschuivende balk ---------- */
 .balk{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;
   transform:translateY(115%);transition:transform .35s ease}
 .balk.aan{transform:none}
 .balk a{flex:1;display:flex;align-items:center;justify-content:center;padding:1.1rem .6rem;
-  text-decoration:none;background:var(--nacht);color:var(--zout);font-family:Jost,Arial,sans-serif;
+  text-decoration:none;background:var(--mokka-diep);color:var(--room);font-family:Jost,Arial,sans-serif;
   font-size:.68rem;text-transform:uppercase;letter-spacing:.2em;border-top:1px solid rgba(245,241,234,.14)}
-.balk a.hoofd{background:var(--koper);color:var(--nacht);flex:1.6;border-top-color:var(--koper)}
+.balk a.hoofd{background:var(--bloem);color:var(--mokka-diep);flex:1.6;border-top-color:var(--bloem)}
 @media(min-width:900px){
   .balk{left:auto;right:1.8rem;bottom:1.8rem;width:auto;gap:.5rem}
   .balk a{padding:1rem 1.7rem;border:1px solid var(--rand);box-shadow:0 10px 34px rgba(11,17,19,.3)}
@@ -532,7 +544,7 @@ footer a{color:var(--koper)}
         <span class="duur">Ongeveer 2 uur</span>
       </a>
     </div>
-    <p class="onthul" style="margin-top:1.8rem;font-size:.92rem;color:rgba(227,217,201,.7)">
+    <p class="onthul" style="margin-top:1.8rem;font-size:.92rem;color:rgba(233,222,212,.7)">
       Alle arrangementen kunnen in overleg worden aangepast aan uw wensen. Betaling contant of vooraf per bank. Prijzen en tijdsduur onder voorbehoud.
     </p>
   </div>
@@ -585,8 +597,8 @@ footer a{color:var(--koper)}
         <p><a class="lijn" href="https://www.google.com/maps/search/Heideweg+2+6942+NS+Didam" target="_blank" rel="noopener">Route via Google Maps</a></p>
       </div>
       <div>
-        <p style="font-weight:400;color:#1a2427">Behandelingen uitsluitend op afspraak.</p>
-        <p style="color:#4a5658">Zo staat het ook op mijn eigen prijslijst. Even bellen of appen is genoeg, dan zoeken we samen een moment dat u schikt.</p>
+        <p style="font-weight:400;color:#3a3230">Behandelingen uitsluitend op afspraak.</p>
+        <p style="color:#6b5c56">Zo staat het ook op mijn eigen prijslijst. Even bellen of appen is genoeg, dan zoeken we samen een moment dat u schikt.</p>
         <p style="margin-top:1.6rem"><a class="knop" href="#afspraak">Afspraak aanvragen</a></p>
       </div>
     </div>
