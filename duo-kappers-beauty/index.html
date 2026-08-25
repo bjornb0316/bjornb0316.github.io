@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<script>document.documentElement.className+=' js';</script>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Duo Kappers &amp; Beauty Apeldoorn | Kapsalon en schoonheidssalon aan de Nieuwstraat</title>
+<meta name="description" content="Kapsalon en schoonheidssalon onder een dak aan de Nieuwstraat 60 in Apeldoorn. Kleuren, knippen, gezichtsbehandelingen, wenkbrauwen en microblading. 4,8 uit 1849 beoordelingen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ---------------------------------------------------------------
+   Twee helften onder een dak, en dat zit al in de naam.
+   De kapperskant is zwart lak, mahonie en een kroonluchter.
+   De beautykant is creme, warm pleisterwerk en zacht licht.
+   Het wijnrood komt van hun eigen vloer. Een accent, ronding 4px.
+   --------------------------------------------------------------- */
+:root{
+  --bot:#f7f4f0;
+  --zand:#efe6da;
+  --wijn:#6a2436;
+  --wijn-diep:#4c1826;
+  --mahonie:#7d3a2c;
+  --inkt:#1c1a19;
+  --inkt-op:#2a2624;
+  --grijs:#5f5854;
+  --wit:#fff;
+  --rond:4px;
+  --marge:clamp(1.15rem,4.5vw,4rem);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  font-family:Figtree,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--bot);color:var(--inkt);font-size:17px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:var(--marge)}
+h1,h2,h3,.cijfer{font-family:"Bricolage Grotesque",Figtree,sans-serif;letter-spacing:-.025em}
+
+/* ---- voorstelbalk ---- */
+.voorstel{background:var(--inkt);color:#b7aca6;font-size:.79rem;padding:.55rem 0;line-height:1.45}
+.voorstel .wrap{display:flex;flex-wrap:wrap;gap:.3rem 1rem;justify-content:center;text-align:center}
+.voorstel b{color:#e8c9c1;font-weight:600}
+.voorstel a{font-weight:600;text-underline-offset:2px}
+
+/* ---- kop ---- */
+.kop{position:sticky;top:0;z-index:60;background:rgba(247,244,240,.94);backdrop-filter:blur(10px);
+  border-bottom:1px solid #e3dad0}
+.kop-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:70px}
+.merk{text-decoration:none;line-height:1.05}
+.merk .naam{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.16rem;letter-spacing:-.01em}
+.merk .naam i{font-style:normal;color:var(--wijn)}
+.merk small{display:block;margin-top:.16rem;font-weight:500;font-size:.61rem;letter-spacing:.26em;
+  color:var(--grijs);text-transform:uppercase}
+.kop-rechts{display:flex;align-items:center;gap:1.1rem}
+.kop-tel{text-decoration:none;font-weight:600;font-size:.93rem;color:var(--grijs)}
+.kop-tel:hover{color:var(--inkt)}
+.kop-cta{background:var(--wijn);color:var(--wit);text-decoration:none;font-weight:600;font-size:.93rem;
+  padding:.62rem 1.2rem;border-radius:var(--rond);white-space:nowrap;transition:background .18s,transform .1s}
+.kop-cta:hover{background:var(--wijn-diep)}
+.kop-cta:active{transform:translateY(1px)}
+@media(max-width:740px){.kop-tel{display:none}}
+@media(max-width:520px){.kop-cta{display:none}}
+
+/* ---- hero ---- */
+.hero{padding-block:clamp(2rem,5vw,3.4rem) clamp(2.6rem,6vw,4rem)}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:2.2rem;align-items:center}
+@media(min-width:950px){.hero-grid{grid-template-columns:1fr 1.06fr;gap:clamp(2.5rem,5vw,4rem)}}
+.hero h1{font-weight:800;line-height:1.04;font-size:clamp(2.15rem,5vw,3.1rem)}
+.hero h1 i{font-style:normal;color:var(--wijn)}
+.hero-sub{margin-top:1.05rem;color:var(--grijs);font-size:clamp(1.02rem,2.1vw,1.14rem);max-width:40ch}
+.nu{display:inline-flex;align-items:center;gap:.5rem;margin-bottom:1.05rem;background:var(--wit);
+  border:1px solid #e3dad0;border-radius:var(--rond);padding:.42rem .85rem;font-size:.86rem;font-weight:500}
+.stip{width:8px;height:8px;border-radius:50%;background:#2f7d4f;flex:0 0 auto}
+.stip.dicht{background:#a99b94}
+.knoppen{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1.8rem}
+.knop{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;text-decoration:none;font-weight:600;
+  border-radius:var(--rond);padding:.9rem 1.5rem;font-size:1rem;border:2px solid transparent;white-space:nowrap;
+  transition:background .18s,color .18s,border-color .18s,transform .1s}
+.knop-hoofd{background:var(--wijn);color:var(--wit);border-color:var(--wijn)}
+.knop-hoofd:hover{background:var(--wijn-diep);border-color:var(--wijn-diep)}
+.knop-rand{border-color:var(--inkt);color:var(--inkt)}
+.knop-rand:hover{background:var(--inkt);color:var(--bot)}
+.knop-licht{background:var(--bot);color:var(--inkt);border-color:var(--bot)}
+.knop-licht:hover{background:var(--zand);border-color:var(--zand)}
+.knop:active{transform:translateY(1px)}
+.hero-beeld{border-radius:var(--rond);overflow:hidden;background:#ded3c8;max-width:620px;margin-inline:auto}
+.hero-beeld img{width:100%;aspect-ratio:3/2;object-fit:cover}
+
+/* ---- bewijsband ---- */
+.bewijs{background:var(--inkt)}
+.bewijs-in{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.13)}
+@media(min-width:880px){.bewijs-in{grid-template-columns:repeat(4,1fr)}}
+.bewijs-cel{background:var(--inkt);color:var(--bot);padding:1.5rem var(--marge)}
+.cijfer{display:block;font-weight:800;font-size:1.7rem;line-height:1.05}
+.bewijs-cel span{display:block;margin-top:.3rem;font-size:.85rem;color:#b7aca6}
+.zacht{color:#e8c9c1}
+
+/* ---- de twee helften: het eigen gezicht van deze pagina ---- */
+.duo{padding-block:clamp(3rem,7vw,4.8rem)}
+.duo > .wrap > h2{font-weight:800;font-size:clamp(1.8rem,4.2vw,2.5rem);max-width:20ch}
+.duo > .wrap > p{margin-top:.65rem;color:var(--grijs);max-width:52ch}
+.helften{display:grid;grid-template-columns:1fr;gap:1.1rem;margin-top:2.1rem}
+@media(min-width:900px){.helften{grid-template-columns:1fr 1fr;gap:1.4rem}}
+.helft{border-radius:var(--rond);overflow:hidden;display:flex;flex-direction:column}
+.helft img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.helft-tekst{padding:1.6rem;flex:1;display:flex;flex-direction:column}
+.helft h3{font-weight:800;font-size:1.35rem}
+.helft > .helft-tekst > p{margin-top:.5rem;font-size:.97rem}
+.helft ul{list-style:none;margin-top:1.2rem;display:grid;gap:.55rem;flex:1}
+.helft li{font-size:.96rem;padding-left:1.15rem;position:relative}
+.helft li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:50%}
+.helft .knop{margin-top:1.5rem;align-self:flex-start}
+/* kapperskant: zwart lak en mahonie, zoals de salon zelf */
+.helft-haar{background:var(--inkt-op);color:var(--bot)}
+.helft-haar p{color:#c3b8b2}
+.helft-haar li{color:#d8cec9}
+.helft-haar li::before{background:var(--mahonie)}
+/* beautykant: creme en warm pleisterwerk, zoals de behandelkamer */
+.helft-huid{background:var(--zand);color:var(--inkt)}
+.helft-huid p{color:#5f5651}
+.helft-huid li{color:#4a423e}
+.helft-huid li::before{background:var(--wijn)}
+
+/* ---- afspraak ---- */
+.afspraak{background:var(--wit);border-block:1px solid #e3dad0;padding-block:clamp(3rem,7vw,4.6rem)}
+.a-grid{display:grid;grid-template-columns:1fr;gap:1.8rem;align-items:start}
+@media(min-width:1000px){.a-grid{grid-template-columns:.82fr 1.18fr;gap:2.4rem}}
+.a-kop h2{font-weight:800;line-height:1.1;font-size:clamp(1.8rem,4.2vw,2.4rem)}
+.a-kop h2 i{font-style:normal;color:var(--wijn)}
+.a-kop p{margin-top:.7rem;color:var(--grijs);max-width:42ch}
+.bel-kaart{margin-top:1.5rem;background:var(--bot);border:1px solid #e3dad0;border-radius:var(--rond);padding:1.4rem}
+.bel-kaart h3{font-family:Figtree,sans-serif;font-weight:600;font-size:1rem;letter-spacing:0}
+.bel-kaart p{margin-top:.3rem;font-size:.92rem;color:var(--grijs);max-width:none}
+.bel-nummer{display:inline-flex;align-items:center;gap:.5rem;margin-top:.9rem;font-family:"Bricolage Grotesque",sans-serif;
+  font-weight:800;font-size:1.5rem;letter-spacing:-.02em;text-decoration:none;color:var(--wijn)}
+.bel-nummer:hover{color:var(--wijn-diep);text-decoration:underline;text-underline-offset:4px}
+.widget-doos{border-radius:var(--rond);overflow:hidden;background:var(--wit);border:1px solid #e3dad0}
+.widget-doos iframe{width:100%;height:700px;border:0;display:block;background:var(--wit)}
+@media(max-width:640px){.widget-doos iframe{height:600px}}
+.widget-terug{margin-top:.65rem;font-size:.85rem;color:var(--grijs)}
+.widget-terug a{font-weight:600;text-underline-offset:3px}
+
+/* ---- prijzen ---- */
+.prijzen{padding-block:clamp(3rem,7vw,4.8rem)}
+.prijzen h2{font-weight:800;font-size:clamp(1.8rem,4.2vw,2.5rem)}
+.prijzen > .wrap > p{margin-top:.65rem;color:var(--grijs);max-width:54ch}
+.tros-raster{display:grid;grid-template-columns:1fr;gap:1.1rem;margin-top:2rem}
+@media(min-width:840px){.tros-raster{grid-template-columns:repeat(3,1fr)}}
+.tros{background:var(--wit);border:1px solid #e3dad0;border-radius:var(--rond);padding:1.5rem;display:flex;flex-direction:column}
+.tros h3{font-weight:800;font-size:1.1rem}
+.tros > p{margin-top:.35rem;font-size:.9rem;color:var(--grijs)}
+.tros ul{list-style:none;margin-top:1.15rem;display:grid;gap:.85rem}
+.tros li{display:grid;grid-template-columns:1fr auto;gap:.4rem 1rem;align-items:baseline}
+.tros .dienst{font-size:.96rem}
+.tros .duur{display:block;font-size:.8rem;color:var(--grijs);margin-top:.1rem}
+.tros .prijs{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:1rem;white-space:nowrap}
+.tros .los{margin-top:1.15rem;padding-top:1rem;border-top:1px solid #e8dfd5;font-size:.88rem;color:var(--grijs)}
+.prijs-noot{margin-top:1.4rem;font-size:.88rem;color:var(--grijs);max-width:64ch}
+
+/* ---- sfeerstrook: een breed beeld met twee smalle ernaast ---- */
+.sfeer{padding-bottom:clamp(3rem,7vw,4.6rem)}
+.sfeer-raster{display:grid;grid-template-columns:1fr;gap:.8rem}
+@media(min-width:760px){.sfeer-raster{grid-template-columns:1.7fr 1fr 1fr;gap:1rem}}
+.sfeer-raster figure{margin:0;border-radius:var(--rond);overflow:hidden;background:#ded3c8}
+.sfeer-raster img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.sfeer p{margin-top:1rem;font-size:.88rem;color:var(--grijs)}
+
+/* ---- stemmen ---- */
+.stemmen{background:var(--zand);padding-block:clamp(3rem,7vw,4.6rem)}
+.stemmen h2{font-weight:800;font-size:clamp(1.7rem,4vw,2.3rem)}
+.stemmen > .wrap > p{margin-top:.5rem;color:#5f5651}
+.s-raster{display:grid;grid-template-columns:1fr;gap:1.1rem;margin-top:2rem}
+@media(min-width:880px){.s-raster{grid-template-columns:repeat(3,1fr)}}
+.stem{background:var(--wit);border-radius:var(--rond);padding:1.5rem;display:flex;flex-direction:column}
+.sterren{color:var(--wijn);letter-spacing:.16em;font-size:.85rem}
+.stem p{margin-top:.7rem;font-size:1rem;line-height:1.5;flex:1}
+.stem cite{display:block;margin-top:1.1rem;font-style:normal;font-weight:600;font-size:.86rem;color:var(--grijs)}
+
+/* ---- praktisch ---- */
+.praktisch{padding-block:clamp(3rem,7vw,4.8rem)}
+.p-grid{display:grid;grid-template-columns:1fr;gap:2.2rem}
+@media(min-width:880px){.p-grid{grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,4.5rem)}}
+.praktisch h2{font-weight:800;font-size:clamp(1.55rem,3.6vw,2rem);margin-bottom:1.2rem}
+.uren{width:100%;border-collapse:collapse;font-size:.98rem}
+.uren th,.uren td{text-align:left;padding:.62rem 0;border-bottom:1px solid #e5dcd2}
+.uren th{font-weight:500;color:var(--grijs)}
+.uren td{text-align:right;font-variant-numeric:tabular-nums}
+.uren tr.dicht th,.uren tr.dicht td{color:#6e6560}  /* haalt AA op de botkleur */
+.uren tr.vandaag th,.uren tr.vandaag td{font-weight:700;color:var(--wijn)}
+.uren-noot{margin-top:.9rem;font-size:.85rem;color:var(--grijs)}
+.adres{font-size:1.02rem;line-height:1.75}
+.adres b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-weight:700}
+.p-beeld{margin-top:1.4rem;border-radius:var(--rond);overflow:hidden;background:#ded3c8}
+.p-beeld img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.p-knoppen{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
+
+/* ---- voet ---- */
+.voet{background:var(--inkt);color:#b7aca6;padding-block:2.4rem;font-size:.88rem}
+.voet-in{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;align-items:flex-start}
+.voet b{color:var(--bot)}
+.voet a{color:#e8c9c1;font-weight:600;text-underline-offset:3px}
+
+/* ---- vaste balk op mobiel ---- */
+.balk{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;gap:.55rem;
+  padding:.6rem var(--marge) calc(.6rem + env(safe-area-inset-bottom));
+  background:rgba(247,244,240,.97);backdrop-filter:blur(10px);border-top:1px solid #e3dad0}
+.balk a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.4rem;text-decoration:none;
+  font-weight:600;font-size:.95rem;line-height:1.25;white-space:nowrap;padding:.8rem .9rem;border-radius:var(--rond)}
+.balk .boek{background:var(--wijn);color:var(--wit)}
+.balk .bel{background:var(--inkt);color:var(--bot)}
+@media(max-width:760px){
+  .balk{display:flex}
+  body{padding-bottom:calc(4.8rem + env(safe-area-inset-bottom))}
+}
+
+/* ---- beweging ---- */
+.js .op{opacity:0;transform:translateY(18px)}
+.js .op.in{opacity:1;transform:none;transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+@media (prefers-reduced-motion:reduce){
+  .js .op{opacity:1;transform:none}
+  .js .op.in{transition:none}
+}
+</style>
+</head>
+<body>
+
+<div class="voorstel">
+  <div class="wrap">
+    <span><b>Voorbeeldpagina.</b> Gemaakt door Bjorn van Capital BB als voorstel voor Duo Kappers &amp; Beauty. Dit is niet hun offici&euml;le website.</span>
+    <span><a href="https://wa.me/31614664161">Vragen? App Bjorn op 06 14664161</a></span>
+  </div>
+</div>
+
+<header class="kop">
+  <div class="wrap kop-in">
+    <a class="merk" href="#top">
+      <span class="naam">Duo Kappers <i>&amp;</i> Beauty</span>
+      <small>Nieuwstraat 60, Apeldoorn</small>
+    </a>
+    <div class="kop-rechts">
+      <a class="kop-tel" href="tel:+31555225186">055 522 5186</a>
+      <a class="kop-cta" href="#afspraak">Vrije tijden bekijken</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="op">
+        <p class="nu" id="nu"><span class="stip" id="stip"></span><span id="nu-tekst">Openingstijden laden</span></p>
+        <h1>Kapper en huid, <i>onder hetzelfde dak</i></h1>
+        <p class="hero-sub">Aan de Nieuwstraat in Apeldoorn. Knippen en kleuren voorin, gezichtsbehandelingen en wenkbrauwen achterin.</p>
+        <div class="knoppen">
+          <a class="knop knop-hoofd" href="#afspraak">Vrije tijden bekijken</a>
+          <a class="knop knop-rand" href="tel:+31555225186">Bel 055 522 5186</a>
+        </div>
+      </div>
+      <div class="op">
+        <div class="hero-beeld">
+          <img src="img/balie.jpg" width="720" height="480" alt="De balie met zwarte lambrisering, kroonluchter en de make-upkast" fetchpriority="high">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEWIJSBAND -->
+  <section class="bewijs">
+    <div class="bewijs-in">
+      <div class="bewijs-cel"><b class="cijfer zacht">4,8</b><span>gemiddeld cijfer</span></div>
+      <div class="bewijs-cel"><b class="cijfer">1849</b><span>beoordelingen</span></div>
+      <div class="bewijs-cel"><b class="cijfer">2 vakken</b><span>kappers en beauty</span></div>
+      <div class="bewijs-cel"><b class="cijfer">Goldwell</b><span>kleuren met kleurenkaart</span></div>
+    </div>
+  </section>
+
+  <!-- DE TWEE HELFTEN -->
+  <section class="duo" id="helften">
+    <div class="wrap">
+      <h2 class="op">Twee salons, een adres</h2>
+      <p class="op">Daar komt de naam vandaan. Je kunt op dezelfde middag geknipt worden en je wenkbrauwen laten doen, zonder een tweede afspraak ergens anders.</p>
+      <div class="helften">
+
+        <article class="helft helft-haar op">
+          <img src="img/kappers.jpg" width="720" height="480" alt="De kapperskant met mahoniehouten spiegelwanden en zwarte stoelen" loading="lazy">
+          <div class="helft-tekst">
+            <h3>De kapperskant</h3>
+            <p>Zwart lak, mahonie en een kroonluchter. Hier wordt geknipt, gekleurd en gef&ouml;hnd.</p>
+            <ul>
+              <li>Kleuren met de Goldwell-kleurenkaart aan de wand, dus je kiest op de echte kleur</li>
+              <li>Knippen voor dames en heren</li>
+              <li>F&ouml;hnen en stylen</li>
+              <li>Twee wasplekken, zodat er niemand hoeft te wachten</li>
+            </ul>
+            <a class="knop knop-licht" href="tel:+31555225186">Bel voor de kapper</a>
+          </div>
+        </article>
+
+        <article class="helft helft-huid op">
+          <img src="img/beautykamer.jpg" width="720" height="480" alt="De behandelkamer in creme met behandelbed, spiegel en kast" loading="lazy">
+          <div class="helft-tekst">
+            <h3>De beautykant</h3>
+            <p>Een eigen kamer achterin, in creme en warm pleisterwerk. Rustiger dan de rest van de zaak.</p>
+            <ul>
+              <li>Gezichtsbehandelingen van drie kwartier tot anderhalf uur</li>
+              <li>Wenkbrauwen harsen, epileren en verven</li>
+              <li>Henna brows en LVL Lash Volume Lift</li>
+              <li>Microblading, met ruim twee uur de tijd</li>
+            </ul>
+            <a class="knop knop-hoofd" href="#afspraak">Boek een behandeling</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- AFSPRAAK -->
+  <section class="afspraak" id="afspraak">
+    <div class="wrap a-grid">
+      <div class="a-kop op">
+        <h2>Zelf een tijd <i>uitkiezen</i></h2>
+        <p>De agenda hiernaast is de echte agenda van de salon. Je ziet meteen welke momenten vrij zijn en boekt zonder te bellen.</p>
+
+        <div class="bel-kaart">
+          <h3>Liever even overleggen?</h3>
+          <p>Voor knippen en kleuren is bellen vaak sneller, want dan kunnen we meteen inschatten hoeveel tijd het kost.</p>
+          <a class="bel-nummer" href="tel:+31555225186">055 522 5186</a>
+        </div>
+      </div>
+
+      <div class="op">
+        <div class="widget-doos">
+          <iframe src="https://widget.treatwell.nl/place/328986/menu/" title="Online agenda van Duo Kappers en Beauty" loading="lazy"></iframe>
+        </div>
+        <p class="widget-terug">Laadt de agenda niet? <a href="https://www.treatwell.nl/salon/duo-kappers-beauty/" target="_blank" rel="noopener">Open hem in een nieuw tabblad</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIJZEN -->
+  <section class="prijzen" id="prijzen">
+    <div class="wrap">
+      <h2 class="op">Wat de behandelingen kosten</h2>
+      <p class="op">De tijd staat erbij, zodat je weet hoe lang je zit. Voor knippen en kleuren hangt de prijs af van je haar, dus dat gaat even in overleg.</p>
+      <div class="tros-raster">
+
+        <div class="tros op">
+          <h3>Gezicht</h3>
+          <p>Drie lengtes, van snel bijwerken tot echt de tijd nemen.</p>
+          <ul>
+            <li><span class="dienst">Quick behandeling<span class="duur">45 min</span></span><span class="prijs">&euro;52,50</span></li>
+            <li><span class="dienst">Relax behandeling<span class="duur">1 uur</span></span><span class="prijs">&euro;72,50</span></li>
+            <li><span class="dienst">Super relax behandeling<span class="duur">1,5 uur</span></span><span class="prijs">&euro;82,50</span></li>
+          </ul>
+          <p class="los">Er wordt gewerkt met Malu Wilz.</p>
+        </div>
+
+        <div class="tros op">
+          <h3>Wenkbrauwen en wimpers</h3>
+          <p>Het meest gevraagde, en meestal in een kwartier klaar.</p>
+          <ul>
+            <li><span class="dienst">Wenkbrauwen harsen of epileren<span class="duur">15 min</span></span><span class="prijs">&euro;15,50</span></li>
+            <li><span class="dienst">Epileren en verven<span class="duur">30 min</span></span><span class="prijs">&euro;30,50</span></li>
+            <li><span class="dienst">Wimpers en wenkbrauwen verven<span class="duur">30 min</span></span><span class="prijs">&euro;30,50</span></li>
+            <li><span class="dienst">Henna brows<span class="duur">40 min</span></span><span class="prijs">&euro;41,50</span></li>
+            <li><span class="dienst">LVL Lash Volume Lift<span class="duur">1 uur</span></span><span class="prijs">&euro;47,-</span></li>
+          </ul>
+        </div>
+
+        <div class="tros op">
+          <h3>Verder in de kamer</h3>
+          <p>Voor de langere afspraken wordt extra tijd gereserveerd.</p>
+          <ul>
+            <li><span class="dienst">Microblading<span class="duur">2,5 uur</span></span><span class="prijs">&euro;275,-</span></li>
+            <li><span class="dienst">Voetverzorging<span class="duur">45 min</span></span><span class="prijs">vanaf &euro;39,50</span></li>
+            <li><span class="dienst">Eelt en likdoorns<span class="duur">30 min</span></span><span class="prijs">vanaf &euro;26,50</span></li>
+            <li><span class="dienst">Harsen bovenlichaam<span class="duur">20 min</span></span><span class="prijs">&euro;26,-</span></li>
+          </ul>
+          <p class="los">Harsen van gezicht of onderlichaam en shellac op de voeten staan in de agenda.</p>
+        </div>
+
+      </div>
+      <p class="prijs-noot">Wil je knippen en een behandeling op dezelfde middag, zeg dat er even bij. Dan wordt de tijd achter elkaar gezet.</p>
+    </div>
+  </section>
+
+  <!-- SFEERSTROOK -->
+  <section class="sfeer">
+    <div class="wrap">
+      <div class="sfeer-raster">
+        <figure class="op"><img src="img/behandeling.jpg" width="720" height="480" alt="Wenkbrauwen worden bijgewerkt tijdens een behandeling" loading="lazy"></figure>
+        <figure class="op"><img src="img/producten.jpg" width="720" height="480" alt="Drie maskers van Malu Wilz naast de wasbak in de behandelkamer" loading="lazy"></figure>
+        <figure class="op"><img src="img/detail.jpg" width="720" height="480" alt="Witte bloemen in een rookglazen fles tegen de warme pleisterwand" loading="lazy"></figure>
+      </div>
+      <p class="op">De behandelkamer achterin, waar met Malu Wilz wordt gewerkt.</p>
+    </div>
+  </section>
+
+  <!-- STEMMEN -->
+  <section class="stemmen">
+    <div class="wrap">
+      <h2 class="op">Wat klanten schrijven</h2>
+      <p class="op">Uit de beoordelingen in de eigen agenda.</p>
+      <div class="s-raster">
+        <figure class="stem op">
+          <div class="sterren" aria-label="Vijf sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;Er is geen kapper in Apeldoorn die beter mijn steile haar in een goede coupe kan knippen.&rdquo;</p>
+          <cite>Ineke</cite>
+        </figure>
+        <figure class="stem op">
+          <div class="sterren" aria-label="Vijf sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;Super tevreden weer de salon uit. Gastvrij en ik kom vaker terug.&rdquo;</p>
+          <cite>Bram</cite>
+        </figure>
+        <figure class="stem op">
+          <div class="sterren" aria-label="Vijf sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;Altijd worden de wenkbrauwen mooi bijgewerkt.&rdquo;</p>
+          <cite>Helene</cite>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRAKTISCH -->
+  <section class="praktisch">
+    <div class="wrap p-grid">
+      <div class="op">
+        <h2>Openingstijden</h2>
+        <table class="uren" id="urentabel">
+          <tbody>
+            <tr data-dag="1" class="dicht"><th scope="row">Maandag</th><td>Gesloten</td></tr>
+            <tr data-dag="2"><th scope="row">Dinsdag</th><td>09:00 tot 17:00</td></tr>
+            <tr data-dag="3"><th scope="row">Woensdag</th><td>09:00 tot 17:30</td></tr>
+            <tr data-dag="4" class="dicht"><th scope="row">Donderdag</th><td>Gesloten</td></tr>
+            <tr data-dag="5"><th scope="row">Vrijdag</th><td>09:00 tot 17:30</td></tr>
+            <tr data-dag="6"><th scope="row">Zaterdag</th><td>09:00 tot 14:00</td></tr>
+            <tr data-dag="0" class="dicht"><th scope="row">Zondag</th><td>Gesloten</td></tr>
+          </tbody>
+        </table>
+        <p class="uren-noot">Vier dagen open, dus de agenda loopt snel vol. Zaterdag is een korte dag tot twee uur.</p>
+      </div>
+      <div class="op">
+        <h2>Waar je moet zijn</h2>
+        <p class="adres">
+          <b>Duo Kappers &amp; Beauty</b>
+          Nieuwstraat 60<br>
+          Apeldoorn<br>
+          <a href="tel:+31555225186" style="font-weight:600">055 522 5186</a>
+        </p>
+        <div class="p-beeld"><img src="img/wassen.jpg" width="720" height="480" alt="De wasplekken met de Goldwell-kleurenkaart aan de wand" loading="lazy"></div>
+        <div class="p-knoppen">
+          <a class="knop knop-hoofd" href="#afspraak">Vrije tijden bekijken</a>
+          <a class="knop knop-rand" href="https://maps.google.com/?q=Nieuwstraat+60,+Apeldoorn" target="_blank" rel="noopener">Route</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="voet">
+  <div class="wrap voet-in">
+    <p><b>Duo Kappers &amp; Beauty</b><br>Nieuwstraat 60, Apeldoorn</p>
+    <p>Voorbeeldontwerp van Bjorn, Capital BB.<br><a href="https://wa.me/31614664161">Reageren kan via WhatsApp</a></p>
+  </div>
+</footer>
+
+<nav class="balk" aria-label="Snelle acties">
+  <a class="boek" href="#afspraak">Vrije tijden</a>
+  <a class="bel" href="tel:+31555225186">Bellen</a>
+</nav>
+
+<script>
+(function(){
+  "use strict";
+
+  /* Vier dagen open. [openminuut, sluitminuut], null is gesloten. */
+  var UREN = { 0:null, 1:null, 2:[540,1020], 3:[540,1050], 4:null, 5:[540,1050], 6:[540,840] };
+  var DAGEN = ["zondag","maandag","dinsdag","woensdag","donderdag","vrijdag","zaterdag"];
+
+  function tijd(m){
+    var u = Math.floor(m/60), r = m%60;
+    return (u<10?"0"+u:u) + ":" + (r<10?"0"+r:r);
+  }
+
+  function toonStatus(){
+    var tekst = document.getElementById("nu-tekst");
+    var stip = document.getElementById("stip");
+    if (!tekst || !stip) return;
+
+    var nu = new Date(), dag = nu.getDay(), min = nu.getHours()*60 + nu.getMinutes();
+    var vandaag = UREN[dag];
+
+    if (vandaag && min >= vandaag[0] && min < vandaag[1]) {
+      tekst.textContent = "Nu open, tot " + tijd(vandaag[1]);
+      stip.classList.remove("dicht");
+    } else {
+      var volgende = null, wanneer = "";
+      if (vandaag && min < vandaag[0]) {
+        volgende = vandaag[0]; wanneer = "vandaag";
+      } else {
+        for (var i = 1; i <= 7; i++) {
+          var d = (dag + i) % 7;
+          if (UREN[d]) { volgende = UREN[d][0]; wanneer = (i===1) ? "morgen" : DAGEN[d]; break; }
+        }
+      }
+      tekst.textContent = volgende === null
+        ? "Bekijk de openingstijden"
+        : "Nu gesloten, " + wanneer + " open om " + tijd(volgende);
+      stip.classList.add("dicht");
+    }
+
+    var rij = document.querySelector('#urentabel tr[data-dag="' + dag + '"]');
+    if (rij) rij.classList.add("vandaag");
+  }
+
+  function beweging(){
+    var mag = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var doelen = document.querySelectorAll(".op");
+    if (!mag || !("IntersectionObserver" in window)) {
+      for (var i=0;i<doelen.length;i++) doelen[i].classList.add("in");
+      return;
+    }
+    var kijker = new IntersectionObserver(function(items){
+      items.forEach(function(item){
+        if (item.isIntersecting) { item.target.classList.add("in"); kijker.unobserve(item.target); }
+      });
+    }, { threshold:0.12, rootMargin:"0px 0px -8% 0px" });
+    for (var j=0;j<doelen.length;j++) kijker.observe(doelen[j]);
+  }
+
+  /* Vangnet: de pagina mag nooit onzichtbaar blijven staan. */
+  function alleszichtbaar(){
+    var doelen = document.querySelectorAll(".op");
+    for (var i=0;i<doelen.length;i++) doelen[i].classList.add("in");
+  }
+
+  try {
+    toonStatus();
+    beweging();
+    setTimeout(function(){
+      var eerste = document.querySelector(".op");
+      if (eerste && !eerste.classList.contains("in")) alleszichtbaar();
+    }, 1600);
+  } catch (e) {
+    alleszichtbaar();
+  }
+})();
+</script>
+</body>
+</html>

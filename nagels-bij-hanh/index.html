@@ -6,167 +6,247 @@
 <meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nagels bij Hanh | Nagelstudio Apeldoorn, elke dag open tot 20:00</title>
-<meta name="description" content="Nagelstudio aan het Hofveld in Apeldoorn. Zeven dagen per week open van 09:00 tot 20:00. Ook voor wie nagelbijt. 4,9 uit 41 reviews. Vraag een afspraak aan via WhatsApp.">
+<meta name="description" content="Nagelstudio aan het Hofveld in Apeldoorn. Acryl, BIAB, gellak, nail art, manicure en pedicure. Zeven dagen per week open van 09:00 tot 20:00. Ook voor wie nagelbijt. 4,9 uit 41 reviews.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;800&display=swap" rel="stylesheet">
 <style>
+/* ---------------------------------------------------------------
+   Het roze komt uit haar eigen werk, niet uit een kleurenwaaier.
+   Op bijna elke foto liggen de handen op dezelfde zwarte leren
+   armleuning, dus die inkttoon is haar echte achtergrond.
+   Een accent, een ronding van 12px.
+   --------------------------------------------------------------- */
 :root{
-  --mauve:#a8697a;
-  --mauve-diep:#834f5e;
-  --blos:#f0dfe1;
-  --kool:#211d1e;
-  --room:#f9f4f3;
-  --grijs:#6d5f61;
+  --roze:#c9245e;
+  --roze-diep:#9d1748;
+  --blos:#f8e4e9;
+  --blos-diep:#f0cdd6;
+  --inkt:#1c1517;
+  --inkt-op:#2b2225;
+  --room:#fdf8f9;
+  --grijs:#6b5c60;
   --wit:#fff;
+  --groen:#25d366;
   --rond:12px;
   --marge:clamp(1.15rem,4.5vw,4rem);
-  --balk:0px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{
   font-family:Epilogue,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-  background:var(--room);color:var(--kool);font-size:17px;line-height:1.65;
-  -webkit-font-smoothing:antialiased;padding-bottom:var(--balk);
+  background:var(--room);color:var(--inkt);font-size:17px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;
 }
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
-.wrap{max-width:1160px;margin:0 auto;padding-inline:var(--marge)}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:var(--marge)}
+h1,h2,h3,.cijfer{letter-spacing:-.03em}
 
-.voorstel{background:var(--kool);color:#b6a8aa;font-size:.79rem;padding:.55rem 0;line-height:1.45}
+/* ---- voorstelbalk ---- */
+.voorstel{background:var(--inkt);color:#b9a9ad;font-size:.79rem;padding:.55rem 0;line-height:1.45}
 .voorstel .wrap{display:flex;flex-wrap:wrap;gap:.3rem 1rem;justify-content:center;text-align:center}
-.voorstel b{color:#e8b6c0;font-weight:600}
-.voorstel a{color:inherit;font-weight:600;text-underline-offset:2px}
+.voorstel b{color:var(--blos);font-weight:600}
+.voorstel a{font-weight:600;text-underline-offset:2px}
 
-.kop{position:sticky;top:0;z-index:60;background:rgba(249,244,243,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--blos)}
-.kop-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:66px}
-.merk{text-decoration:none;font-weight:800;font-size:1.06rem;letter-spacing:-.02em;line-height:1.2}
-.merk small{display:block;font-weight:400;font-size:.64rem;letter-spacing:.22em;color:var(--grijs);text-transform:uppercase}
-.kop-cta{background:var(--mauve);color:var(--wit);text-decoration:none;font-weight:600;font-size:.92rem;
-  padding:.62rem 1.15rem;border-radius:var(--rond);white-space:nowrap;transition:background .18s,transform .1s}
-.kop-cta:hover{background:var(--mauve-diep)}
+/* ---- kop ---- */
+.kop{position:sticky;top:0;z-index:60;background:rgba(253,248,249,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--blos-diep)}
+.kop-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:68px}
+.merk{text-decoration:none;line-height:1.1}
+.merk .naam{font-weight:800;font-size:1.12rem}
+.merk small{display:block;margin-top:.15rem;font-weight:500;font-size:.62rem;letter-spacing:.24em;color:var(--grijs);text-transform:uppercase}
+.kop-rechts{display:flex;align-items:center;gap:1.1rem}
+.kop-tel{text-decoration:none;font-weight:600;font-size:.92rem;color:var(--grijs)}
+.kop-tel:hover{color:var(--inkt)}
+.kop-cta{background:var(--roze);color:var(--wit);text-decoration:none;font-weight:600;font-size:.92rem;
+  padding:.6rem 1.2rem;border-radius:var(--rond);white-space:nowrap;transition:background .18s,transform .1s}
+.kop-cta:hover{background:var(--roze-diep)}
 .kop-cta:active{transform:translateY(1px)}
-@media(max-width:640px){.kop-cta{display:none}}
+@media(max-width:740px){.kop-tel{display:none}}
+@media(max-width:520px){.kop-cta{display:none}}
 
-/* hero */
-.hero{padding-block:clamp(2rem,5vw,3.5rem) clamp(2.5rem,6vw,4rem)}
-.hero-grid{display:grid;grid-template-columns:1fr;gap:2rem;align-items:center}
-@media(min-width:960px){.hero-grid{grid-template-columns:1.05fr .95fr;gap:clamp(2.5rem,6vw,4rem)}}
-.hero h1{font-weight:800;letter-spacing:-.035em;line-height:1.04;font-size:clamp(2.1rem,5.6vw,3.4rem)}
-.hero h1 span{color:var(--mauve)}
-.hero-sub{margin-top:1rem;color:var(--grijs);font-size:clamp(1.02rem,2.2vw,1.14rem);max-width:40ch}
-.punten{list-style:none;margin-top:1.5rem;display:grid;gap:.55rem}
-.punten li{display:flex;gap:.55rem;align-items:flex-start;font-size:1rem}
-.punten svg{flex:0 0 auto;margin-top:.3rem}
+/* ---- hero: beeld draagt de pagina, want haar werk is het product ---- */
+.hero{padding-block:clamp(1.6rem,4vw,3rem) clamp(2.2rem,5vw,3.4rem)}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:1.8rem;align-items:center}
+@media(min-width:940px){.hero-grid{grid-template-columns:1.02fr .98fr;gap:clamp(2.4rem,5vw,4rem)}}
+.hero h1{font-weight:800;line-height:1.04;font-size:clamp(2.1rem,5.2vw,3.2rem)}
+.hero h1 span{color:var(--roze)}
+.hero-sub{margin-top:1rem;color:var(--grijs);font-size:clamp(1.02rem,2.1vw,1.13rem);max-width:38ch}
+.nu{display:inline-flex;align-items:center;gap:.5rem;margin-bottom:1rem;background:var(--wit);
+  border:1px solid var(--blos-diep);border-radius:var(--rond);padding:.42rem .85rem;font-size:.86rem;font-weight:500}
+.stip{width:8px;height:8px;border-radius:50%;background:#2f7d4f;flex:0 0 auto}
+.stip.dicht{background:#ab9a9e}
+.knoppen{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.6rem}
+.knop{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;text-decoration:none;font-weight:600;
+  border-radius:var(--rond);padding:.88rem 1.5rem;font-size:1rem;border:2px solid transparent;white-space:nowrap;
+  transition:background .18s,color .18s,border-color .18s,transform .1s}
+.knop-hoofd{background:var(--roze);color:var(--wit);border-color:var(--roze)}
+.knop-hoofd:hover{background:var(--roze-diep);border-color:var(--roze-diep)}
+.knop-rand{border-color:var(--inkt);color:var(--inkt)}
+.knop-rand:hover{background:var(--inkt);color:var(--room)}
+.knop:active{transform:translateY(1px)}
+/* de drie beloftes staan onder de knoppen, niet erboven, zodat de knop hoog blijft */
+.beloftes{list-style:none;margin-top:1.5rem;display:grid;gap:.5rem}
+.beloftes li{display:flex;gap:.55rem;align-items:flex-start;font-size:.96rem;color:var(--grijs)}
+.beloftes svg{flex:0 0 auto;margin-top:.34rem}
+.hero-beeld{border-radius:var(--rond);overflow:hidden;background:var(--blos-diep);max-width:520px;margin-inline:auto;
+  box-shadow:0 24px 60px rgba(28,21,23,.16)}
+.hero-beeld img{width:100%;aspect-ratio:3/4;object-fit:cover}
+@media(max-width:939px){.hero-beeld img{aspect-ratio:4/3;object-position:50% 46%}}
 
-/* aanvraagkaart */
-.aanvraag{background:var(--wit);border-radius:var(--rond);padding:clamp(1.3rem,3.2vw,1.9rem);box-shadow:0 22px 60px rgba(33,29,30,.13)}
-.aanvraag h2{font-weight:800;font-size:clamp(1.1rem,2.5vw,1.35rem);letter-spacing:-.02em;line-height:1.3}
-.aanvraag .belofte{margin-top:.35rem;font-size:.9rem;color:var(--grijs)}
-.veldgroep{margin-top:1.1rem}
-.veldgroep > label,.veldgroep > .kop-label{display:block;font-weight:600;font-size:.87rem;margin-bottom:.45rem}
-.chips{display:flex;flex-wrap:wrap;gap:.4rem}
-.chip{position:relative}
-.chip input{position:absolute;opacity:0;width:1px;height:1px}
-.chip span{display:inline-block;cursor:pointer;border:1.5px solid var(--blos);background:var(--room);
-  padding:.48rem .8rem;border-radius:var(--rond);font-size:.89rem;font-weight:500;transition:all .15s}
-.chip input:hover + span{border-color:var(--mauve)}
-.chip input:focus-visible + span{outline:3px solid var(--mauve);outline-offset:2px}
-.chip input:checked + span{background:var(--mauve);border-color:var(--mauve);color:var(--wit)}
-.rij2{display:grid;grid-template-columns:1fr;gap:.65rem}
-@media(min-width:520px){.rij2{grid-template-columns:1fr 1fr}}
-.invoer{width:100%;font:inherit;font-size:1rem;padding:.7rem .8rem;border:1.5px solid var(--blos);
-  border-radius:var(--rond);background:var(--room);color:var(--kool)}
-.invoer::placeholder{color:#a6979a}
-.invoer:focus{outline:3px solid var(--mauve);outline-offset:1px;border-color:var(--mauve)}
-.fout-melding{display:none;font-size:.83rem;color:#a8201a;font-weight:600;margin-top:.28rem}
-.mis .fout-melding{display:block}
-.mis .invoer{border-color:#a8201a}
-.verstuur{width:100%;margin-top:1.1rem;font:inherit;font-weight:700;font-size:1rem;cursor:pointer;
-  background:#25d366;color:#04250f;border:0;border-radius:var(--rond);padding:.9rem 1.2rem;
-  display:flex;align-items:center;justify-content:center;gap:.5rem;transition:background .18s,transform .1s}
-.verstuur:hover{background:#1fb955}
-.verstuur:active{transform:translateY(1px)}
-.klein{margin-top:.65rem;font-size:.81rem;color:var(--grijs);text-align:center;line-height:1.5}
-.gelukt{display:none}
-.gelukt.aan{display:block}
-.gelukt h3{font-weight:800;font-size:1.15rem;letter-spacing:-.02em}
-.gelukt .samen{margin-top:.85rem;background:var(--room);border-left:3px solid var(--mauve);
-  border-radius:0 var(--rond) var(--rond) 0;padding:.8rem .95rem;font-size:.95rem;line-height:1.55}
-.gelukt .demo{margin-top:.9rem;font-size:.85rem;color:var(--grijs);line-height:1.55}
-.opnieuw{margin-top:.85rem;background:none;border:0;color:var(--mauve-diep);font:inherit;font-weight:600;font-size:.9rem;cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:3px}
+/* ---- bewijsband ---- */
+.bewijs{background:var(--inkt)}
+.bewijs-in{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.14)}
+@media(min-width:860px){.bewijs-in{grid-template-columns:repeat(4,1fr)}}
+.bewijs-cel{background:var(--inkt);color:var(--room);padding:1.45rem var(--marge)}
+.cijfer{display:block;font-weight:800;font-size:1.7rem;line-height:1.05}
+.bewijs-cel span{display:block;margin-top:.28rem;font-size:.85rem;color:#b9a9ad}
+.zacht{color:var(--blos)}
 
-/* bewijs */
-.bewijs{background:var(--kool);color:var(--room)}
-.bewijs-in{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.16)}
-@media(min-width:820px){.bewijs-in{grid-template-columns:repeat(4,1fr)}}
-.bewijs-cel{background:var(--kool);padding:1.35rem var(--marge)}
-.bewijs-cel b{display:block;font-size:1.45rem;font-weight:800;letter-spacing:-.02em;line-height:1.1}
-.bewijs-cel span{display:block;margin-top:.22rem;font-size:.85rem;color:#b6a8aa}
-.roze{color:#e8b6c0}
-
-/* werk */
+/* ---- portfolio ---- */
 .werk{padding-block:clamp(3rem,7vw,4.6rem)}
-.werk h2{font-weight:800;letter-spacing:-.03em;font-size:clamp(1.75rem,4.3vw,2.5rem)}
+.werk h2{font-weight:800;font-size:clamp(1.75rem,4.2vw,2.5rem);max-width:20ch}
 .werk > .wrap > p{margin-top:.6rem;color:var(--grijs);max-width:50ch}
-.w-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin-top:1.9rem}
-@media(min-width:760px){.w-grid{grid-template-columns:repeat(3,1fr);gap:1rem}}
-.w-grid figure{margin:0;border-radius:var(--rond);overflow:hidden;background:var(--blos)}
-.w-grid img{width:100%;aspect-ratio:3/4;object-fit:cover}
-@media(max-width:759px){.w-grid figure:nth-child(3){grid-column:span 2}.w-grid figure:nth-child(3) img{aspect-ratio:16/10}}
+.w-raster{display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem;margin-top:2rem}
+@media(min-width:620px){.w-raster{grid-template-columns:repeat(3,1fr);gap:.9rem}}
+@media(min-width:980px){.w-raster{grid-template-columns:repeat(4,1fr);gap:1rem}}
+.w-raster figure{margin:0;border-radius:var(--rond);overflow:hidden;background:var(--blos-diep)}
+.w-raster img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+@media(hover:hover){.w-raster figure:hover img{transform:scale(1.04)}}
+@media (prefers-reduced-motion:reduce){.w-raster img{transition:none}.w-raster figure:hover img{transform:none}}
+.w-noot{margin-top:1.2rem;font-size:.88rem;color:var(--grijs)}
+.w-noot a{font-weight:600;text-underline-offset:3px}
 
-/* waarvoor */
+/* ---- op locatie: het vertrouwensverhaal ---- */
+.locatie{background:var(--inkt);color:var(--room);overflow:hidden}
+.loc-grid{display:grid;grid-template-columns:1fr;gap:0;align-items:stretch}
+@media(min-width:900px){.loc-grid{grid-template-columns:.85fr 1.15fr}}
+.loc-beeld{background:var(--inkt-op)}
+.loc-beeld img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+@media(min-width:900px){.loc-beeld img{aspect-ratio:auto;min-height:100%}}
+.loc-tekst{padding:clamp(2.4rem,5vw,3.6rem) var(--marge)}
+@media(min-width:900px){.loc-tekst{padding-right:clamp(2rem,5vw,5rem)}}
+.locatie h2{font-weight:800;font-size:clamp(1.7rem,4vw,2.3rem);line-height:1.12;max-width:18ch}
+.locatie h2 span{color:#f19bb4}
+.locatie p{margin-top:.9rem;color:#c9b9bd;max-width:44ch}
+.loc-knop{margin-top:1.6rem}
+.knop-licht{background:var(--room);color:var(--inkt);border-color:var(--room)}
+.knop-licht:hover{background:var(--blos);border-color:var(--blos)}
+
+/* ---- waarvoor ---- */
 .waarvoor{background:var(--blos);padding-block:clamp(3rem,7vw,4.6rem)}
-.waarvoor h2{font-weight:800;letter-spacing:-.03em;font-size:clamp(1.75rem,4.3vw,2.5rem);max-width:20ch}
+.waarvoor h2{font-weight:800;font-size:clamp(1.7rem,4vw,2.3rem);max-width:20ch}
 .v-grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1.9rem}
 @media(min-width:760px){.v-grid{grid-template-columns:repeat(3,1fr)}}
-.v-kaart{background:var(--wit);border-radius:var(--rond);padding:1.45rem}
+.v-kaart{background:var(--wit);border-radius:var(--rond);padding:1.5rem}
 .v-kaart h3{font-weight:800;font-size:1.06rem}
 .v-kaart p{margin-top:.4rem;color:var(--grijs);font-size:.95rem}
 
-/* stemmen */
-.stemmen{padding-block:clamp(3rem,7vw,4.6rem)}
-.stemmen h2{font-weight:800;letter-spacing:-.03em;font-size:clamp(1.75rem,4.3vw,2.5rem)}
-.stemmen > .wrap > p{margin-top:.5rem;color:var(--grijs)}
-.stem-grid{display:grid;grid-template-columns:1fr;gap:1.1rem;margin-top:1.9rem}
-@media(min-width:860px){.stem-grid{grid-template-columns:repeat(3,1fr)}}
-.stem{background:var(--wit);border-radius:var(--rond);padding:1.4rem;border-top:3px solid var(--mauve)}
-.sterren{color:var(--mauve);letter-spacing:.14em;font-size:.9rem}
-.stem p{margin-top:.6rem;font-size:.97rem;line-height:1.55}
-.stem cite{display:block;margin-top:.85rem;font-style:normal;font-weight:600;font-size:.85rem;color:var(--grijs)}
+/* ---- afspraak: eigen sectie, laag op de pagina ---- */
+.afspraak{padding-block:clamp(3rem,7vw,4.8rem)}
+.a-grid{display:grid;grid-template-columns:1fr;gap:1.7rem;align-items:start}
+@media(min-width:960px){.a-grid{grid-template-columns:.92fr 1.08fr;gap:2.4rem}}
+.a-kop h2{font-weight:800;line-height:1.1;font-size:clamp(1.85rem,4.4vw,2.6rem)}
+.a-kop h2 span{color:var(--roze)}
+.a-kop > p{margin-top:.7rem;color:var(--grijs);max-width:42ch}
+.stappen{list-style:none;margin-top:1.5rem;display:grid;gap:.9rem;max-width:40ch}
+.stappen li{display:grid;grid-template-columns:auto 1fr;gap:.8rem;align-items:start;font-size:.97rem;color:var(--grijs)}
+.stappen b{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;
+  background:var(--roze);color:var(--wit);font-size:.83rem;font-weight:700;flex:0 0 auto}
+.stappen strong{color:var(--inkt);font-weight:600}
+.aanvraag{background:var(--wit);border:1px solid var(--blos-diep);border-radius:var(--rond);
+  padding:clamp(1.3rem,3.2vw,1.9rem);box-shadow:0 22px 60px rgba(28,21,23,.10)}
+.aanvraag h3{font-weight:800;font-size:clamp(1.15rem,2.6vw,1.35rem);line-height:1.3}
+.belofte{margin-top:.35rem;font-size:.91rem;color:var(--grijs)}
+.veldgroep{margin-top:1.15rem}
+.kop-label,.veldgroep > label{display:block;font-weight:600;font-size:.88rem;margin-bottom:.5rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;width:1px;height:1px}
+.chip span{display:inline-block;cursor:pointer;border:1.5px solid var(--blos-diep);background:var(--room);
+  padding:.5rem .85rem;border-radius:var(--rond);font-size:.9rem;font-weight:500;transition:all .15s}
+.chip input:hover + span{border-color:var(--roze)}
+.chip input:focus-visible + span{outline:3px solid var(--roze);outline-offset:2px}
+.chip input:checked + span{background:var(--inkt);border-color:var(--inkt);color:var(--room)}
+.rij2{display:grid;grid-template-columns:1fr;gap:.7rem}
+@media(min-width:520px){.rij2{grid-template-columns:1fr 1fr}}
+.invoer{width:100%;font:inherit;font-size:1rem;padding:.78rem .85rem;border:1.5px solid var(--blos-diep);
+  border-radius:var(--rond);background:var(--room);color:var(--inkt)}
+.invoer::placeholder{color:#6f6165}
+.invoer:focus{outline:3px solid var(--roze);outline-offset:1px;border-color:var(--roze)}
+.fout-melding{display:none;font-size:.83rem;color:#a11226;font-weight:600;margin-top:.28rem}
+.mis .fout-melding{display:block}
+.mis .invoer,.mis .chip span{border-color:#a11226}
+.verstuur{width:100%;margin-top:1.2rem;font:inherit;font-weight:700;font-size:1rem;cursor:pointer;
+  background:var(--groen);color:#04250f;border:0;border-radius:var(--rond);padding:.92rem 1.2rem;
+  display:flex;align-items:center;justify-content:center;gap:.5rem;transition:background .18s,transform .1s}
+.verstuur:hover{background:#1fb955}
+.verstuur:active{transform:translateY(1px)}
+.klein{margin-top:.7rem;font-size:.85rem;color:var(--grijs);text-align:center;line-height:1.5}
+.klein a{font-weight:600;color:var(--roze-diep)}
+.gelukt{display:none}
+.gelukt.aan{display:block}
+.gelukt h3{font-weight:800;font-size:1.2rem}
+.samen{margin-top:.9rem;background:var(--room);border-left:3px solid var(--roze);
+  border-radius:0 var(--rond) var(--rond) 0;padding:.85rem 1rem;font-size:.95rem;line-height:1.55}
+.gelukt .demo{margin-top:.9rem;font-size:.86rem;color:var(--grijs);line-height:1.55}
+.opnieuw{margin-top:.9rem;background:none;border:0;color:var(--roze-diep);font:inherit;font-weight:600;
+  font-size:.92rem;cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:3px}
 
-/* praktisch */
-.praktisch{padding-block:clamp(3rem,7vw,4.6rem);background:var(--wit);border-top:1px solid var(--blos)}
+/* ---- stemmen ---- */
+.stemmen{background:var(--blos);padding-block:clamp(3rem,7vw,4.6rem)}
+.stemmen h2{font-weight:800;font-size:clamp(1.7rem,4vw,2.3rem)}
+.stemmen > .wrap > p{margin-top:.45rem;color:var(--grijs)}
+.s-raster{display:grid;grid-template-columns:1fr;gap:1.1rem;margin-top:1.9rem}
+@media(min-width:860px){.s-raster{grid-template-columns:repeat(3,1fr)}}
+.stem{background:var(--wit);border-radius:var(--rond);padding:1.5rem;display:flex;flex-direction:column}
+.sterren{color:var(--roze);letter-spacing:.15em;font-size:.85rem}
+.stem p{margin-top:.7rem;font-size:1rem;line-height:1.5;flex:1}
+.stem cite{display:block;margin-top:1.05rem;font-style:normal;font-weight:600;font-size:.86rem;color:var(--grijs)}
+
+/* ---- praktisch ---- */
+.praktisch{padding-block:clamp(3rem,7vw,4.8rem)}
 .p-grid{display:grid;grid-template-columns:1fr;gap:2.2rem}
-@media(min-width:860px){.p-grid{grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,5rem)}}
-.praktisch h2{font-weight:800;letter-spacing:-.03em;font-size:clamp(1.55rem,4vw,2.1rem);margin-bottom:1.1rem}
-.tijden{list-style:none;background:var(--room);border-radius:var(--rond);padding:1.1rem 1.35rem}
-.tijden li{display:flex;justify-content:space-between;gap:1rem;padding:.5rem 0;font-size:1rem}
-.tijden li + li{border-top:1px solid rgba(33,29,30,.08)}
-.tijden span:first-child{color:var(--grijs)}
-.tijden span:last-child{font-weight:700;font-variant-numeric:tabular-nums}
-.adres{font-size:1.03rem;line-height:1.85}
-.adres strong{display:block;font-weight:800;font-size:1.1rem}
-.adres a{color:var(--mauve-diep);font-weight:600;text-underline-offset:3px}
+@media(min-width:880px){.p-grid{grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,4.5rem)}}
+.praktisch h2{font-weight:800;font-size:clamp(1.55rem,3.6vw,2rem);margin-bottom:1.2rem}
+.uren{width:100%;border-collapse:collapse;font-size:.98rem}
+.uren th,.uren td{text-align:left;padding:.62rem 0;border-bottom:1px solid var(--blos-diep)}
+.uren th{font-weight:500;color:var(--grijs)}
+.uren td{text-align:right;font-variant-numeric:tabular-nums}
+.uren tr.vandaag th,.uren tr.vandaag td{font-weight:700;color:var(--roze)}
+.uren-noot{margin-top:.9rem;font-size:.85rem;color:var(--grijs)}
+.adres{font-size:1.02rem;line-height:1.75}
+.adres b{display:block;font-weight:800}
+.p-beeld{margin-top:1.4rem;border-radius:var(--rond);overflow:hidden;background:var(--blos-diep)}
+.p-beeld img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 40%}
+.p-knoppen{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
 
-.voet{background:var(--kool);color:#9c8e90;padding-block:2.1rem;font-size:.87rem}
-.voet-in{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:space-between}
-.voet a{color:var(--room);font-weight:600}
+/* ---- voet ---- */
+.voet{background:var(--inkt);color:#b9a9ad;padding-block:2.4rem;font-size:.88rem}
+.voet-in{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;align-items:flex-start}
+.voet b{color:var(--room)}
+.voet a{color:var(--blos);font-weight:600;text-underline-offset:3px}
 
-.actiebalk{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;
-  background:rgba(33,29,30,.97);backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.14);
-  padding:.55rem var(--marge) calc(.55rem + env(safe-area-inset-bottom,0px));gap:.5rem}
-.actiebalk a{flex:1;display:flex;align-items:center;justify-content:center;text-decoration:none;
-  font-weight:700;font-size:.92rem;padding:.75rem .4rem;border-radius:var(--rond);white-space:nowrap}
-.ab-wa{background:#25d366;color:#04250f}
-.ab-bel{background:rgba(255,255,255,.14);color:var(--room)}
-.ab-route{background:rgba(255,255,255,.14);color:var(--room)}
-@media(max-width:860px){.actiebalk{display:flex} body{--balk:74px}}
+/* ---- vaste balk op mobiel ---- */
+.balk{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;gap:.55rem;
+  padding:.6rem var(--marge) calc(.6rem + env(safe-area-inset-bottom));
+  background:rgba(253,248,249,.97);backdrop-filter:blur(10px);border-top:1px solid var(--blos-diep)}
+.balk a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.4rem;text-decoration:none;
+  font-weight:600;font-size:.95rem;line-height:1.25;white-space:nowrap;padding:.8rem .9rem;border-radius:var(--rond)}
+.balk .wa{background:var(--groen);color:#04250f}
+.balk .bel{background:var(--inkt);color:var(--room)}
+@media(max-width:760px){
+  .balk{display:flex}
+  body{padding-bottom:calc(4.8rem + env(safe-area-inset-bottom))}
+}
 
-@media(prefers-reduced-motion:no-preference){
-  .js .onthul{opacity:0;transform:translateY(18px);transition:opacity .65s cubic-bezier(.16,1,.3,1),transform .65s cubic-bezier(.16,1,.3,1)}
-  .onthul.zichtbaar{opacity:1;transform:none}
+/* ---- beweging ---- */
+.js .op{opacity:0;transform:translateY(18px)}
+.js .op.in{opacity:1;transform:none;transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+@media (prefers-reduced-motion:reduce){
+  .js .op{opacity:1;transform:none}
+  .js .op.in{transition:none}
 }
 </style>
 </head>
@@ -174,182 +254,249 @@ a{color:inherit}
 
 <div class="voorstel">
   <div class="wrap">
-    <span><b>Voorbeeldontwerp</b> gemaakt voor Nagels bij Hanh door Bjorn Beerntsen.</span>
-    <span>Dit is geen offici&euml;le website van Nagels bij Hanh.</span>
-    <span>Vragen? Bel of app Bjorn op <a href="tel:+31622658452">06 22658452</a></span>
+    <span><b>Voorbeeldpagina.</b> Gemaakt door Bjorn van Capital BB als voorstel voor Nagels bij Hanh. Dit is niet haar offici&euml;le website.</span>
+    <span><a href="https://wa.me/31614664161">Vragen? App Bjorn op 06 14664161</a></span>
   </div>
 </div>
 
 <header class="kop">
   <div class="wrap kop-in">
-    <a class="merk" href="#top">Nagels bij Hanh<small>Apeldoorn</small></a>
-    <a class="kop-cta" href="#aanvraag">Afspraak aanvragen</a>
+    <a class="merk" href="#top">
+      <span class="naam">Nagels bij Hanh</span>
+      <small>Hofveld, Apeldoorn</small>
+    </a>
+    <div class="kop-rechts">
+      <a class="kop-tel" href="tel:+31622424456">06 22424456</a>
+      <a class="kop-cta" href="#afspraak">Afspraak aanvragen</a>
+    </div>
   </div>
 </header>
 
 <main id="top">
 
+  <!-- HERO: beeld en vertrouwen, geen formulier -->
   <section class="hero">
     <div class="wrap hero-grid">
-      <div>
-        <h1>Elke dag open, <span>ook 's avonds.</span></h1>
-        <p class="hero-sub">Nagelstudio aan het Hofveld in Apeldoorn. Zeven dagen per week van negen tot acht, dus er is altijd wel een moment dat u schikt.</p>
-        <ul class="punten">
-          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#a8697a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Klanten schrijven dat u snel antwoord krijgt via WhatsApp</li>
-          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#a8697a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Ook als u nagelbijt of dunne nagels heeft</li>
-          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#a8697a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>4,9 uit 41 reviews op Google</li>
+      <div class="op">
+        <p class="nu"><span class="stip" id="stip"></span><span id="nu-tekst">Openingstijden laden</span></p>
+        <h1>Elke dag open, <span>ook 's avonds</span></h1>
+        <p class="hero-sub">Nagelstudio aan het Hofveld in Apeldoorn. Zeven dagen per week van negen tot acht, dus er is altijd een moment dat u schikt.</p>
+        <div class="knoppen">
+          <a class="knop knop-hoofd" href="#afspraak">Afspraak aanvragen</a>
+          <a class="knop knop-rand" href="#werk">Bekijk het werk</a>
+        </div>
+        <ul class="beloftes">
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#c9245e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>4,9 uit 41 beoordelingen op Google</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#c9245e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Ook als u nagelbijt of dunne nagels heeft</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#c9245e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Klanten schrijven dat u snel antwoord krijgt via WhatsApp</li>
         </ul>
       </div>
-
-      <form class="aanvraag" id="aanvraag" novalidate>
-        <div id="formulier-kant">
-          <h2>Vraag een afspraak aan</h2>
-          <p class="belofte">Duurt een halve minuut. Hanh appt u terug om een tijd af te spreken.</p>
-
-          <div class="veldgroep">
-            <span class="kop-label">Wat wilt u laten doen?</span>
-            <div class="chips">
-              <label class="chip"><input type="radio" name="werk" value="Nieuwe set"><span>Nieuwe set</span></label>
-              <label class="chip"><input type="radio" name="werk" value="Bijwerken"><span>Bijwerken</span></label>
-              <label class="chip"><input type="radio" name="werk" value="Manicure"><span>Manicure</span></label>
-              <label class="chip"><input type="radio" name="werk" value="Nail art"><span>Nail art</span></label>
-              <label class="chip"><input type="radio" name="werk" value="Weet ik nog niet"><span>Weet ik nog niet</span></label>
-            </div>
-            <span class="fout-melding" id="fout-werk">Kies wat u wilt laten doen.</span>
-          </div>
-
-          <div class="veldgroep">
-            <span class="kop-label">Wanneer schikt het?</span>
-            <div class="chips">
-              <label class="chip"><input type="radio" name="wanneer" value="Overdag"><span>Overdag</span></label>
-              <label class="chip"><input type="radio" name="wanneer" value="'s Avonds"><span>'s Avonds</span></label>
-              <label class="chip"><input type="radio" name="wanneer" value="In het weekend"><span>Weekend</span></label>
-              <label class="chip"><input type="radio" name="wanneer" value="Maakt niet uit"><span>Maakt niet uit</span></label>
-            </div>
-            <span class="fout-melding" id="fout-wanneer">Geef even aan wanneer het u schikt.</span>
-          </div>
-
-          <div class="veldgroep rij2">
-            <div id="veld-naam">
-              <label for="naam">Uw naam</label>
-              <input class="invoer" type="text" id="naam" placeholder="Naam" autocomplete="name">
-              <span class="fout-melding">Vul uw naam in.</span>
-            </div>
-            <div id="veld-tel">
-              <label for="telefoon">Telefoonnummer</label>
-              <input class="invoer" type="tel" id="telefoon" placeholder="06 12345678" inputmode="tel" autocomplete="tel">
-              <span class="fout-melding">Vul een nummer in.</span>
-            </div>
-          </div>
-
-          <button class="verstuur" type="submit">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.16c-.24.68-1.4 1.3-1.94 1.35-.5.05-1.13.07-1.82-.11-.42-.11-.96-.29-1.65-.59-2.9-1.25-4.8-4.17-4.94-4.36-.15-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.7.8.61.39.94 1.32 3.25 1.44 3.49.12.24.2.51.04.8-.16.29-.24.47-.47.73-.23.26-.49.58-.7.78-.23.23-.48.48-.2.94.27.46 1.22 2.01 2.62 3.26 1.8 1.6 3.31 2.1 3.78 2.33.47.24.74.2 1.02-.12.27-.32 1.17-1.36 1.48-1.83.31-.47.62-.39 1.04-.23.42.15 2.68 1.26 3.14 1.49.46.23.77.35.88.54.11.19.11 1.11-.13 1.79Z"/></svg>
-            Aanvraag via WhatsApp
-          </button>
-          <p class="klein">Liever direct bellen? <a href="tel:+31622424456" style="font-weight:600;color:var(--mauve-diep)">06 22424456</a></p>
+      <div class="op">
+        <div class="hero-beeld">
+          <img src="img/hero-french.jpg" width="1050" height="1400" alt="Vierkante French manicure in acryl, gemaakt bij Nagels bij Hanh" fetchpriority="high">
         </div>
-
-        <div class="gelukt" id="gelukt" role="status" aria-live="polite">
-          <h3>Uw aanvraag staat klaar</h3>
-          <div class="samen" id="samenvatting"></div>
-          <p class="demo">
-            Dit is een voorbeeldontwerp. Op een werkende website komt deze aanvraag
-            rechtstreeks binnen bij Nagels bij Hanh. Om te laten zien dat het werkt,
-            openen we hem nu in WhatsApp.
-          </p>
-          <button type="button" class="opnieuw" id="opnieuw">Nog een aanvraag doen</button>
-        </div>
-      </form>
+      </div>
     </div>
   </section>
 
+  <!-- BEWIJSBAND -->
   <section class="bewijs">
     <div class="bewijs-in">
-      <div class="bewijs-cel"><b>4,9 <span class="roze">&#9733;</span></b><span>gemiddeld op Google</span></div>
-      <div class="bewijs-cel"><b>41</b><span>klanten schreven een review</span></div>
-      <div class="bewijs-cel"><b>7 dagen</b><span>per week open, ook zondag</span></div>
-      <div class="bewijs-cel"><b>Tot 20:00</b><span>elke dag, dus ook na werktijd</span></div>
+      <div class="bewijs-cel"><b class="cijfer zacht">4,9</b><span>gemiddeld op Google</span></div>
+      <div class="bewijs-cel"><b class="cijfer">41</b><span>klanten schreven een review</span></div>
+      <div class="bewijs-cel"><b class="cijfer">7 dagen</b><span>per week open, ook zondag</span></div>
+      <div class="bewijs-cel"><b class="cijfer">tot 20:00</b><span>elke avond</span></div>
     </div>
   </section>
 
-  <section class="werk">
+  <!-- PORTFOLIO -->
+  <section class="werk" id="werk">
     <div class="wrap">
-      <h2 class="onthul">Werk van de afgelopen tijd</h2>
-      <p class="onthul">Van een rustige nude tot een ontwerp waar u zelf mee komt aanzetten. Geen idee is te gek.</p>
-      <div class="w-grid">
-        <figure class="onthul"><img src="img/h01.jpg" alt="Zachtroze nagels met kleine witte stipjes" width="825" height="1100" fetchpriority="high"></figure>
-        <figure class="onthul"><img src="img/h02.jpg" alt="Nagelwerk van Nagels bij Hanh" width="825" height="1100" loading="lazy"></figure>
-        <figure class="onthul"><img src="img/h03.jpg" alt="Nagelontwerp gezet bij Nagels bij Hanh" width="1000" height="1068" loading="lazy"></figure>
+      <h2 class="op">Werk uit de studio</h2>
+      <p class="op">Acryl, BIAB, gellak en met de hand geschilderde nail art. Alles hieronder is echt werk van Hanh.</p>
+      <div class="w-raster">
+        <figure class="op"><img src="img/werk-roze.jpg" width="1050" height="1400" alt="Ovale nagels in fel roze met een glanzende chrome-afwerking" loading="lazy"></figure>
+        <figure class="op"><img src="img/werk-rood.jpg" width="1391" height="1400" alt="Klassiek rode nagels met een handgeschilderd bloemetje op de ringvinger" loading="lazy"></figure>
+        <figure class="op"><img src="img/werk-bloemen.jpg" width="1050" height="1400" alt="Koraalrode nagels afgewisseld met handgeschilderde bloemen en steentjes" loading="lazy"></figure>
+        <figure class="op"><img src="img/werk-biab.jpg" width="1050" height="1400" alt="BIAB met een klassieke French en kleine zwarte stippen" loading="lazy"></figure>
+        <figure class="op"><img src="img/werk-zomer.jpg" width="1050" height="1400" alt="Zachte kleuren met vrolijke bloemen, een frisse zomerlook" loading="lazy"></figure>
+        <figure class="op"><img src="img/werk-geel.jpg" width="1050" height="1400" alt="Nagels in zonnig geel met fijne details" loading="lazy"></figure>
+        <figure class="op"><img src="img/hero-french.jpg" width="1050" height="1400" alt="Vierkante French manicure in acryl" loading="lazy"></figure>
+        <figure class="op"><img src="img/op-locatie.jpg" width="1050" height="1400" alt="Roze French met zilveren lijn, gemaakt bij een klant thuis" loading="lazy"></figure>
+      </div>
+      <p class="w-noot op">Meer werk staat op Instagram, bij <a href="https://www.instagram.com/nagelsbijhanh/" target="_blank" rel="noopener">@nagelsbijhanh</a>.</p>
+    </div>
+  </section>
+
+  <!-- OP LOCATIE: het vertrouwensverhaal -->
+  <section class="locatie">
+    <div class="loc-grid">
+      <div class="loc-beeld op">
+        <img src="img/op-locatie.jpg" width="1050" height="1400" alt="Handen van een oudere klant met roze French, gemaakt op locatie" loading="lazy">
+      </div>
+      <div class="loc-tekst">
+        <h2 class="op">Kunt u niet komen? <span>Dan kom ik naar u toe.</span></h2>
+        <p class="op">Niet iedereen kan makkelijk de deur uit. Naast de studio aan het Hofveld werkt Hanh ook op locatie, zodat mensen die slecht ter been zijn evengoed verzorgde nagels houden.</p>
+        <p class="op">Vraag er gerust naar in uw bericht, dan wordt er samen gekeken wat kan.</p>
+        <div class="loc-knop op">
+          <a class="knop knop-licht" href="#afspraak">Vraag naar de mogelijkheden</a>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- WAARVOOR -->
   <section class="waarvoor">
     <div class="wrap">
-      <h2 class="onthul">Waarvoor u bij Hanh terecht kunt</h2>
+      <h2 class="op">Waarvoor u bij Hanh terecht kunt</h2>
       <div class="v-grid">
-        <div class="v-kaart onthul">
-          <h3>Ook als u nagelbijt</h3>
-          <p>Korte of beschadigde nagels zijn geen probleem. Er wordt met geduld gewerkt naar iets waar u weer blij van wordt.</p>
+        <div class="v-kaart op">
+          <h3>Een nieuwe set</h3>
+          <p>Acryl of BIAB, met of zonder verlenging. In de lengte en vorm die u zelf mooi vindt.</p>
         </div>
-        <div class="v-kaart onthul">
-          <h3>Uitbundig mag</h3>
-          <p>Heeft u een foto gezien van iets bijzonders? Laat het zien. Hoe gekker het ontwerp, hoe leuker Hanh het vindt.</p>
+        <div class="v-kaart op">
+          <h3>Bijwerken</h3>
+          <p>Uitgroei wegwerken zodat het weer strak zit, meestal na drie tot vier weken.</p>
         </div>
-        <div class="v-kaart onthul">
-          <h3>Ook voor uw dochter</h3>
-          <p>Kinderen zijn welkom en krijgen dezelfde aandacht. Klanten schrijven daar uit zichzelf over.</p>
+        <div class="v-kaart op">
+          <h3>Gellak en nail art</h3>
+          <p>Van een effen kleur tot met de hand geschilderde bloemen. Ook manicure en pedicure.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- AFSPRAAK: eigen sectie, laag op de pagina -->
+  <section class="afspraak" id="afspraak">
+    <div class="wrap a-grid">
+      <div class="a-kop op">
+        <h2>Vraag een afspraak aan in <span>een halve minuut</span></h2>
+        <p>U kiest wat u wilt laten doen en wanneer het schikt. Meer hoeft niet, Hanh appt u terug om een tijd af te spreken.</p>
+        <ol class="stappen">
+          <li><b>1</b><span><strong>U vult het in.</strong> Vier vinkjes, uw naam en uw nummer.</span></li>
+          <li><b>2</b><span><strong>Uw bericht staat klaar in WhatsApp.</strong> U leest het na en drukt zelf op verzenden.</span></li>
+          <li><b>3</b><span><strong>Hanh appt terug</strong> met een tijd die past. Klanten schrijven dat dat snel gaat.</span></li>
+        </ol>
+      </div>
+
+      <div class="op">
+        <form class="aanvraag" id="formulier" novalidate>
+          <div id="formulier-kant">
+            <h3>Waarvoor komt u langs?</h3>
+            <p class="belofte">Er wordt niets verstuurd zonder dat u het zelf doet.</p>
+
+            <div class="veldgroep" id="veld-werk">
+              <span class="kop-label">Wat wilt u laten doen?</span>
+              <div class="chips">
+                <label class="chip"><input type="radio" name="werk" value="een nieuwe set"><span>Nieuwe set</span></label>
+                <label class="chip"><input type="radio" name="werk" value="bijwerken"><span>Bijwerken</span></label>
+                <label class="chip"><input type="radio" name="werk" value="een manicure"><span>Manicure</span></label>
+                <label class="chip"><input type="radio" name="werk" value="een pedicure"><span>Pedicure</span></label>
+                <label class="chip"><input type="radio" name="werk" value="nail art"><span>Nail art</span></label>
+                <label class="chip"><input type="radio" name="werk" value="iets anders, dat leg ik uit"><span>Weet ik nog niet</span></label>
+              </div>
+              <span class="fout-melding">Kies even wat u wilt laten doen.</span>
+            </div>
+
+            <div class="veldgroep" id="veld-wanneer">
+              <span class="kop-label">Wanneer schikt het?</span>
+              <div class="chips">
+                <label class="chip"><input type="radio" name="wanneer" value="overdag"><span>Overdag</span></label>
+                <label class="chip"><input type="radio" name="wanneer" value="'s avonds"><span>'s Avonds</span></label>
+                <label class="chip"><input type="radio" name="wanneer" value="in het weekend"><span>Weekend</span></label>
+                <label class="chip"><input type="radio" name="wanneer" value="bij mij op locatie"><span>Bij mij thuis</span></label>
+                <label class="chip"><input type="radio" name="wanneer" value="maakt niet uit"><span>Maakt niet uit</span></label>
+              </div>
+              <span class="fout-melding">Geef even aan wanneer het u schikt.</span>
+            </div>
+
+            <div class="veldgroep rij2">
+              <div id="veld-naam">
+                <label for="naam">Uw naam</label>
+                <input class="invoer" type="text" id="naam" placeholder="Bijvoorbeeld Sanne" autocomplete="name">
+                <span class="fout-melding">Vul uw naam in.</span>
+              </div>
+              <div id="veld-tel">
+                <label for="telefoon">Uw telefoonnummer</label>
+                <input class="invoer" type="tel" id="telefoon" placeholder="06 ..." inputmode="tel" autocomplete="tel">
+                <span class="fout-melding">Vul een nummer in.</span>
+              </div>
+            </div>
+
+            <button class="verstuur" type="submit">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.16c-.24.68-1.4 1.3-1.94 1.35-.5.05-1.13.07-1.82-.11-.42-.11-.96-.29-1.65-.59-2.9-1.25-4.8-4.17-4.94-4.36-.15-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.7.8.61.39.94 1.32 3.25 1.44 3.49.12.24.2.51.04.8-.16.29-.24.47-.47.73-.23.26-.49.58-.7.78-.23.23-.48.48-.2.94.27.46 1.22 2.01 2.62 3.26 1.8 1.6 3.31 2.1 3.78 2.33.47.24.74.2 1.02-.12.27-.32 1.17-1.36 1.48-1.83.31-.47.62-.39 1.04-.23.42.15 2.68 1.26 3.14 1.49.46.23.77.35.88.54.11.19.11 1.11-.13 1.79Z"/></svg>
+              Zet mijn aanvraag klaar
+            </button>
+            <p class="klein">Liever direct bellen? <a href="tel:+31622424456">06 22424456</a></p>
+          </div>
+
+          <div class="gelukt" id="gelukt" role="status" aria-live="polite">
+            <h3>Uw aanvraag staat klaar</h3>
+            <div class="samen" id="samenvatting"></div>
+            <p class="demo">Dit is een voorbeeldontwerp. Op een werkende website komt de aanvraag rechtstreeks binnen bij Nagels bij Hanh. Om te laten zien dat het werkt, is hij nu in WhatsApp geopend.</p>
+            <a class="knop knop-hoofd" style="margin-top:1rem;width:100%" id="nogmaals" href="#" target="_blank" rel="noopener">Opnieuw openen in WhatsApp</a>
+            <button type="button" class="opnieuw" id="opnieuw">Nog een aanvraag doen</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEMMEN -->
   <section class="stemmen">
     <div class="wrap">
-      <h2>Wat klanten schrijven</h2>
-      <p>41 reviews op Google, gemiddeld een 4,9.</p>
-      <div class="stem-grid">
-        <article class="stem">
-          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>Ik kom nu al een jaar bij Hanh en kan zeggen dat ik nergens anders meer heen ga. Ik hou persoonlijk van uitbundige nagels en geen design is te gek.</p>
+      <h2 class="op">Wat klanten schrijven</h2>
+      <p class="op">Uit de beoordelingen op Google.</p>
+      <div class="s-raster">
+        <figure class="stem op">
+          <div class="sterren" aria-label="Vijf sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;Ik kom nu al een jaar bij Hanh en kan zeggen dat ik nergens anders meer heen ga.&rdquo;</p>
           <cite>Emiel Reinders</cite>
-        </article>
-        <article class="stem">
-          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>Ontzettend tevreden over mijn nagels. Ze werkt heel professioneel en neemt echt de tijd voor je.</p>
+        </figure>
+        <figure class="stem op">
+          <div class="sterren" aria-label="Vijf sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;Ontzettend tevreden over mijn nagels. Ze werkt heel professioneel en neemt echt de tijd voor je.&rdquo;</p>
           <cite>Asli Ozmen</cite>
-        </article>
-        <article class="stem">
-          <div class="sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>Heel blij met mijn nagels. Reageert snel op WhatsApp om een afspraak te maken.</p>
+        </figure>
+        <figure class="stem op">
+          <div class="sterren" aria-label="Vijf sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;Heel blij met mijn nagels. Reageert snel op WhatsApp om een afspraak te maken.&rdquo;</p>
           <cite>Delhia Testerink</cite>
-        </article>
+        </figure>
       </div>
     </div>
   </section>
 
+  <!-- PRAKTISCH -->
   <section class="praktisch">
     <div class="wrap p-grid">
-      <div class="onthul">
+      <div class="op">
         <h2>Openingstijden</h2>
-        <ul class="tijden">
-          <li><span>Maandag</span><span>09:00 - 20:00</span></li>
-          <li><span>Dinsdag</span><span>09:00 - 20:00</span></li>
-          <li><span>Woensdag</span><span>09:00 - 20:00</span></li>
-          <li><span>Donderdag</span><span>09:00 - 20:00</span></li>
-          <li><span>Vrijdag</span><span>09:00 - 20:00</span></li>
-          <li><span>Zaterdag</span><span>09:00 - 20:00</span></li>
-          <li><span>Zondag</span><span>09:00 - 20:00</span></li>
-        </ul>
+        <table class="uren" id="urentabel">
+          <tbody>
+            <tr data-dag="1"><th scope="row">Maandag</th><td>09:00 tot 20:00</td></tr>
+            <tr data-dag="2"><th scope="row">Dinsdag</th><td>09:00 tot 20:00</td></tr>
+            <tr data-dag="3"><th scope="row">Woensdag</th><td>09:00 tot 20:00</td></tr>
+            <tr data-dag="4"><th scope="row">Donderdag</th><td>09:00 tot 20:00</td></tr>
+            <tr data-dag="5"><th scope="row">Vrijdag</th><td>09:00 tot 20:00</td></tr>
+            <tr data-dag="6"><th scope="row">Zaterdag</th><td>09:00 tot 20:00</td></tr>
+            <tr data-dag="0"><th scope="row">Zondag</th><td>09:00 tot 20:00</td></tr>
+          </tbody>
+        </table>
+        <p class="uren-noot">Zeven dagen per week, ook op zondag. Werken gaat op afspraak, dus stuur even een bericht.</p>
       </div>
-      <div class="onthul">
+      <div class="op">
         <h2>Waar u ons vindt</h2>
-        <div class="adres">
-          <strong>Nagels bij Hanh</strong>
+        <p class="adres">
+          <b>Nagels bij Hanh</b>
           Hofveld 124A<br>
-          7333 BM Apeldoorn<br><br>
-          <a href="https://wa.me/31622424456" target="_blank" rel="noopener">06 22424456 via WhatsApp</a><br>
-          <a href="https://maps.google.com/?q=Hofveld+124A+Apeldoorn" target="_blank" rel="noopener">Route via Google Maps</a>
+          7333 BM Apeldoorn<br>
+          <a href="tel:+31622424456" style="font-weight:600">06 22424456</a>
+        </p>
+        <div class="p-beeld"><img src="img/werk-bloemen.jpg" width="1050" height="1400" alt="Koraalrode nagels met handgeschilderde bloemen" loading="lazy"></div>
+        <div class="p-knoppen">
+          <a class="knop knop-hoofd" href="#afspraak">Afspraak aanvragen</a>
+          <a class="knop knop-rand" href="https://maps.google.com/?q=Hofveld+124A+Apeldoorn" target="_blank" rel="noopener">Route</a>
         </div>
       </div>
     </div>
@@ -358,91 +505,156 @@ a{color:inherit}
 
 <footer class="voet">
   <div class="wrap voet-in">
-    <div>Nagels bij Hanh &nbsp;&middot;&nbsp; Hofveld 124A, Apeldoorn &nbsp;&middot;&nbsp; Elke dag open tot 20:00</div>
-    <div><a href="#aanvraag">Afspraak aanvragen</a></div>
+    <p><b>Nagels bij Hanh</b><br>Hofveld 124A, 7333 BM Apeldoorn</p>
+    <p>Voorbeeldontwerp van Bjorn, Capital BB.<br><a href="https://wa.me/31614664161">Reageren kan via WhatsApp</a></p>
   </div>
 </footer>
 
-<nav class="actiebalk" aria-label="Snel contact">
-  <a class="ab-wa" href="#aanvraag">Afspraak</a>
-  <a class="ab-bel" href="tel:+31622424456">Bellen</a>
-  <a class="ab-route" href="https://maps.google.com/?q=Hofveld+124A+Apeldoorn" target="_blank" rel="noopener">Route</a>
+<nav class="balk" aria-label="Snelle acties">
+  <a class="wa" href="#afspraak">Afspraak aanvragen</a>
+  <a class="bel" href="tel:+31622424456">Bellen</a>
 </nav>
 
 <script>
-(function () {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
-    document.querySelectorAll('.onthul').forEach(function (d) { d.classList.add('zichtbaar'); });
-  } else {
-    var kijker = new IntersectionObserver(function (rijen) {
-      rijen.forEach(function (rij) {
-        if (!rij.isIntersecting) return;
-        rij.target.classList.add('zichtbaar');
-        kijker.unobserve(rij.target);
-      });
-    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.onthul').forEach(function (d) { kijker.observe(d); });
+(function(){
+  "use strict";
+
+  var NUMMER = "31622424456";
+
+  /* Zeven dagen open van 09:00 tot 20:00. */
+  var OPEN = 540, DICHT = 1200;
+
+  function tijd(m){
+    var u = Math.floor(m/60), r = m%60;
+    return (u<10?"0"+u:u) + ":" + (r<10?"0"+r:r);
   }
-})();
 
-// De aanvraag wordt een WhatsApp-bericht. Geen server nodig, en het komt echt aan.
-(function () {
-  var form = document.getElementById('aanvraag');
-  if (!form) return;
-  var NUMMER = '31622424456';
-  var naam = document.getElementById('naam');
-  var tel = document.getElementById('telefoon');
+  function toonStatus(){
+    var tekst = document.getElementById("nu-tekst");
+    var stip = document.getElementById("stip");
+    if (!tekst || !stip) return;
+    var nu = new Date(), min = nu.getHours()*60 + nu.getMinutes();
+    if (min >= OPEN && min < DICHT) {
+      tekst.textContent = "Nu open, tot " + tijd(DICHT);
+      stip.classList.remove("dicht");
+    } else {
+      tekst.textContent = (min < OPEN ? "Nu gesloten, vandaag open om " : "Nu gesloten, morgen open om ") + tijd(OPEN);
+      stip.classList.add("dicht");
+    }
+    var rij = document.querySelector('#urentabel tr[data-dag="' + nu.getDay() + '"]');
+    if (rij) rij.classList.add("vandaag");
+  }
 
-  function markeer(id, mis) { document.getElementById(id).classList.toggle('mis', mis); }
+  /* ----- het aanvraagformulier ----- */
+  function gekozen(naam){
+    var el = document.querySelector('input[name="' + naam + '"]:checked');
+    return el ? el.value : "";
+  }
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var werk = form.querySelector('input[name="werk"]:checked');
-    var wanneer = form.querySelector('input[name="wanneer"]:checked');
-    var missers = 0;
+  function bouwBericht(){
+    var naam = document.getElementById("naam").value.trim();
+    var tel = document.getElementById("telefoon").value.trim();
+    return [
+      "Hoi Hanh, ik zag jullie pagina en ik wil graag een afspraak.",
+      "",
+      "Waarvoor: " + gekozen("werk"),
+      "Wanneer: " + gekozen("wanneer"),
+      "Naam: " + naam,
+      "Nummer: " + tel,
+      "",
+      "Hoor ik van je wanneer het kan?"
+    ].join("\n");
+  }
 
-    document.getElementById('fout-werk').style.display = werk ? 'none' : 'block';
-    if (!werk) missers++;
-    document.getElementById('fout-wanneer').style.display = wanneer ? 'none' : 'block';
-    if (!wanneer) missers++;
+  function samenvatting(){
+    return "<b>Waarvoor:</b> " + gekozen("werk") +
+           "<br><b>Wanneer:</b> " + gekozen("wanneer") +
+           "<br><b>Naam:</b> " + document.getElementById("naam").value.trim().replace(/</g,"&lt;");
+  }
 
-    var naamLeeg = !naam.value.trim();
-    markeer('veld-naam', naamLeeg); if (naamLeeg) missers++;
-    var telLeeg = tel.value.replace(/\D/g, '').length < 9;
-    markeer('veld-tel', telLeeg); if (telLeeg) missers++;
+  function link(tekst){
+    return "https://wa.me/" + NUMMER + "?text=" + encodeURIComponent(tekst);
+  }
 
-    if (missers) {
-      var eerste = form.querySelector('.mis .invoer');
-      if (eerste) eerste.focus();
+  function fout(id, mis){
+    var el = document.getElementById(id);
+    if (el) el.classList[mis ? "add" : "remove"]("mis");
+    return mis;
+  }
+
+  var formulier = document.getElementById("formulier");
+  if (formulier) {
+    formulier.addEventListener("submit", function(e){
+      e.preventDefault();
+      var naamVeld = document.getElementById("naam");
+      var telVeld = document.getElementById("telefoon");
+
+      var problemen = 0;
+      if (fout("veld-werk", !gekozen("werk"))) problemen++;
+      if (fout("veld-wanneer", !gekozen("wanneer"))) problemen++;
+      if (fout("veld-naam", !naamVeld.value.trim())) problemen++;
+      if (fout("veld-tel", telVeld.value.replace(/\D/g,"").length < 9)) problemen++;
+      if (problemen) {
+        var eerste = formulier.querySelector(".mis");
+        if (eerste) eerste.scrollIntoView({ block: "center" });
+        return;
+      }
+
+      var url = link(bouwBericht());
+      window.open(url, "_blank", "noopener");
+      document.getElementById("samenvatting").innerHTML = samenvatting();
+      document.getElementById("nogmaals").href = url;
+      document.getElementById("formulier-kant").style.display = "none";
+      document.getElementById("gelukt").classList.add("aan");
+    });
+
+    formulier.addEventListener("input", function(e){
+      var vak = e.target.closest(".mis");
+      if (vak) vak.classList.remove("mis");
+    });
+    formulier.addEventListener("change", function(e){
+      var vak = e.target.closest(".mis");
+      if (vak) vak.classList.remove("mis");
+    });
+
+    document.getElementById("opnieuw").addEventListener("click", function(){
+      document.getElementById("gelukt").classList.remove("aan");
+      document.getElementById("formulier-kant").style.display = "";
+      document.getElementById("naam").focus();
+    });
+  }
+
+  function beweging(){
+    var mag = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var doelen = document.querySelectorAll(".op");
+    if (!mag || !("IntersectionObserver" in window)) {
+      for (var i=0;i<doelen.length;i++) doelen[i].classList.add("in");
       return;
     }
+    var kijker = new IntersectionObserver(function(items){
+      items.forEach(function(item){
+        if (item.isIntersecting) { item.target.classList.add("in"); kijker.unobserve(item.target); }
+      });
+    }, { threshold:0.12, rootMargin:"0px 0px -8% 0px" });
+    for (var j=0;j<doelen.length;j++) kijker.observe(doelen[j]);
+  }
 
-    var regels = [
-      'Afspraakaanvraag via de website',
-      '',
-      'Behandeling: ' + werk.value,
-      'Voorkeur: ' + wanneer.value,
-      'Naam: ' + naam.value.trim(),
-      'Telefoon: ' + tel.value.trim()
-    ];
+  /* Vangnet: de pagina mag nooit onzichtbaar blijven staan. */
+  function alleszichtbaar(){
+    var doelen = document.querySelectorAll(".op");
+    for (var i=0;i<doelen.length;i++) doelen[i].classList.add("in");
+  }
 
-    document.getElementById('samenvatting').innerHTML =
-      '<b>' + werk.value + '</b>, ' + wanneer.value.toLowerCase() + '<br>' +
-      naam.value.trim() + '<br>' + tel.value.trim();
-
-    document.getElementById('formulier-kant').style.display = 'none';
-    document.getElementById('gelukt').classList.add('aan');
-    window.open('https://wa.me/' + NUMMER + '?text=' + encodeURIComponent(regels.join('\n')), '_blank', 'noopener');
-  });
-
-  document.getElementById('opnieuw').addEventListener('click', function () {
-    form.reset();
-    ['veld-naam', 'veld-tel'].forEach(function (id) { markeer(id, false); });
-    document.getElementById('fout-werk').style.display = 'none';
-    document.getElementById('fout-wanneer').style.display = 'none';
-    document.getElementById('gelukt').classList.remove('aan');
-    document.getElementById('formulier-kant').style.display = '';
-  });
+  try {
+    toonStatus();
+    beweging();
+    setTimeout(function(){
+      var eerste = document.querySelector(".op");
+      if (eerste && !eerste.classList.contains("in")) alleszichtbaar();
+    }, 1600);
+  } catch (e) {
+    alleszichtbaar();
+  }
 })();
 </script>
 </body>
