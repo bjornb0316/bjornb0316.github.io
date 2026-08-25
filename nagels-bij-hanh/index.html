@@ -67,17 +67,21 @@ h1,h2,h3,.cijfer{letter-spacing:-.03em}
 @media(max-width:520px){.kop-cta{display:none}}
 
 /* ---- hero: beeld draagt de pagina, want haar werk is het product ---- */
-.hero{padding-block:clamp(1.6rem,4vw,3rem) clamp(2.2rem,5vw,3.4rem)}
-.hero-grid{display:grid;grid-template-columns:1fr;gap:1.8rem;align-items:center}
-@media(min-width:940px){.hero-grid{grid-template-columns:1.02fr .98fr;gap:clamp(2.4rem,5vw,4rem)}}
+.hero{padding-block:clamp(1.3rem,3vw,2.1rem) clamp(2.2rem,5vw,3.4rem)}
+/* Grote hero-foto boven, daaronder de tekst en de knoppen. Een kolom,
+   ook op desktop. De hoogte van het beeld is begrensd zodat de knop
+   binnen het scherm blijft. */
+.hero-grid{display:grid;grid-template-columns:1fr;gap:clamp(1.1rem,2.4vw,1.6rem);justify-items:center;text-align:center}
+.hero-grid > div{width:100%}
+.hero-tekst{max-width:46rem}
 .hero h1{font-weight:800;line-height:1.04;font-size:clamp(2.1rem,5.2vw,3.2rem)}
 .hero h1 span{color:var(--roze)}
-.hero-sub{margin-top:1rem;color:var(--grijs);font-size:clamp(1.02rem,2.1vw,1.13rem);max-width:38ch}
-.nu{display:inline-flex;align-items:center;gap:.5rem;margin-bottom:1rem;background:var(--wit);
+.hero-sub{margin-top:.85rem;color:var(--grijs);font-size:clamp(1.02rem,2.1vw,1.13rem);max-width:52ch;margin-inline:auto}
+.nu{display:inline-flex;align-items:center;gap:.5rem;margin-bottom:.8rem;background:var(--wit);
   border:1px solid var(--blos-diep);border-radius:var(--rond);padding:.42rem .85rem;font-size:.86rem;font-weight:500}
 .stip{width:8px;height:8px;border-radius:50%;background:#2f7d4f;flex:0 0 auto}
 .stip.dicht{background:#ab9a9e}
-.knoppen{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.6rem}
+.knoppen{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem;justify-content:center}
 .knop{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;text-decoration:none;font-weight:600;
   border-radius:var(--rond);padding:.88rem 1.5rem;font-size:1rem;border:2px solid transparent;white-space:nowrap;
   transition:background .18s,color .18s,border-color .18s,transform .1s}
@@ -87,13 +91,12 @@ h1,h2,h3,.cijfer{letter-spacing:-.03em}
 .knop-rand:hover{background:var(--inkt);color:var(--room)}
 .knop:active{transform:translateY(1px)}
 /* de drie beloftes staan onder de knoppen, niet erboven, zodat de knop hoog blijft */
-.beloftes{list-style:none;margin-top:1.5rem;display:grid;gap:.5rem}
-.beloftes li{display:flex;gap:.55rem;align-items:flex-start;font-size:.96rem;color:var(--grijs)}
+.beloftes{list-style:none;margin-top:1.4rem;display:grid;gap:.45rem;justify-content:center}
+.beloftes li{display:flex;gap:.55rem;align-items:flex-start;font-size:.95rem;color:var(--grijs);text-align:left}
 .beloftes svg{flex:0 0 auto;margin-top:.34rem}
-.hero-beeld{border-radius:var(--rond);overflow:hidden;background:var(--blos-diep);max-width:520px;margin-inline:auto;
-  box-shadow:0 24px 60px rgba(28,21,23,.16)}
-.hero-beeld img{width:100%;aspect-ratio:3/4;object-fit:cover}
-@media(max-width:939px){.hero-beeld img{aspect-ratio:4/3;object-position:50% 46%}}
+.hero-beeld{border-radius:var(--rond);overflow:hidden;background:var(--blos-diep);width:100%;max-width:1000px;
+  margin-inline:auto;box-shadow:0 24px 60px rgba(28,21,23,.16)}
+.hero-beeld img{width:100%;aspect-ratio:5/3;max-height:clamp(210px,31vh,300px);object-fit:cover;object-position:50% 42%}
 
 /* ---- bewijsband ---- */
 .bewijs{background:var(--inkt)}
@@ -278,6 +281,11 @@ h1,h2,h3,.cijfer{letter-spacing:-.03em}
   <section class="hero">
     <div class="wrap hero-grid">
       <div class="op">
+        <div class="hero-beeld">
+          <img src="img/hero-french.jpg" width="1050" height="1400" alt="Vierkante French manicure in acryl, gemaakt bij Nagels bij Hanh" fetchpriority="high">
+        </div>
+      </div>
+      <div class="op hero-tekst">
         <p class="nu"><span class="stip" id="stip"></span><span id="nu-tekst">Openingstijden laden</span></p>
         <h1>Elke dag open, <span>ook 's avonds</span></h1>
         <p class="hero-sub">Nagelstudio aan het Hofveld in Apeldoorn. Zeven dagen per week van negen tot acht, dus er is altijd een moment dat u schikt.</p>
@@ -290,11 +298,6 @@ h1,h2,h3,.cijfer{letter-spacing:-.03em}
           <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#c9245e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Ook als u nagelbijt of dunne nagels heeft</li>
           <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#c9245e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Klanten schrijven dat u snel antwoord krijgt via WhatsApp</li>
         </ul>
-      </div>
-      <div class="op">
-        <div class="hero-beeld">
-          <img src="img/hero-french.jpg" width="1050" height="1400" alt="Vierkante French manicure in acryl, gemaakt bij Nagels bij Hanh" fetchpriority="high">
-        </div>
       </div>
     </div>
   </section>
