@@ -84,8 +84,23 @@ h3.display{font-size:clamp(1.5rem,3vw,2.2rem)}
 .hero{position:relative;min-height:clamp(560px,88vh,900px);display:flex;align-items:flex-end;overflow:hidden}
 @media(max-width:640px){.hero{min-height:74vh}}
 .hero-foto{position:absolute;inset:0;background:#000}
-.hero-foto img,
-.hero-foto .hero-video{width:100%;height:100%;object-fit:cover;display:block}
+.hero-foto img{width:100%;height:100%;object-fit:cover;display:block}
+/* De opname is staand en de hero is liggend. Op de telefoon past dat bijna
+   precies, dus daar vult de video het hele vlak. */
+.hero-foto .hero-video{width:100%;height:100%;object-fit:cover;display:block;object-position:50% 46%;position:relative;z-index:1}
+
+/* Op een breed scherm zou vullen tweederde van de opname afsnijden. Daarom
+   staat het beeld daar compleet, iets naar rechts, met een zachte wassing
+   van hetzelfde beeld eromheen. Zo zie je de hele kamer. */
+@media(min-width:1000px){
+  .hero-foto{background-image:var(--wassing);background-size:cover;background-position:center}
+  .hero-foto::before{content:"";position:absolute;inset:-6%;background-image:var(--wassing);
+    background-size:cover;background-position:center;filter:blur(46px) brightness(.42) saturate(.8);transform:scale(1.08)}
+  .hero-foto .hero-video{object-fit:contain;object-position:96% 50%}
+  /* de tekst blijft links van de beeldstrook */
+  .hero .hero-in .wrap > *{max-width:660px}
+  .hero h1.display{font-size:clamp(2.8rem,5.2vw,4.6rem)}
+}
 /* Wie beweging heeft uitgezet krijgt het stilstaande posterbeeld.
    De video wordt dan in het script gepauzeerd. */
 @media (prefers-reduced-motion:reduce){.hero-foto .hero-video{}}
