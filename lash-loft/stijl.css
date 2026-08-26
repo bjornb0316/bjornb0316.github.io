@@ -1,0 +1,266 @@
+/* =================================================================
+   Lash Loft II The Headspa Loft, Apeldoorn.
+   Gedeelde stijl over vijf pagina's.
+
+   Het warme taupe is hun eigen merkkleur uit hun boeksysteem
+   (#a9936d). De crème en het zwart komen uit hun eigen salon:
+   boucle behandelbanken, zwart metaal, houten lamellen, beton.
+
+   Gebouwd op DE-LAT-BEAUTY.md: grote lichte display, ronding 0,
+   hero vult het scherm, een knop, veel lucht, weinig hoge secties.
+   ================================================================= */
+
+:root{
+  --bot:#f7f4ef;
+  --creme:#eee7db;
+  --taupe:#a9936d;
+  --taupe-diep:#73603d;
+  --inkt:#1a1815;
+  --inkt-op:#242019;
+  --grijs:#635b4e;
+  --wit:#fff;
+  --rond:0px;
+  --marge:clamp(1.15rem,4.5vw,4.5rem);
+  --lucht:clamp(4.5rem,10vw,8rem);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  font-family:Karla,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--bot);color:var(--inkt);font-size:17px;line-height:1.72;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:var(--marge)}
+.smal{max-width:880px}
+
+.display{font-family:Marcellus,Georgia,serif;font-weight:400;letter-spacing:-.005em;line-height:1.06}
+h1.display{font-size:clamp(2.6rem,7.5vw,6rem)}
+h2.display{font-size:clamp(2.1rem,5.5vw,4.2rem)}
+h3.display{font-size:clamp(1.45rem,2.8vw,2.1rem)}
+.label{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--taupe-diep);font-weight:700}
+
+/* ---- voorstelbalk ---- */
+.voorstel{background:var(--inkt);color:#a1978a;font-size:.78rem;padding:.55rem 0;line-height:1.45}
+.voorstel .wrap{display:flex;flex-wrap:wrap;gap:.3rem 1rem;justify-content:center;text-align:center}
+.voorstel b{color:var(--creme);font-weight:700}
+.voorstel a{font-weight:700;text-underline-offset:2px}
+
+/* ---- kop ---- */
+.kop{position:sticky;top:0;z-index:60;background:rgba(247,244,239,.93);backdrop-filter:blur(14px);
+  border-bottom:1px solid #e2d9c9}
+.kop-in{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;height:76px}
+.merk{text-decoration:none;line-height:1.05}
+.merk .naam{display:block;font-family:Marcellus,Georgia,serif;font-size:1.3rem;letter-spacing:.2em;text-transform:uppercase}
+.merk small{display:block;margin-top:.12rem;font-size:.6rem;letter-spacing:.26em;color:var(--grijs);text-transform:uppercase}
+.nav{display:flex;align-items:center;gap:1.7rem}
+.nav a{text-decoration:none;font-size:.88rem;letter-spacing:.05em;color:var(--grijs);transition:color .18s;padding-block:.4rem}
+.nav a:hover,.nav a[aria-current=page]{color:var(--inkt)}
+.nav a[aria-current=page]{border-bottom:1px solid var(--taupe)}
+@media(max-width:940px){.nav{display:none}}
+.kop-cta{background:var(--inkt);color:var(--bot);text-decoration:none;font-weight:700;font-size:.87rem;
+  letter-spacing:.03em;padding:.7rem 1.35rem;border-radius:var(--rond);white-space:nowrap;
+  transition:background .18s,transform .1s}
+.kop-cta:hover{background:var(--taupe-diep)}
+.kop-cta:active{transform:translateY(1px)}
+@media(max-width:520px){.kop-cta{display:none}}
+
+/* ---- knoppen ---- */
+.knop{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;text-decoration:none;
+  font-weight:700;font-size:.96rem;letter-spacing:.03em;border-radius:var(--rond);
+  padding:1.05rem 2.1rem;border:1px solid transparent;white-space:nowrap;
+  transition:background .2s,color .2s,border-color .2s,transform .1s}
+.knop-vol{background:var(--inkt);color:var(--bot);border-color:var(--inkt)}
+.knop-vol:hover{background:var(--taupe-diep);border-color:var(--taupe-diep)}
+.knop-licht{border-color:rgba(247,244,239,.5);color:var(--bot)}
+.knop-licht:hover{background:var(--bot);color:var(--inkt);border-color:var(--bot)}
+.knop-rand{border-color:var(--inkt);color:var(--inkt)}
+.knop-rand:hover{background:var(--inkt);color:var(--bot)}
+.knop:active{transform:translateY(1px)}
+
+/* ---- hero ----
+   Gedeeld beeld: links een donker paneel met de tekst, rechts de macro.
+   Op de telefoon eerst het beeld, dan de tekst. ---- */
+.hero{background:var(--inkt);color:var(--bot)}
+.hero-grid{display:grid;grid-template-columns:1fr;min-height:auto}
+@media(min-width:1000px){
+  .hero-grid{grid-template-columns:1.02fr .98fr;min-height:clamp(560px,calc(100vh - 108px),900px)}
+}
+.hero-tekst{display:flex;flex-direction:column;justify-content:center;
+  padding:clamp(2.6rem,6vw,5rem) var(--marge) clamp(3.2rem,6vw,5rem)}
+@media(min-width:1000px){
+  .hero-tekst{padding-inline:clamp(3rem,6vw,6.5rem) clamp(2.4rem,4vw,4rem)}
+  .hero-tekst > h1{max-width:13ch}
+  .hero-tekst > .hero-onder{max-width:40ch}
+}
+.hero-beeld{position:relative;overflow:hidden;background:#100e0b;order:-1}
+@media(min-width:1000px){.hero-beeld{order:0}}
+.hero-beeld img{width:100%;height:100%;object-fit:cover;object-position:50% 44%}
+@media(max-width:999px){
+  .hero-beeld img{aspect-ratio:5/4;max-height:min(34vh,282px)}
+}
+.hero h1.display{color:var(--bot);font-size:clamp(2.25rem,4.4vw,4.2rem)}
+.hero-onder{margin-top:1.4rem;color:#ddd3c4;font-size:clamp(1.04rem,2.1vw,1.22rem);line-height:1.62}
+.hero-knop{margin-top:2.2rem}
+.eer{display:flex;flex-wrap:wrap;gap:.45rem;margin-bottom:1.6rem}
+.eer span{border:1px solid rgba(247,244,239,.3);color:#e6dccd;font-size:.68rem;letter-spacing:.1em;
+  text-transform:uppercase;padding:.36rem .7rem;border-radius:var(--rond);white-space:nowrap}
+.eer span b{color:var(--bot);font-weight:700}
+.nu{display:flex;align-items:center;gap:.55rem;margin-bottom:1.5rem;white-space:nowrap;
+  font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#b4aa9b}
+.stip{width:7px;height:7px;border-radius:50%;background:#8ccfa4;flex:0 0 auto}
+.stip.dicht{background:#8b8274}
+
+
+/* Op een telefoon telt elke pixel boven de vouw: de balk, de erelijst
+   en de bovenmarge worden krapper zodat de kop nog heel op het scherm past. */
+@media(max-width:640px){
+  .voorstel{font-size:.72rem;padding:.45rem 0}
+  .hero-tekst{padding-top:2.1rem}
+  .nu{margin-bottom:1rem;font-size:.72rem}
+  /* Op smalle schermen passen er geen drie kadertjes naast elkaar.
+     Dan wordt het een lijstje achter een streep: even hard, minder hoog. */
+  .eer{display:block;margin-bottom:1.15rem;padding-left:.85rem;
+    border-left:2px solid rgba(217,191,146,.55)}
+  .eer span{display:block;border:0;padding:0;font-size:.67rem;line-height:1.85;letter-spacing:.09em}
+  .hero-onder{margin-top:1.1rem}
+  .hero-knop{margin-top:1.7rem}
+}
+
+/* ---- kleine hero voor de onderpagina's ---- */
+.hero-klein{position:relative;min-height:clamp(340px,52vh,540px);display:flex;align-items:flex-end;
+  overflow:hidden;background:var(--inkt);color:var(--bot)}
+.hero-klein .hero-foto{position:absolute;inset:0}
+.hero-klein .hero-foto img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.hero-klein .hero-scrim{position:absolute;inset:0;background:
+  linear-gradient(to top, rgba(16,14,11,.95) 0%, rgba(16,14,11,.82) 46%, rgba(16,14,11,.45) 100%)}
+.hero-klein .hero-in{position:relative;z-index:2;width:100%;padding-block:clamp(2.4rem,5vw,4rem)}
+.hero-klein .label{color:#d8bf92}
+.hero-klein h1.display{font-size:clamp(2.1rem,5.6vw,4.2rem);max-width:16ch}
+.hero-klein .hero-onder{max-width:52ch}
+
+/* ---- secties ---- */
+.sectie{padding-block:var(--lucht)}
+.sectie-creme{background:var(--creme)}
+.sectie-donker{background:var(--inkt);color:var(--bot)}
+.sectie-donker .label{color:var(--taupe)}
+.sectie-donker .intro{color:#b4aa9b}
+.intro{margin-top:1.5rem;color:var(--grijs);font-size:clamp(1.02rem,2vw,1.17rem);max-width:54ch;line-height:1.75}
+
+/* ---- twee werelden onder een dak ---- */
+.werelden{display:grid;grid-template-columns:1fr;gap:1.4rem;margin-top:3.2rem}
+@media(min-width:900px){.werelden{grid-template-columns:1fr 1fr;gap:1.8rem}}
+.wereld{display:flex;flex-direction:column;overflow:hidden;border-radius:var(--rond)}
+.wereld img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.wereld-tekst{padding:2rem 1.9rem 2.2rem;flex:1;display:flex;flex-direction:column}
+.wereld h3{margin-bottom:.2rem}
+.wereld > .wereld-tekst > p{margin-top:.7rem;font-size:1rem;line-height:1.7}
+.wereld ul{list-style:none;margin-top:1.4rem;display:grid;gap:.6rem;flex:1}
+.wereld li{font-size:.97rem;padding-left:1.2rem;position:relative}
+.wereld li::before{content:"";position:absolute;left:0;top:.68em;width:5px;height:5px;border-radius:50%}
+.wereld .knop{margin-top:1.8rem;align-self:flex-start}
+.wereld-spa{background:var(--inkt);color:var(--bot)}
+.wereld-spa p{color:#b4aa9b}
+.wereld-spa li{color:#cdc3b4}
+.wereld-spa li::before{background:var(--taupe)}
+.wereld-lash{background:var(--wit)}
+.wereld-lash p{color:var(--grijs)}
+.wereld-lash li::before{background:var(--taupe-diep)}
+
+/* ---- de belofte, regels in plaats van vakjes ---- */
+.belofte{display:grid;gap:0;margin-top:3.2rem;max-width:1000px}
+.belofte div{padding:2.1rem 0;border-top:1px solid #e2d9c9;display:grid;gap:.5rem}
+@media(min-width:820px){.belofte div{grid-template-columns:.85fr 1.15fr;gap:2.6rem;align-items:baseline}}
+.belofte div:last-child{border-bottom:1px solid #e2d9c9}
+.belofte dt{font-family:Marcellus,Georgia,serif;font-size:clamp(1.6rem,3.4vw,2.5rem);line-height:1.12}
+.belofte dd{color:var(--grijs);font-size:1.02rem;line-height:1.7;max-width:48ch}
+.sectie-donker .belofte div{border-color:#332d24}
+.sectie-donker .belofte dd{color:#b4aa9b}
+
+/* ---- beeldraster ---- */
+.raster{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:3rem}
+@media(min-width:760px){.raster{grid-template-columns:repeat(3,1fr);gap:1.3rem}}
+.raster figure{margin:0;overflow:hidden;background:#e0d7c8;border-radius:var(--rond)}
+.raster img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .7s cubic-bezier(.16,1,.3,1)}
+@media(hover:hover){.raster figure:hover img{transform:scale(1.05)}}
+@media (prefers-reduced-motion:reduce){.raster img{transition:none}.raster figure:hover img{transform:none}}
+
+/* ---- prijzen als regels ---- */
+.prijslijst{margin-top:3rem;max-width:880px}
+.prijsgroep + .prijsgroep{margin-top:3.6rem}
+.prijsgroep h3{margin-bottom:.5rem}
+.prijsgroep > p{color:var(--grijs);margin-bottom:1.5rem;max-width:52ch;font-size:.98rem}
+.prijsregel{display:grid;grid-template-columns:1fr auto;gap:1rem 2rem;align-items:baseline;
+  padding:1.1rem 0;border-top:1px solid #e2d9c9}
+.prijsregel:last-child{border-bottom:1px solid #e2d9c9}
+.sectie-donker .prijsregel{border-color:#332d24}
+.prijsregel .dienst{font-size:1.04rem}
+.prijsregel .duur{display:block;font-size:.85rem;color:var(--grijs);margin-top:.15rem}
+.sectie-donker .prijsregel .duur{color:#a1978a}
+.prijsregel .bedrag{font-family:Marcellus,Georgia,serif;font-size:1.45rem;white-space:nowrap}
+.prijsnoot{margin-top:1.7rem;font-size:.93rem;color:var(--grijs);max-width:58ch}
+.sectie-donker .prijsnoot{color:#b4aa9b}
+
+/* ---- stemmen ---- */
+.stem-lijst{margin-top:3rem;display:grid;gap:0}
+.stem-lijst blockquote{margin:0;padding:2.4rem 0;border-top:1px solid #e2d9c9}
+.stem-lijst blockquote:last-child{border-bottom:1px solid #e2d9c9}
+.stem-lijst p{font-family:Marcellus,Georgia,serif;font-size:clamp(1.35rem,2.9vw,2rem);line-height:1.38;max-width:26ch}
+.stem-lijst cite{display:block;margin-top:1rem;font-style:normal;font-size:.76rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--taupe-diep)}
+
+/* ---- afspraak ---- */
+.boek-grid{display:grid;grid-template-columns:1fr;gap:2.4rem;align-items:start;margin-top:3rem}
+@media(min-width:1000px){.boek-grid{grid-template-columns:.82fr 1.18fr;gap:3.4rem}}
+.widget-doos{border:1px solid #ded4c3;border-radius:var(--rond);overflow:hidden;background:var(--wit)}
+.widget-doos iframe{width:100%;height:740px;border:0;display:block;background:var(--wit)}
+@media(max-width:640px){.widget-doos iframe{height:640px}}
+.widget-terug{margin-top:.8rem;font-size:.88rem;color:var(--grijs)}
+.widget-terug a{font-weight:700;text-underline-offset:3px}
+.uren{width:100%;border-collapse:collapse;font-size:1rem;margin-top:1.8rem}
+.uren th,.uren td{text-align:left;padding:.7rem 0;border-bottom:1px solid #e2d9c9}
+.uren th{font-weight:400;color:var(--grijs)}
+.uren td{text-align:right;font-variant-numeric:tabular-nums}
+.uren tr.dicht th,.uren tr.dicht td{color:#726a5d}
+.uren tr.vandaag th,.uren tr.vandaag td{color:var(--taupe-diep);font-weight:700}
+.adres{margin-top:2rem;line-height:1.9}
+.adres b{display:block;font-family:Marcellus,Georgia,serif;font-size:1.3rem;font-weight:400}
+.adres a{font-weight:700;text-underline-offset:3px}
+
+/* ---- afsluiter ---- */
+.slot{background:var(--inkt);color:var(--bot)}
+.slot-in{padding-block:clamp(5rem,12vw,9rem);text-align:center}
+.slot .intro{margin-inline:auto;color:#b4aa9b}
+.slot-knop{margin-top:2.4rem}
+
+/* ---- voet ---- */
+.voet{background:var(--inkt);color:#a1978a;padding-block:3rem;font-size:.9rem;border-top:1px solid #332d24}
+.voet-in{display:grid;grid-template-columns:1fr;gap:2rem}
+@media(min-width:760px){.voet-in{grid-template-columns:1.3fr 1fr 1fr}}
+.voet b{color:var(--bot);font-weight:400;font-family:Marcellus,Georgia,serif;font-size:1.1rem}
+.voet a{color:#a1978a;text-decoration:none;display:block;padding-block:.22rem}
+.voet a:hover{color:var(--taupe)}
+.voet .voet-kop{color:var(--bot);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;margin-bottom:.7rem}
+
+/* ---- vaste balk op mobiel ---- */
+.balk{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;gap:.5rem;
+  padding:.6rem var(--marge) calc(.6rem + env(safe-area-inset-bottom));
+  background:rgba(247,244,239,.97);backdrop-filter:blur(12px);border-top:1px solid #e2d9c9}
+.balk a{flex:1;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;
+  font-weight:700;font-size:.93rem;line-height:1.25;white-space:nowrap;padding:.85rem .9rem;border-radius:var(--rond)}
+.balk .boek{background:var(--inkt);color:var(--bot)}
+.balk .app{background:#25d366;color:#04250f}
+@media(max-width:760px){
+  .balk{display:flex}
+  body{padding-bottom:calc(4.9rem + env(safe-area-inset-bottom))}
+}
+
+/* ---- beweging ---- */
+.js .op{opacity:0;transform:translateY(20px)}
+.js .op.in{opacity:1;transform:none;transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+@media (prefers-reduced-motion:reduce){
+  .js .op{opacity:1;transform:none}
+  .js .op.in{transition:none}
+}
