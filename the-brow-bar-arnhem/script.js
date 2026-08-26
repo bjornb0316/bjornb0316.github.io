@@ -45,6 +45,20 @@
     if (rij) rij.classList.add("vandaag");
   }
 
+  /* De hero-video staat stil voor wie beweging heeft uitgezet.
+     Het posterbeeld blijft dan gewoon staan. */
+  function video(){
+    var v = document.getElementById("studio");
+    if (!v) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      v.removeAttribute("autoplay");
+      v.pause();
+      return;
+    }
+    var poging = v.play();
+    if (poging && poging.catch) poging.catch(function(){ /* browser weigert, poster blijft staan */ });
+  }
+
   function beweging(){
     var mag = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var doelen = document.querySelectorAll(".op");
@@ -67,6 +81,7 @@
 
   try {
     toonStatus();
+    video();
     beweging();
     setTimeout(function(){
       var eerste = document.querySelector(".op");

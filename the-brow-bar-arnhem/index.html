@@ -40,7 +40,13 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-foto">
-      <img src="img/hero-brows.jpg" width="1125" height="1500" alt="Gelamineerde wenkbrauwen van dichtbij, gemaakt bij The Brow Bar Arnhem" fetchpriority="high">
+      <!-- Beelden uit hun eigen studio. De video speelt vanzelf, zonder geluid,
+           en valt terug op het posterbeeld als hij niet mag of kan spelen. -->
+      <video id="studio" class="hero-video" poster="img/studio-poster.jpg"
+             autoplay loop muted playsinline preload="metadata"
+             aria-label="Beelden van de behandelkamer aan de Nieuwstad">
+        <source src="img/studio.mp4" type="video/mp4">
+      </video>
     </div>
     <div class="hero-scrim"></div>
     <div class="hero-in">
@@ -92,7 +98,7 @@
         <figure class="op"><img src="img/brows-blond.jpg" width="1125" height="1500" alt="Lichtere wenkbrauwen met een zachte boog bij een blonde klant" loading="lazy"></figure>
         <figure class="op"><img src="img/werk-06.jpg" width="1125" height="1500" alt="Wenkbrauwen na een hybrid behandeling" loading="lazy"></figure>
         <figure class="op"><img src="img/werk-10.jpg" width="1125" height="1500" alt="Wenkbrauwen van dichtbij na het lamineren" loading="lazy"></figure>
-        <figure class="op"><img src="img/werk-02.jpg" width="1125" height="1500" alt="Resultaat van een brow lamination" loading="lazy"></figure>
+        <figure class="op"><img src="img/hero-brows.jpg" width="1125" height="1500" alt="Gelamineerde wenkbrauwen van dichtbij" loading="lazy"></figure>
         <figure class="op"><img src="img/werk-12.jpg" width="1125" height="1500" alt="Wenkbrauwen en wimpers na een combibehandeling" loading="lazy"></figure>
       </div>
     </div>

@@ -84,7 +84,11 @@ h3.display{font-size:clamp(1.5rem,3vw,2.2rem)}
 .hero{position:relative;min-height:clamp(560px,88vh,900px);display:flex;align-items:flex-end;overflow:hidden}
 @media(max-width:640px){.hero{min-height:74vh}}
 .hero-foto{position:absolute;inset:0;background:#000}
-.hero-foto img{width:100%;height:100%;object-fit:cover}
+.hero-foto img,
+.hero-foto .hero-video{width:100%;height:100%;object-fit:cover;display:block}
+/* Wie beweging heeft uitgezet krijgt het stilstaande posterbeeld.
+   De video wordt dan in het script gepauzeerd. */
+@media (prefers-reduced-motion:reduce){.hero-foto .hero-video{}}
 .hero-scrim{position:absolute;inset:0;background:
   linear-gradient(to top, rgba(8,6,9,.94) 0%, rgba(8,6,9,.66) 32%, rgba(8,6,9,.10) 68%, rgba(8,6,9,.34) 100%)}
 .hero-in{position:relative;z-index:2;width:100%;padding-block:clamp(2.4rem,6vw,4.5rem)}
