@@ -82,7 +82,11 @@ h3.display{font-size:clamp(1.5rem,3vw,2.2rem)}
 
 /* ---- hero, gedeeld ---- */
 .hero{position:relative;min-height:clamp(560px,88vh,900px);display:flex;align-items:flex-end;overflow:hidden}
-@media(max-width:640px){.hero{min-height:74vh}}
+@media(max-width:640px){
+  .hero{min-height:74vh}
+  /* op een smal scherm past de kop anders niet op twee regels */
+  .hero h1.display{font-size:clamp(2rem,9.4vw,2.6rem)}
+}
 .hero-foto{position:absolute;inset:0;background:#000}
 .hero-foto img{width:100%;height:100%;object-fit:cover;display:block}
 /* De opname is staand en de hero is liggend. Op de telefoon past dat bijna
@@ -99,9 +103,13 @@ h3.display{font-size:clamp(1.5rem,3vw,2.2rem)}
   .hero-foto .hero-video{object-fit:contain;object-position:98% 50%}
   /* De tekst blijft links van de beeldstrook. Het beeld begint op
      ongeveer 46 procent van de breedte, dus de tekst krijgt de helft. */
-  .hero .hero-in .wrap > *{max-width:min(470px,38vw)}
-  .hero h1.display{font-size:clamp(2.4rem,3.9vw,3.6rem)}
-  .hero .hero-onder{font-size:1.08rem}
+  .hero .hero-in .wrap > *{max-width:min(440px,35vw)}
+  .hero h1.display{font-size:clamp(2.3rem,3.82vw,3.05rem)}
+  .hero .hero-onder{font-size:1.1rem}
+  /* De tekst stond onderaan, waardoor de lege ruimte als een gat bovenin
+     viel. Optisch gecentreerd valt de rust aan beide kanten. */
+  .hero{align-items:center}
+  .hero .hero-in{padding-block:0}
 }
 /* Wie beweging heeft uitgezet krijgt het stilstaande posterbeeld.
    De video wordt dan in het script gepauzeerd. */
