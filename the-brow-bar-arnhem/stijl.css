@@ -96,10 +96,12 @@ h3.display{font-size:clamp(1.5rem,3vw,2.2rem)}
   .hero-foto{background-image:var(--wassing);background-size:cover;background-position:center}
   .hero-foto::before{content:"";position:absolute;inset:-6%;background-image:var(--wassing);
     background-size:cover;background-position:center;filter:blur(46px) brightness(.42) saturate(.8);transform:scale(1.08)}
-  .hero-foto .hero-video{object-fit:contain;object-position:96% 50%}
-  /* de tekst blijft links van de beeldstrook */
-  .hero .hero-in .wrap > *{max-width:660px}
-  .hero h1.display{font-size:clamp(2.8rem,5.2vw,4.6rem)}
+  .hero-foto .hero-video{object-fit:contain;object-position:98% 50%}
+  /* De tekst blijft links van de beeldstrook. Het beeld begint op
+     ongeveer 46 procent van de breedte, dus de tekst krijgt de helft. */
+  .hero .hero-in .wrap > *{max-width:min(470px,38vw)}
+  .hero h1.display{font-size:clamp(2.4rem,3.9vw,3.6rem)}
+  .hero .hero-onder{font-size:1.08rem}
 }
 /* Wie beweging heeft uitgezet krijgt het stilstaande posterbeeld.
    De video wordt dan in het script gepauzeerd. */
