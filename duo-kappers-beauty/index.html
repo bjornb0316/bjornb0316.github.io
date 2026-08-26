@@ -69,9 +69,17 @@ h1,h2,h3,.cijfer{font-family:"Bricolage Grotesque",Figtree,sans-serif;letter-spa
 @media(max-width:520px){.kop-cta{display:none}}
 
 /* ---- hero ---- */
-.hero{padding-block:clamp(2rem,5vw,3.4rem) clamp(2.6rem,6vw,4rem)}
-.hero-grid{display:grid;grid-template-columns:1fr;gap:2.2rem;align-items:center}
+.hero{padding-block:clamp(1.4rem,3.5vw,3.4rem) clamp(2.6rem,6vw,4rem)}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:1.6rem;align-items:center}
 @media(min-width:950px){.hero-grid{grid-template-columns:1fr 1.06fr;gap:clamp(2.5rem,5vw,4rem)}}
+/* Op de telefoon staat de foto boven de tekst. In de opmaak staat de
+   tekst eerst, dus daar wordt de volgorde omgedraaid. Op desktop blijft
+   het naast elkaar, tekst links. */
+@media(max-width:949px){
+  .hero-grid > div:first-child{order:2}
+  .hero-grid > div:last-child{order:1}
+  .hero-beeld img{aspect-ratio:5/3;max-height:clamp(200px,30vh,290px)}
+}
 .hero h1{font-weight:800;line-height:1.04;font-size:clamp(2.15rem,5vw,3.1rem)}
 .hero h1 i{font-style:normal;color:var(--wijn)}
 .hero-sub{margin-top:1.05rem;color:var(--grijs);font-size:clamp(1.02rem,2.1vw,1.14rem);max-width:40ch}
