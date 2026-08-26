@@ -1,0 +1,209 @@
+/* =================================================================
+   The Brow Bar Arnhem, gedeelde stijl over vijf pagina's.
+
+   Het magenta is hun eigen merkkleur, rechtstreeks uit hun
+   boeksysteem (#feb2ff). Hun werk staat op Instagram consequent op
+   een zwarte achtergrond, dus de pagina is donker; zo blijft het
+   beeld het felst.
+
+   Gebouwd op de lat uit DE-LAT-BEAUTY.md:
+   grote lichte display-serif, ronding 0, hero vult het scherm,
+   een knop boven de vouw, veel lucht, weinig maar hoge secties.
+   ================================================================= */
+
+:root{
+  --inkt:#0e0c10;
+  --inkt-op:#171319;
+  --inkt-rand:#272029;
+  --room:#f6f2f4;
+  --zacht:#a89ba4;
+  --magenta:#feb2ff;
+  --magenta-diep:#d47ad6;
+  --rond:0px;
+  --marge:clamp(1.15rem,4.5vw,4.5rem);
+  --lucht:clamp(4.5rem,10vw,8rem);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--inkt);color:var(--room);font-size:17px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:var(--marge)}
+.smal{max-width:900px}
+
+/* display: hoge dunne didone, groot en licht */
+.display{font-family:"Bodoni Moda",Georgia,serif;font-weight:400;letter-spacing:-.01em;line-height:1.02}
+h1.display{font-size:clamp(2.8rem,9vw,7rem)}
+h2.display{font-size:clamp(2.2rem,6vw,4.6rem)}
+h3.display{font-size:clamp(1.5rem,3vw,2.2rem)}
+
+/* kleine hoofdletterlabels, spaarzaam gebruikt */
+.label{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--magenta);font-weight:500}
+
+/* ---- voorstelbalk ---- */
+.voorstel{background:#000;color:#8f838b;font-size:.78rem;padding:.55rem 0;line-height:1.45}
+.voorstel .wrap{display:flex;flex-wrap:wrap;gap:.3rem 1rem;justify-content:center;text-align:center}
+.voorstel b{color:var(--magenta);font-weight:600}
+.voorstel a{font-weight:600;text-underline-offset:2px}
+
+/* ---- kop ---- */
+.kop{position:sticky;top:0;z-index:60;background:rgba(14,12,16,.88);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--inkt-rand)}
+.kop-in{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;height:74px}
+.merk{text-decoration:none;font-family:"Bodoni Moda",Georgia,serif;font-weight:400;
+  font-size:1.24rem;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
+.nav{display:flex;align-items:center;gap:1.6rem}
+.nav a{text-decoration:none;font-size:.88rem;letter-spacing:.06em;color:var(--zacht);
+  transition:color .18s;padding-block:.4rem}
+.nav a:hover,.nav a[aria-current=page]{color:var(--room)}
+.nav a[aria-current=page]{border-bottom:1px solid var(--magenta)}
+@media(max-width:900px){.nav{display:none}}
+.kop-cta{background:var(--magenta);color:#1a0f1a;text-decoration:none;font-weight:600;font-size:.88rem;
+  padding:.66rem 1.3rem;border-radius:var(--rond);white-space:nowrap;transition:background .18s,transform .1s}
+.kop-cta:hover{background:#fff}
+.kop-cta:active{transform:translateY(1px)}
+@media(max-width:520px){.kop-cta{display:none}}
+
+/* ---- knoppen ---- */
+.knop{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;text-decoration:none;
+  font-weight:600;font-size:.98rem;letter-spacing:.02em;border-radius:var(--rond);
+  padding:1rem 2rem;border:1px solid transparent;white-space:nowrap;
+  transition:background .2s,color .2s,border-color .2s,transform .1s}
+.knop-vol{background:var(--magenta);color:#1a0f1a;border-color:var(--magenta)}
+.knop-vol:hover{background:#fff;border-color:#fff}
+.knop-rand{border-color:rgba(246,242,244,.42);color:var(--room)}
+.knop-rand:hover{border-color:var(--room);background:var(--room);color:var(--inkt)}
+.knop:active{transform:translateY(1px)}
+
+/* ---- hero, gedeeld ---- */
+.hero{position:relative;min-height:clamp(560px,88vh,900px);display:flex;align-items:flex-end;overflow:hidden}
+@media(max-width:640px){.hero{min-height:74vh}}
+.hero-foto{position:absolute;inset:0;background:#000}
+.hero-foto img{width:100%;height:100%;object-fit:cover}
+.hero-scrim{position:absolute;inset:0;background:
+  linear-gradient(to top, rgba(8,6,9,.94) 0%, rgba(8,6,9,.66) 32%, rgba(8,6,9,.10) 68%, rgba(8,6,9,.34) 100%)}
+.hero-in{position:relative;z-index:2;width:100%;padding-block:clamp(2.4rem,6vw,4.5rem)}
+.hero-onder{margin-top:1.2rem;color:#d9cdd5;font-size:clamp(1.05rem,2.2vw,1.28rem);max-width:36ch;line-height:1.55}
+.hero-knop{margin-top:2rem}
+.nu{display:inline-flex;align-items:center;gap:.55rem;margin-bottom:1.3rem;
+  border:1px solid rgba(246,242,244,.3);border-radius:var(--rond);padding:.42rem .9rem;
+  font-size:.82rem;font-weight:500;letter-spacing:.04em;background:rgba(8,6,9,.42)}
+.stip{width:7px;height:7px;border-radius:50%;background:#79d69b;flex:0 0 auto}
+.stip.dicht{background:#8f838b}
+
+/* ---- kleine hero voor de onderpagina's ---- */
+.hero-klein{position:relative;min-height:clamp(300px,44vh,460px);display:flex;align-items:flex-end;overflow:hidden}
+.hero-klein .hero-in{padding-block:clamp(2rem,4vw,3rem)}
+
+/* ---- secties ---- */
+.sectie{padding-block:var(--lucht)}
+.sectie-licht{background:var(--room);color:var(--inkt)}
+/* Op de lichte secties is het merkmagenta te licht voor tekst.
+   Daar staat een diepe variant die AA haalt. */
+.sectie-licht .label,
+.sectie-licht .stem-lijst cite,
+.sectie-licht .widget-terug a,
+.sectie-licht .adres a{color:#7a2a7c}
+.sectie-op{background:var(--inkt-op)}
+.intro{margin-top:1.4rem;color:var(--zacht);font-size:clamp(1.02rem,2vw,1.16rem);max-width:52ch;line-height:1.7}
+.sectie-licht .intro{color:#5c5158}
+
+/* ---- de belofte: drie regels, geen vakjes ---- */
+.belofte{display:grid;grid-template-columns:1fr;gap:0;margin-top:3rem}
+.belofte div{padding:2rem 0;border-top:1px solid var(--inkt-rand);display:grid;gap:.5rem}
+@media(min-width:820px){.belofte div{grid-template-columns:.8fr 1.2fr;gap:2.5rem;align-items:baseline}}
+.belofte div:last-child{border-bottom:1px solid var(--inkt-rand)}
+.belofte dt{font-family:"Bodoni Moda",Georgia,serif;font-weight:400;font-size:clamp(1.6rem,3.4vw,2.4rem);line-height:1.1}
+.belofte dd{color:var(--zacht);font-size:1.02rem;line-height:1.65;max-width:46ch}
+
+/* ---- werk: groot beeld, weinig tegels ---- */
+.werk-raster{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:3rem}
+@media(min-width:760px){.werk-raster{grid-template-columns:repeat(2,1fr);gap:1.4rem}}
+@media(min-width:1080px){.werk-raster{grid-template-columns:repeat(3,1fr)}}
+.werk-raster figure{margin:0;overflow:hidden;background:#1a151c;border-radius:var(--rond)}
+.werk-raster img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .7s cubic-bezier(.16,1,.3,1)}
+@media(hover:hover){.werk-raster figure:hover img{transform:scale(1.05)}}
+@media (prefers-reduced-motion:reduce){.werk-raster img{transition:none}.werk-raster figure:hover img{transform:none}}
+
+/* ---- prijslijst als regels, geen kaartjes ---- */
+.prijslijst{margin-top:3rem}
+.prijsgroep + .prijsgroep{margin-top:3.5rem}
+.prijsgroep h3{margin-bottom:1.6rem}
+.prijsregel{display:grid;grid-template-columns:1fr auto;gap:1rem 2rem;align-items:baseline;
+  padding:1.15rem 0;border-top:1px solid var(--inkt-rand)}
+.prijsregel:last-child{border-bottom:1px solid var(--inkt-rand)}
+.sectie-licht .prijsregel{border-color:#ddd2d8}
+.prijsregel .dienst{font-size:1.05rem;font-weight:500}
+.prijsregel .duur{display:block;font-size:.85rem;color:var(--zacht);font-weight:400;margin-top:.15rem}
+.sectie-licht .prijsregel .duur{color:#7d7078}
+.prijsregel .bedrag{font-family:"Bodoni Moda",Georgia,serif;font-size:1.5rem;white-space:nowrap}
+.prijsnoot{margin-top:1.6rem;font-size:.92rem;color:var(--zacht);max-width:54ch}
+.sectie-licht .prijsnoot{color:#5c5158}
+
+/* ---- stemmen, als grote uitspraken onder elkaar ---- */
+.stem-lijst{margin-top:3rem;display:grid;gap:0}
+.stem-lijst blockquote{margin:0;padding:2.4rem 0;border-top:1px solid var(--inkt-rand)}
+.stem-lijst blockquote:last-child{border-bottom:1px solid var(--inkt-rand)}
+.stem-lijst p{font-family:"Bodoni Moda",Georgia,serif;font-weight:400;
+  font-size:clamp(1.4rem,3vw,2.1rem);line-height:1.32;max-width:24ch}
+.stem-lijst cite{display:block;margin-top:1.1rem;font-style:normal;font-size:.78rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--magenta)}
+
+/* ---- afspraak ---- */
+.boek-grid{display:grid;grid-template-columns:1fr;gap:2.4rem;align-items:start;margin-top:3rem}
+@media(min-width:1000px){.boek-grid{grid-template-columns:.8fr 1.2fr;gap:3.5rem}}
+.widget-doos{border:1px solid var(--inkt-rand);border-radius:var(--rond);overflow:hidden;background:#fff}
+.widget-doos iframe{width:100%;height:720px;border:0;display:block;background:#fff}
+@media(max-width:640px){.widget-doos iframe{height:620px}}
+.widget-terug{margin-top:.8rem;font-size:.87rem;color:var(--zacht)}
+.widget-terug a{font-weight:600;text-underline-offset:3px;color:var(--magenta)}
+.uren{width:100%;border-collapse:collapse;font-size:1rem;margin-top:1.8rem}
+.uren th,.uren td{text-align:left;padding:.7rem 0;border-bottom:1px solid var(--inkt-rand)}
+.uren th{font-weight:400;color:var(--zacht)}
+.uren td{text-align:right;font-variant-numeric:tabular-nums}
+.uren tr.dicht th,.uren tr.dicht td{color:#7a6e76}
+.uren tr.vandaag th,.uren tr.vandaag td{color:var(--magenta);font-weight:600}
+.adres{margin-top:2rem;line-height:1.9}
+.adres b{display:block;font-family:"Bodoni Moda",Georgia,serif;font-weight:400;font-size:1.3rem}
+.adres a{color:var(--magenta);font-weight:500;text-underline-offset:3px}
+
+/* ---- afsluiter ---- */
+.slot{position:relative;overflow:hidden;background:var(--inkt-op)}
+.slot-in{position:relative;z-index:2;padding-block:clamp(5rem,12vw,9rem);text-align:center}
+.slot .intro{margin-inline:auto}
+.slot-knop{margin-top:2.4rem}
+
+/* ---- voet ---- */
+.voet{background:#000;color:#8f838b;padding-block:3rem;font-size:.9rem;border-top:1px solid var(--inkt-rand)}
+.voet-in{display:grid;grid-template-columns:1fr;gap:2rem}
+@media(min-width:760px){.voet-in{grid-template-columns:1.2fr 1fr 1fr}}
+.voet b{color:var(--room);font-weight:500}
+.voet a{color:var(--zacht);text-decoration:none;display:block;padding-block:.22rem}
+.voet a:hover{color:var(--magenta)}
+.voet .voet-kop{color:var(--room);font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.7rem}
+
+/* ---- vaste balk op mobiel ---- */
+.balk{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;gap:.5rem;
+  padding:.6rem var(--marge) calc(.6rem + env(safe-area-inset-bottom));
+  background:rgba(14,12,16,.97);backdrop-filter:blur(12px);border-top:1px solid var(--inkt-rand)}
+.balk a{flex:1;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;
+  font-weight:600;font-size:.94rem;line-height:1.25;white-space:nowrap;padding:.85rem .9rem;border-radius:var(--rond)}
+.balk .boek{background:var(--magenta);color:#1a0f1a}
+.balk .app{background:#25d366;color:#04250f}
+@media(max-width:760px){
+  .balk{display:flex}
+  body{padding-bottom:calc(4.9rem + env(safe-area-inset-bottom))}
+}
+
+/* ---- beweging ---- */
+.js .op{opacity:0;transform:translateY(20px)}
+.js .op.in{opacity:1;transform:none;transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+@media (prefers-reduced-motion:reduce){
+  .js .op{opacity:1;transform:none}
+  .js .op.in{transition:none}
+}
