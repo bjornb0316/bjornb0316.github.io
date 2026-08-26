@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<script>document.documentElement.className+=' js';</script>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Afspraak aanvragen | A Beautiful Nail Apeldoorn</title>
+<meta name="description" content="Vraag een afspraak aan bij nagelsalon A Beautiful Nail, Kanaalpad 2 in Apeldoorn. Maandag, dinsdag en woensdag van 9:15 tot 17:00, alleen op afspraak.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stijl.css">
+</head>
+<body>
+
+<div class="voorstel">
+  <div class="wrap">
+    <span><b>Voorbeeldpagina.</b> Gemaakt door Bjorn van Capital BB als voorstel voor A Beautiful Nail. Dit is niet de offici&euml;le website.</span>
+    <span><a href="https://wa.me/31614664161">Vragen? App Bjorn op 06 14664161</a></span>
+  </div>
+</div>
+
+<header class="kop">
+  <div class="wrap kop-in">
+    <a class="merk" href="index.html">
+      <span class="naam">A Beautiful Nail</span>
+      <small>Nagelsalon &middot; Apeldoorn</small>
+    </a>
+    <nav class="nav" aria-label="Hoofdmenu">
+      <a href="index.html">Home</a>
+      <a href="behandelingen.html">Behandelingen</a>
+      <a href="nagelbijten.html">Nagelbijten</a>
+      <a href="prijzen.html">Prijzen</a>
+      <a href="afspraak.html" aria-current="page">Afspraak</a>
+    </nav>
+    <a class="kop-cta" href="afspraak.html">Afspraak aanvragen</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero-klein">
+    <div class="wrap">
+      <p class="label">Afspraak</p>
+      <h1 class="display">Zet uw vraag klaar,<br>ook buiten de openingstijden</h1>
+      <p class="hero-onder">De salon is drie dagen per week open, tussen 9:15 en 17:00. Kunt u dan niet bellen? Vul hieronder in wat u wilt, dan staat uw vraag compleet klaar en belt Marja u terug.</p>
+    </div>
+  </section>
+
+  <section class="sectie">
+    <div class="wrap twee">
+      <div>
+        <p class="label op">Openingstijden</p>
+        <h2 class="display op" style="margin-top:1rem;font-size:clamp(1.7rem,3.4vw,2.6rem)">Maandag, dinsdag en woensdag</h2>
+        <table class="uren op" id="urentabel">
+          <tbody>
+            <tr data-dag="1"><th scope="row">Maandag</th><td>9:15&ndash;17:00</td></tr>
+            <tr data-dag="2"><th scope="row">Dinsdag</th><td>9:15&ndash;17:00</td></tr>
+            <tr data-dag="3"><th scope="row">Woensdag</th><td>9:15&ndash;17:00</td></tr>
+            <tr data-dag="4" class="dicht"><th scope="row">Donderdag</th><td>Gesloten</td></tr>
+            <tr data-dag="5" class="dicht"><th scope="row">Vrijdag</th><td>Gesloten</td></tr>
+            <tr data-dag="6" class="dicht"><th scope="row">Zaterdag</th><td>Gesloten</td></tr>
+            <tr data-dag="0" class="dicht"><th scope="row">Zondag</th><td>Gesloten</td></tr>
+          </tbody>
+        </table>
+        <p class="nu op" style="margin-top:1.4rem"><span class="stip" id="stip"></span><span id="nu-tekst">Openingstijden laden</span></p>
+
+        <div class="adres op">
+          <b>A Beautiful Nail</b>
+          Kanaalpad 2<br>
+          7321 AP Apeldoorn<br>
+          <a href="tel:0646255748">06 46 25 57 48</a><br>
+          <a href="mailto:marjadekrosse@hotmail.com">marjadekrosse@hotmail.com</a>
+        </div>
+        <p class="prijsnoot op" style="margin-top:1.6rem">Parkeergelegenheid op eigen terrein en de
+        salon is rolstoelvriendelijk. Een gemaakte afspraak wijzigen kan alleen telefonisch.</p>
+      </div>
+
+      <div>
+        <p class="label op">Aanvraag</p>
+        <h2 class="display op" style="margin-top:1rem;font-size:clamp(1.7rem,3.4vw,2.6rem)">In twintig seconden klaar</h2>
+        <div class="aanvraag op" id="aanvraag">
+          <div class="veld">
+            <label for="v-behandeling">Waarvoor komt u?</label>
+            <select id="v-behandeling">
+              <option>Klassieke manicure</option>
+              <option>Spa luxurieus manicure</option>
+              <option>De MAN-icure</option>
+              <option>ManiQ Gel</option>
+              <option>Gellak blank</option>
+              <option>Gellak gekleurd</option>
+              <option>Manicure met gellak</option>
+              <option>Nail-art</option>
+              <option>Bruidsnagels</option>
+              <option>Intakegesprek nagelbijten</option>
+              <option>Ik weet het nog niet</option>
+            </select>
+          </div>
+          <div class="veld">
+            <label for="v-dagdeel">Wanneer schikt het u?</label>
+            <select id="v-dagdeel">
+              <option value="">Maakt niet uit</option>
+              <option>maandagochtend</option>
+              <option>maandagmiddag</option>
+              <option>dinsdagochtend</option>
+              <option>dinsdagmiddag</option>
+              <option>woensdagochtend</option>
+              <option>woensdagmiddag</option>
+            </select>
+          </div>
+          <div class="veld">
+            <label for="v-naam">Uw naam</label>
+            <input type="text" id="v-naam" autocomplete="name" placeholder="Bijvoorbeeld Anneke Jansen">
+          </div>
+          <div class="veld">
+            <label for="v-telefoon">Uw telefoonnummer</label>
+            <input type="tel" id="v-telefoon" autocomplete="tel" placeholder="06 12345678">
+          </div>
+          <div class="veld">
+            <label for="v-toelichting">Iets wat Marja moet weten</label>
+            <textarea id="v-toelichting" placeholder="Bijvoorbeeld: mijn nagels scheuren steeds, of ik kom voor het eerst."></textarea>
+          </div>
+
+          <p class="label" style="margin-top:1.8rem">Dit gaat er straks uit</p>
+          <div class="opbouw" id="opbouw"></div>
+
+          <div class="knop-groep">
+            <a class="knop knop-vol" id="knop-mail" href="mailto:marjadekrosse@hotmail.com">Versturen per mail</a>
+            <a class="knop knop-app" id="knop-app" target="_blank" rel="noopener">Versturen via WhatsApp</a>
+            <a class="knop knop-rand" href="tel:0646255748">Toch even bellen</a>
+          </div>
+          <p class="aanvraag-noot">Er wordt hier niets opgeslagen en er gaat niets naar een server.
+          Uw antwoorden worden alleen gebruikt om het bericht op te stellen dat u zelf verstuurt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slot">
+    <div class="wrap slot-in">
+      <h2 class="display op">Tot aan het Kanaalpad</h2>
+      <p class="intro op">Komt u voor het eerst? Zet dat er even bij, dan wordt er extra tijd ingepland om naar uw nagels te kijken voordat er iets gebeurt.</p>
+      <div class="knop-groep op">
+        <a class="knop knop-licht" href="afspraak.html">Afspraak aanvragen</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="voet">
+  <div class="wrap voet-in">
+    <div>
+      <p><b>A Beautiful Nail</b><br>
+      Nagelstyliste Marja de Krosse<br>
+      Kanaalpad 2<br>7321 AP Apeldoorn</p>
+      <p style="margin-top:1.2rem">Maandag, dinsdag en woensdag<br>9:15 tot 17:00, op afspraak</p>
+    </div>
+    <div>
+      <p class="voet-kop">Pagina's</p>
+      <a href="behandelingen.html">Behandelingen</a>
+      <a href="nagelbijten.html">Nagelbijten</a>
+      <a href="prijzen.html">Prijzen</a>
+      <a href="afspraak.html">Afspraak</a>
+    </div>
+    <div>
+      <p class="voet-kop">Contact</p>
+      <a href="tel:0646255748">06 46 25 57 48</a>
+      <a href="mailto:marjadekrosse@hotmail.com">marjadekrosse@hotmail.com</a>
+      <p style="margin-top:1.4rem;font-size:.82rem">KvK 08200654<br>Parkeren op eigen terrein &middot; rolstoelvriendelijk</p>
+      <p style="margin-top:1.2rem;font-size:.82rem">Voorbeeldontwerp van Bjorn, Capital BB.<br><a href="https://wa.me/31614664161" style="display:inline">Reageren via WhatsApp</a></p>
+    </div>
+  </div>
+</footer>
+
+<nav class="balk" aria-label="Snelle acties">
+  <a class="bel" href="tel:0646255748">Bellen</a>
+  <a class="app" href="afspraak.html">Afspraak aanvragen</a>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>

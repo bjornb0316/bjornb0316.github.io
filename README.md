@@ -12,6 +12,7 @@ Publiceren gaat via GitHub Pages: alles op de tak `main` staat direct online.
 | `million-hair/` | Million Hair Barbershop | Zevenaar |
 | `the-brow-bar-arnhem/` | The Brow Bar | Arnhem |
 | `lash-loft/` | Lash Loft II The Headspa Loft | Apeldoorn |
+| `a-beautiful-nail/` | A Beautiful Nail, Marja de Krosse | Apeldoorn |
 
 Elke pagina draagt bovenaan een regel die zegt dat het een voorstel is
 en geen offici&euml;le website van het bedrijf. Die regel blijft staan.
