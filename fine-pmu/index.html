@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<script>document.documentElement.className+=' js';</script>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fine PMU Duiven | Lipblush, ombr&eacute; lips en powderbrow</title>
+<meta name="description" content="Permanente make-up in Duiven, in het Franklin Business Center. Lipblush, ombre lips en powderbrow. 250 euro inclusief de tweede behandeling. Vrijdag tot en met zondag geopend.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ---------------------------------------------------------------
+   De huisstijl komt van hun eigen prijskaart op Instagram: een hoge
+   serif in kapitalen, warm zand, dunne haarlijnen. Het roze accent
+   komt uit hun eigen werk, niet uit een waaier. Geen brons, geen
+   goud. Een accent, en overal dezelfde scherpe ronding van 2px.
+   --------------------------------------------------------------- */
+:root{
+  --room:#f4eee6;
+  --zand:#ddcfbc;
+  --zand-diep:#c3b096;
+  --inkt:#221b17;
+  --inkt-op:#332a24;
+  --rose:#9d4256;
+  --rose-diep:#7d2f41;
+  --grijs:#6b5f54;
+  --wit:#fff;
+  --rond:2px;
+  --marge:clamp(1.15rem,4.5vw,4rem);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  font-family:Manrope,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--room);color:var(--inkt);font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:var(--marge)}
+.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;letter-spacing:.01em}
+
+/* ---- voorstelbalk ---- */
+.voorstel{background:var(--inkt);color:#b8a99c;font-size:.79rem;padding:.55rem 0;line-height:1.45}
+.voorstel .wrap{display:flex;flex-wrap:wrap;gap:.3rem 1rem;justify-content:center;text-align:center}
+.voorstel b{color:var(--zand);font-weight:600}
+.voorstel a{font-weight:600;text-underline-offset:2px}
+
+/* ---- kop ---- */
+.kop{position:sticky;top:0;z-index:60;background:rgba(244,238,230,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--zand)}
+.kop-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:66px}
+.merk{text-decoration:none;font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;
+  font-size:1.32rem;letter-spacing:.22em;text-transform:uppercase;line-height:1}
+.kop-cta{background:var(--rose);color:var(--wit);text-decoration:none;font-weight:600;font-size:.9rem;
+  padding:.62rem 1.25rem;border-radius:var(--rond);white-space:nowrap;transition:background .18s,transform .1s}
+.kop-cta:hover{background:var(--rose-diep)}
+.kop-cta:active{transform:translateY(1px)}
+@media(max-width:460px){.kop-cta{display:none}}
+
+/* ---- hero: hun eigen werk, paginavullend. Dit is de eerste seconde. ---- */
+.hero{position:relative;min-height:clamp(480px,78vh,720px);display:flex;align-items:flex-end;
+  overflow:hidden;background:var(--inkt)}
+.hero-foto{position:absolute;inset:0}
+.hero-foto img{width:100%;height:100%;object-fit:cover;object-position:52% 42%}
+/* scrim, zodat de tekst altijd leesbaar is over de foto */
+.hero-scrim{position:absolute;inset:0;background:
+  linear-gradient(to top, rgba(20,15,13,.90) 0%, rgba(20,15,13,.70) 34%, rgba(20,15,13,.16) 66%, rgba(20,15,13,.30) 100%)}
+.hero-in{position:relative;z-index:2;width:100%;padding-block:clamp(2.2rem,5vw,3.6rem)}
+.hero-merk{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;color:var(--room);
+  font-size:clamp(2.9rem,9vw,6.2rem);line-height:.98;letter-spacing:.06em;text-transform:uppercase}
+.hero-onder{color:#e8ddd2;margin-top:1rem;font-size:clamp(1.02rem,2.2vw,1.2rem);max-width:34ch}
+.hero-knoppen{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.7rem}
+.knop{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;text-decoration:none;font-weight:600;
+  border-radius:var(--rond);padding:.92rem 1.6rem;font-size:1rem;border:1.5px solid transparent;white-space:nowrap;
+  transition:background .18s,color .18s,border-color .18s,transform .1s}
+.knop-hoofd{background:var(--rose);color:var(--wit);border-color:var(--rose)}
+.knop-hoofd:hover{background:var(--rose-diep);border-color:var(--rose-diep)}
+.knop-licht{border-color:var(--room);color:var(--room)}
+.knop-licht:hover{background:var(--room);color:var(--inkt)}
+.knop-donker{border-color:var(--inkt);color:var(--inkt)}
+.knop-donker:hover{background:var(--inkt);color:var(--room)}
+.knop:active{transform:translateY(1px)}
+.nu{display:inline-flex;align-items:center;gap:.5rem;margin-bottom:1.1rem;
+  border:1px solid rgba(244,238,230,.42);border-radius:var(--rond);padding:.4rem .8rem;
+  font-size:.84rem;font-weight:500;color:var(--room);background:rgba(20,15,13,.36)}
+.stip{width:7px;height:7px;border-radius:50%;background:#7fc79b;flex:0 0 auto}
+.stip.dicht{background:#c9b6a6}
+
+/* ---- bewijsband ---- */
+.bewijs{background:var(--inkt)}
+.bewijs-in{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.13)}
+@media(min-width:880px){.bewijs-in{grid-template-columns:repeat(4,1fr)}}
+.bewijs-cel{background:var(--inkt);color:var(--room);padding:1.5rem var(--marge)}
+.cijfer{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:2rem;line-height:1}
+.bewijs-cel span{display:block;margin-top:.35rem;font-size:.85rem;color:#b8a99c}
+.zandkleur{color:var(--zand)}
+
+/* ---- de afspraak stap voor stap: het hart van deze pagina ----
+   Bij permanente make-up is de drempel geen prijs maar spanning.
+   Elke stap staat er met een echte zin van een echte klant erbij. */
+.stappen{padding-block:clamp(3rem,7vw,5rem)}
+.stappen h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;
+  font-size:clamp(2rem,5vw,3.1rem);line-height:1.08;max-width:19ch}
+.stappen > .wrap > p{margin-top:.8rem;color:var(--grijs);max-width:50ch}
+.stap-lijst{list-style:none;margin-top:2.4rem;display:grid;gap:0}
+.stap{display:grid;grid-template-columns:auto 1fr;gap:1.1rem;padding:1.5rem 0;border-top:1px solid var(--zand)}
+@media(min-width:820px){.stap{grid-template-columns:auto 1fr 1fr;gap:2rem;align-items:start}}
+.stap:last-child{border-bottom:1px solid var(--zand)}
+.stap-nr{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:1.7rem;
+  line-height:1;color:var(--rose);min-width:1.6rem}
+.stap h3{font-weight:600;font-size:1.08rem;letter-spacing:-.01em}
+.stap h3 + p{margin-top:.35rem;color:var(--grijs);font-size:.97rem;max-width:46ch}
+.stap blockquote{margin:0;font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;
+  font-size:1.18rem;line-height:1.45;color:var(--inkt)}
+.stap blockquote cite{display:block;margin-top:.5rem;font-family:Manrope,sans-serif;font-style:normal;
+  font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--grijs)}
+@media(max-width:819px){.stap blockquote{grid-column:1 / -1;margin-top:.9rem;padding-left:1rem;border-left:2px solid var(--rose)}}
+
+/* ---- werk ---- */
+.werk{background:var(--zand);padding-block:clamp(3rem,7vw,5rem)}
+.werk h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;font-size:clamp(2rem,5vw,3rem);line-height:1.08}
+.werk > .wrap > p{margin-top:.7rem;color:#5c5044;max-width:48ch}
+.w-raster{display:grid;grid-template-columns:1fr;gap:.9rem;margin-top:2.2rem}
+@media(min-width:760px){.w-raster{grid-template-columns:1.25fr 1fr;gap:1.1rem}}
+.w-raster figure{margin:0;overflow:hidden;background:var(--zand-diep);border-radius:var(--rond)}
+.w-raster img{width:100%;height:100%;object-fit:cover}
+.w-groot img{aspect-ratio:4/5}
+.w-klein{display:grid;grid-template-rows:1fr 1fr;gap:1.1rem}
+.w-klein img{aspect-ratio:16/11}
+.w-noot{margin-top:1.3rem;font-size:.88rem;color:#5c5044}
+.w-noot a{font-weight:600;text-underline-offset:3px}
+
+/* ---- prijs: open kaart, want dat is de tweede drempel ---- */
+.prijs{padding-block:clamp(3rem,7vw,5rem)}
+.prijs-grid{display:grid;grid-template-columns:1fr;gap:2rem;align-items:start}
+@media(min-width:900px){.prijs-grid{grid-template-columns:.9fr 1.1fr;gap:clamp(2.4rem,5vw,4rem)}}
+.prijs h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;font-size:clamp(2rem,5vw,3rem);line-height:1.08}
+.prijs-kop p{margin-top:.8rem;color:var(--grijs);max-width:40ch}
+.hoofdprijs{margin-top:1.6rem;border:1px solid var(--zand-diep);border-radius:var(--rond);padding:1.6rem;background:var(--wit)}
+.hoofdprijs .titel{font-weight:600;font-size:1.05rem}
+.hoofdprijs .bedrag{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:3.1rem;
+  line-height:1;margin-top:.5rem;color:var(--rose)}
+.hoofdprijs .duur{margin-top:.35rem;font-size:.9rem;color:var(--grijs)}
+.inbegrepen{list-style:none;margin-top:1.2rem;display:grid;gap:.6rem;border-top:1px solid var(--zand);padding-top:1.2rem}
+.inbegrepen li{display:grid;grid-template-columns:auto 1fr;gap:.6rem;font-size:.96rem}
+.inbegrepen svg{margin-top:.34rem}
+.rest{list-style:none;margin-top:1.6rem;display:grid;gap:0}
+.rest li{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:baseline;
+  padding:.95rem 0;border-top:1px solid var(--zand)}
+.rest li:last-child{border-bottom:1px solid var(--zand)}
+.rest .duur{display:block;font-size:.82rem;color:var(--grijs);margin-top:.1rem}
+.rest .bedrag{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.35rem;white-space:nowrap}
+.prijs-noot{margin-top:1.2rem;font-size:.88rem;color:var(--grijs);max-width:52ch}
+
+/* ---- stemmen ---- */
+.stemmen{background:var(--inkt);color:var(--room);padding-block:clamp(3rem,7vw,5rem)}
+.stemmen h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;font-size:clamp(2rem,5vw,3rem);line-height:1.08}
+.stemmen > .wrap > p{margin-top:.6rem;color:#b8a99c}
+.s-raster{display:grid;grid-template-columns:1fr;gap:1.2rem;margin-top:2.2rem}
+@media(min-width:880px){.s-raster{grid-template-columns:repeat(3,1fr);gap:1.6rem}}
+.stem{border-top:1px solid rgba(244,238,230,.24);padding-top:1.3rem}
+.sterren{color:var(--zand);letter-spacing:.18em;font-size:.82rem}
+.stem p{margin-top:.8rem;font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;
+  font-size:1.28rem;line-height:1.42}
+.stem cite{display:block;margin-top:1rem;font-style:normal;font-size:.8rem;font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;color:#b8a99c}
+
+/* ---- afspraak ---- */
+.afspraak{padding-block:clamp(3rem,7vw,5rem)}
+.a-grid{display:grid;grid-template-columns:1fr;gap:1.9rem;align-items:start}
+@media(min-width:1000px){.a-grid{grid-template-columns:.84fr 1.16fr;gap:2.6rem}}
+.afspraak h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;font-size:clamp(2rem,5vw,3rem);line-height:1.08}
+.a-kop > p{margin-top:.8rem;color:var(--grijs);max-width:40ch}
+.uren{width:100%;border-collapse:collapse;font-size:.97rem;margin-top:1.6rem}
+.uren th,.uren td{text-align:left;padding:.58rem 0;border-bottom:1px solid var(--zand)}
+.uren th{font-weight:500;color:var(--grijs)}
+.uren td{text-align:right;font-variant-numeric:tabular-nums}
+.uren tr.dicht th,.uren tr.dicht td{color:#6f6357}  /* haalt AA op de roomkleur */
+.uren tr.vandaag th,.uren tr.vandaag td{font-weight:700;color:var(--rose)}
+.adres{margin-top:1.5rem;font-size:1rem;line-height:1.8}
+.adres b{display:block;font-weight:600}
+.adres a{font-weight:600;text-underline-offset:3px}
+.widget-doos{border:1px solid var(--zand-diep);border-radius:var(--rond);overflow:hidden;background:var(--wit)}
+.widget-doos iframe{width:100%;height:700px;border:0;display:block;background:var(--wit)}
+@media(max-width:640px){.widget-doos iframe{height:600px}}
+.widget-terug{margin-top:.7rem;font-size:.85rem;color:var(--grijs)}
+.widget-terug a{font-weight:600;text-underline-offset:3px}
+
+/* ---- voet ---- */
+.voet{background:var(--inkt);color:#b8a99c;padding-block:2.4rem;font-size:.88rem;border-top:1px solid rgba(244,238,230,.14)}
+.voet-in{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;align-items:flex-start}
+.voet b{color:var(--room)}
+.voet a{color:var(--zand);font-weight:600;text-underline-offset:3px}
+
+/* ---- vaste balk op mobiel ---- */
+.balk{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;gap:.55rem;
+  padding:.6rem var(--marge) calc(.6rem + env(safe-area-inset-bottom));
+  background:rgba(244,238,230,.97);backdrop-filter:blur(10px);border-top:1px solid var(--zand)}
+.balk a{flex:1;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;
+  font-weight:600;font-size:.94rem;line-height:1.25;white-space:nowrap;padding:.8rem .9rem;border-radius:var(--rond)}
+.balk .boek{background:var(--rose);color:var(--wit)}
+.balk .mail{background:var(--inkt);color:var(--room)}
+@media(max-width:760px){
+  .balk{display:flex}
+  body{padding-bottom:calc(4.7rem + env(safe-area-inset-bottom))}
+}
+
+/* ---- beweging ---- */
+.js .op{opacity:0;transform:translateY(16px)}
+.js .op.in{opacity:1;transform:none;transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+@media (prefers-reduced-motion:reduce){
+  .js .op{opacity:1;transform:none}
+  .js .op.in{transition:none}
+}
+</style>
+</head>
+<body>
+
+<div class="voorstel">
+  <div class="wrap">
+    <span><b>Voorbeeldpagina.</b> Gemaakt door Bjorn van Capital BB als voorstel voor Fine PMU. Dit is niet hun offici&euml;le website.</span>
+    <span><a href="https://wa.me/31614664161">Vragen? App Bjorn op 06 14664161</a></span>
+  </div>
+</div>
+
+<header class="kop">
+  <div class="wrap kop-in">
+    <a class="merk" href="#top">Fine PMU</a>
+    <a class="kop-cta" href="#afspraak">Afspraak maken</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-foto">
+      <img src="img/hero-lippen.jpg" width="1229" height="1392" alt="Genezen lipblush in een warme nudetint, gemaakt bij Fine PMU" fetchpriority="high">
+    </div>
+    <div class="hero-scrim"></div>
+    <div class="hero-in">
+      <div class="wrap">
+        <p class="nu"><span class="stip" id="stip"></span><span id="nu-tekst">Openingstijden laden</span></p>
+        <h1 class="hero-merk">Fine PMU</h1>
+        <p class="hero-onder">Lipblush in Duiven. Je eigen lippen, alleen dan uitgerust wakker.</p>
+        <div class="hero-knoppen">
+          <a class="knop knop-hoofd" href="#afspraak">Plan een afspraak</a>
+          <a class="knop knop-licht" href="#verloop">Zo gaat het in zijn werk</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEWIJSBAND -->
+  <section class="bewijs">
+    <div class="bewijs-in">
+      <div class="bewijs-cel"><b class="cijfer zandkleur">5,0</b><span>op Google en in de eigen agenda</span></div>
+      <div class="bewijs-cel"><b class="cijfer">2 sessies</b><span>de tweede zit bij de prijs in</span></div>
+      <div class="bewijs-cel"><b class="cijfer">2,5 uur</b><span>de tijd, zonder haast</span></div>
+      <div class="bewijs-cel"><b class="cijfer">Zondag</b><span>ook in het weekend open</span></div>
+    </div>
+  </section>
+
+  <!-- HET VERLOOP: de kern van de pagina -->
+  <section class="stappen" id="verloop">
+    <div class="wrap">
+      <h2 class="serif op">De spanning zit hem in het niet weten</h2>
+      <p class="op">Permanente make-up is spannend, want het gaat over je gezicht. Daarom staat hier
+      precies wat er gebeurt, stap voor stap, met bij elke stap wat klanten er zelf over schreven.</p>
+
+      <ol class="stap-lijst">
+        <li class="stap op">
+          <span class="stap-nr serif">1</span>
+          <div>
+            <h3>Eerst uitleg, dan pas iets anders</h3>
+            <p>Voordat er iets gebeurt wordt uitgelegd wat er gaat komen, hoe het voelt en hoe lang het duurt.</p>
+          </div>
+          <blockquote class="serif">&ldquo;Eerst uitgebreid uitleg gehad.&rdquo;<cite>Klantbeoordeling</cite></blockquote>
+        </li>
+
+        <li class="stap op">
+          <span class="stap-nr serif">2</span>
+          <div>
+            <h3>Samen de kleur kiezen</h3>
+            <p>De tint wordt op jouw huid en jouw wensen afgestemd. Je kiest niet uit een boekje, er wordt meegedacht.</p>
+          </div>
+          <blockquote class="serif">&ldquo;Er werd goed geluisterd naar mijn wensen en meegedacht over welke kleur het beste bij mij zou passen.&rdquo;<cite>Gul</cite></blockquote>
+        </li>
+
+        <li class="stap op">
+          <span class="stap-nr serif">3</span>
+          <div>
+            <h3>Meten en uittekenen</h3>
+            <p>De vorm wordt eerst getekend en je kijkt mee. Pas als jij het goed vindt, begint de behandeling.</p>
+          </div>
+          <blockquote class="serif">&ldquo;Rustig aan beginnen met meten, uittekenen, om vervolgens te beginnen met de behandeling.&rdquo;<cite>Klantbeoordeling</cite></blockquote>
+        </li>
+
+        <li class="stap op">
+          <span class="stap-nr serif">4</span>
+          <div>
+            <h3>De behandeling zelf</h3>
+            <p>Er wordt tussendoor gevraagd hoe het met je gaat. Er is tweeënhalf uur ingepland, dus er hoeft niets snel.</p>
+          </div>
+          <blockquote class="serif">&ldquo;Alles verloopt rustig en zorgvuldig, zonder dat het gehaast aanvoelt.&rdquo;<cite>Sultan</cite></blockquote>
+        </li>
+
+        <li class="stap op">
+          <span class="stap-nr serif">5</span>
+          <div>
+            <h3>Na zes tot acht weken de tweede behandeling</h3>
+            <p>Die zit bij de prijs in. Dan wordt bijgewerkt wat tijdens het genezen is weggetrokken, en pas dan is het af.</p>
+          </div>
+          <blockquote class="serif">&ldquo;Ik ben er super tevreden over en kom terug voor een touch up.&rdquo;<cite>Meryem</cite></blockquote>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- WERK -->
+  <section class="werk" id="werk">
+    <div class="wrap">
+      <h2 class="serif op">Werk uit de studio</h2>
+      <p class="op">Geen stockfoto's en geen filters. Dit zijn klanten van Fine PMU, gefotografeerd in de behandelkamer aan de Stenograaf.</p>
+      <div class="w-raster">
+        <figure class="w-groot op">
+          <img src="img/vers.jpg" width="1050" height="1400" alt="Vers gezette lipblush, direct na de behandeling" loading="lazy">
+        </figure>
+        <div class="w-klein">
+          <figure class="op"><img src="img/klant-lach.jpg" width="1400" height="1368" alt="Klant lacht na haar behandeling, warme roze lippen" loading="lazy"></figure>
+          <figure class="op"><img src="img/klant-bed.jpg" width="788" height="1400" alt="Klant op de behandelstoel met het genezen resultaat" loading="lazy"></figure>
+        </div>
+      </div>
+      <p class="w-noot op">Meer werk, ook video's van het genezen, staat op <a href="https://www.instagram.com/fine_pmu/" target="_blank" rel="noopener">@fine_pmu</a>.</p>
+    </div>
+  </section>
+
+  <!-- PRIJS -->
+  <section class="prijs" id="prijs">
+    <div class="wrap prijs-grid">
+      <div class="prijs-kop op">
+        <h2 class="serif">Wat het kost, zonder sterretjes</h2>
+        <p>Bij permanente make-up hoor je vaak pas achteraf wat de tweede behandeling kost. Hier niet.</p>
+      </div>
+
+      <div class="op">
+        <div class="hoofdprijs">
+          <p class="titel">Lipblush, ombr&eacute; lips of full lips</p>
+          <p class="bedrag serif">&euro;250</p>
+          <p class="duur">Tweeënhalf uur ingepland</p>
+          <ul class="inbegrepen">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9d4256" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>De tweede behandeling na zes tot acht weken zit erbij in</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9d4256" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>De kleur wordt vooraf samen met jou gekozen</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9d4256" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>De vorm wordt eerst getekend, jij kijkt mee voordat er iets vast ligt</span>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="rest">
+          <li>
+            <span>Beauty marker, maximaal drie<span class="duur">30 minuten</span></span>
+            <span class="bedrag serif">&euro;80</span>
+          </li>
+          <li>
+            <span>Nabehandeling binnen een jaar<span class="duur">Anderhalf uur, voor bestaande klanten</span></span>
+            <span class="bedrag serif">&euro;100</span>
+          </li>
+          <li>
+            <span>Nabehandeling binnen twee jaar<span class="duur">Anderhalf uur, voor bestaande klanten</span></span>
+            <span class="bedrag serif">&euro;150</span>
+          </li>
+        </ul>
+        <p class="prijs-noot">Twijfel je of het bij je past? Stuur een bericht met een foto van je lippen, dan hoor je eerlijk wat er mogelijk is.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEMMEN -->
+  <section class="stemmen">
+    <div class="wrap">
+      <h2 class="serif op">Wat klanten schrijven</h2>
+      <p class="op">Vijf sterren, en steeds over hetzelfde: rust, uitleg en hygiëne.</p>
+      <div class="s-raster">
+        <figure class="stem op">
+          <div class="sterren" aria-label="Vijf sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="serif">&ldquo;Er werd zeer zorgvuldig en professioneel gewerkt, met veel aandacht voor detail en hygiëne.&rdquo;</p>
+          <cite>Meryem</cite>
+        </figure>
+        <figure class="stem op">
+          <div class="sterren" aria-label="Vijf sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="serif">&ldquo;Wat ben ik blij met mijn nieuwe lippen. Een fijne ervaring van begin tot eind.&rdquo;</p>
+          <cite>Dilek</cite>
+        </figure>
+        <figure class="stem op">
+          <div class="sterren" aria-label="Vijf sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="serif">&ldquo;Er wordt echt de tijd genomen en er is veel aandacht voor detail. Zeker een aanrader.&rdquo;</p>
+          <cite>Sultan</cite>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- AFSPRAAK -->
+  <section class="afspraak" id="afspraak">
+    <div class="wrap a-grid">
+      <div class="a-kop op">
+        <h2 class="serif">Kies zelf een moment</h2>
+        <p>De agenda hiernaast is de echte agenda van Fine PMU. Je ziet meteen wat vrij is en boekt zonder te bellen.</p>
+
+        <table class="uren" id="urentabel">
+          <tbody>
+            <tr data-dag="1" class="dicht"><th scope="row">Maandag</th><td>Gesloten</td></tr>
+            <tr data-dag="2" class="dicht"><th scope="row">Dinsdag</th><td>Gesloten</td></tr>
+            <tr data-dag="3" class="dicht"><th scope="row">Woensdag</th><td>Gesloten</td></tr>
+            <tr data-dag="4"><th scope="row">Donderdag</th><td>13:00 tot 16:30</td></tr>
+            <tr data-dag="5"><th scope="row">Vrijdag</th><td>09:00 tot 17:00</td></tr>
+            <tr data-dag="6"><th scope="row">Zaterdag</th><td>09:00 tot 17:00</td></tr>
+            <tr data-dag="0"><th scope="row">Zondag</th><td>09:00 tot 17:00</td></tr>
+          </tbody>
+        </table>
+
+        <p class="adres">
+          <b>Fine PMU</b>
+          Stenograaf 1, Franklin Business Center<br>
+          6921 EX Duiven<br>
+          <a href="mailto:info@finepmu.nl">info@finepmu.nl</a>
+        </p>
+      </div>
+
+      <div class="op">
+        <div class="widget-doos">
+          <iframe src="https://widget.salonized.com/widget?color=%239d4256&amp;language=nl&amp;company=kK78sCW7djSPYhaG8d4sNqrM&amp;inline=true" title="Online agenda van Fine PMU" loading="lazy"></iframe>
+        </div>
+        <p class="widget-terug">Laadt de agenda niet? <a href="https://fine-pmu.salonized.com/" target="_blank" rel="noopener">Open hem in een nieuw tabblad</a>.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="voet">
+  <div class="wrap voet-in">
+    <p><b>Fine PMU</b><br>Stenograaf 1, 6921 EX Duiven<br><a href="mailto:info@finepmu.nl">info@finepmu.nl</a></p>
+    <p>Voorbeeldontwerp van Bjorn, Capital BB.<br><a href="https://wa.me/31614664161">Reageren kan via WhatsApp</a></p>
+  </div>
+</footer>
+
+<nav class="balk" aria-label="Snelle acties">
+  <a class="boek" href="#afspraak">Afspraak maken</a>
+  <a class="mail" href="mailto:info@finepmu.nl">Mailen</a>
+</nav>
+
+<script>
+(function(){
+  "use strict";
+
+  /* Gesloten op maandag, dinsdag en woensdag.
+     [openminuut, sluitminuut] per weekdag, null is gesloten. */
+  var UREN = { 0:[540,1020], 1:null, 2:null, 3:null, 4:[780,990], 5:[540,1020], 6:[540,1020] };
+  var DAGEN = ["zondag","maandag","dinsdag","woensdag","donderdag","vrijdag","zaterdag"];
+
+  function tijd(m){
+    var u = Math.floor(m/60), r = m%60;
+    return (u<10?"0"+u:u) + ":" + (r<10?"0"+r:r);
+  }
+
+  function toonStatus(){
+    var tekst = document.getElementById("nu-tekst");
+    var stip = document.getElementById("stip");
+    if (!tekst || !stip) return;
+
+    var nu = new Date(), dag = nu.getDay(), min = nu.getHours()*60 + nu.getMinutes();
+    var vandaag = UREN[dag];
+
+    if (vandaag && min >= vandaag[0] && min < vandaag[1]) {
+      tekst.textContent = "Nu open, tot " + tijd(vandaag[1]);
+      stip.classList.remove("dicht");
+    } else {
+      var volgende = null, wanneer = "";
+      if (vandaag && min < vandaag[0]) {
+        volgende = vandaag[0]; wanneer = "vandaag";
+      } else {
+        for (var i = 1; i <= 7; i++) {
+          var d = (dag + i) % 7;
+          if (UREN[d]) { volgende = UREN[d][0]; wanneer = (i===1) ? "morgen" : DAGEN[d]; break; }
+        }
+      }
+      tekst.textContent = volgende === null
+        ? "Bekijk de openingstijden"
+        : "Nu gesloten, " + wanneer + " open om " + tijd(volgende);
+      stip.classList.add("dicht");
+    }
+
+    var rij = document.querySelector('#urentabel tr[data-dag="' + dag + '"]');
+    if (rij) rij.classList.add("vandaag");
+  }
+
+  function beweging(){
+    var mag = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var doelen = document.querySelectorAll(".op");
+    if (!mag || !("IntersectionObserver" in window)) {
+      for (var i=0;i<doelen.length;i++) doelen[i].classList.add("in");
+      return;
+    }
+    var kijker = new IntersectionObserver(function(items){
+      items.forEach(function(item){
+        if (item.isIntersecting) { item.target.classList.add("in"); kijker.unobserve(item.target); }
+      });
+    }, { threshold:0.12, rootMargin:"0px 0px -8% 0px" });
+    for (var j=0;j<doelen.length;j++) kijker.observe(doelen[j]);
+  }
+
+  /* Vangnet: de pagina mag nooit onzichtbaar blijven staan. */
+  function alleszichtbaar(){
+    var doelen = document.querySelectorAll(".op");
+    for (var i=0;i<doelen.length;i++) doelen[i].classList.add("in");
+  }
+
+  try {
+    toonStatus();
+    beweging();
+    setTimeout(function(){
+      var eerste = document.querySelector(".op");
+      if (eerste && !eerste.classList.contains("in")) alleszichtbaar();
+    }, 1600);
+  } catch (e) {
+    alleszichtbaar();
+  }
+})();
+</script>
+</body>
+</html>
