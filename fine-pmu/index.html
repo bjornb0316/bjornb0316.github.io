@@ -27,7 +27,7 @@
   --rose-diep:#7d2f41;
   --grijs:#6b5f54;
   --wit:#fff;
-  --rond:2px;
+  --rond:0px;
   --marge:clamp(1.15rem,4.5vw,4rem);
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -61,16 +61,16 @@ a{color:inherit}
 @media(max-width:460px){.kop-cta{display:none}}
 
 /* ---- hero: hun eigen werk, paginavullend. Dit is de eerste seconde. ---- */
-.hero{position:relative;min-height:clamp(480px,78vh,720px);display:flex;align-items:flex-end;
+.hero{position:relative;min-height:clamp(560px,88vh,880px);display:flex;align-items:flex-end;
   overflow:hidden;background:var(--inkt)}
 .hero-foto{position:absolute;inset:0}
 .hero-foto img{width:100%;height:100%;object-fit:cover;object-position:52% 42%}
 /* scrim, zodat de tekst altijd leesbaar is over de foto */
 .hero-scrim{position:absolute;inset:0;background:
   linear-gradient(to top, rgba(20,15,13,.90) 0%, rgba(20,15,13,.70) 34%, rgba(20,15,13,.16) 66%, rgba(20,15,13,.30) 100%)}
-.hero-in{position:relative;z-index:2;width:100%;padding-block:clamp(2.2rem,5vw,3.6rem)}
+.hero-in{position:relative;z-index:2;width:100%;padding-block:clamp(2.6rem,6vw,4.5rem)}
 .hero-merk{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;color:var(--room);
-  font-size:clamp(2.9rem,9vw,6.2rem);line-height:.98;letter-spacing:.06em;text-transform:uppercase}
+  font-size:clamp(3.2rem,11vw,8.5rem);line-height:.94;letter-spacing:.05em;text-transform:uppercase}
 .hero-onder{color:#e8ddd2;margin-top:1rem;font-size:clamp(1.02rem,2.2vw,1.2rem);max-width:34ch}
 .hero-knoppen{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.7rem}
 .knop{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;text-decoration:none;font-weight:600;
@@ -89,21 +89,18 @@ a{color:inherit}
 .stip{width:7px;height:7px;border-radius:50%;background:#7fc79b;flex:0 0 auto}
 .stip.dicht{background:#c9b6a6}
 
-/* ---- bewijsband ---- */
-.bewijs{background:var(--inkt)}
-.bewijs-in{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.13)}
-@media(min-width:880px){.bewijs-in{grid-template-columns:repeat(4,1fr)}}
-.bewijs-cel{background:var(--inkt);color:var(--room);padding:1.5rem var(--marge)}
-.cijfer{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:2rem;line-height:1}
-.bewijs-cel span{display:block;margin-top:.35rem;font-size:.85rem;color:#b8a99c}
-.zandkleur{color:var(--zand)}
+/* ---- een stille regel in plaats van een balk met cijfers.
+        De referenties hebben nergens zo'n vakjesbalk. ---- */
+.regel{background:var(--inkt);padding-block:clamp(3.5rem,8vw,6rem)}
+.regel p{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;color:var(--room);
+  font-size:clamp(1.5rem,3.6vw,2.6rem);line-height:1.32;max-width:26ch;letter-spacing:.01em}
 
 /* ---- de afspraak stap voor stap: het hart van deze pagina ----
    Bij permanente make-up is de drempel geen prijs maar spanning.
    Elke stap staat er met een echte zin van een echte klant erbij. */
-.stappen{padding-block:clamp(3rem,7vw,5rem)}
+.stappen{padding-block:clamp(4.5rem,10vw,8rem)}
 .stappen h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;
-  font-size:clamp(2rem,5vw,3.1rem);line-height:1.08;max-width:19ch}
+  font-size:clamp(2.4rem,6.5vw,4.4rem);line-height:1.08;max-width:19ch}
 .stappen > .wrap > p{margin-top:.8rem;color:var(--grijs);max-width:50ch}
 .stap-lijst{list-style:none;margin-top:2.4rem;display:grid;gap:0}
 .stap{display:grid;grid-template-columns:auto 1fr;gap:1.1rem;padding:1.5rem 0;border-top:1px solid var(--zand)}
@@ -120,8 +117,8 @@ a{color:inherit}
 @media(max-width:819px){.stap blockquote{grid-column:1 / -1;margin-top:.9rem;padding-left:1rem;border-left:2px solid var(--rose)}}
 
 /* ---- werk ---- */
-.werk{background:var(--zand);padding-block:clamp(3rem,7vw,5rem)}
-.werk h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;font-size:clamp(2rem,5vw,3rem);line-height:1.08}
+.werk{background:var(--zand);padding-block:clamp(4.5rem,10vw,8rem)}
+.werk h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;font-size:clamp(2.4rem,6.5vw,4.4rem);line-height:1.08}
 .werk > .wrap > p{margin-top:.7rem;color:#5c5044;max-width:48ch}
 .w-raster{display:grid;grid-template-columns:1fr;gap:.9rem;margin-top:2.2rem}
 @media(min-width:760px){.w-raster{grid-template-columns:1.25fr 1fr;gap:1.1rem}}
@@ -134,10 +131,10 @@ a{color:inherit}
 .w-noot a{font-weight:600;text-underline-offset:3px}
 
 /* ---- prijs: open kaart, want dat is de tweede drempel ---- */
-.prijs{padding-block:clamp(3rem,7vw,5rem)}
+.prijs{padding-block:clamp(4.5rem,10vw,8rem)}
 .prijs-grid{display:grid;grid-template-columns:1fr;gap:2rem;align-items:start}
 @media(min-width:900px){.prijs-grid{grid-template-columns:.9fr 1.1fr;gap:clamp(2.4rem,5vw,4rem)}}
-.prijs h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;font-size:clamp(2rem,5vw,3rem);line-height:1.08}
+.prijs h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;font-size:clamp(2.4rem,6.5vw,4.4rem);line-height:1.08}
 .prijs-kop p{margin-top:.8rem;color:var(--grijs);max-width:40ch}
 .hoofdprijs{margin-top:1.6rem;border:1px solid var(--zand-diep);border-radius:var(--rond);padding:1.6rem;background:var(--wit)}
 .hoofdprijs .titel{font-weight:600;font-size:1.05rem}
@@ -156,8 +153,8 @@ a{color:inherit}
 .prijs-noot{margin-top:1.2rem;font-size:.88rem;color:var(--grijs);max-width:52ch}
 
 /* ---- stemmen ---- */
-.stemmen{background:var(--inkt);color:var(--room);padding-block:clamp(3rem,7vw,5rem)}
-.stemmen h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;font-size:clamp(2rem,5vw,3rem);line-height:1.08}
+.stemmen{background:var(--inkt);color:var(--room);padding-block:clamp(4.5rem,10vw,8rem)}
+.stemmen h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;font-size:clamp(2.4rem,6.5vw,4.4rem);line-height:1.08}
 .stemmen > .wrap > p{margin-top:.6rem;color:#b8a99c}
 .s-raster{display:grid;grid-template-columns:1fr;gap:1.2rem;margin-top:2.2rem}
 @media(min-width:880px){.s-raster{grid-template-columns:repeat(3,1fr);gap:1.6rem}}
@@ -169,10 +166,10 @@ a{color:inherit}
   letter-spacing:.08em;text-transform:uppercase;color:#b8a99c}
 
 /* ---- afspraak ---- */
-.afspraak{padding-block:clamp(3rem,7vw,5rem)}
+.afspraak{padding-block:clamp(4.5rem,10vw,8rem)}
 .a-grid{display:grid;grid-template-columns:1fr;gap:1.9rem;align-items:start}
 @media(min-width:1000px){.a-grid{grid-template-columns:.84fr 1.16fr;gap:2.6rem}}
-.afspraak h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;font-size:clamp(2rem,5vw,3rem);line-height:1.08}
+.afspraak h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;font-size:clamp(2.4rem,6.5vw,4.4rem);line-height:1.08}
 .a-kop > p{margin-top:.8rem;color:var(--grijs);max-width:40ch}
 .uren{width:100%;border-collapse:collapse;font-size:.97rem;margin-top:1.6rem}
 .uren th,.uren td{text-align:left;padding:.58rem 0;border-bottom:1px solid var(--zand)}
@@ -247,20 +244,17 @@ a{color:inherit}
         <h1 class="hero-merk">Fine PMU</h1>
         <p class="hero-onder">Lipblush in Duiven. Je eigen lippen, alleen dan uitgerust wakker.</p>
         <div class="hero-knoppen">
-          <a class="knop knop-hoofd" href="#afspraak">Plan een afspraak</a>
-          <a class="knop knop-licht" href="#verloop">Zo gaat het in zijn werk</a>
+          <a class="knop knop-licht" href="#verloop">Kijk hoe het gaat</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- BEWIJSBAND -->
-  <section class="bewijs">
-    <div class="bewijs-in">
-      <div class="bewijs-cel"><b class="cijfer zandkleur">5,0</b><span>op Google en in de eigen agenda</span></div>
-      <div class="bewijs-cel"><b class="cijfer">2 sessies</b><span>de tweede zit bij de prijs in</span></div>
-      <div class="bewijs-cel"><b class="cijfer">2,5 uur</b><span>de tijd, zonder haast</span></div>
-      <div class="bewijs-cel"><b class="cijfer">Zondag</b><span>ook in het weekend open</span></div>
+  <!-- STILLE REGEL: een zin, geen vakjes -->
+  <section class="regel">
+    <div class="wrap">
+      <p class="serif op">Vijf sterren, op Google en in de eigen agenda.<br>
+      Tweeënhalf uur de tijd, en de tweede behandeling zit erbij in.</p>
     </div>
   </section>
 
