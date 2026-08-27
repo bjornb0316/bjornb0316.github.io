@@ -14,6 +14,7 @@ Publiceren gaat via GitHub Pages: alles op de tak `main` staat direct online.
 | `lash-loft/` | Lash Loft II The Headspa Loft | Apeldoorn |
 | `a-beautiful-nail/` | A Beautiful Nail, Marja de Krosse | Apeldoorn |
 | `studio-kimberley-klijn/` | Studio Kimberley Klijn, permanente make-up | Almere |
+| `schoonheidssalon-julia/` | Schoonheidssalon Julia | Houten |
 
 Elke pagina draagt bovenaan een regel die zegt dat het een voorstel is
 en geen offici&euml;le website van het bedrijf. Die regel blijft staan.
