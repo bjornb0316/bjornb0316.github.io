@@ -103,6 +103,14 @@ h3.display{font-size:clamp(1.4rem,2.7vw,2rem)}
 .plaat{background:var(--wit);border:1px solid var(--lijn);padding:clamp(.7rem,1.4vw,1rem);
   max-width:460px;margin-inline:auto}
 .plaat img{width:100%}
+
+/* De hero stond stil. Een langzame beweging over twintig seconden maakt
+   hem levend zonder dat er iets van kwaliteit af gaat; wie beweging heeft
+   uitgezet krijgt gewoon het stilstaande beeld. */
+.plaat-hero{overflow:hidden}
+.plaat-hero img{transform-origin:52% 40%;animation:adem 24s ease-in-out infinite alternate}
+@keyframes adem{from{transform:scale(1)}to{transform:scale(1.07)}}
+@media (prefers-reduced-motion:reduce){.plaat-hero img{animation:none}}
 .plaat figcaption{display:flex;justify-content:space-between;gap:1rem;margin-top:.8rem;padding-top:.65rem;
   border-top:1px solid var(--lijn);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
   color:var(--grijs)}
@@ -166,6 +174,36 @@ h3.display{font-size:clamp(1.4rem,2.7vw,2rem)}
 .sectie-donker .prijsregel{border-color:#493a2f}
 .sectie-donker .prijsregel .duur,.sectie-donker .prijsnoot{color:#b3a292}
 
+/* ---- het bewijsblok: 990 beoordelingen verdienen meer dan een rijtje ---- */
+.bewijs{display:grid;grid-template-columns:1fr;gap:2.6rem;margin-top:3rem;align-items:start}
+@media(min-width:900px){.bewijs{grid-template-columns:.9fr 1.1fr;gap:4rem}}
+
+.cijfer-groot{display:flex;align-items:baseline;gap:.9rem}
+.cijfer-groot strong{font-family:Fraunces,Georgia,serif;font-weight:400;font-size:clamp(4rem,10vw,6.5rem);
+  line-height:.9;letter-spacing:-.03em}
+.cijfer-groot span{font-size:.95rem;color:var(--grijs);max-width:14ch;line-height:1.4}
+.sectie-donker .cijfer-groot span{color:#b3a292}
+
+/* De verdeling over de sterren, als staafjes die iets zeggen. */
+.verdeling{margin-top:2rem;display:grid;gap:.55rem}
+.verdeling div{display:grid;grid-template-columns:2.6rem 1fr 3rem;gap:.8rem;align-items:center;
+  font-size:.86rem;color:var(--grijs)}
+.sectie-donker .verdeling div{color:#b3a292}
+.verdeling .staaf{height:8px;background:var(--lijn);position:relative;overflow:hidden}
+.sectie-donker .verdeling .staaf{background:#493a2f}
+.verdeling .staaf i{position:absolute;inset:0 auto 0 0;background:var(--teal);display:block}
+.sectie-donker .verdeling .staaf i{background:var(--teal-licht)}
+.verdeling .aantal{text-align:right;font-variant-numeric:tabular-nums}
+
+/* Cijfers per behandeling: waar ze het hoogst scoort staat vooraan. */
+.per-behandeling{margin-top:2.4rem;display:grid;gap:0}
+.per-behandeling div{display:grid;grid-template-columns:1fr auto;gap:1rem;padding:.72rem 0;
+  border-top:1px solid var(--lijn);font-size:.95rem}
+.per-behandeling div:last-child{border-bottom:1px solid var(--lijn)}
+.sectie-donker .per-behandeling div{border-color:#493a2f}
+.per-behandeling b{font-family:Fraunces,Georgia,serif;font-weight:400;font-size:1.15rem;
+  font-variant-numeric:tabular-nums}
+
 /* ---- stemmen ---- */
 .stem-lijst{margin-top:2.8rem;display:grid;gap:0}
 .stem-lijst blockquote{margin:0;padding:2.2rem 0;border-top:1px solid var(--lijn)}
@@ -199,6 +237,11 @@ h3.display{font-size:clamp(1.4rem,2.7vw,2rem)}
 .adres{margin-top:2rem;line-height:1.9}
 .adres b{display:block;font-family:Fraunces,Georgia,serif;font-size:1.28rem;font-weight:400}
 .adres a{font-weight:600;text-underline-offset:3px;display:inline-block;padding-block:.3rem}
+
+/* ---- het boekscherm van Treatwell, in de pagina zelf ---- */
+.boekdoos{border:1px solid var(--lijn);background:var(--wit);overflow:hidden;margin-top:1.6rem}
+.boekdoos iframe{width:100%;height:820px;border:0;display:block;background:var(--wit)}
+@media(max-width:640px){.boekdoos iframe{height:640px}}
 
 .twee{display:grid;grid-template-columns:1fr;gap:2.6rem;margin-top:2.8rem;align-items:start}
 @media(min-width:1000px){.twee{grid-template-columns:1fr 1fr;gap:4rem}}
