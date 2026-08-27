@@ -16,6 +16,7 @@ Publiceren gaat via GitHub Pages: alles op de tak `main` staat direct online.
 | `studio-kimberley-klijn/` | Studio Kimberley Klijn, permanente make-up | Almere |
 | `schoonheidssalon-julia/` | Schoonheidssalon Julia | Houten |
 | `gentle-wax-laser/` | Gentle Wax & Laser Clinic | Utrecht |
+| `queensworld/` | QueensWorld Health & Beauty | Almere Buiten |
 
 Elke pagina draagt bovenaan een regel die zegt dat het een voorstel is
 en geen offici&euml;le website van het bedrijf. Die regel blijft staan.
