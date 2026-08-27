@@ -1,0 +1,296 @@
+/* =================================================================
+   Your Finishing Touch, Proostwetering 41, Utrecht.
+   Gedeelde stijl over vijf pagina's.
+
+   Maria heeft iets wat in deze hele batch nergens anders voorkomt: een
+   gave 5,0 op haar eigen naam, 467 keer. Niet 4,9, niet bijna. Dat is
+   het uitgangspunt van de pagina en het staat op de plek waar het hoort.
+
+   Zij fotografeert haar werk zelf en goed: haar beelden komen binnen op
+   1034 tot 1440 pixels breed. Die dragen deze site dus, en de hero is
+   een echte close-up van haar werk in plaats van een sfeerplaatje.
+
+   Het magenta is haar eigen logokleur. Op wit is dat te fel om lang naar
+   te kijken, dus staat er een verdiepte variant voor tekst en de felle
+   alleen als vlak en accentlijn.
+
+   Instrument Serif voor de koppen, omdat de hoge contrastvormen bij het
+   fijne lijnenspel van wimpers passen; DM Sans eronder voor de rest.
+
+   Gebouwd op DE-LAT-BEAUTY.md: ronding 0, hero vult het scherm, één knop.
+   ================================================================= */
+
+:root{
+  --papier:#f7f4f4;
+  --blos:#f0e6e8;
+  --wit:#fffdfd;
+  --inkt:#1c1a1b;
+  --magenta:#c4157a;
+  --magenta-fel:#e5177f;
+  --magenta-licht:#f2a8cd;
+  --grijs:#645b5e;
+  --lijn:#e2d8da;
+  --rond:0px;
+  --marge:clamp(1.15rem,4.5vw,4.5rem);
+  --lucht:clamp(4.5rem,10vw,8rem);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  font-family:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--papier);color:var(--inkt);font-size:17px;line-height:1.72;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:var(--marge)}
+.smal{max-width:820px}
+
+.display{font-family:"Instrument Serif",Georgia,serif;font-weight:400;line-height:1.04;
+  letter-spacing:-.012em}
+h1.display{font-size:clamp(2.7rem,7vw,5.6rem)}
+h2.display{font-size:clamp(2.1rem,5vw,3.8rem)}
+h3.display{font-size:clamp(1.45rem,2.8vw,2.1rem)}
+.label{font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--magenta);font-weight:700}
+.intro{margin-top:1.4rem;color:var(--grijs);font-size:clamp(1.02rem,2vw,1.16rem);max-width:56ch}
+
+/* ---- voorstelbalk ---- */
+.voorstel{background:var(--inkt);color:#a79ea1;font-size:.78rem;padding:.55rem 0;line-height:1.45}
+.voorstel .wrap{display:flex;flex-wrap:wrap;gap:.3rem 1rem;justify-content:center;text-align:center}
+.voorstel b{color:var(--papier);font-weight:700}
+.voorstel a{font-weight:700;text-underline-offset:2px;color:var(--magenta-licht)}
+
+/* ---- kop ---- */
+.kop{position:sticky;top:0;z-index:60;background:rgba(247,244,244,.94);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--lijn)}
+.kop-in{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;height:78px}
+.merk{text-decoration:none;line-height:1.05}
+.merk .naam{display:block;font-family:"Instrument Serif",Georgia,serif;font-size:1.35rem;
+  letter-spacing:-.01em}
+.merk small{display:block;margin-top:.1rem;font-size:.59rem;letter-spacing:.22em;color:var(--grijs);
+  text-transform:uppercase}
+.nav{display:flex;align-items:center;gap:1.6rem}
+.nav a{text-decoration:none;font-size:.88rem;color:var(--grijs);transition:color .18s;padding-block:.4rem}
+.nav a:hover,.nav a[aria-current=page]{color:var(--inkt)}
+.nav a[aria-current=page]{border-bottom:1px solid var(--magenta)}
+@media(max-width:1000px){.nav{display:none}}
+.kop-cta{background:var(--inkt);color:var(--papier);text-decoration:none;font-weight:700;font-size:.86rem;
+  padding:.72rem 1.35rem;border-radius:var(--rond);white-space:nowrap;transition:background .18s,transform .1s}
+.kop-cta:hover{background:var(--magenta)}
+.kop-cta:active{transform:translateY(1px)}
+@media(max-width:520px){.kop-cta{display:none}}
+
+/* ---- knoppen ---- */
+.knop{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;text-decoration:none;
+  font-weight:700;font-size:.95rem;border-radius:var(--rond);padding:1.05rem 2.1rem;
+  border:1px solid transparent;white-space:nowrap;
+  transition:background .2s,color .2s,border-color .2s,transform .1s}
+.knop-vol{background:var(--magenta);color:#fff;border-color:var(--magenta)}
+.knop-vol:hover{background:var(--inkt);border-color:var(--inkt)}
+.knop-licht{border-color:rgba(255,255,255,.55);color:#fff}
+.knop-licht:hover{background:#fff;color:var(--inkt);border-color:#fff}
+.knop-rand{border-color:var(--inkt);color:var(--inkt)}
+.knop-rand:hover{background:var(--inkt);color:var(--papier)}
+.knop:active{transform:translateY(1px)}
+.knop-groep{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2.1rem}
+
+/* ---- hero: haar eigen werk, paginabreed ---- */
+.hero{position:relative;min-height:clamp(540px,calc(100vh - 112px),900px);display:flex;
+  align-items:center;overflow:hidden;background:var(--inkt)}
+.hero-foto{position:absolute;inset:0}
+.hero-foto img{width:100%;height:100%;object-fit:cover;object-position:64% 30%}
+.hero-scrim{position:absolute;inset:0;background:
+  linear-gradient(100deg, rgba(18,16,17,.93) 0%, rgba(18,16,17,.87) 52%, rgba(18,16,17,.34) 84%, rgba(18,16,17,.55) 100%)}
+@media(max-width:820px){
+  .hero-scrim{background:
+    linear-gradient(to top, rgba(18,16,17,.95) 0%, rgba(18,16,17,.9) 48%, rgba(18,16,17,.6) 100%)}
+  .hero-foto img{object-position:60% 22%}
+}
+.hero-in{position:relative;z-index:2;width:100%;padding-block:clamp(2.2rem,4vw,3.4rem)}
+@media(min-width:1000px){.hero-in .wrap > *{max-width:min(640px,50vw)}}
+.hero .label{color:var(--magenta-licht)}
+.hero h1.display{margin-top:1.1rem;max-width:13ch;color:#fff}
+.hero-onder{margin-top:1.2rem;color:#cfc6c9;font-size:clamp(1.02rem,1.9vw,1.16rem);max-width:44ch}
+.hero .nu{color:#cfc6c9}
+.hero .knop-groep{margin-top:1.6rem}
+
+/* Het cijfer dat nergens anders voorkomt: een gave vijf, 467 keer. */
+.vijf{display:flex;align-items:center;gap:1.1rem;margin-top:1.6rem;padding-top:1.3rem;
+  border-top:1px solid rgba(242,168,205,.4)}
+.vijf strong{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:3.4rem;
+  line-height:.85;color:#fff}
+.vijf span{font-size:.9rem;color:#cfc6c9;max-width:22ch;line-height:1.45}
+.vijf span b{color:#fff;font-weight:700}
+
+/* ---- kleine hero ---- */
+.hero-klein{background:var(--inkt);color:var(--papier);padding-block:clamp(3rem,7vw,5.5rem)}
+.hero-klein .label{color:var(--magenta-licht)}
+.hero-klein h1.display{margin-top:1rem;font-size:clamp(2.2rem,5.4vw,4.2rem);max-width:16ch}
+.hero-klein .hero-onder{color:#a79ea1;max-width:54ch}
+
+/* ---- secties ---- */
+.sectie{padding-block:var(--lucht)}
+.sectie-blos{background:var(--blos)}
+.sectie-donker{background:var(--inkt);color:var(--papier)}
+.sectie-donker .label{color:var(--magenta-licht)}
+.sectie-donker .intro{color:#a79ea1}
+
+/* ---- de setkiezer: hoe vol wil je het ---- */
+.setkiezer{background:var(--wit);border:1px solid var(--lijn);padding:clamp(1.6rem,3.4vw,2.6rem);
+  margin-top:2.6rem;max-width:960px}
+.setknoppen{display:grid;grid-template-columns:1fr;gap:.5rem}
+@media(min-width:560px){.setknoppen{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.setknoppen{grid-template-columns:repeat(4,1fr)}}
+.setknoppen button{font:inherit;cursor:pointer;text-align:left;background:var(--papier);
+  color:var(--inkt);border:1px solid var(--lijn);border-radius:var(--rond);padding:1rem 1.1rem;
+  transition:background .15s,border-color .15s,color .15s}
+.setknoppen button b{display:block;font-family:"Instrument Serif",Georgia,serif;font-weight:400;
+  font-size:1.3rem;line-height:1.15}
+.setknoppen button small{display:block;margin-top:.3rem;font-size:.84rem;color:var(--grijs)}
+.setknoppen button:hover{border-color:var(--magenta)}
+.setknoppen button[aria-pressed=true]{background:var(--inkt);color:#fff;border-color:var(--inkt)}
+.setknoppen button[aria-pressed=true] small{color:#c9bfc2}
+.setknoppen button:focus-visible{outline:2px solid var(--magenta);outline-offset:2px}
+
+.setuit{margin-top:1.6rem;padding-top:1.5rem;border-top:1px solid var(--lijn);min-height:10.5rem}
+.setuit .leeg{color:var(--grijs)}
+.setuit .rij{display:grid;grid-template-columns:1fr;gap:.7rem 2.4rem}
+@media(min-width:700px){.setuit .rij{grid-template-columns:auto auto auto;justify-content:start}}
+.setuit .rij div dt{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--grijs)}
+.setuit .rij div dd{font-family:"Instrument Serif",Georgia,serif;font-size:1.75rem;line-height:1.15;
+  margin-top:.15rem}
+.setuit .wat{margin-top:1.1rem;color:var(--grijs);max-width:52ch}
+.setuit .knop{margin-top:1.3rem;padding:.85rem 1.6rem;font-size:.9rem}
+.js .setuit-in{animation:opkomen .45s cubic-bezier(.16,1,.3,1)}
+@keyframes opkomen{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.js .setuit-in{animation:none}}
+
+/* ---- beeld naast tekst ---- */
+.twee{display:grid;grid-template-columns:1fr;gap:2.6rem;margin-top:2.8rem;align-items:center}
+@media(min-width:1000px){.twee{grid-template-columns:1fr 1fr;gap:4rem}}
+.plaat{background:var(--wit);border:1px solid var(--lijn);padding:clamp(.7rem,1.4vw,1rem);max-width:540px}
+.plaat img{width:100%}
+.plaat figcaption{display:flex;justify-content:space-between;gap:1rem;margin-top:.8rem;padding-top:.65rem;
+  border-top:1px solid var(--lijn);font-size:.69rem;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--grijs)}
+.plaat figcaption b{color:var(--magenta);font-weight:700}
+
+.strook{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem;margin-top:3rem}
+@media(min-width:820px){.strook{grid-template-columns:repeat(4,1fr);gap:1.2rem}}
+.strook figure{margin:0;background:var(--wit);border:1px solid var(--lijn);padding:.5rem}
+.strook img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.strook figcaption{margin-top:.55rem;font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--grijs)}
+
+/* ---- ruwe lijsten ---- */
+.regels{display:grid;gap:0;margin-top:3rem;max-width:1000px}
+.regels > div{padding:2rem 0;border-top:1px solid var(--lijn);display:grid;gap:.5rem}
+@media(min-width:820px){.regels > div{grid-template-columns:.8fr 1.2fr;gap:2.6rem;align-items:baseline}}
+.regels > div:last-child{border-bottom:1px solid var(--lijn)}
+.regels dt{font-family:"Instrument Serif",Georgia,serif;font-size:clamp(1.4rem,3vw,2.1rem);line-height:1.16}
+.regels dt small{display:block;font-family:"DM Sans",sans-serif;font-size:.66rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--magenta);margin-bottom:.45rem}
+.regels dd{color:var(--grijs);font-size:1.02rem;max-width:50ch}
+.sectie-donker .regels > div{border-color:#332e30}
+.sectie-donker .regels dd{color:#a79ea1}
+.sectie-donker .regels dt small{color:var(--magenta-licht)}
+
+/* ---- prijzen ---- */
+.prijslijst{margin-top:2.8rem;max-width:860px}
+.prijsgroep + .prijsgroep{margin-top:3.4rem}
+.prijsgroep h3{margin-bottom:.4rem}
+.prijsgroep > p{color:var(--grijs);margin-bottom:1.4rem;max-width:54ch;font-size:1rem}
+.prijsregel{display:grid;grid-template-columns:1fr auto;gap:1rem 2rem;align-items:baseline;
+  padding:1.05rem 0;border-top:1px solid var(--lijn)}
+.prijsregel:last-child{border-bottom:1px solid var(--lijn)}
+.prijsregel .duur{display:block;font-size:.85rem;color:var(--grijs);margin-top:.1rem}
+.prijsregel .bedrag{font-family:"Instrument Serif",Georgia,serif;font-size:1.4rem;white-space:nowrap;
+  font-variant-numeric:tabular-nums}
+.prijsnoot{margin-top:1.6rem;font-size:.94rem;color:var(--grijs);max-width:60ch}
+.sectie-donker .prijsregel{border-color:#332e30}
+.sectie-donker .prijsregel .duur,.sectie-donker .prijsnoot{color:#a79ea1}
+
+/* ---- bewijs ---- */
+.bewijs{display:grid;grid-template-columns:1fr;gap:2.6rem;margin-top:3rem;align-items:start}
+@media(min-width:900px){.bewijs{grid-template-columns:.85fr 1.15fr;gap:4rem}}
+.woorden{display:grid;gap:0;margin-top:1.8rem}
+.woorden div{display:grid;grid-template-columns:1fr auto;gap:1rem;padding:.72rem 0;
+  border-top:1px solid #332e30;font-size:.96rem;color:#a79ea1}
+.woorden div:last-child{border-bottom:1px solid #332e30}
+.woorden b{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:1.15rem;color:var(--papier)}
+.stem-lijst{display:grid;gap:0}
+.stem-lijst blockquote{margin:0;padding:2.1rem 0;border-top:1px solid #332e30}
+.stem-lijst blockquote:last-child{border-bottom:1px solid #332e30}
+.stem-lijst p{font-family:"Instrument Serif",Georgia,serif;font-size:clamp(1.3rem,2.7vw,1.95rem);
+  line-height:1.28;max-width:30ch}
+.stem-lijst cite{display:block;margin-top:.85rem;font-style:normal;font-size:.68rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--magenta-licht)}
+
+/* ---- boekscherm ---- */
+.boekdoos{border:1px solid var(--lijn);background:var(--wit);overflow:hidden;margin-top:1.6rem}
+.boekdoos iframe{width:100%;height:820px;border:0;display:block;background:var(--wit)}
+@media(max-width:640px){.boekdoos iframe{height:640px}}
+
+/* ---- uren en adres ---- */
+.uren{width:100%;border-collapse:collapse;font-size:1rem;margin-top:1.6rem;max-width:420px}
+.uren th,.uren td{text-align:left;padding:.66rem 0;border-bottom:1px solid var(--lijn)}
+.uren th{font-weight:400;color:var(--grijs)}
+.uren td{text-align:right;font-variant-numeric:tabular-nums}
+.uren tr.dicht th,.uren tr.dicht td{color:#6f6669}
+.uren tr.vandaag th,.uren tr.vandaag td{color:var(--magenta);font-weight:700}
+.nu{display:flex;align-items:center;gap:.55rem;font-size:.75rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--grijs)}
+.stip{width:7px;height:7px;border-radius:50%;background:#3f8a5f;flex:0 0 auto}
+.stip.dicht{background:#9a8f92}
+.adres{margin-top:2rem;line-height:1.9}
+.adres b{display:block;font-family:"Instrument Serif",Georgia,serif;font-size:1.3rem;font-weight:400}
+.adres a{font-weight:700;text-underline-offset:3px;display:inline-block;padding-block:.3rem}
+
+/* ---- afsluiter ---- */
+.slot{background:var(--magenta);color:#fff}
+.slot-in{padding-block:clamp(4.5rem,11vw,8rem);text-align:center}
+.slot .intro{margin-inline:auto;color:#f8dced}
+.slot .knop-groep{justify-content:center}
+
+/* ---- voet ---- */
+.voet{background:var(--inkt);color:#a79ea1;padding-block:3rem;font-size:.9rem;border-top:1px solid #332e30}
+.voet-in{display:grid;grid-template-columns:1fr;gap:2rem}
+@media(min-width:760px){.voet-in{grid-template-columns:1.3fr 1fr 1fr}}
+.voet b{color:var(--papier);font-weight:400;font-family:"Instrument Serif",Georgia,serif;font-size:1.12rem}
+.voet a{color:#a79ea1;text-decoration:none;display:block;padding-block:.22rem}
+.voet a:hover{color:var(--magenta-licht)}
+.voet .voet-kop{color:var(--papier);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;
+  margin-bottom:.7rem}
+
+/* ---- vaste balk op mobiel ---- */
+.balk{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;gap:.5rem;
+  padding:.6rem var(--marge) calc(.6rem + env(safe-area-inset-bottom));
+  background:rgba(247,244,244,.97);backdrop-filter:blur(12px);border-top:1px solid var(--lijn)}
+.balk a{flex:1;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;
+  font-weight:700;font-size:.92rem;line-height:1.25;white-space:nowrap;padding:.85rem .9rem;
+  border-radius:var(--rond)}
+.balk .boek{background:var(--magenta);color:#fff}
+.balk .prijs{background:var(--blos);color:var(--inkt);border:1px solid var(--lijn)}
+@media(max-width:760px){
+  .balk{display:flex}
+  body{padding-bottom:calc(4.9rem + env(safe-area-inset-bottom))}
+}
+
+@media(max-width:640px){
+  .voorstel{font-size:.72rem;padding:.45rem 0}
+  .hero-in{padding-block:1.6rem}
+  .hero h1.display{margin-top:.9rem}
+  .hero-onder{margin-top:1rem}
+  .vijf{margin-top:1.2rem;padding-top:1rem}
+  .vijf strong{font-size:2.9rem}
+  .hero .knop-groep{margin-top:1.2rem}
+}
+
+/* ---- beweging ---- */
+.js .op{opacity:0;transform:translateY(16px)}
+.js .op.in{opacity:1;transform:none;transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+@media (prefers-reduced-motion:reduce){
+  .js .op{opacity:1;transform:none}
+  .js .op.in{transition:none}
+}
