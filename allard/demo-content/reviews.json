@@ -1,0 +1,38 @@
+[
+  {
+    "id": "demo-1",
+    "name": "M. de Vries",
+    "place": "Castricum",
+    "rating": 5,
+    "text": "Voorbeeldreview — hier komt straks een echte, geverifieerde klantervaring van Allard te staan. Deze tekst is demomateriaal en wordt vóór livegang vervangen.",
+    "source": "Demo",
+    "date": "2026-08-01",
+    "verified": false,
+    "featured": true,
+    "isDemoPlaceholder": true
+  },
+  {
+    "id": "demo-2",
+    "name": "Familie J.",
+    "place": "Heiloo",
+    "rating": 5,
+    "text": "Voorbeeldreview — echte klantervaringen (bijvoorbeeld via Advieskeuze of Google) worden hier na verificatie toegevoegd via AB Beheer.",
+    "source": "Demo",
+    "date": "2026-07-15",
+    "verified": false,
+    "featured": true,
+    "isDemoPlaceholder": true
+  },
+  {
+    "id": "demo-3",
+    "name": "R. Bakker",
+    "place": "Uitgeest",
+    "rating": 5,
+    "text": "Voorbeeldreview — de reviewcomponent ondersteunt naam, woonplaats, bron, datum en een geverifieerd-kenmerk, zodat alleen echte ervaringen getoond worden.",
+    "source": "Demo",
+    "date": "2026-06-20",
+    "verified": false,
+    "featured": false,
+    "isDemoPlaceholder": true
+  }
+]

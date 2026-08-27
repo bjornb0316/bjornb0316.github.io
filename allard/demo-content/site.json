@@ -1,0 +1,34 @@
+{
+  "brand": {
+    "name": "AB Onafhankelijk",
+    "subline": "Hypotheek Advies",
+    "domain": "ab-onafhankelijk.nl"
+  },
+  "demoNotice": {
+    "enabled": true,
+    "text": "Vrijblijvend websitevoorstel voor AB Onafhankelijk Hypotheek Advies"
+  },
+  "contact": {
+    "phoneDisplay": "06 21 17 97 51",
+    "phoneE164": "+31621179751",
+    "whatsappNumber": "31621179751",
+    "email": "allard@ab-onafhankelijk.nl"
+  },
+  "location": {
+    "base": "Castricum",
+    "region": "Kennemerland",
+    "places": [
+      "Bakkum",
+      "Limmen",
+      "Heiloo",
+      "Uitgeest",
+      "Akersloot",
+      "Heemskerk",
+      "Alkmaar"
+    ],
+    "homeVisits": true,
+    "nationwideOnline": true
+  },
+  "responsePromise": "Ik reageer doorgaans dezelfde werkdag, uiterlijk binnen 24 uur.",
+  "availabilityNote": "Ook 's avonds bereikbaar in overleg."
+}

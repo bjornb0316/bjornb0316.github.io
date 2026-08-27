@@ -1,0 +1,93 @@
+[
+  {
+    "id": "eerste-gesprek",
+    "question": "Is het eerste gesprek echt gratis?",
+    "answer": "Ja. De eerste kennismaking is gratis en vrijblijvend. We bespreken je situatie, je wensen en wat er mogelijk is. Daarna beslis jij zelf of je verder wilt — je zit nergens aan vast.",
+    "category": "werkwijze",
+    "showOnHome": true
+  },
+  {
+    "id": "onafhankelijk",
+    "question": "Wat betekent onafhankelijk hypotheekadvies?",
+    "answer": "Een bank adviseert je binnen het eigen aanbod. Als onafhankelijk adviseur ben ik niet gebonden aan één geldverstrekker: ik kijk breed naar een passend aanbod van hypotheekverstrekkers en adviseer wat bij jouw situatie past — niet wat het beste uitkomt voor één bank.",
+    "category": "advies",
+    "showOnHome": true
+  },
+  {
+    "id": "waarom-niet-bank",
+    "question": "Waarom zou ik niet rechtstreeks naar mijn bank gaan?",
+    "answer": "Dat kan natuurlijk. Maar je bank vergelijkt zichzelf niet met anderen. Een klein verschil in rente of voorwaarden kan over dertig jaar duizenden euro's schelen. Onafhankelijk advies laat je zien wat er buiten het aanbod van één bank mogelijk is — daarna kies jij.",
+    "category": "advies",
+    "showOnHome": true
+  },
+  {
+    "id": "ondernemer",
+    "question": "Kan ik als ondernemer of zzp'er een hypotheek krijgen?",
+    "answer": "In veel gevallen wel — vaak zijn er meer mogelijkheden dan je denkt. Geldverstrekkers kijken verschillend naar ondernemersinkomen: sommige willen drie jaarcijfers, andere werken al met één jaar. Juist daarom loont het om breed te vergelijken. Ik weet welke verstrekkers hoe rekenen.",
+    "category": "ondernemer",
+    "showOnHome": true
+  },
+  {
+    "id": "eigen-geld",
+    "question": "Hoeveel eigen geld heb ik nodig bij het kopen van een huis?",
+    "answer": "Je kunt maximaal 100% van de woningwaarde lenen. Kosten die daarbovenop komen — zoals overdrachtsbelasting, notaris, taxatie en advies — betaal je uit eigen middelen. Reken globaal op 4 tot 6% van de koopsom, afhankelijk van je situatie. In een gesprek maken we dit concreet voor jouw geval.",
+    "category": "kopen",
+    "showOnHome": false
+  },
+  {
+    "id": "aan-huis",
+    "question": "Kan Allard bij mij thuis langskomen?",
+    "answer": "Ja, graag zelfs. In Castricum en omgeving kom ik bij je aan de keukentafel — daar praat het vaak makkelijker dan in een kantoor. Woon je verder weg of heb je liever een videogesprek? Dat kan ook: ik adviseer door heel Nederland online.",
+    "category": "werkwijze",
+    "showOnHome": true
+  },
+  {
+    "id": "online",
+    "question": "Kan het advies ook volledig online?",
+    "answer": "Ja. Het hele traject — van kennismaking tot afronding — kan via videobellen en veilige documentuitwisseling. Je kiest zelf wat prettig voelt; combineren kan ook.",
+    "category": "werkwijze",
+    "showOnHome": false
+  },
+  {
+    "id": "duur",
+    "question": "Hoe lang duurt een hypotheekaanvraag?",
+    "answer": "Van advies tot definitieve offerte duurt gemiddeld enkele weken, afhankelijk van de geldverstrekker en hoe snel documenten compleet zijn. Bij een aankoop bewaak ik de deadlines uit je koopcontract — zoals het financieringsvoorbehoud — zodat je nergens in de knel komt.",
+    "category": "werkwijze",
+    "showOnHome": false
+  },
+  {
+    "id": "kosten",
+    "question": "Wat kost hypotheekadvies?",
+    "answer": "Je vindt de actuele tarieven op de tarievenpagina. Het eerste gesprek is altijd gratis, en je weet vóóraf precies waar je aan toe bent — geen verrassingen achteraf. Advieskosten voor je eigen woning zijn bovendien in veel gevallen fiscaal aftrekbaar.",
+    "category": "kosten",
+    "showOnHome": true
+  },
+  {
+    "id": "overwaarde",
+    "question": "Wat kan ik met de overwaarde van mijn huis?",
+    "answer": "Overwaarde kun je — onder voorwaarden — gebruiken voor bijvoorbeeld een verbouwing, verduurzaming, een schenking aan je kinderen of extra financiële ruimte. Hoeveel je kunt opnemen hangt af van je inkomen, je leeftijd en de regels van de geldverstrekker. Het is dus niet automatisch 'vrij besteedbaar geld', maar er kan vaak meer dan je denkt.",
+    "category": "overwaarde",
+    "showOnHome": false
+  },
+  {
+    "id": "meenemen",
+    "question": "Kan ik mijn huidige hypotheek meenemen naar een nieuw huis?",
+    "answer": "Veel hypotheken hebben een verhuisregeling waarmee je je huidige rente kunt meenemen. Of dat gunstig is, hangt af van je oude rente, de actuele rente en de voorwaarden. Dit reken ik altijd voor je door voordat je beslist.",
+    "category": "verhuizen",
+    "showOnHome": false
+  },
+  {
+    "id": "wanneer-adviseur",
+    "question": "Wanneer schakel ik het beste een adviseur in?",
+    "answer": "Liefst vroeg: vóórdat je een bod doet, of zodra je begint met oriënteren. Dan weet je precies wat je kunt bieden en sta je sterker in de onderhandeling. Maar ook als je al een huis op het oog hebt of snel moet schakelen, kun je me bellen — dan kijken we samen wat er binnen de deadlines mogelijk is.",
+    "category": "werkwijze",
+    "showOnHome": false
+  },
+  {
+    "id": "niet-standaard",
+    "question": "Mijn situatie is niet standaard. Heeft een gesprek dan zin?",
+    "answer": "Juist dan. Wisselend inkomen, een recente onderneming, een scheiding, een BKR-registratie: geldverstrekkers gaan er heel verschillend mee om. Soms zijn er meer mogelijkheden dan je in eerste instantie denkt. In een gratis kennismaking hoor je eerlijk waar je staat — ook als het antwoord is: nu nog niet.",
+    "category": "advies",
+    "showOnHome": false
+  }
+]

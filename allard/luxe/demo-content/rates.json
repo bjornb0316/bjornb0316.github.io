@@ -1,0 +1,14 @@
+{
+  "updatedAt": "2026-08-25",
+  "isDemoPlaceholder": true,
+  "intro": "Een eerste gevoel bij de actuele markt. Dit zijn indicatieve rentes op basis van een gemiddelde over meerdere geldverstrekkers — jouw rente hangt af van je situatie, de verstrekker en de risicoklasse.",
+  "rows": [
+    { "id": "10-nhg", "label": "10 jaar vast", "condition": "met NHG", "rate": "3,4%" },
+    { "id": "10", "label": "10 jaar vast", "condition": "zonder NHG (t/m 80% marktwaarde)", "rate": "3,6%" },
+    { "id": "20-nhg", "label": "20 jaar vast", "condition": "met NHG", "rate": "3,8%" },
+    { "id": "20", "label": "20 jaar vast", "condition": "zonder NHG (t/m 80% marktwaarde)", "rate": "4,0%" },
+    { "id": "30-nhg", "label": "30 jaar vast", "condition": "met NHG", "rate": "4,0%" },
+    { "id": "30", "label": "30 jaar vast", "condition": "zonder NHG (t/m 80% marktwaarde)", "rate": "4,2%" }
+  ],
+  "disclaimer": "Indicatieve demo-rentes — vóór livegang vervangen door actuele standen en daarna via AB Beheer actueel te houden. Aan deze tabel kunnen geen rechten worden ontleend."
+}

@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+Disallow: /beheer
+Disallow: /api/
+
+Sitemap: https://ab-onafhankelijk.nl/sitemap.xml

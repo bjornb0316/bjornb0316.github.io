@@ -1,0 +1,43 @@
+{
+  "name": "Allard Baars",
+  "firstName": "Allard",
+  "title": "Zelfstandig financieel adviseur · Erkend hypothecair planner",
+  "yearsExperience": 20,
+  "shortBio": "Al meer dan 20 jaar help ik mensen bij een van de grootste financiële keuzes in hun leven: de hypotheek voor hun huis. Onafhankelijk, in begrijpelijke taal en afgestemd op jouw situatie.",
+  "longBio": [
+    "Ik werk al meer dan twintig jaar met plezier in de financiële dienstverlening als hypotheekspecialist. In die jaren heb ik honderden mensen begeleid: starters die hun eerste huis kochten, gezinnen die doorstroomden, ondernemers met een wisselend inkomen en mensen die hun overwaarde wilden benutten.",
+    "Wat ik in al die jaren heb geleerd: geen twee situaties zijn hetzelfde. Daarom begin ik nooit bij een product, maar bij jou. Wat wil je? Wat kan er? En wat past er echt bij hoe jij leeft en werkt? Pas daarna kijk ik welke hypotheek daarbij hoort.",
+    "Ik heb bewust gekozen voor onafhankelijk adviseren. Dat betekent dat ik niet gebonden ben aan de producten van één bank, maar breed kijk naar een passend aanbod van geldverstrekkers. Mijn kennis houd ik actueel via cursussen, webinars en vakbijeenkomsten — de hypotheekmarkt verandert snel, en jij verdient advies dat klopt met vandaag."
+  ],
+  "personalNote": "Een hypotheek is voor mij geslaagd als jij aan het einde zegt: nu snap ik eindelijk hoe het werkt — en dit past bij ons.",
+  "photo": {
+    "src": "/images/allard.jpg",
+    "alt": "Allard Baars, zelfstandig hypotheekadviseur in Castricum",
+    "isPlaceholder": true
+  },
+  "credentials": [
+    {
+      "id": "seh",
+      "name": "SEH Erkend Financieel Adviseur",
+      "issuer": "Stichting Erkend Hypotheekadviseur",
+      "description": "Erkenning voor aantoonbare kennis en permanente educatie op het gebied van hypotheekadvies.",
+      "url": "https://www.seh.nl",
+      "verified": false
+    },
+    {
+      "id": "nvhp",
+      "name": "Erkend Hypothecair Planner",
+      "issuer": "Nederlandse Vereniging van Hypothecair Planners (NVHP)",
+      "description": "Lidmaatschap van de beroepsvereniging voor hypothecair planners, met strenge kennis- en integriteitseisen.",
+      "url": "https://www.nvhp.nl",
+      "verified": false
+    },
+    {
+      "id": "wft",
+      "name": "Wft-gecertificeerd",
+      "issuer": "Wet op het financieel toezicht",
+      "description": "Wettelijk vereiste diploma's voor het geven van hypotheekadvies in Nederland.",
+      "verified": false
+    }
+  ]
+}

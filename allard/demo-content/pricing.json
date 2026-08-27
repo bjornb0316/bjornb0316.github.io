@@ -1,0 +1,51 @@
+{
+  "intro": "Duidelijk over de kosten. Je weet vóóraf precies waar je aan toe bent: één vast tarief voor advies en bemiddeling, afgestemd op je situatie. Geen verrassingen achteraf.",
+  "firstMeetingFree": true,
+  "firstMeetingNote": "De eerste kennismaking is altijd gratis en vrijblijvend — thuis, op locatie of online.",
+  "items": [
+    {
+      "id": "aankoop",
+      "service": "Hypotheekadvies bij aankoop woning",
+      "audience": "Starters en doorstromers in loondienst",
+      "price": "vanaf € 2.495",
+      "priceNote": "Indicatief vast tarief, afhankelijk van je situatie",
+      "included": [
+        "Volledige inventarisatie van je situatie en wensen",
+        "Onafhankelijke vergelijking van geldverstrekkers",
+        "Persoonlijk adviesrapport in begrijpelijke taal",
+        "Bemiddeling en complete aanvraagbegeleiding",
+        "Bewaking van deadlines (o.a. financieringsvoorbehoud)",
+        "Begeleiding tot en met de notaris"
+      ],
+      "isIndicative": true
+    },
+    {
+      "id": "ondernemer",
+      "service": "Hypotheekadvies voor ondernemers",
+      "audience": "Zzp'ers, eenmanszaken en DGA's",
+      "price": "vanaf € 2.795",
+      "priceNote": "Indicatief vast tarief; ondernemersdossiers vragen extra analyse",
+      "included": [
+        "Analyse van jaarcijfers en toetsinkomen",
+        "Vergelijking van verstrekkers die met ondernemersinkomen rekenen",
+        "Persoonlijk adviesrapport en aanvraagbegeleiding",
+        "Afstemming met je boekhouder of accountant waar nodig"
+      ],
+      "isIndicative": true
+    },
+    {
+      "id": "oversluiten",
+      "service": "Oversluiten of aanpassen bestaande hypotheek",
+      "audience": "Huiseigenaren",
+      "price": "vanaf € 1.995",
+      "priceNote": "Indicatief vast tarief",
+      "included": [
+        "Analyse van je huidige hypotheek en voorwaarden",
+        "Doorrekening: loont oversluiten of aanpassen?",
+        "Advies en volledige begeleiding bij de wijziging"
+      ],
+      "isIndicative": true
+    }
+  ],
+  "disclaimer": "Bovenstaande tarieven zijn indicatief en worden vóór livegang geverifieerd. Het exacte tarief hangt af van je situatie en wordt altijd vooraf schriftelijk met je afgestemd. Advieskosten voor de eigen woning zijn in veel gevallen fiscaal aftrekbaar."
+}
