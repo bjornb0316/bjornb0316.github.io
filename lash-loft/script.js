@@ -81,3 +81,35 @@
     alleszichtbaar();
   }
 })();
+
+
+/* Het menu op de telefoon. Staat los van de rest, zodat een fout hier
+   de pagina verder niet raakt. */
+(function(){
+  "use strict";
+  var knop = document.querySelector(".menuknop");
+  var menu = document.getElementById("menu");
+  if (!knop || !menu) return;
+
+  function zet(open){
+    knop.setAttribute("aria-expanded", open ? "true" : "false");
+    knop.setAttribute("aria-label", open ? "Menu sluiten" : "Menu openen");
+    menu.setAttribute("data-open", open ? "ja" : "nee");
+    document.documentElement.setAttribute("data-menu", open ? "open" : "dicht");
+    if (open) { var e = menu.querySelector("a"); if (e) e.focus(); }
+    else { knop.focus(); }
+  }
+
+  knop.addEventListener("click", function(){
+    zet(knop.getAttribute("aria-expanded") !== "true");
+  });
+  document.addEventListener("keydown", function(e){
+    if (e.key === "Escape" && knop.getAttribute("aria-expanded") === "true") zet(false);
+  });
+  // Wie het scherm draait naar een breedte waar de gewone navigatie weer
+  // zichtbaar is, moet niet met een open menu blijven zitten.
+  window.addEventListener("resize", function(){
+    if (window.innerWidth > 1000 && knop.getAttribute("aria-expanded") === "true") zet(false);
+  });
+  zet(false);
+})();
