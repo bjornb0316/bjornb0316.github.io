@@ -1,0 +1,259 @@
+/* =================================================================
+   Studio Kimberley Klijn, permanente make-up, Almere.
+   Gedeelde stijl over vijf pagina's.
+
+   Waarom lei en botwit en geen roze: hier gaat een naald onder je huid,
+   vlak bij je oog, en het resultaat blijft jaren zitten. De vrouw die
+   dat doet is IC- en recovery-verpleegkundige in het VUMC en haar salon
+   staat bij de GGD geregistreerd. Dat is geen beautybar, dat is een
+   behandelkamer. De pagina hoort daar rustig en precies bij te zijn.
+
+   Het leiblauw is haar eigen merkkleur uit haar boeksysteem (#40545c).
+   Verder bijna geen kleur: de warmte komt uit haar eigen foto's, want
+   daar staan huid en pigment op.
+
+   Andere koers dan de vorige drie demo's: hier draagt een lichte, brede
+   schreefloze de koppen en zet een schreefletter de lopende tekst. Precies
+   andersom dus, want dit moet klinisch aanvoelen en niet romantisch.
+
+   Gebouwd op DE-LAT-BEAUTY.md: ronding 0, hero vult het scherm, één knop.
+   ================================================================= */
+
+:root{
+  --bot:#eef0ef;
+  --vlak:#ffffff;
+  --dek:#e3e7e6;
+  --lei:#40545c;
+  --diep:#26333a;
+  --grijs:#55646a;
+  --lijn:#d3d9d8;
+  --rond:0px;
+  --marge:clamp(1.15rem,4.5vw,4.5rem);
+  --lucht:clamp(4.5rem,10vw,8rem);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  font-family:"Source Serif 4",Georgia,"Times New Roman",serif;
+  background:var(--bot);color:var(--diep);font-size:17.5px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:var(--marge)}
+.smal{max-width:800px}
+
+.display{font-family:"Schibsted Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-weight:400;line-height:1.06;letter-spacing:-.022em}
+h1.display{font-size:clamp(2.5rem,6vw,4.9rem)}
+h2.display{font-size:clamp(2rem,4.6vw,3.5rem)}
+h3.display{font-size:clamp(1.35rem,2.5vw,1.9rem);letter-spacing:-.015em}
+.label{font-family:"Schibsted Grotesk",sans-serif;font-size:.7rem;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--lei);font-weight:500}
+.intro{margin-top:1.4rem;color:var(--grijs);font-size:clamp(1.03rem,2vw,1.17rem);max-width:56ch}
+
+/* ---- voorstelbalk ---- */
+.voorstel{background:var(--diep);color:#9fb0b7;font-size:.78rem;padding:.55rem 0;line-height:1.45;
+  font-family:"Schibsted Grotesk",sans-serif}
+.voorstel .wrap{display:flex;flex-wrap:wrap;gap:.3rem 1rem;justify-content:center;text-align:center}
+.voorstel b{color:var(--bot);font-weight:500}
+.voorstel a{font-weight:500;text-underline-offset:2px}
+
+/* ---- kop ---- */
+.kop{position:sticky;top:0;z-index:60;background:rgba(238,240,239,.94);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--lijn)}
+.kop-in{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;height:78px}
+.merk{text-decoration:none;line-height:1.06;font-family:"Schibsted Grotesk",sans-serif}
+.merk .naam{display:block;font-size:1.12rem;letter-spacing:.02em;font-weight:500}
+.merk small{display:block;margin-top:.12rem;font-size:.6rem;letter-spacing:.22em;color:var(--grijs);
+  text-transform:uppercase}
+.nav{display:flex;align-items:center;gap:1.7rem;font-family:"Schibsted Grotesk",sans-serif}
+.nav a{text-decoration:none;font-size:.87rem;color:var(--grijs);transition:color .18s;padding-block:.4rem}
+.nav a:hover,.nav a[aria-current=page]{color:var(--diep)}
+.nav a[aria-current=page]{border-bottom:1px solid var(--lei)}
+@media(max-width:1000px){.nav{display:none}}
+.kop-cta{background:var(--diep);color:var(--bot);text-decoration:none;font-family:"Schibsted Grotesk",sans-serif;
+  font-weight:500;font-size:.86rem;padding:.72rem 1.35rem;border-radius:var(--rond);white-space:nowrap;
+  transition:background .18s,transform .1s}
+.kop-cta:hover{background:var(--lei)}
+.kop-cta:active{transform:translateY(1px)}
+@media(max-width:520px){.kop-cta{display:none}}
+
+/* ---- knoppen ---- */
+.knop{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;text-decoration:none;
+  font-family:"Schibsted Grotesk",sans-serif;font-weight:500;font-size:.95rem;
+  border-radius:var(--rond);padding:1.05rem 2.1rem;border:1px solid transparent;white-space:nowrap;
+  transition:background .2s,color .2s,border-color .2s,transform .1s}
+.knop-vol{background:var(--diep);color:var(--bot);border-color:var(--diep)}
+.knop-vol:hover{background:var(--lei);border-color:var(--lei)}
+.knop-licht{border-color:rgba(238,240,239,.5);color:var(--bot)}
+.knop-licht:hover{background:var(--bot);color:var(--diep);border-color:var(--bot)}
+.knop-rand{border-color:var(--diep);color:var(--diep)}
+.knop-rand:hover{background:var(--diep);color:var(--bot)}
+.knop:active{transform:translateY(1px)}
+.knop-groep{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2.1rem}
+
+/* ---- hero ---- */
+.hero{padding-block:clamp(2.6rem,6vw,5rem) clamp(3.2rem,7vw,5.5rem);
+  min-height:clamp(540px,calc(100vh - 112px),900px);display:flex;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:clamp(2.2rem,5vw,4rem);align-items:center;width:100%}
+@media(min-width:1000px){.hero-grid{grid-template-columns:1.1fr .9fr}}
+.hero h1.display{margin-top:1.3rem;max-width:13ch}
+.hero-onder{margin-top:1.5rem;color:var(--grijs);font-size:clamp(1.04rem,2vw,1.2rem);max-width:42ch}
+.hero-beeld{order:-1}
+@media(min-width:1000px){.hero-beeld{order:0}}
+
+/* De bevoegdheidsregel: het enige dat op deze pagina een kadertje krijgt. */
+.bevoegd{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.4rem}
+.bevoegd span{font-family:"Schibsted Grotesk",sans-serif;font-size:.71rem;letter-spacing:.11em;
+  text-transform:uppercase;font-weight:500;color:var(--lei);
+  border:1px solid var(--lei);padding:.34rem .7rem;border-radius:var(--rond)}
+
+/* De plaat: haar foto's zijn staand, dus die krijgen een lijst en een bijschrift. */
+.plaat{background:var(--vlak);border:1px solid var(--lijn);padding:clamp(.7rem,1.4vw,1rem);
+  max-width:460px;margin-inline:auto}
+.plaat img{width:100%}
+.plaat figcaption{display:flex;justify-content:space-between;gap:1rem;margin-top:.8rem;padding-top:.65rem;
+  border-top:1px solid var(--lijn);font-family:"Schibsted Grotesk",sans-serif;
+  font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--grijs)}
+.plaat figcaption b{color:var(--lei);font-weight:500}
+
+/* ---- kleine hero ---- */
+.hero-klein{background:var(--diep);color:var(--bot);padding-block:clamp(3rem,7vw,5.5rem)}
+.hero-klein .label{color:#a8c0c8}
+.hero-klein h1.display{margin-top:1rem;font-size:clamp(2.2rem,5.2vw,4.1rem);max-width:16ch}
+.hero-klein .hero-onder{color:#a3b2b8;max-width:54ch}
+
+/* ---- secties ---- */
+.sectie{padding-block:var(--lucht)}
+.sectie-dek{background:var(--dek)}
+.sectie-donker{background:var(--diep);color:var(--bot)}
+.sectie-donker .label{color:#a8c0c8}
+.sectie-donker .intro{color:#a3b2b8}
+
+/* ---- genummerde stappen en ruwe lijsten ---- */
+.regels{display:grid;gap:0;margin-top:3rem;max-width:1000px}
+.regels > div{padding:2rem 0;border-top:1px solid var(--lijn);display:grid;gap:.5rem}
+@media(min-width:820px){.regels > div{grid-template-columns:.8fr 1.2fr;gap:2.6rem;align-items:baseline}}
+.regels > div:last-child{border-bottom:1px solid var(--lijn)}
+.regels dt{font-family:"Schibsted Grotesk",sans-serif;font-weight:400;letter-spacing:-.015em;
+  font-size:clamp(1.4rem,3vw,2.1rem);line-height:1.15}
+.regels dt small{display:block;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--lei);margin-bottom:.45rem}
+.regels dd{color:var(--grijs);font-size:1.02rem;max-width:50ch}
+.sectie-donker .regels > div{border-color:#3a4a52}
+.sectie-donker .regels dd{color:#a3b2b8}
+.sectie-donker .regels dt small{color:#a8c0c8}
+
+/* ---- behandelkaarten ---- */
+.kaarten{display:grid;grid-template-columns:1fr;gap:1.2rem;margin-top:3rem}
+@media(min-width:860px){.kaarten{grid-template-columns:repeat(2,1fr);gap:1.5rem}}
+.kaart{background:var(--vlak);border:1px solid var(--lijn);display:flex;flex-direction:column;
+  padding:1.9rem 1.8rem 2rem}
+.kaart h3{margin-top:.5rem}
+.kaart p{margin-top:.8rem;color:var(--grijs);font-size:1rem;flex:1}
+.kaart .prijs{margin-top:1.5rem;padding-top:1.1rem;border-top:1px solid var(--lijn);
+  font-family:"Schibsted Grotesk",sans-serif;font-size:1.6rem;letter-spacing:-.02em;
+  display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.kaart .prijs small{font-family:"Source Serif 4",serif;font-size:.88rem;color:var(--grijs);letter-spacing:0}
+
+/* ---- beeldstrook ---- */
+.strook{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem;margin-top:3rem}
+@media(min-width:820px){.strook{grid-template-columns:repeat(4,1fr);gap:1.2rem}}
+.strook figure{margin:0;background:var(--vlak);border:1px solid var(--lijn);padding:.5rem}
+.strook img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.strook figcaption{margin-top:.55rem;font-family:"Schibsted Grotesk",sans-serif;font-size:.67rem;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--grijs)}
+
+/* ---- prijzen ---- */
+.prijslijst{margin-top:2.8rem;max-width:860px}
+.prijsgroep + .prijsgroep{margin-top:3.4rem}
+.prijsgroep h3{margin-bottom:.4rem}
+.prijsgroep > p{color:var(--grijs);margin-bottom:1.4rem;max-width:54ch;font-size:1rem}
+.prijsregel{display:grid;grid-template-columns:1fr auto;gap:1rem 2rem;align-items:baseline;
+  padding:1.05rem 0;border-top:1px solid var(--lijn)}
+.prijsregel:last-child{border-bottom:1px solid var(--lijn)}
+.prijsregel .duur{display:block;font-size:.86rem;color:var(--grijs);margin-top:.1rem}
+.prijsregel .bedrag{font-family:"Schibsted Grotesk",sans-serif;font-size:1.3rem;letter-spacing:-.02em;
+  white-space:nowrap;font-variant-numeric:tabular-nums}
+.prijsnoot{margin-top:1.6rem;font-size:.95rem;color:var(--grijs);max-width:58ch}
+.sectie-donker .prijsregel{border-color:#3a4a52}
+.sectie-donker .prijsregel .duur,.sectie-donker .prijsnoot{color:#a3b2b8}
+
+/* ---- stemmen ---- */
+.stem-lijst{margin-top:2.8rem;display:grid;gap:0}
+.stem-lijst blockquote{margin:0;padding:2.2rem 0;border-top:1px solid var(--lijn)}
+.stem-lijst blockquote:last-child{border-bottom:1px solid var(--lijn)}
+.stem-lijst p{font-family:"Schibsted Grotesk",sans-serif;font-weight:400;letter-spacing:-.018em;
+  font-size:clamp(1.3rem,2.7vw,1.95rem);line-height:1.28;max-width:30ch}
+.stem-lijst cite{display:block;margin-top:.9rem;font-style:normal;font-family:"Schibsted Grotesk",sans-serif;
+  font-size:.7rem;letter-spacing:.19em;text-transform:uppercase;color:var(--lei)}
+
+/* ---- boekscherm ---- */
+.widget-doos{border:1px solid var(--lijn);background:var(--vlak);overflow:hidden;margin-top:1.6rem}
+.widget-doos iframe{width:100%;height:760px;border:0;display:block;background:var(--vlak)}
+@media(max-width:640px){.widget-doos iframe{height:660px}}
+
+.twee{display:grid;grid-template-columns:1fr;gap:2.6rem;margin-top:2.8rem;align-items:start}
+@media(min-width:1000px){.twee{grid-template-columns:.85fr 1.15fr;gap:3.6rem}}
+
+/* ---- uren en adres ---- */
+.uren{width:100%;border-collapse:collapse;font-size:1rem;margin-top:1.6rem;max-width:420px}
+.uren th,.uren td{text-align:left;padding:.65rem 0;border-bottom:1px solid var(--lijn)}
+.uren th{font-weight:400;color:var(--grijs)}
+.uren td{text-align:right;font-variant-numeric:tabular-nums;font-family:"Schibsted Grotesk",sans-serif;font-size:.95rem}
+.adres{margin-top:2rem;line-height:1.85}
+.adres b{display:block;font-family:"Schibsted Grotesk",sans-serif;font-size:1.2rem;font-weight:500;
+  letter-spacing:-.01em}
+.adres a{font-weight:600;text-underline-offset:3px}
+
+/* ---- afsluiter ---- */
+.slot{background:var(--diep);color:var(--bot)}
+.slot-in{padding-block:clamp(4.5rem,11vw,8rem);text-align:center}
+.slot .intro{margin-inline:auto;color:#a3b2b8}
+.slot .knop-groep{justify-content:center}
+
+/* ---- voet ---- */
+.voet{background:var(--diep);color:#9fb0b7;padding-block:3rem;font-size:.9rem;border-top:1px solid #3a4a52}
+.voet-in{display:grid;grid-template-columns:1fr;gap:2rem}
+@media(min-width:760px){.voet-in{grid-template-columns:1.3fr 1fr 1fr}}
+.voet b{color:var(--bot);font-weight:500;font-family:"Schibsted Grotesk",sans-serif;font-size:1.05rem}
+.voet a{color:#9fb0b7;text-decoration:none;display:block;padding-block:.22rem}
+.voet a:hover{color:var(--bot)}
+.voet .voet-kop{color:var(--bot);font-family:"Schibsted Grotesk",sans-serif;font-size:.68rem;
+  letter-spacing:.2em;text-transform:uppercase;margin-bottom:.7rem}
+
+/* ---- vaste balk op mobiel ---- */
+.balk{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;gap:.5rem;
+  padding:.6rem var(--marge) calc(.6rem + env(safe-area-inset-bottom));
+  background:rgba(238,240,239,.97);backdrop-filter:blur(12px);border-top:1px solid var(--lijn)}
+.balk a{flex:1;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;
+  font-family:"Schibsted Grotesk",sans-serif;font-weight:500;font-size:.92rem;line-height:1.25;
+  white-space:nowrap;padding:.85rem .9rem;border-radius:var(--rond)}
+.balk .boek{background:var(--diep);color:var(--bot)}
+.balk .app{background:#25d366;color:#04250f}
+@media(max-width:760px){
+  .balk{display:flex}
+  body{padding-bottom:calc(4.9rem + env(safe-area-inset-bottom))}
+}
+
+/* ---- op de telefoon telt elke pixel boven de vouw ---- */
+@media(max-width:640px){
+  .voorstel{font-size:.72rem;padding:.45rem 0}
+  .hero{padding-top:1.5rem;padding-bottom:3rem;min-height:0}
+  .hero-grid{gap:1.8rem}
+  .plaat{padding:.5rem}
+  .plaat img{aspect-ratio:4/3;object-fit:cover;object-position:50% 30%;max-height:min(27vh,215px);width:100%}
+  .plaat figcaption{margin-top:.55rem;padding-top:.5rem;font-size:.62rem;letter-spacing:.1em}
+  .bevoegd span{font-size:.64rem;padding:.28rem .55rem}
+  .hero h1.display{margin-top:1rem}
+}
+
+/* ---- beweging ---- */
+.js .op{opacity:0;transform:translateY(16px)}
+.js .op.in{opacity:1;transform:none;transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+@media (prefers-reduced-motion:reduce){
+  .js .op{opacity:1;transform:none}
+  .js .op.in{transition:none}
+}
