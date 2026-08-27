@@ -41,28 +41,44 @@
 <main>
 
   <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
+    <div class="hero-foto">
+      <img src="img/behandeling.jpg" width="1600" height="1600" fetchpriority="high"
+           alt="Een behandeling bij QueensWorld: handen aan de slapen, de klant met gesloten ogen">
+    </div>
+    <div class="hero-scrim"></div>
+    <div class="hero-in">
+      <div class="wrap">
         <p class="label">Health &amp; Beauty &middot; Almere Buiten</p>
         <h1 class="display">Hier lossen ze klachten op. Dat het ook een salon is, komt daarna.</h1>
         <p class="hero-onder">Luba is twintig jaar gecertificeerd massagetherapeute en behandelt
-        klachten aan spieren, pezen en gewrichten. Daarnaast staan er een SkinPen, permanente make-up
-        en een kappersstoel. Drie vakken, &eacute;&eacute;n adres.</p>
+        klachten aan spieren, pezen en gewrichten. Daarnaast staan er een SkinPen, permanente
+        make-up en een kappersstoel.</p>
+        <dl class="feitenregel">
+          <div><dt>Beoordelingen</dt><dd>1194<small>gemiddeld een 4,9</small></dd></div>
+          <div><dt>Luba zelf</dt><dd>5,0<small>uit 692 beoordelingen</small></dd></div>
+          <div><dt>E&eacute;n ster</dt><dd>0&times;<small>nooit voorgekomen</small></dd></div>
+        </dl>
         <div class="knop-groep">
-          <a class="knop knop-vol" href="klachten.html">Zie wat er behandeld wordt</a>
+          <a class="knop knop-licht" href="#kiezer">Zoek jouw klacht op</a>
         </div>
-        <p class="nu op" style="margin-top:1.8rem"><span class="stip" id="stip"></span><span id="nu-tekst">Openingstijden laden</span></p>
+        <p class="nu op" style="margin-top:1.6rem"><span class="stip" id="stip"></span><span id="nu-tekst">Openingstijden laden</span></p>
       </div>
-      <div>
-        <p class="klachten-kop op">Waarvoor mensen hier komen</p>
-        <div class="klachten op">
-          <div><span>Ischias</span><span>vanaf &euro;&nbsp;65</span></div>
-          <div><span>Bevroren schouder of tennisarm</span><span>vanaf &euro;&nbsp;65</span></div>
-          <div><span>Rugpijn</span><span>vanaf &euro;&nbsp;55</span></div>
-          <div><span>Na een heup- of kruisbandoperatie</span><span>vanaf &euro;&nbsp;100</span></div>
-          <div><span>Lymfedrainage na liposuctie</span><span>vanaf &euro;&nbsp;65</span></div>
-          <div><span>Slijmbeursontsteking</span><span>&euro;&nbsp;85</span></div>
-          <div><span>Osteopathie</span><span>vanaf &euro;&nbsp;65</span></div>
+    </div>
+  </section>
+
+  <!-- DE KIEZER -->
+  <section class="sectie" id="kiezer">
+    <div class="wrap">
+      <p class="label op">Waar heb je last van?</p>
+      <h2 class="display op" style="margin-top:1rem;max-width:17ch">Tik erop en je ziet meteen wat het inhoudt</h2>
+      <p class="intro op">Vijftien klachten, elk gekoppeld aan de behandeling die ervoor staat, met de
+      tijd en de prijs erbij. Allemaal uit hun eigen behandelmenu.</p>
+
+      <div class="kiezer op">
+        <div class="klachtknoppen" id="klachtknoppen"></div>
+        <div class="uitkomst" id="uitkomst" aria-live="polite">
+          <p class="leeg">Kies hierboven een klacht. Staat die er niet bij? Bel of loop binnen &mdash;
+          er wordt altijd eerst gekeken voordat er behandeld wordt.</p>
         </div>
       </div>
     </div>
@@ -75,6 +91,22 @@
       <h2 class="display op" style="margin-top:1rem;max-width:16ch">Drie vakken, drie specialisten</h2>
       <p class="intro op">QueensWorld heeft meerdere behandelruimtes en voldoet aan alle eisen van de
       GGD op het gebied van hygi&euml;ne en techniek.</p>
+
+      <div class="twee" style="margin-top:2.6rem">
+        <figure class="plaat op">
+          <img src="img/luba.jpg" width="1080" height="1080" loading="lazy"
+               alt="Luba in haar praktijkjas, met het ingelijste diploma aan de muur achter haar">
+          <figcaption><span>Luba, eigenaresse</span><b>Sinds 20 jaar gecertificeerd</b></figcaption>
+        </figure>
+        <div>
+          <h3 class="display op" style="max-width:16ch">Twintig jaar in hetzelfde vak</h3>
+          <p class="intro op">Luba heeft ruime ervaring binnen de schoonheidsbranche en is al twintig
+          jaar gecertificeerd massagetherapeute. Ze is gespecialiseerd in unieke massages om klachten
+          aan spieren, pezen en gewrichten te verminderen of weg te nemen.</p>
+          <p class="intro op">Daarnaast heeft ze eigen gezicht- en lichaamsbehandelingen waarbij de
+          huid er zonder medische ingrepen jonger uitziet. Dat zijn haar eigen woorden.</p>
+        </div>
+      </div>
 
       <div class="werelden">
         <article class="wereld op">

@@ -45,6 +45,75 @@
     if (rij) rij.classList.add("vandaag");
   }
 
+
+  /* De klachtenkiezer in de hero. Elke regel komt uit hun eigen
+     behandelmenu; de omschrijving zegt alleen wat er gebeurt. */
+  var KLACHTEN = [
+    ["Rugpijn", "Rugmassage bij pijn", "30 tot 50 minuten", "vanaf \u20ac 55",
+     "Gericht werken op de plek waar het vastzit, niet een algemene rugmassage."],
+    ["Nek en schouders", "Rugmassage bij pijn", "30 tot 50 minuten", "vanaf \u20ac 55",
+     "Dezelfde behandeling, gericht op de bovenrug, nek en schouders."],
+    ["Ischias", "Ischias behandeling", "30 tot 45 minuten", "vanaf \u20ac 65",
+     "Op de zenuwbaan die vanuit de onderrug het been in straalt."],
+    ["Bevroren schouder", "Bevroren schouder behandeling", "30 tot 45 minuten", "vanaf \u20ac 65",
+     "Gericht op het weer op gang brengen van een schouder die vastzit."],
+    ["Tennisarm", "Tennisarm behandeling", "30 tot 45 minuten", "vanaf \u20ac 65",
+     "Op de aanhechting van de pezen bij de elleboog."],
+    ["Na een operatie", "Revalidatie na een operatie", "50 minuten tot 1 uur 20", "vanaf \u20ac 100",
+     "Na een heup- of kruisbandoperatie. De langste behandeling die er staat."],
+    ["Na liposuctie", "Lymfedrainage na liposuctie", "30 tot 45 minuten", "vanaf \u20ac 65",
+     "Om vocht af te voeren en het herstel op gang te helpen."],
+    ["Slijmbeursontsteking", "Behandeling bij slijmbeursontsteking", "40 minuten", "\u20ac 85",
+     "Gericht op de ontstoken slijmbeurs en het weefsel eromheen."],
+    ["Vocht vasthouden", "Lymfedrainagemassage", "30 minuten tot 1 uur", "vanaf \u20ac 65",
+     "Zachte, ritmische massage die het lymfestelsel op gang helpt."],
+    ["Spanning en stress", "Anti-stressmassage", "55 minuten", "\u20ac 95",
+     "Lichaam, hoofd en gezicht in \u00e9\u00e9n behandeling."],
+    ["Sportblessure", "Sportmassage", "45 minuten", "\u20ac 85",
+     "Voor herstel na inspanning of bij een blessure."],
+    ["Wervelkolom", "Craniosacraaltherapie", "50 minuten", "\u20ac 85",
+     "Zachte techniek langs de wervelkolom en de schedelbasis."],
+    ["Buikklachten", "Viscerale massage", "40 minuten", "\u20ac 85",
+     "Op de organen in de buik en het bindweefsel eromheen."],
+    ["Cellulite", "Anti-cellulitemassage", "50 minuten", "vanaf \u20ac 75",
+     "Werkt in kuren; hoeveel behandelingen er nodig zijn hoor je bij de intake."],
+    ["Gewoon ontspannen", "Ontspanningsmassage", "45 minuten", "\u20ac 85",
+     "Geen klacht nodig. De meest geboekte behandeling van de salon."]
+  ];
+
+  function kiezer(){
+    var doos = document.getElementById("klachtknoppen");
+    var uit  = document.getElementById("uitkomst");
+    if (!doos || !uit) return;
+
+    KLACHTEN.forEach(function(k, i){
+      var b = document.createElement("button");
+      b.type = "button";
+      b.textContent = k[0];
+      b.setAttribute("aria-pressed", "false");
+      b.addEventListener("click", function(){
+        for (var j = 0; j < doos.children.length; j++) {
+          doos.children[j].setAttribute("aria-pressed", "false");
+        }
+        b.setAttribute("aria-pressed", "true");
+        toon(i);
+      });
+      doos.appendChild(b);
+    });
+
+    function toon(i){
+      var k = KLACHTEN[i];
+      uit.innerHTML =
+        '<p class="behandeling">' + k[1] + '</p>' +
+        '<p class="meta"><span>' + k[2] + '</span><b>' + k[3] + '</b></p>' +
+        '<p class="wat">' + k[4] + '</p>' +
+        '<a class="knop knop-vol" href="afspraak.html">Kijk wanneer er plek is</a>';
+      uit.classList.remove("uitkomst-in");
+      void uit.offsetWidth;
+      uit.classList.add("uitkomst-in");
+    }
+  }
+
   function beweging(){
     var mag = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var doelen = document.querySelectorAll(".op");
@@ -67,6 +136,7 @@
 
   try {
     toonStatus();
+    kiezer();
     beweging();
     setTimeout(function(){
       var eerste = document.querySelector(".op");
