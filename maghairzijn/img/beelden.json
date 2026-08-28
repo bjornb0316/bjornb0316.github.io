@@ -1,0 +1,65 @@
+[
+ {
+  "bestand": "01-gevel.jpg",
+  "alt": "De eigen ingang van Maghairzijn in BINK36, met de bank ernaast",
+  "soort": "gevel",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 85
+ },
+ {
+  "bestand": "02-zaak.jpg",
+  "alt": "De lange werkbank met spiegels en een bos bloemen",
+  "soort": "zaak",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 73
+ },
+ {
+  "bestand": "03-zaak.jpg",
+  "alt": "De salon met de stucwand en de nissen met producten",
+  "soort": "zaak",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 85
+ },
+ {
+  "bestand": "04-zaak.jpg",
+  "alt": "De wasplek met de zwarte stoel",
+  "soort": "zaak",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 58
+ },
+ {
+  "bestand": "05-zaak.jpg",
+  "alt": "De salon vanaf de ingang gezien",
+  "soort": "zaak",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 59
+ },
+ {
+  "bestand": "06-zaak.jpg",
+  "alt": "De zithoek achterin met de hoge krukken",
+  "soort": "zaak",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 71
+ },
+ {
+  "bestand": "07-product.jpg",
+  "alt": "Olaplex in de nis",
+  "soort": "product",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 33
+ }
+]

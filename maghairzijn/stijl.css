@@ -1,0 +1,266 @@
+/* Maghairzijn, Den Haag
+   Afgelezen van hun eigen salon: betonvloer, witte wanden, staal, en twee
+   bossen wilde bloemen als enige kleur. Dus: papier en inkt, en koraal alleen
+   waar iets aanklikbaar is. Ronding nul, want er is niets rond in dat pand. */
+
+:root{
+  --papier:#eae7e1;
+  --papier-diep:#dedbd4;
+  --inkt:#17181a;
+  --grijs:#6d6f6c;
+  --lijn:#c9c5bd;
+  --koraal:#bd4f34;
+  --salie:#7c8879;
+  --wit:#fbfaf8;
+}
+
+.overslaan{position:absolute;left:-9999px;top:0;background:#000;color:#fff;padding:.7rem 1rem;z-index:99}
+.overslaan:focus{left:0}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--papier);color:var(--inkt);
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:clamp(1rem,.96rem + .2vw,1.08rem);line-height:1.7;
+  -webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+button{font:inherit}
+:focus-visible{outline:2px solid var(--koraal);outline-offset:3px}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important;
+    scroll-behavior:auto!important}
+}
+
+h1,h2,h3,blockquote{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;
+  letter-spacing:-.012em;margin:0}
+h1{font-size:clamp(2.5rem,6.2vw,5.1rem);line-height:1.0}
+h2{font-size:clamp(1.9rem,4.2vw,3.4rem);line-height:1.06}
+h3{font-size:1.35rem;font-weight:400}
+p{margin:0}
+
+.klein{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--grijs);
+  font-weight:500;font-family:Inter,sans-serif}
+.grijs{color:var(--grijs);font-size:.9rem}
+
+/* ------------------------------------------------------------ voorstelbalk */
+.voorstel{background:var(--inkt);color:#e9e6e0;font-size:.78rem;padding:.6rem 1.2rem;
+  text-align:center;position:relative;z-index:60}
+.voorstel p{margin:0}
+.voorstel b{color:#fff}
+.voorstel a{color:#f0a58f;text-decoration:none;white-space:nowrap}
+.voorstel a:hover{text-decoration:underline}
+
+/* -------------------------------------------------------------------- kop */
+.bovenaan{position:sticky;top:0;z-index:50;display:flex;align-items:center;
+  justify-content:space-between;gap:1rem;padding:1.1rem clamp(1.1rem,4vw,3.2rem);
+  background:rgba(234,231,225,.86);backdrop-filter:blur(9px);
+  border-bottom:1px solid transparent;transition:border-color .25s,padding .25s}
+.bovenaan.vast{border-bottom-color:var(--lijn);padding-block:.7rem}
+.merk{font-family:"Cormorant Garamond",serif;font-size:1.5rem;text-decoration:none;
+  line-height:1;display:flex;align-items:baseline;gap:.6rem}
+.merk span{font-family:Inter,sans-serif;font-size:.62rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--grijs)}
+.bovenaan ul{list-style:none;display:flex;align-items:center;gap:1.7rem;margin:0;padding:0}
+.bovenaan a{text-decoration:none;font-size:.86rem;letter-spacing:.02em}
+.bovenaan a[aria-current]{border-bottom:1px solid var(--inkt);padding-bottom:2px}
+.nav-boek{background:var(--inkt);color:var(--wit)!important;padding:.62rem 1.15rem}
+.nav-boek:hover{background:var(--koraal)}
+.menuknop{display:none;background:none;border:1px solid var(--lijn);padding:.55rem .95rem;
+  font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+
+/* ------------------------------------------------------------------ knop */
+.knop{display:inline-block;text-decoration:none;background:var(--inkt);color:var(--wit);
+  padding:.95rem 1.7rem;font-size:.83rem;letter-spacing:.13em;text-transform:uppercase;
+  font-weight:500;transition:background .2s,color .2s;border:1px solid var(--inkt)}
+.knop:hover{background:var(--koraal);border-color:var(--koraal)}
+.knop-groot{padding:1.15rem 2.3rem;font-size:.86rem}
+.knop-licht{background:transparent;color:var(--inkt)}
+.knop-licht:hover{background:var(--inkt);color:var(--wit)}
+
+/* ------------------------------------------------------------------ hero */
+.hero{display:grid;grid-template-columns:1fr minmax(300px,40%);gap:clamp(2rem,5vw,4rem);
+  align-items:center;padding:clamp(1.6rem,3vw,3rem) clamp(1.1rem,4vw,3.2rem) clamp(3.5rem,7vw,6rem);
+  min-height:calc(92vh - 96px)}
+.hero-tekst{max-width:36ch}
+.hero h1{margin:.9rem 0 0}
+.inleiding{margin-top:1.15rem;color:#3d3f3d;font-size:1.06rem;max-width:44ch}
+.hero-nu{display:flex;align-items:center;gap:.6rem;margin-top:1.3rem;font-size:.86rem;
+  letter-spacing:.04em;color:#3d3f3d}
+.stip{width:8px;height:8px;background:var(--grijs);display:inline-block;flex:none}
+[data-open="ja"] ~ .stip,.hero-nu:has([data-open="ja"]) .stip{background:var(--salie)}
+.hero .knop{margin-top:1.5rem}
+.hero-cijfer{margin-top:1.2rem;font-size:.83rem;color:var(--grijs)}
+.hero-cijfer b{color:var(--inkt);font-weight:600}
+.hero-beeld{position:relative}
+.hero-beeld img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 40%}
+.hero-beeld::after{content:"";position:absolute;left:-14px;top:-14px;right:14px;bottom:14px;
+  border:1px solid var(--lijn);z-index:-1}
+
+/* ------------------------------------------------------------------ band */
+.band{background:var(--inkt);color:#e7e4de;padding:clamp(4.5rem,10vw,8rem) clamp(1.1rem,4vw,3.2rem)}
+.band-in{max-width:52rem;margin:0 auto;text-align:center}
+.band p{color:#9b9a95;font-size:.95rem}
+.band blockquote{margin:1.8rem 0 0;font-size:clamp(1.7rem,4.4vw,3.2rem);line-height:1.16;
+  color:#fff;font-style:italic}
+.band blockquote::before{content:"“"}
+.band blockquote::after{content:"”"}
+.band .bron{margin-top:1.6rem;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
+  color:#7d7c78}
+
+/* ------------------------------------------------------------------ werk */
+.werk{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);
+  gap:clamp(2rem,6vw,5rem);align-items:center;
+  padding:clamp(4.5rem,10vw,8rem) clamp(1.1rem,4vw,3.2rem)}
+.werk-tekst{max-width:40ch}
+.werk-tekst p{margin-top:1.4rem;color:#3d3f3d}
+.werk-knoppen{display:flex;gap:.7rem;margin-top:2.2rem;flex-wrap:wrap}
+.werk-beeld{position:relative}
+.werk-beeld img:first-child{width:100%;aspect-ratio:4/3;object-fit:cover}
+.werk-klein{position:absolute;right:-1.5rem;bottom:-2.5rem;width:44%;
+  aspect-ratio:1/1;object-fit:cover;border:8px solid var(--papier)}
+
+/* ---------------------------------------------------------------- ruimte */
+.ruimte{padding:clamp(4.5rem,10vw,8rem) clamp(1.1rem,4vw,3.2rem);background:var(--papier-diep)}
+.ruimte h2{max-width:16ch}
+.ruimte-uit{margin-top:1.2rem;max-width:52ch;color:#3d3f3d}
+.raster{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;
+  margin-top:3rem;background:var(--lijn)}
+.raster img{width:100%;aspect-ratio:3/2;object-fit:cover}
+
+/* ------------------------------------------------------------- uitgelicht */
+.uitgelicht{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);
+  gap:clamp(2rem,6vw,5rem);align-items:center;
+  padding:clamp(4.5rem,10vw,8rem) clamp(1.1rem,4vw,3.2rem)}
+.uitgelicht img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.uitgelicht blockquote{margin:0;font-size:clamp(1.5rem,3.4vw,2.6rem);line-height:1.2;font-style:italic}
+.uitgelicht cite{display:block;margin-top:1.4rem;font-family:Inter,sans-serif;font-style:normal;
+  font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--grijs)}
+.uitgelicht-om img{order:2}
+.uitgelicht-tekst p{margin-top:1.2rem;color:#3d3f3d}
+
+/* ------------------------------------------------------------------- kop */
+.kop{padding:clamp(3.5rem,8vw,6.5rem) clamp(1.1rem,4vw,3.2rem) clamp(2rem,4vw,3rem);
+  max-width:60rem}
+.kop h1{margin-top:1rem}
+.kop-smal{max-width:46rem}
+
+/* ----------------------------------------------------------------- lijst */
+.lijst{padding:clamp(2rem,5vw,4rem) clamp(1.1rem,4vw,3.2rem) clamp(4.5rem,10vw,8rem)}
+.lijst-uit{margin-top:1rem;color:var(--grijs);max-width:52ch;font-size:.95rem}
+.groep{margin-top:3.4rem;max-width:64rem}
+.groep h3{font-size:1.5rem;padding-bottom:.9rem;border-bottom:1px solid var(--lijn)}
+.regel{display:grid;grid-template-columns:1fr auto auto auto;align-items:baseline;
+  gap:1.4rem;padding:1.15rem 0;border-bottom:1px solid var(--lijn);text-decoration:none;
+  transition:background .18s,padding .18s}
+.regel:hover{background:var(--papier-diep);padding-inline:.9rem}
+.naam{font-size:1.02rem}
+.uitleg{display:block;color:var(--grijs);font-size:.87rem;margin-top:.25rem;max-width:52ch}
+.duur{color:var(--grijs);font-size:.85rem;white-space:nowrap}
+.bedrag{font-family:"Cormorant Garamond",serif;font-size:1.6rem;white-space:nowrap}
+.pijl{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--koraal);
+  opacity:0;transition:opacity .18s;white-space:nowrap}
+.regel:hover .pijl,.regel:focus-visible .pijl{opacity:1}
+
+/* ---------------------------------------------------------------- oproep */
+.oproep{background:var(--inkt);color:#e7e4de;
+  padding:clamp(4.5rem,10vw,8rem) clamp(1.1rem,4vw,3.2rem)}
+.oproep-in{max-width:44rem;margin:0 auto;text-align:center}
+.oproep h2{color:#fff}
+.oproep p{margin-top:1.2rem;color:#a09f9a}
+.oproep .knop{margin-top:2.2rem;background:var(--wit);color:var(--inkt);border-color:var(--wit)}
+.oproep .knop:hover{background:var(--koraal);color:#fff;border-color:var(--koraal)}
+.oproep .knop-licht{background:transparent;color:#e7e4de;border-color:#4a4b4c}
+.oproep .knop-licht:hover{background:#fff;color:var(--inkt);border-color:#fff}
+.oproep-knoppen{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap}
+
+/* -------------------------------------------------------------- praktisch */
+.praktisch{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:clamp(2rem,6vw,5rem);padding:clamp(4.5rem,10vw,8rem) clamp(1.1rem,4vw,3.2rem)}
+.uren{margin:1.6rem 0 0;display:grid;gap:0}
+.uren div{display:flex;justify-content:space-between;gap:1rem;padding:.62rem 0;
+  border-bottom:1px solid var(--lijn)}
+.uren dt{color:#3d3f3d}
+.uren dd{margin:0;font-variant-numeric:tabular-nums}
+.uren .dicht dd{color:var(--grijs)}
+.nu-groot{margin-top:1.6rem;font-family:"Cormorant Garamond",serif;font-size:1.5rem}
+.adres{margin-top:1.6rem;line-height:1.8}
+.tel{font-family:"Cormorant Garamond",serif;font-size:1.7rem;text-decoration:none;
+  display:inline-block;margin-top:.6rem}
+.tel:hover{color:var(--koraal)}
+.praktisch p{margin-top:.9rem}
+
+/* ----------------------------------------------------------- afspraakhulp */
+.hulp-blok{padding:0 clamp(1.1rem,4vw,3.2rem) clamp(3rem,7vw,5rem)}
+.hulp{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.4rem;
+  max-width:58rem;background:var(--wit);border:1px solid var(--lijn);
+  padding:clamp(1.6rem,4vw,2.8rem)}
+.veld{display:flex;flex-direction:column;gap:.5rem}
+.veld-breed{grid-column:1/-1}
+.hulp label{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--grijs)}
+.hulp select,.hulp input,.hulp textarea{font:inherit;font-size:.98rem;padding:.85rem .95rem;
+  border:1px solid var(--lijn);background:var(--papier);color:var(--inkt);border-radius:0}
+.hulp textarea{line-height:1.65;resize:vertical;min-height:11rem}
+.hulp select:focus,.hulp input:focus,.hulp textarea:focus{outline:2px solid var(--koraal);
+  outline-offset:-1px;border-color:var(--koraal)}
+.hulp-knoppen{grid-column:1/-1;display:flex;gap:.7rem;flex-wrap:wrap;align-items:center}
+.knop-wa{background:#1f8f4d;border-color:#1f8f4d}
+.knop-wa:hover{background:#177038;border-color:#177038}
+.knop-kopie{cursor:pointer}
+.gedaan{opacity:0;transition:opacity .2s;font-size:.82rem;color:var(--salie)}
+.gedaan.aan{opacity:1}
+
+/* --------------------------------------------------------------- direct */
+.direct{padding:0 clamp(1.1rem,4vw,3.2rem) clamp(4.5rem,10vw,7rem)}
+.direct-in{max-width:58rem;border-top:1px solid var(--lijn);padding-top:clamp(2.5rem,6vw,4rem)}
+.direct p{margin-top:1rem;color:#3d3f3d}
+.direct .knop{margin-top:1.6rem}
+.direct .grijs{margin-top:.9rem}
+
+/* ------------------------------------------------------------------ voet */
+.voet{background:var(--inkt);color:#9b9a95;padding:clamp(3rem,7vw,5rem) clamp(1.1rem,4vw,3.2rem);
+  font-size:.88rem}
+.voet-in{max-width:70rem;margin:0 auto;display:grid;gap:.9rem}
+.voet-naam{font-family:"Cormorant Garamond",serif;font-size:1.9rem;color:#fff}
+.voet-adres{line-height:1.7}
+.voet a{color:#e7e4de}
+.voet-klein{margin-top:1.4rem;padding-top:1.4rem;border-top:1px solid #2e2f31;
+  font-size:.79rem;max-width:62ch;line-height:1.7}
+
+/* ------------------------------------------------------------- onderbalk */
+.onderbalk{display:none}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;min-height:0;padding-top:2rem}
+  .hero-beeld{order:-1}
+  .hero-beeld img{aspect-ratio:4/3}
+  .hero-beeld::after{display:none}
+  .werk,.uitgelicht,.praktisch{grid-template-columns:1fr}
+  .uitgelicht-om img{order:0}
+  .werk-klein{position:static;width:100%;margin-top:1px;border:0;aspect-ratio:3/2}
+  .menuknop{display:block}
+  .bovenaan{flex-wrap:wrap}
+  .bovenaan ul{display:none;width:100%;flex-direction:column;align-items:flex-start;
+    gap:.2rem;padding-top:1rem}
+  body.js .bovenaan ul.open{display:flex}
+  body:not(.js) .bovenaan ul{display:flex;flex-direction:row;flex-wrap:wrap;gap:1rem}
+  .bovenaan li{width:100%}
+  .bovenaan ul.open a{display:block;padding:.7rem 0;border-bottom:1px solid var(--lijn);width:100%}
+  .nav-boek{text-align:center}
+  .regel{grid-template-columns:1fr auto;gap:.5rem 1rem}
+  .duur{grid-column:1;color:var(--grijs)}
+  .pijl{display:none}
+  .onderbalk{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:70;
+    background:var(--wit);border-top:1px solid var(--lijn)}
+  .onderbalk a{flex:1;text-align:center;padding:.95rem .4rem;text-decoration:none;
+    font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
+  .onderbalk .hoofdknop{background:var(--inkt);color:var(--wit)}
+  body{padding-bottom:3.4rem}
+}
+@media (max-width:520px){
+  .hero-beeld img{aspect-ratio:3/2}
+  .raster{grid-template-columns:1fr}
+}
+
+/* de knop boven aan de onderpagina - uit de meting: de weg naar de agenda
+   moet in beeld staan zodra iemand binnenkomt, niet pas na drie schermen. */
+.kop-knoppen{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:2rem}

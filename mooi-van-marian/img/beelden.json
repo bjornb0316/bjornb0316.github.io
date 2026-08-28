@@ -1,0 +1,83 @@
+[
+ {
+  "bestand": "01-mens.jpg",
+  "alt": "Een van de schoonheidsspecialistes bij de make-upkast",
+  "soort": "mens",
+  "breedte": 1280,
+  "hoogte": 1707,
+  "origineel": "1280x1707",
+  "kb": 184
+ },
+ {
+  "bestand": "02-mens.jpg",
+  "alt": "Een van de schoonheidsspecialistes bij de make-upkast",
+  "soort": "mens",
+  "breedte": 1280,
+  "hoogte": 1707,
+  "origineel": "1280x1707",
+  "kb": 155
+ },
+ {
+  "bestand": "03-mens.jpg",
+  "alt": "Een van de schoonheidsspecialistes bij de make-upkast",
+  "soort": "mens",
+  "breedte": 1368,
+  "hoogte": 1824,
+  "origineel": "1368x1824",
+  "kb": 184
+ },
+ {
+  "bestand": "04-mens.jpg",
+  "alt": "Een van de schoonheidsspecialistes bij de make-upkast",
+  "soort": "mens",
+  "breedte": 1280,
+  "hoogte": 1439,
+  "origineel": "1280x1439",
+  "kb": 166
+ },
+ {
+  "bestand": "05-mens.jpg",
+  "alt": "Een van de schoonheidsspecialistes bij de make-upkast",
+  "soort": "mens",
+  "breedte": 1280,
+  "hoogte": 1707,
+  "origineel": "1280x1707",
+  "kb": 167
+ },
+ {
+  "bestand": "06-mens.jpg",
+  "alt": "Een van de schoonheidsspecialistes bij de make-upkast",
+  "soort": "mens",
+  "breedte": 1280,
+  "hoogte": 1707,
+  "origineel": "1280x1707",
+  "kb": 183
+ },
+ {
+  "bestand": "07-mens.jpg",
+  "alt": "Een van de schoonheidsspecialistes bij de make-upkast",
+  "soort": "mens",
+  "breedte": 986,
+  "hoogte": 1315,
+  "origineel": "986x1315",
+  "kb": 174
+ },
+ {
+  "bestand": "08-zaak.jpg",
+  "alt": "De parfumkasten in de winkel",
+  "soort": "zaak",
+  "breedte": 1600,
+  "hoogte": 1067,
+  "origineel": "1920x1280",
+  "kb": 175
+ },
+ {
+  "bestand": "09-zaak.jpg",
+  "alt": "De winkel van binnen",
+  "soort": "zaak",
+  "breedte": 1600,
+  "hoogte": 1068,
+  "origineel": "1920x1281",
+  "kb": 227
+ }
+]

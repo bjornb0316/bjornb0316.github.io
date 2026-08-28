@@ -1,0 +1,56 @@
+[
+ {
+  "bestand": "01-gevel.jpg",
+  "alt": "Het hoekpand aan het Zevenend in Laren",
+  "soort": "gevel",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 101
+ },
+ {
+  "bestand": "02-zaak.jpg",
+  "alt": "De salon met de mintgroene stoelen aan de lange tafel",
+  "soort": "zaak",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 62
+ },
+ {
+  "bestand": "03-zaak.jpg",
+  "alt": "De tafel met de stoelen en de zwarte kasten",
+  "soort": "zaak",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 50
+ },
+ {
+  "bestand": "04-zaak.jpg",
+  "alt": "De marmeren bar met de krukken",
+  "soort": "zaak",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 81
+ },
+ {
+  "bestand": "05-detail.jpg",
+  "alt": "De rij gellakflesjes op de zwarte plank",
+  "soort": "detail",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 49
+ },
+ {
+  "bestand": "06-zaak.jpg",
+  "alt": "De behandelkamer met de witte stoel",
+  "soort": "zaak",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 43
+ }
+]

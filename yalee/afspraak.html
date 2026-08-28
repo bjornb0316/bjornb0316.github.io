@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Boeken - Yalee Almere</title>
+  <meta name="description" content="Kies je tijd in de agenda van Yalee.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stijl.css">
+</head>
+<body>
+<a class="overslaan" href="#hoofd">Naar de inhoud</a>
+<div class="voorstel" role="note">
+  <p>Dit is een <b>voorstel</b> voor Yalee en niet hun offici&euml;le website.
+  Gemaakt door Bjorn van Capital BB &middot;
+  <a href="tel:0614664161">06 14664161</a></p>
+</div>
+<header class="bovenaan" id="bovenaan">
+  <a class="merk" href="index.html">Yalee<span>Almere</span></a>
+  <nav aria-label="Hoofdmenu">
+    <button class="menuknop" id="menuknop" aria-expanded="false" aria-controls="menu">Menu</button>
+    <ul id="menu">
+      <li><a href="index.html">De salon</a></li>
+      <li><a href="wimpers.html">Wimpers</a></li>
+      <li><a href="wenkbrauwen.html">Wenkbrauwen</a></li>
+      <li><a href="prijzen.html">Prijzen</a></li>
+      <li><a class="nav-boek" href="afspraak.html">Boeken</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="hoofd">
+<section class="kop kop-smal">
+  <p class="label">Boeken</p>
+  <h1>Haar eigen agenda,<br>hier in de pagina.</h1>
+  <p class="onder">Dit is geen formulier dat ergens heen gaat: dit is het boeksysteem dat
+  ze zelf gebruikt. Kies je behandeling, je dag en je tijd, en het staat erin.</p>
+  <p class="nu"><span class="bol" aria-hidden="true"></span><span data-klok>Openingstijden</span></p>
+
+  <div class="kop-knoppen"><a class="knop" href="afspraak.html">Naar de agenda</a><a class="knop knop-licht" href="prijzen.html">Alle prijzen</a></div>
+</section>
+
+<section class="agenda">
+  <div class="agenda-kader">
+    <iframe src="https://yalee.salonized.com/widget_bookings/new" title="Boeken bij Yalee" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <p class="klein-uit">Werkt de agenda niet in jouw browser?
+  <a href="https://yalee.salonized.com/widget_bookings/new" target="_blank" rel="noopener">Open hem in een nieuw tabblad</a>,
+  of stuur hieronder een bericht.</p>
+</section>
+
+<section class="huisregels">
+  <p class="label">Haar huisregels, kort</p>
+  <div class="regel-rij">
+    <div><span class="cijfertje">48</span><p>uur van tevoren kun je wijzigen of annuleren.
+    Daarna wordt het volledige bedrag in rekening gebracht.</p></div>
+    <div><span class="cijfertje">1</span><p>aanbetaling bij het reserveren. Die is niet
+    restitueerbaar; zo blijven de plekken vrij voor wie komt.</p></div>
+    <div><span class="cijfertje">15</span><p>minuten te laat betekent dat de afspraak
+    vervalt. Laat het daarom weten zodra je vertraging hebt.</p></div>
+  </div>
+  <p class="klein-uit">Overgenomen van haar eigen voorwaarden.</p>
+</section>
+
+<section class="hulp-blok">
+  <h2>Liever eerst iets vragen?</h2>
+  <form class="hulp" id="hulp" novalidate>
+      <div class="veld">
+        <label for="v-behandeling">Waarvoor wil je komen?</label>
+        <select id="v-behandeling"></select>
+      </div>
+      <div class="veld">
+        <label for="v-wanneer">Wanneer schikt het?</label>
+        <select id="v-wanneer">
+        <option>zo snel mogelijk</option>
+        <option>deze week</option>
+        <option>volgende week</option>
+        <option>'s ochtends</option>
+        <option>'s middags</option>
+        <option>aan het eind van de dag</option>
+        <option>in het weekend</option>
+        </select>
+      </div>
+      <div class="veld">
+        <label for="v-naam">Je naam</label>
+        <input type="text" id="v-naam" autocomplete="name" placeholder="Voornaam en achternaam">
+      </div>
+      <div class="veld">
+        <label for="v-tel">Je telefoonnummer</label>
+        <input type="tel" id="v-tel" autocomplete="tel" placeholder="06 ...">
+      </div>
+      <div class="veld veld-breed">
+        <label for="v-bericht">Dit versturen we</label>
+        <textarea id="v-bericht" rows="7"></textarea>
+      </div>
+      <div class="hulp-knoppen">
+        <a class="knop knop-mail" id="naar-mail" href="#">Stuur via mail</a> <button type="button" class="knop knop-kopie" id="kopieer">Kopieer bericht</button>
+        <span class="gedaan" id="gedaan">Gekopieerd</span>
+      </div>
+    </form>
+</section>
+
+<section class="praktisch">
+  <div>
+    <p class="label">Openingstijden</p>
+    <dl class="uren">
+    <div class="dicht"><dt>Maandag</dt><dd>Gesloten</dd></div>
+    <div class="dicht"><dt>Dinsdag</dt><dd>Gesloten</dd></div>
+    <div><dt>Woensdag</dt><dd>10:00 - 15:00</dd></div>
+    <div><dt>Donderdag</dt><dd>17:30 - 22:00</dd></div>
+    <div><dt>Vrijdag</dt><dd>09:30 - 18:00</dd></div>
+    <div class="dicht"><dt>Zaterdag</dt><dd>Gesloten</dd></div>
+    <div><dt>Zondag</dt><dd>12:00 - 17:00</dd></div>
+  </dl>
+  </div>
+  <div>
+    <p class="label">Waar</p>
+    <p class="adres">Transistorstraat 151<br>1322 CN Almere</p>
+    <p><a class="mail" href="mailto:fleekybrowsnl@gmail.com">fleekybrowsnl@gmail.com</a></p>
+    <p class="klein-uit">Gratis parkeren voor de deur.</p>
+  </div>
+</section>
+
+</main>
+<footer class="voet">
+  <div class="voet-in">
+    <p class="voet-naam">Yalee, voorheen Fleeky Brows</p>
+    <p class="voet-adres">Transistorstraat 151<br>1322CN Almere</p>
+    <p class="voet-contact"><a href="mailto:fleekybrowsnl@gmail.com">fleekybrowsnl@gmail.com</a></p>
+    <p class="voet-klein">Dit is een voorstel van Bjorn van Capital BB en niet de offici&euml;le
+    website van Yalee. De gegevens komen van hun eigen pagina's; de foto's zijn van henzelf.
+    Wil je de pagina weg, dan haal ik hem op &eacute;&eacute;n bericht offline.
+    <a href="tel:0614664161">06 14664161</a></p>
+  </div>
+</footer>
+<nav class="onderbalk" aria-label="Snel contact">
+  <a class="hoofdknop" href="afspraak.html">Direct boeken</a>
+</nav><script src="script.js"></script>
+</body>
+</html>

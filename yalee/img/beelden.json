@@ -1,0 +1,65 @@
+[
+ {
+  "bestand": "01-zaak.jpg",
+  "alt": "De behandelkamer met de twee boognissen en de linnen bedden",
+  "soort": "zaak",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 50
+ },
+ {
+  "bestand": "02-zaak.jpg",
+  "alt": "De wachthoek met de rieten stoelen en de boogspiegel",
+  "soort": "zaak",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 65
+ },
+ {
+  "bestand": "03-zaak.jpg",
+  "alt": "De vazen met bloesemtakken bij de boognissen",
+  "soort": "zaak",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 60
+ },
+ {
+  "bestand": "04-detail.jpg",
+  "alt": "Het schaaltje en het kaartje van de salon tussen de planten",
+  "soort": "detail",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 68
+ },
+ {
+  "bestand": "05-bewijs.jpg",
+  "alt": "De ingelijste Top Rated-oorkondes van Treatwell",
+  "soort": "bewijs",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 47
+ },
+ {
+  "bestand": "06-zaak.jpg",
+  "alt": "De wand met de ingelijste certificaten",
+  "soort": "zaak",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 46
+ },
+ {
+  "bestand": "07-detail.jpg",
+  "alt": "De diffuser en het schaaltje op de kast",
+  "soort": "detail",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 49
+ }
+]

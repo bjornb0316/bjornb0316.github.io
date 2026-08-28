@@ -1,0 +1,47 @@
+[
+ {
+  "bestand": "01-gevel.jpg",
+  "alt": "De gevel met Sempre Belleza en Sempre Inkt naast elkaar",
+  "soort": "gevel",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 85
+ },
+ {
+  "bestand": "02-detail.jpg",
+  "alt": "Het houten uithangbord van Sempre Belleza",
+  "soort": "detail",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 85
+ },
+ {
+  "bestand": "03-zaak.jpg",
+  "alt": "De behandelruimte met de grijze stoelen",
+  "soort": "zaak",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 69
+ },
+ {
+  "bestand": "04-zaak.jpg",
+  "alt": "De ruimte met het goudkleurige behang en de spiegels",
+  "soort": "zaak",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 95
+ },
+ {
+  "bestand": "05-zaak.jpg",
+  "alt": "De tatoeagestudio met de schilderijen aan de wand",
+  "soort": "zaak",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 58
+ }
+]

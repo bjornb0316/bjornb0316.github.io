@@ -1,0 +1,235 @@
+/* Parfumerie Mooi van Marian, Voorburg
+   Afgelezen van hun eigen beeld: iedereen staat voor dezelfde zwarte
+   make-upkast, en hun logo is smaraggroen. Dus zwart, wit en dat groen -
+   en gezichten die de pagina dragen in plaats van sfeerfoto's.
+   Playfair voor de koppen, Manrope voor de tekst. Ronding nul. */
+
+:root{
+  --wit:#ffffff;
+  --papier:#f6f5f3;
+  --zwart:#141414;
+  --grijs:#6f6d6a;
+  --lijn:#dedbd7;
+  --groen:#0f9c72;
+  --groen-diep:#0a7154;
+}
+
+.overslaan{position:absolute;left:-9999px;top:0;background:#000;color:#fff;padding:.7rem 1rem;z-index:99}
+.overslaan:focus{left:0}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--wit);color:var(--zwart);
+  font-family:Manrope,system-ui,-apple-system,sans-serif;
+  font-size:clamp(1rem,.96rem + .2vw,1.06rem);line-height:1.72;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+button{font:inherit}
+:focus-visible{outline:2px solid var(--groen);outline-offset:3px}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important;
+    scroll-behavior:auto!important}
+}
+
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:400;margin:0;
+  letter-spacing:-.012em}
+h1{font-size:clamp(2.4rem,5.4vw,4.6rem);line-height:1.06}
+h2{font-size:clamp(1.8rem,3.6vw,2.9rem);line-height:1.14}
+h3{font-size:1.25rem}
+p{margin:0}
+.label{font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:var(--groen);
+  font-weight:700}
+.label-licht{color:rgba(255,255,255,.72)}
+.klein-uit{font-size:.85rem;color:var(--grijs);margin-top:1.1rem}
+
+/* ---------------------------------------------------------- voorstelbalk */
+.voorstel{background:var(--zwart);color:#d9d7d4;font-size:.78rem;padding:.6rem 1.2rem;
+  text-align:center;position:relative;z-index:60}
+.voorstel b{color:#fff}
+.voorstel a{color:#5ad3aa;text-decoration:none;white-space:nowrap}
+.voorstel a:hover{text-decoration:underline}
+
+/* ------------------------------------------------------------------- kop */
+.bovenaan{position:sticky;top:0;z-index:50;display:flex;align-items:center;
+  justify-content:space-between;gap:1rem;padding:1rem clamp(1.1rem,4vw,3rem);
+  background:rgba(255,255,255,.94);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--lijn)}
+.merk{text-decoration:none;display:flex;align-items:baseline;gap:.55rem}
+.merk-mooi{font-family:"Playfair Display",serif;font-size:1.5rem;letter-spacing:.14em;
+  color:var(--groen)}
+.merk-rest{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grijs)}
+.bovenaan ul{list-style:none;display:flex;align-items:center;gap:1.7rem;margin:0;padding:0}
+.bovenaan a{text-decoration:none;font-size:.85rem}
+.bovenaan a[aria-current]{color:var(--groen);font-weight:700}
+.nav-boek{background:var(--zwart);color:#fff!important;padding:.62rem 1.15rem;font-weight:700;
+  font-size:.8rem}
+.nav-boek:hover{background:var(--groen)}
+.menuknop{display:none;background:none;border:1px solid var(--lijn);padding:.55rem .95rem;
+  font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+
+/* ------------------------------------------------------------------ knop */
+.knop{display:inline-block;text-decoration:none;background:var(--zwart);color:#fff;
+  padding:1rem 1.9rem;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;
+  font-weight:700;border:1px solid var(--zwart);transition:background .2s,color .2s}
+.knop:hover{background:var(--groen);border-color:var(--groen)}
+.knop-leeg{background:transparent;color:var(--zwart)}
+.knop-leeg:hover{background:var(--zwart);color:#fff}
+.knop-licht{background:#fff;color:var(--zwart);border-color:#fff}
+.knop-licht:hover{background:var(--groen);border-color:var(--groen);color:#fff}
+.knop-leeg-licht{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
+.knop-leeg-licht:hover{background:#fff;color:var(--zwart);border-color:#fff}
+.tekstknop{display:inline-block;margin-top:1.7rem;text-decoration:none;font-size:.72rem;
+  letter-spacing:.2em;text-transform:uppercase;font-weight:700;
+  border-bottom:2px solid currentColor;padding-bottom:3px}
+
+/* ------------------------------------------------------------------ hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(280px,.75fr);
+  gap:clamp(2rem,5vw,4.5rem);align-items:center;
+  padding:clamp(2.5rem,5vw,4.5rem) clamp(1.1rem,4vw,3rem) clamp(4rem,8vw,6rem)}
+.hero h1{margin-top:1.2rem}
+.onder{margin-top:1.5rem;color:#43413f;max-width:46ch}
+.hero-actie{display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap;margin-top:2rem}
+.nu{display:inline-flex;align-items:center;gap:.5rem;font-size:.85rem;color:#43413f}
+.bol{width:8px;height:8px;border-radius:50%;background:var(--groen);display:inline-block;flex:none}
+.cijfer{margin-top:1.4rem;font-size:.83rem;color:var(--grijs)}
+.cijfer b{color:var(--zwart)}
+.hero-beeld img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 25%}
+
+/* ------------------------------------------------------------- gezichten */
+.gezichten{background:var(--papier);padding:clamp(4.5rem,10vw,7.5rem) 0}
+.gez-kop{padding:0 clamp(1.1rem,4vw,3rem);max-width:44rem}
+.gez-kop p{margin-top:.9rem;color:var(--grijs)}
+.strip{display:flex;gap:1px;overflow-x:auto;padding:2.6rem clamp(1.1rem,4vw,3rem) .8rem;
+  scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.strip figure{margin:0;flex:0 0 clamp(190px,22vw,270px);scroll-snap-align:start}
+.strip img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 22%;
+  filter:grayscale(1);transition:filter .3s}
+.strip figure:hover img{filter:grayscale(0)}
+.gez-uit{padding:0 clamp(1.1rem,4vw,3rem);font-size:.82rem;color:var(--grijs)}
+.raster-gezichten{padding:clamp(2rem,4vw,3rem) clamp(1.1rem,4vw,3rem) clamp(4.5rem,9vw,7rem)}
+.raster{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;
+  background:var(--lijn)}
+.raster figure{margin:0}
+.raster img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 22%}
+
+/* ------------------------------------------------------------------ twee */
+.twee{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.twee-blok{padding:clamp(3.5rem,7vw,6rem) clamp(1.5rem,4vw,3.5rem);color:#fff}
+.twee-groen{background:var(--groen-diep)}
+.twee-zwart{background:var(--zwart)}
+.twee-blok h2{margin-top:1rem;color:#fff}
+.twee-blok p{margin-top:1.2rem;color:rgba(255,255,255,.82);max-width:40ch}
+
+/* ---------------------------------------------------------------- winkel */
+.winkel{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);
+  gap:clamp(2rem,6vw,5rem);align-items:center;
+  padding:clamp(4.5rem,10vw,8rem) clamp(1.1rem,4vw,3rem)}
+.winkel-beeld img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.winkel-tekst h2{margin-top:1rem}
+.winkel-tekst p{margin-top:1.3rem;color:#43413f;max-width:44ch}
+.nu-groot{margin-top:1.8rem!important;font-family:"Playfair Display",serif;font-size:1.5rem;
+  color:var(--groen)!important}
+
+/* ------------------------------------------------------------------- kop */
+.kop{padding:clamp(3rem,6vw,5rem) clamp(1.1rem,4vw,3rem) clamp(2rem,4vw,3rem);max-width:52rem}
+.kop h1{margin-top:1rem}
+.kop-smal{max-width:44rem}
+
+/* ----------------------------------------------------------------- lijst */
+.lijst{padding:clamp(2rem,4vw,3rem) clamp(1.1rem,4vw,3rem) clamp(4.5rem,9vw,7rem);max-width:66rem}
+.groep{margin-top:3rem}
+.groep h3{font-family:Manrope,sans-serif;font-weight:700;font-size:.76rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--groen);padding-bottom:.9rem;border-bottom:2px solid var(--groen)}
+.regel{display:grid;grid-template-columns:1fr auto auto auto;align-items:baseline;gap:1.3rem;
+  padding:1.1rem 0;border-bottom:1px solid var(--lijn);text-decoration:none;
+  transition:background .18s,padding .18s}
+.regel:hover{background:var(--papier);padding-inline:.9rem}
+.naam{font-size:1.01rem}
+.uitleg{display:block;color:var(--grijs);font-size:.86rem;margin-top:.25rem;max-width:56ch}
+.duur{color:var(--grijs);font-size:.84rem;white-space:nowrap}
+.bedrag{font-family:"Playfair Display",serif;font-size:1.45rem;white-space:nowrap}
+.pijl{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--groen);
+  font-weight:700;opacity:0;transition:opacity .18s;white-space:nowrap}
+.regel:hover .pijl,.regel:focus-visible .pijl{opacity:1}
+
+/* ------------------------------------------------------------------ slot */
+.slot{background:var(--zwart);color:#d9d7d4;padding:clamp(4.5rem,10vw,8rem) clamp(1.1rem,4vw,3rem)}
+.slot-in{max-width:42rem}
+.slot h2{color:#fff}
+.slot p{margin-top:1.1rem;color:rgba(255,255,255,.7)}
+.slot-knoppen{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2rem}
+
+/* -------------------------------------------------------------- praktisch */
+.praktisch{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  gap:clamp(2rem,6vw,4.5rem);padding:clamp(4.5rem,9vw,7rem) clamp(1.1rem,4vw,3rem);
+  background:var(--papier)}
+.uren{margin:1.5rem 0 0;display:grid}
+.uren div{display:flex;justify-content:space-between;gap:1rem;padding:.62rem 0;
+  border-bottom:1px solid var(--lijn)}
+.uren dd{margin:0;font-variant-numeric:tabular-nums}
+.uren .dicht dd{color:var(--grijs)}
+.adres{margin-top:1.5rem;line-height:1.8}
+.praktisch p{margin-top:.7rem}
+.tel{font-family:"Playfair Display",serif;font-size:1.7rem;text-decoration:none;
+  display:inline-block}
+.tel:hover{color:var(--groen)}
+
+/* ---------------------------------------------------------- afspraakhulp */
+.hulp-blok{padding:0 clamp(1.1rem,4vw,3rem) clamp(3rem,6vw,4.5rem)}
+.hulp{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:1.35rem;
+  max-width:56rem;border:1px solid var(--lijn);padding:clamp(1.6rem,4vw,2.6rem);
+  background:var(--papier)}
+.veld{display:flex;flex-direction:column;gap:.45rem}
+.veld-breed{grid-column:1/-1}
+.hulp label{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--grijs);
+  font-weight:700}
+.hulp select,.hulp input,.hulp textarea{font:inherit;font-size:.97rem;padding:.82rem .9rem;
+  border:1px solid var(--lijn);background:#fff;color:var(--zwart);border-radius:0}
+.hulp textarea{line-height:1.66;resize:vertical;min-height:11rem}
+.hulp select:focus,.hulp input:focus,.hulp textarea:focus{outline:2px solid var(--groen);
+  outline-offset:-1px}
+.hulp-knoppen{grid-column:1/-1;display:flex;gap:.7rem;flex-wrap:wrap;align-items:center}
+.knop-kopie{cursor:pointer;background:transparent;color:var(--zwart)}
+.knop-kopie:hover{background:var(--zwart);color:#fff}
+.gedaan{opacity:0;transition:opacity .2s;font-size:.82rem;color:var(--groen);font-weight:700}
+.gedaan.aan{opacity:1}
+.direct{padding:0 clamp(1.1rem,4vw,3rem) clamp(4rem,8vw,6rem)}
+.direct-in{max-width:56rem;border-top:1px solid var(--lijn);padding-top:clamp(2.5rem,5vw,3.5rem)}
+.direct p{margin-top:1rem;color:#43413f}
+.direct .knop{margin-top:1.5rem}
+
+/* ------------------------------------------------------------------ voet */
+.voet{background:var(--zwart);color:#98958f;padding:clamp(3rem,6vw,4.5rem) clamp(1.1rem,4vw,3rem);
+  font-size:.88rem}
+.voet-in{max-width:70rem;margin:0 auto;display:grid;gap:.85rem}
+.voet-naam{font-family:"Playfair Display",serif;font-size:1.8rem;color:#fff}
+.voet a{color:#dedbd7}
+.voet-klein{margin-top:1.3rem;padding-top:1.3rem;border-top:1px solid #2b2b2b;font-size:.79rem;
+  max-width:62ch;line-height:1.7}
+.onderbalk{display:none}
+
+@media (max-width:900px){
+  .hero,.winkel,.praktisch{grid-template-columns:1fr}
+  .hero-beeld{order:-1}
+  .hero-beeld img{aspect-ratio:4/3;object-position:center 20%}
+  .menuknop{display:block}
+  .bovenaan{flex-wrap:wrap}
+  .bovenaan ul{display:none;width:100%;flex-direction:column;align-items:stretch;gap:0;padding-top:.8rem}
+  body.js .bovenaan ul.open{display:flex}
+  body:not(.js) .bovenaan ul{display:flex;flex-direction:row;flex-wrap:wrap;gap:1rem}
+  .bovenaan ul.open a{display:block;padding:.75rem 0;border-bottom:1px solid var(--lijn)}
+  .nav-boek{text-align:center;margin-top:.5rem}
+  .regel{grid-template-columns:1fr auto;gap:.35rem 1rem}
+  .duur{grid-column:1}
+  .pijl{display:none}
+  .strip img{filter:none}
+  .onderbalk{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:70;background:#fff;
+    border-top:1px solid var(--lijn)}
+  .onderbalk a{flex:1;text-align:center;padding:.95rem .4rem;text-decoration:none;font-size:.78rem;
+    letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+  .onderbalk .hoofdknop{background:var(--groen);color:#fff}
+  body{padding-bottom:3.4rem}
+}
+
+/* de knop boven aan de onderpagina - uit de meting: de weg naar de agenda
+   moet in beeld staan zodra iemand binnenkomt, niet pas na drie schermen. */
+.kop-knoppen{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:2rem}

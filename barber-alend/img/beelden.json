@@ -1,0 +1,65 @@
+[
+ {
+  "bestand": "01-gereedschap.jpg",
+  "alt": "Zijn scharen, kammen en opzetstukken op de handdoek",
+  "soort": "gereedschap",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 79
+ },
+ {
+  "bestand": "02-mens.jpg",
+  "alt": "Alend in zijn zaak, naast de barbersstoel",
+  "soort": "mens",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 78
+ },
+ {
+  "bestand": "03-gereedschap.jpg",
+  "alt": "De tondeuses van dichtbij",
+  "soort": "gereedschap",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 71
+ },
+ {
+  "bestand": "04-zaak.jpg",
+  "alt": "De zaak met de barbersstoelen en de wasplek",
+  "soort": "zaak",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 68
+ },
+ {
+  "bestand": "05-zaak.jpg",
+  "alt": "De stoel bij het raam",
+  "soort": "zaak",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 71
+ },
+ {
+  "bestand": "06-zaak.jpg",
+  "alt": "De werkplek met spiegel en het raam op straat",
+  "soort": "zaak",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 75
+ },
+ {
+  "bestand": "07-product.jpg",
+  "alt": "Wahl Barber Tools",
+  "soort": "product",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 88
+ }
+]

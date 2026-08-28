@@ -1,0 +1,238 @@
+/* Sempre Belleza, Ermelo
+   Hun eigen woordmerk is goud op zwart, hun ruimtes zijn warm en donker:
+   kaarslicht, goud hexagoonbehang, een houten uithangbord. De pagina is dus
+   donker - de enige van de acht - met goud als enige kleur. Cinzel voor de
+   koppen omdat de naam Italiaans is en hun logo Romeinse kapitalen gebruikt;
+   Barlow voor de tekst. Ronding nul. */
+
+:root{
+  --zwart:#100e0c;
+  --zwart-zacht:#1a1714;
+  --steen:#252019;
+  --room:#e9e2d6;
+  --zacht:#9a9084;
+  --lijn:#332c24;
+  --goud:#c9a227;
+  --goud-diep:#8f7118;
+}
+
+.overslaan{position:absolute;left:-9999px;top:0;background:#fff;color:#000;padding:.7rem 1rem;z-index:99}
+.overslaan:focus{left:0}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--zwart);color:var(--room);
+  font-family:Barlow,system-ui,-apple-system,sans-serif;font-weight:300;
+  font-size:clamp(1rem,.96rem + .2vw,1.08rem);line-height:1.74;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+button{font:inherit}
+:focus-visible{outline:2px solid var(--goud);outline-offset:3px}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important;
+    scroll-behavior:auto!important}
+}
+
+h1,h2,h3{font-family:Cinzel,Georgia,serif;font-weight:400;margin:0;letter-spacing:.01em;
+  color:#fff}
+h1{font-size:clamp(2.2rem,5.2vw,4.4rem);line-height:1.14}
+h2{font-size:clamp(1.7rem,3.4vw,2.7rem);line-height:1.2}
+h3{font-size:1.15rem;letter-spacing:.03em}
+p{margin:0}
+.label{font-size:.64rem;letter-spacing:.32em;text-transform:uppercase;color:var(--goud);
+  font-weight:500}
+.klein-uit{font-size:.85rem;color:var(--zacht);margin-top:1.2rem;line-height:1.7}
+
+/* ---------------------------------------------------------- voorstelbalk */
+.voorstel{background:var(--steen);color:#c9c0b3;font-size:.78rem;padding:.6rem 1.2rem;
+  text-align:center;position:relative;z-index:60;border-bottom:1px solid var(--lijn)}
+.voorstel b{color:#fff}
+.voorstel a{color:var(--goud);text-decoration:none;white-space:nowrap}
+.voorstel a:hover{text-decoration:underline}
+
+/* ------------------------------------------------------------------- kop */
+.bovenaan{position:sticky;top:0;z-index:50;display:flex;align-items:center;
+  justify-content:space-between;gap:1rem;padding:1rem clamp(1.1rem,4vw,3rem);
+  background:rgba(16,14,12,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--lijn)}
+.merk{font-family:Cinzel,serif;font-size:1.35rem;text-decoration:none;letter-spacing:.16em;
+  color:var(--goud);display:flex;align-items:baseline;gap:.7rem}
+.merk span{font-family:Barlow,sans-serif;font-size:.58rem;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--zacht)}
+.bovenaan ul{list-style:none;display:flex;align-items:center;gap:1.7rem;margin:0;padding:0}
+.bovenaan a{text-decoration:none;font-size:.84rem;letter-spacing:.04em}
+.bovenaan a[aria-current]{color:var(--goud)}
+.nav-boek{border:1px solid var(--goud);color:var(--goud)!important;padding:.58rem 1.2rem}
+.nav-boek:hover{background:var(--goud);color:var(--zwart)!important}
+.menuknop{display:none;background:none;border:1px solid var(--lijn);padding:.55rem .95rem;
+  color:var(--room);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+
+/* ------------------------------------------------------------------ knop */
+.knop{display:inline-block;text-decoration:none;background:transparent;color:var(--room);
+  padding:.95rem 1.9rem;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;
+  border:1px solid var(--room);transition:background .2s,color .2s,border-color .2s}
+.knop:hover{background:var(--room);color:var(--zwart)}
+.knop-groot{padding:1.1rem 2.3rem}
+.knop-goud{background:var(--goud);border-color:var(--goud);color:var(--zwart);font-weight:500}
+.knop-goud:hover{background:#e0b93c;border-color:#e0b93c;color:var(--zwart)}
+.knop-rand{background:transparent;color:var(--goud);border-color:var(--goud)}
+.knop-rand:hover{background:var(--goud);color:var(--zwart)}
+.knop-rand-licht{background:transparent;color:var(--room);border-color:var(--lijn)}
+.knop-rand-licht:hover{background:var(--room);color:var(--zwart);border-color:var(--room)}
+
+/* ------------------------------------------------------------------ hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch;
+  min-height:calc(88vh - 92px)}
+.hero-beeld img{width:100%;height:100%;min-height:320px;object-fit:cover;filter:brightness(.86)}
+.hero-tekst{display:flex;flex-direction:column;justify-content:center;
+  padding:clamp(2.5rem,6vw,5rem) clamp(1.1rem,4vw,3.5rem)}
+.hero h1{margin-top:1.2rem}
+.onder{margin-top:1.5rem;color:#bdb3a5;max-width:44ch}
+.hero-actie{display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap;margin-top:2.2rem}
+.nu{display:inline-flex;align-items:center;gap:.55rem;font-size:.85rem;color:#bdb3a5}
+.vonk{width:7px;height:7px;background:var(--goud);display:inline-block;flex:none;
+  box-shadow:0 0 10px 1px rgba(201,162,39,.65)}
+.cijfer{margin-top:1.5rem;font-size:.83rem;color:var(--zacht)}
+.cijfer b{color:var(--goud)}
+
+/* ---------------------------------------------------------------- takken */
+.takken{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  border-top:1px solid var(--lijn)}
+.tak{display:grid;grid-template-columns:3.5rem 1fr;gap:1.4rem;text-decoration:none;
+  padding:clamp(2.6rem,5vw,4rem) clamp(1.3rem,3vw,2.6rem);border-right:1px solid var(--lijn);
+  border-bottom:1px solid var(--lijn);transition:background .2s}
+.tak:hover{background:var(--zwart-zacht)}
+.tak-stil{cursor:default}
+.tak-stil:hover{background:transparent}
+.tak-nr{font-family:Cinzel,serif;font-size:1.5rem;color:var(--goud-diep);line-height:1.2}
+.tak-in{display:grid;gap:.9rem;align-content:start}
+.tak p{color:var(--zacht);font-size:.95rem}
+.tak-knop{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--goud);
+  border-bottom:1px solid var(--goud);padding-bottom:3px;justify-self:start}
+.tak-klein{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--zacht)}
+
+/* ------------------------------------------------------------------ bord */
+.bord{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:clamp(2rem,6vw,5rem);align-items:center;
+  padding:clamp(4.5rem,10vw,8rem) clamp(1.1rem,4vw,3rem)}
+.bord-beeld img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.bord-tekst h2{margin-top:1rem}
+.bord-tekst p{margin-top:1.3rem;color:#bdb3a5;max-width:42ch}
+
+/* --------------------------------------------------------------- ruimtes */
+.ruimtes{padding:0 clamp(1.1rem,4vw,3rem) clamp(4.5rem,10vw,8rem)}
+.ruimte-raster{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;
+  margin-top:2.4rem;background:var(--lijn)}
+.ruimte-raster img{width:100%;aspect-ratio:3/2;object-fit:cover}
+
+/* ------------------------------------------------------------- cijferband */
+.cijferband{background:var(--zwart-zacht);border-block:1px solid var(--lijn);
+  padding:clamp(4rem,9vw,7rem) clamp(1.1rem,4vw,3rem)}
+.cijferband-in{max-width:58rem;display:grid;grid-template-columns:auto 1fr;
+  gap:clamp(1.5rem,5vw,4rem);align-items:center}
+.mega{font-family:Cinzel,serif;font-size:clamp(4rem,13vw,9rem);line-height:.9;color:var(--goud)}
+.mega-uit{font-size:clamp(1.05rem,1.7vw,1.3rem);line-height:1.6;color:#bdb3a5;max-width:34ch}
+.mega-uit b{color:#fff;font-weight:400}
+
+/* ------------------------------------------------------------------- kop */
+.kop{padding:clamp(3rem,6vw,5rem) clamp(1.1rem,4vw,3rem) clamp(2rem,4vw,3rem);max-width:52rem}
+.kop h1{margin-top:1rem}
+.kop-smal{max-width:46rem}
+.breed{padding:0 clamp(1.1rem,4vw,3rem)}
+.breed img{width:100%;height:clamp(240px,40vh,420px);object-fit:cover;filter:brightness(.9)}
+
+/* ----------------------------------------------------------------- lijst */
+.lijst{padding:clamp(2.5rem,5vw,4rem) clamp(1.1rem,4vw,3rem) clamp(4.5rem,9vw,7rem);max-width:64rem}
+.groep{margin-top:3rem}
+.groep h3{font-family:Cinzel,serif;font-size:.9rem;letter-spacing:.16em;color:var(--goud);
+  padding-bottom:.9rem;border-bottom:1px solid var(--lijn)}
+.regel{display:grid;grid-template-columns:1fr auto auto auto;align-items:baseline;gap:1.3rem;
+  padding:1.15rem 0;border-bottom:1px solid var(--lijn);text-decoration:none;
+  transition:background .18s,padding .18s}
+.regel:hover{background:var(--zwart-zacht);padding-inline:.9rem}
+.naam{font-size:1.01rem;color:#fff}
+.uitleg{display:block;color:var(--zacht);font-size:.86rem;margin-top:.25rem;max-width:54ch}
+.duur{color:var(--zacht);font-size:.84rem;white-space:nowrap}
+.bedrag{font-family:Cinzel,serif;font-size:1.25rem;white-space:nowrap;color:var(--goud)}
+.pijl{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--goud);
+  opacity:0;transition:opacity .18s;white-space:nowrap}
+.regel:hover .pijl,.regel:focus-visible .pijl{opacity:1}
+
+/* ------------------------------------------------------------------ slot */
+.slot{background:var(--steen);border-top:1px solid var(--lijn);
+  padding:clamp(4.5rem,10vw,8rem) clamp(1.1rem,4vw,3rem)}
+.slot-in{max-width:44rem}
+.slot p{margin-top:1.1rem;color:#bdb3a5}
+.slot-knoppen{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2rem}
+
+/* -------------------------------------------------------------- praktisch */
+.praktisch{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));
+  gap:clamp(2rem,6vw,4.5rem);padding:clamp(4.5rem,9vw,7rem) clamp(1.1rem,4vw,3rem)}
+.uren{margin:1.5rem 0 0;display:grid}
+.uren div{display:flex;justify-content:space-between;gap:1rem;padding:.62rem 0;
+  border-bottom:1px solid var(--lijn)}
+.uren dt{color:#bdb3a5}
+.uren dd{margin:0;font-variant-numeric:tabular-nums;color:#fff}
+.uren .dicht dd{color:var(--zacht)}
+.nu-groot{margin-top:1.5rem;font-family:Cinzel,serif;font-size:1.3rem;color:var(--goud)}
+.adres{margin-top:1.5rem;line-height:1.8}
+.praktisch p{margin-top:.7rem}
+.tel{font-family:Cinzel,serif;font-size:1.5rem;text-decoration:none;display:inline-block;
+  color:#fff}
+.tel:hover{color:var(--goud)}
+
+/* ---------------------------------------------------------- afspraakhulp */
+.hulp-blok{padding:0 clamp(1.1rem,4vw,3rem) clamp(3rem,6vw,4.5rem)}
+.hulp{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:1.35rem;
+  max-width:56rem;background:var(--zwart-zacht);border:1px solid var(--lijn);
+  padding:clamp(1.6rem,4vw,2.6rem)}
+.veld{display:flex;flex-direction:column;gap:.45rem}
+.veld-breed{grid-column:1/-1}
+.hulp label{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--goud);
+  font-weight:500}
+.hulp select,.hulp input,.hulp textarea{font:inherit;font-size:.97rem;padding:.82rem .9rem;
+  border:1px solid var(--lijn);background:var(--zwart);color:var(--room);border-radius:0}
+.hulp textarea{line-height:1.68;resize:vertical;min-height:11rem}
+.hulp select:focus,.hulp input:focus,.hulp textarea:focus{outline:2px solid var(--goud);
+  outline-offset:-1px}
+.hulp-knoppen{grid-column:1/-1;display:flex;gap:.7rem;flex-wrap:wrap;align-items:center}
+.knop-wa{background:#1f8f4d;border-color:#1f8f4d;color:#fff}
+.knop-wa:hover{background:#177038;border-color:#177038;color:#fff}
+.knop-kopie{cursor:pointer}
+.gedaan{opacity:0;transition:opacity .2s;font-size:.82rem;color:var(--goud)}
+.gedaan.aan{opacity:1}
+.direct{padding:0 clamp(1.1rem,4vw,3rem) clamp(4rem,8vw,6rem)}
+.direct-in{max-width:56rem;border-top:1px solid var(--lijn);padding-top:clamp(2.5rem,5vw,3.5rem)}
+.direct p{margin-top:1rem;color:#bdb3a5}
+
+/* ------------------------------------------------------------------ voet */
+.voet{background:var(--steen);border-top:1px solid var(--lijn);color:var(--zacht);
+  padding:clamp(3rem,6vw,4.5rem) clamp(1.1rem,4vw,3rem);font-size:.88rem}
+.voet-in{max-width:70rem;margin:0 auto;display:grid;gap:.85rem}
+.voet-naam{font-family:Cinzel,serif;font-size:1.6rem;color:var(--goud);letter-spacing:.1em}
+.voet a{color:var(--room)}
+.voet-klein{margin-top:1.3rem;padding-top:1.3rem;border-top:1px solid var(--lijn);
+  font-size:.79rem;max-width:62ch;line-height:1.7}
+.onderbalk{display:none}
+.kop-knoppen{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:2rem}
+
+@media (max-width:900px){
+  .hero,.bord,.praktisch,.cijferband-in{grid-template-columns:1fr;min-height:0}
+  .hero-beeld img{height:auto;aspect-ratio:3/2;min-height:0}
+  .cijferband-in{gap:1rem}
+  .tak{border-right:0}
+  .menuknop{display:block}
+  .bovenaan{flex-wrap:wrap}
+  .bovenaan ul{display:none;width:100%;flex-direction:column;align-items:stretch;gap:0;padding-top:.8rem}
+  body.js .bovenaan ul.open{display:flex}
+  body:not(.js) .bovenaan ul{display:flex;flex-direction:row;flex-wrap:wrap;gap:1rem}
+  .bovenaan ul.open a{display:block;padding:.75rem 0;border-bottom:1px solid var(--lijn)}
+  .nav-boek{text-align:center;margin-top:.5rem}
+  .regel{grid-template-columns:1fr auto;gap:.35rem 1rem}
+  .duur{grid-column:1}
+  .pijl{display:none}
+  .onderbalk{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:70;
+    background:var(--steen);border-top:1px solid var(--lijn)}
+  .onderbalk a{flex:1;text-align:center;padding:.95rem .4rem;text-decoration:none;font-size:.76rem;
+    letter-spacing:.14em;text-transform:uppercase}
+  .onderbalk .hoofdknop{background:var(--goud);color:var(--zwart);font-weight:500}
+  body{padding-bottom:3.4rem}
+}

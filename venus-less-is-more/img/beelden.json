@@ -1,0 +1,65 @@
+[
+ {
+  "bestand": "01-zaak.jpg",
+  "alt": "De witte console met spiegel en het paspop-torso",
+  "soort": "zaak",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 30
+ },
+ {
+  "bestand": "02-mens.jpg",
+  "alt": "De eigenaresse in haar eigen salon",
+  "soort": "mens",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 52
+ },
+ {
+  "bestand": "03-zaak.jpg",
+  "alt": "De behandelkamer met de stoel bij het raam",
+  "soort": "zaak",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 46
+ },
+ {
+  "bestand": "04-zaak.jpg",
+  "alt": "De kast met producten en de klimop",
+  "soort": "zaak",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 43
+ },
+ {
+  "bestand": "05-detail.jpg",
+  "alt": "Schelpen met steentjes op de witte kast",
+  "soort": "detail",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 41
+ },
+ {
+  "bestand": "06-product.jpg",
+  "alt": "De Lycon-flessen waar ze mee werkt",
+  "soort": "product",
+  "breedte": 720,
+  "hoogte": 480,
+  "origineel": "720x480",
+  "kb": 33
+ },
+ {
+  "bestand": "07-straat.jpg",
+  "alt": "De straat waar de salon zit",
+  "soort": "straat",
+  "breedte": 1000,
+  "hoogte": 667,
+  "origineel": "1000x667",
+  "kb": 179
+ }
+]
