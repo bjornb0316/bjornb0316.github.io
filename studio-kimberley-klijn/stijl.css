@@ -44,7 +44,7 @@ a{color:inherit}
 .wrap{max-width:1200px;margin:0 auto;padding-inline:var(--marge)}
 .smal{max-width:800px}
 
-.display{overflow-wrap:break-word;hyphens:auto;font-family:"Schibsted Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+.display{overflow-wrap:break-word;font-family:"Schibsted Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   font-weight:400;line-height:1.06;letter-spacing:-.022em}
 h1.display{font-size:clamp(2.5rem,6vw,4.9rem)}
 h2.display{font-size:clamp(2rem,4.6vw,3.5rem)}
@@ -278,7 +278,7 @@ h3.display{font-size:clamp(1.35rem,2.5vw,1.9rem);letter-spacing:-.015em}
 .menu a{display:block;text-decoration:none;color:#ffffff;
   font-family:"Schibsted Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:clamp(1.7rem,7.4vw,3.1rem);line-height:1.16;
   padding:.42rem 0;border-bottom:1px solid #4e5559;
-  overflow-wrap:break-word;hyphens:auto}
+  overflow-wrap:break-word}
 .menu a:first-of-type{border-top:1px solid #4e5559}
 .menu a[aria-current=page]{color:#8c9ca3}
 /* Let op de selector: .menu a (0,2,0) wint anders van .menu-cta (0,1,0),

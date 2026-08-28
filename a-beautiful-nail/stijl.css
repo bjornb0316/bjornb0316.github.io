@@ -42,7 +42,7 @@ a{color:inherit}
 .wrap{max-width:1200px;margin:0 auto;padding-inline:var(--marge)}
 .smal{max-width:860px}
 
-.display{font-family:"EB Garamond",Georgia,serif;font-weight:400;overflow-wrap:break-word;hyphens:auto;line-height:1.08;letter-spacing:-.004em}
+.display{font-family:"EB Garamond",Georgia,serif;font-weight:400;overflow-wrap:break-word;line-height:1.08;letter-spacing:-.004em}
 h1.display{font-size:clamp(2.6rem,6.4vw,5.1rem)}
 h2.display{font-size:clamp(2.1rem,5.2vw,4rem)}
 h3.display{font-size:clamp(1.5rem,2.9vw,2.2rem)}
@@ -280,7 +280,7 @@ h3.display{font-size:clamp(1.5rem,2.9vw,2.2rem)}
 .menu a{display:block;text-decoration:none;color:#fbfaf7;
   font-family:"EB Garamond",Georgia,serif;font-size:clamp(1.7rem,7.4vw,3.1rem);line-height:1.16;
   padding:.42rem 0;border-bottom:1px solid #4a504c;
-  overflow-wrap:break-word;hyphens:auto}
+  overflow-wrap:break-word}
 .menu a:first-of-type{border-top:1px solid #4a504c}
 .menu a[aria-current=page]{color:#d5d1c4}
 /* Let op de selector: .menu a (0,2,0) wint anders van .menu-cta (0,1,0),
